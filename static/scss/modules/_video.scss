@@ -1,0 +1,180 @@
+/* ==========================================================================
+   BASE VIDEO STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.video {
+    margin-bottom: quadruple($gel-spacing-unit);
+
+    //* =======================ELEMENT
+    &__container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 56.25%;
+        z-index: z(default);
+    }
+
+    &__jump {
+        position: fixed;
+        top: -9999px;
+        left: 100px;
+        max-width: 600px;
+        background-color: palette(shades, white);
+        border-style: solid;
+        border-width: 1px;
+        padding: $gel-spacing-unit;
+        z-index: z(overlay);
+
+        a{
+            font-weight:bold;
+            font-size: 0.9em;
+            font-family: arial;
+        }
+    }
+
+    &__before {
+        position: fixed;
+        top: -9999px;
+        left: 100px;
+        max-width: 600px;
+        background-color: palette(shades, white);
+        border-style: solid;
+        border-width: 1px;
+        padding: $gel-spacing-unit;
+        z-index: z(overlay);
+
+        a{
+            font-weight:bold;
+            font-size: 0.9em;
+            font-family: arial;
+            color: palette(shades, black);
+        }
+    }
+
+    &__player {
+        position: absolute;
+        left: 0px; 
+        top: 0px;
+        right: 0px;
+        bottom: 0px; 
+
+        object {
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+        }
+    }
+
+    &__after {
+        position: fixed;
+        top: 10px;
+        left: -999px;
+        background-color: palette(shades, white);
+        border-style: solid;
+        border-width: 1px;
+        padding: $gel-spacing-unit;
+        z-index: z(overlay);
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+    }
+
+    @include bp(s, min-width, portrait) {
+    }
+
+    @include bp(m, min-width) {
+    }
+
+    @include bp(l, min-width) {
+        
+    }
+}
+
+#mp-container {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    background: #191919;
+}
+
+#mp {
+    width: 100%;
+    position: absolute;
+}
+
+#footer {
+    display: none;
+}
+
+#vid-caption{
+    position: relative;
+    top: -32px;
+    background-color: palette(type, body);
+    color: white;
+    padding: $gel-spacing-unit double($gel-spacing-unit);
+    margin-bottom: quadruple($gel-spacing-unit);
+    @extend #{gel(pica)};
+}
+
+#credits {
+    padding: 0;
+    display:block;
+}
+
+#credits h1 {
+    font-size: 23px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#footer .more-link {
+
+    font-size: 15px;
+
+    display: block;
+    margin: 0 0 16px 14px;
+    padding: 1px 0 0 25px;
+    min-height: 16px;
+
+    background: no-repeat;
+    background-image: url(new-window.png);
+    background-image: linear-gradient(transparent, transparent), url(new-window.svg);
+    background-size: 16px 16px;
+}
+
+#footer .strip { 
+    position: relative;
+    background-color: #191919;
+    height: 48px;
+
+}
+
+#footer .strip .bbc-logo {
+    display: block;
+    position: absolute;
+    left: 11px;
+    bottom: 11px;
+}
+
+#footer .strip .links {
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+}
+
+.vid-caption{ 
+    background-color: #191919;
+    color: palette(brand, d);
+    padding: $gel-spacing-unit double($gel-spacing-unit);
+    margin-bottom:32px;
+    position:relative;
+}

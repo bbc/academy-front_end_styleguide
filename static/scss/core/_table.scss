@@ -1,0 +1,125 @@
+/* ==========================================================================
+   BASE LIST STYLES
+   ========================================================================== */
+
+
+//* ===========================BLOCK
+table, .table {
+    @extend #{gel(pica)};
+    width: 100%;
+    border-collapse: separate;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    margin-top: double($gel-spacing-unit);
+    margin-bottom: quadruple($gel-spacing-unit);
+
+    //* =======================ELEMENT
+    &__container {
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    thead, &__head {
+        vertical-align: bottom;
+    }
+
+    tbody, &__body {
+
+    }
+
+    tr, &__row {
+        &:nth-child(even) {
+            background-color: #F7F7F7;
+        }
+    }
+
+    td, &__cell {
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        padding: 12px 8px;
+        text-align: left;
+        vertical-align: bottom;
+
+        &:first-child {
+            border-left: 0;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+
+    @include bp(xs, min-width) {
+
+    }
+
+    @include bp(s, min-width, portrait) {
+
+    }
+
+    @include bp(m, min-width) {
+
+    }
+
+    @include bp(l, min-width) {
+
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Standard table 
+category: Core - Table
+---
+
+Block description:
+
+```html_example
+<div class="table__container">
+    <table class="table">
+        <thead class="table__head">
+            <tr>
+                <th class="table__cell" scope="col"></th>
+                <th class="table__cell" scope="col">Heading 2</th>
+                <th class="table__cell" scope="col">Heading 3</th>
+                <th class="table__cell" scope="col">Heading 4</th>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+            <tr class="table__row">
+                <th class="table__cell" scope="row">Row title 1</th>
+                <td class="table__cell">12/34</td>
+                <td class="table__cell">12/34</td>
+                <td class="table__cell">12/34</td>
+            </tr>
+            <tr class="table__row">
+                <th class="table__cell" scope="row">Row title 2</th>
+                <td class="table__cell">data</td>
+                <td class="table__cell">data</td>
+                <td class="table__cell">data</td>
+            </tr>
+        </tbody>
+        <tbody class="table__body">
+            <tr class="table__row">
+                <th class="table__cell" scope="row">Row title 3</th>
+                <td class="table__cell">data</td>
+                <td class="table__cell">data</td>
+                <td class="table__cell">data</td>
+            </tr>
+            <tr class="table__row">
+                <th class="table__cell" scope="row">Row title 4</th>
+                <td class="table__cell">data</td>
+                <td class="table__cell">data</td>
+                <td class="table__cell">data</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+*/

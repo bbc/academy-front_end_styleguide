@@ -1,0 +1,224 @@
+///*------------------------------------*\
+//    # TYPOGRAPHY - SETTINGS
+//\*------------------------------------*/
+
+// general configuration
+$gel-type-namespace: $gel-namespace !default;
+$gel-type-touch-class: 'n-no-touchevents' !default;
+$gel-type-base-group: 'group-a';
+$gel-type-no-touch-group: 'group-d';
+
+
+
+// output configuration
+$gel-type-enable--markup-output: true !default;
+$gel-type-enable--font-family: false !default;
+$gel-type-enable--base-elements: false !default;
+
+
+
+// default GEL typography configuration
+$gel-type-settings: (
+    'canon': (
+        'group-a': (
+          'font-size': 28px,
+          'line-height': 32px,
+          '-bold': (
+              'font-weight': bold,
+              'letter-spacing': -1px
+          )
+        ),
+        'group-b': (
+          'font-size': 32px,
+          'line-height': 36px
+        ),
+        'group-c': (
+          'font-size': 52px,
+          'line-height': 56px 
+        ),
+        'group-d': (
+          'font-size': 44px,
+          'line-height': 48px
+        )
+    ),
+    'trafalgar': (
+        'group-a': (
+          'font-size': 20px,
+          'line-height': 24px,
+          '-bold': (
+              'font-weight': bold,
+              'letter-spacing': -1px
+          )
+        ),
+        'group-b': (
+          'font-size': 24px,
+          'line-height': 28px
+        ),
+        'group-c': (
+          'font-size': 36px,
+          'line-height': 40px
+        ),
+        'group-d': (
+          'font-size': 32px,
+          'line-height': 36px
+        )
+    ),
+    'double-pica': (
+        'group-a': (
+          'font-size': 20px,
+          'line-height': 24px,
+          '-bold': (
+              'font-weight': bold,
+              'letter-spacing': -1px
+          )
+        ),
+        'group-b': (
+          'font-size': 20px,
+          'line-height': 24px
+        ),
+        'group-c': (
+          'font-size': 26px,
+          'line-height': 30px
+        ),
+        'group-d': (
+          'font-size': 24px,
+          'line-height': 28px
+        )
+    ),
+    'great-primer': (
+        'group-a': (
+          'font-size': 18px,
+          'line-height': 22px,
+          '-bold': (
+              'font-weight': bold
+          )
+        ),
+        'group-b': (
+          'font-size': 18px,
+          'line-height': 22px,
+          '-bold': (
+              'letter-spacing': -1px
+          )
+        ),
+        'group-c': (
+          'font-size': 21px,
+          'line-height': 24px
+        ),
+        'group-d': (
+          'font-size': 20px,
+          'line-height': 24px
+        )
+    ),
+    'pica': (
+        'group-a': (
+          'font-size': 15px,
+          'line-height': 20px,
+          '-bold': (
+              'font-weight': bold
+          )
+        ),
+        'group-b': (
+          'font-size': 16px,
+          'line-height': 20px
+        ),
+        'group-c': (
+          'font-size': 18px,
+          'line-height': 22px
+        ),
+        'group-d': (
+          'font-size': 16px,
+          'line-height': 20px
+        )
+    ),
+    'long-primer': (
+        'group-a': (
+          'font-size': 15px,
+          'line-height': 18px,
+          '-bold': (
+              'font-weight': bold
+          )
+        ),
+        'group-b': (
+          'font-size': 15px,
+          'line-height': 18px
+        ),
+        'group-c': (
+          'font-size': 15px,
+          'line-height': 20px
+        ),
+        'group-d': (
+          'font-size': 14px,
+          'line-height': 18px
+        )
+    ),
+    'brevier': (
+        'group-a': (
+          'font-size': 14px,
+          'line-height': 16px,
+          '-bold': (
+              'font-weight': bold
+          )
+        ),
+        'group-b': (
+          'font-size': 14px,
+          'line-height': 18px
+        ),
+        'group-c': (
+          'font-size': 14px,
+          'line-height': 18px
+        ),
+        'group-d': (
+          'font-size': 13px,
+          'line-height': 16px
+        )
+    ),
+    'minion': (
+        'group-a': (
+          'font-size': 12px,
+          'line-height': 16px,
+          'text-transform': uppercase,
+          '-bold': (
+              'font-weight': bold
+          )
+        ),
+        'group-b': (
+          'font-size': 16px,
+          'line-height': 16px
+        ),
+        'group-c': (
+          'font-size': 13px,
+          'line-height': 16px
+        ),
+        'group-d': (
+          'font-size': 12px,
+          'line-height': 16px
+        )
+    ),
+    'articlebody': (
+        'group-a': (
+          'font-size': 15px,
+          'line-height': 20px
+        ),
+        'group-b': (
+          'font-size': 16px,
+          'line-height': 22px
+        ),
+        'group-c': (
+          'font-size': 18px,
+          'line-height': 24px
+        ),
+        'group-d': (
+          'font-size': 16px,
+          'line-height': 22px
+        )
+    )
+) !default;
+
+// add the typography breakpoints to the list of exisiting
+// breakpoints if Sass Mq is available
+@if (mixin-exists(mq)) {
+
+    @include mq-add-breakpoint(gel-bp-type-b, 400px);
+    @include mq-add-breakpoint(gel-bp-type-c, 600px);
+
+}

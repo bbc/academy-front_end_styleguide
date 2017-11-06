@@ -1,0 +1,209 @@
+/* ==========================================================================
+   BASE HEADER STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.header {
+    padding: $gel-spacing-unit 0;
+    background-color: palette(brand, a);
+    z-index: 2;
+
+    //* =======================ELEMENT
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    //* =======================MODIFIER
+    &--narrow {
+        @extend .header;
+    }
+
+    &.search-open {
+        .logo {
+            width: 0;
+            overflow: hidden;
+        }
+        .search {
+            padding-left: 0;
+            width: calc(100% - 92px);
+            left: 24px;
+
+            &__input {
+                display: block;
+                opacity: 1;
+            }
+            &__button {
+                background-color: palette(shades, white);
+            }
+            &__icon {
+                .icon__svg {
+                    svg {
+                        fill: palette(brand, a);
+                    }
+                }
+            }
+            &__open-btn {
+                z-index: z(bottomless-pit);
+            }
+        }
+        .search__button__wrapper{
+            display: block;
+        }
+        .search__button--close .search__icon .icon__svg svg {
+            fill: palette(shades, white);
+        }
+    }
+
+    &.menu-open {
+        .nav__menu-btn {
+            color: palette(brand, c);
+            
+            .stack {
+                background-color: palette(brand, c);
+                &:nth-child(2) {
+                    top: 19px;
+                    transform: rotate(135deg);
+                }
+
+                &:nth-child(3) {
+                    opacity: 0;
+                    left: -60px;
+                }
+
+                &:nth-child(4) {
+                    top: 19px;
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+    }
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+
+    @include bp(xs, min-width) {
+
+    }
+
+    @include bp(s, min-width, true) {
+        padding: double($gel-spacing-unit) 0 $gel-spacing-unit 0;
+
+        &--narrow {
+            padding: double($gel-spacing-unit) 0 $gel-spacing-unit*8;
+        }
+
+        &.search-open {
+            .logo {
+                width: 160px;
+            }
+        }
+    }
+
+    @include bp(m, min-width, true) {
+        padding: double($gel-spacing-unit) 0;
+
+        .wrapper {
+            padding-left: double($gel-spacing-unit);
+            padding-right: double($gel-spacing-unit);
+        }
+
+        &.search-open {
+            .logo {
+                width: 200px;
+            }
+        }
+    }
+
+    @include bp(l, min-width) {
+
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Header
+category: Modules - Header
+---
+
+Module description goes here
+
+```html_example
+<header class="header" role="banner">
+    <div class="wrapper">
+        <div class="row">
+            <div class="logo">
+                <a href="/academy/en/" class="logo__link" title="Academy Logo">
+                    <figure class="logo__icon"><span class="icon__svg gel-icon-logo"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#acad-logo"><title>Academy Logo</title></use></svg><noscript>&lt;img class="icon__falback" id="logo" src="/academy/static/img/svg-fallbacks/gel-icon-logo-white.png" alt="Academy Logo" /&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-logo-white.png" alt="Academy Logo" /><![endif]--></span>
+                        <figcaption class="icon__caption">Go to the Academy Homepage</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <!-- End Academy logo. -->
+
+            <a href="#menu-base" class="nav__menu-btn istats-notrack">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="stack"></span>
+                <span class="stack"></span>
+                <span class="stack"></span>
+                Menu
+            </a>
+            <!-- End Burger menu. -->
+
+            <div id="search01">
+                <form class="search__button__wrapper">
+                    <button type="button" class="search__button--close">
+                        <span class="search__icon"><span class="icon__svg gel-icon-search"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-no"><title>Close search box</title></use></svg><noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-no.png" alt="Search" /&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-no.png" alt="Search" /><![endif]--></span>
+                        </span>
+                    </button>
+                </form>
+                <div class="search">
+                    <form method="GET" action="/academy/search/" class="search__form" autocomplete="off">
+                        <label class="sr-only" for="HeaderSearch">Search the Academy</label>
+                        <input type="search" id="HeaderSearch" name="q" value="" placeholder="Search BBC Academy" class="search__input">
+                        <button type="button" class="search__button--clear">
+                            <span class="search__icon"><span class="icon__svg gel-icon-search"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-no"><title>Clear search term</title></use></svg><noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-no.png" alt="Search" /&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-no.png" alt="Search" /><![endif]--></span>
+                            </span>
+                        </button>
+                        <button type="submit" class="search__button">
+                            <span class="search__icon"><span class="icon__svg gel-icon-search"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-search"><title>Search</title></use></svg><noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-search-purple.png" alt="Search" /&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-search-purple.png" alt="Search" /><![endif]--></span>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+                <!-- End Search bar. -->
+            </div>
+            <!-- End Search. -->
+        </div>
+    </div>
+</header>
+
+<div class="nav">
+    <nav class="nav__bar" role="navigation" aria-label="Main menu">   
+        <ul id="nav" class="nav__list" role="menubar">
+            <div class="nav__wrapper">
+                <li class="nav__item "><a href="/academy/en/" class="nav__link">Home</a></li>
+                <li class="nav__item "><a href="/academy/en/collections/mandatory-training" class="nav__link">Mandatory Training</a></li>
+                <li class="nav__item i18n__en-only "><a href="/academy/en/a-z/collections" class="nav__link">Collections</a></li>
+                <li class="nav__item i18n__en-only "><a href="/academy/en/help" class="nav__link">Help</a></li>
+                <li class="nav__item--language">
+                    <div class="language__change">
+                        <span>Change language: </span>
+                        <a href="/academy/en/languages" class="language__selector__link istats-notrack">English</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </nav>
+</div>
+<!-- End Main navigation. -->
+```
+
+NUNJUKS
+
+```
+
+```
+
+*/

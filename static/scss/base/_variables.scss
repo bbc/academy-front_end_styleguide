@@ -1,0 +1,94 @@
+// ------------------------------------------------------------------------------------------------------------------------//
+// COLOURS
+// ------------------------------------------------------------------------------------------------------------------------//
+
+$shades                 : hsl(0, 0%, 100%);
+$gallery                : #dcdcdc;
+$dates                  : #f3f3f3;
+
+// Usage:
+// background-color: palette(brand, a);
+// color: palette(links, link);
+
+$palettes: ( 
+    brand: (
+        a               : #121260,              // New Blue
+        b               : #53565a,              // New Dark Grey
+        c               : #FFFFFF,              // White
+        d               : #e4e4e4,              // Light Grey
+        e               : #1A1A1A,              // Black
+        f               : darken(#121260,10),   // New Dark Blue
+        g               : #EC712F,              // Orange
+        h               : #d9e1e2,              // New Light Grey
+        i               : #888b8d               // New Medium Grey
+    ),
+    shades: (
+        white           : $shades,              // White
+        lightergray     : darken($shades,10),   // Lighter Grey
+        lightgray       : darken($shades,20),   // Light Grey
+        gray            : darken($shades,30),   // Grey
+        darkergray      : darken($shades,40),   // Darker Grey
+        darkgray        : darken($shades,50),   // Dark Grey
+        black           : hsl(0, 0%, 0%)        // Black
+    ),
+    links: (
+        menu-btn        : #271349,              // Dark Purple
+        subnav          : #1d1d1d,              // Dark Grey
+        clear           : #564275,              // Soft Purple
+        tooltip         : #333333               // Dark Grey
+    ),
+    alerts: (
+        info            : #4babcc,              // Blue
+        warn            : #ffdc48,              // Yellow
+        error           : #fa453d,              // Red
+        success         : #02CA9C               // Green
+    ),
+    type: (
+        body            : #1A1A1A,              // Dark Black
+        grey            : #53565a               // Grey
+    )
+);
+
+// ------------------------------------------------------------------------------------------------------------------------//
+// Z-INDEX
+// ------------------------------------------------------------------------------------------------------------------------//
+ 
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);
+
+// ------------------------------------------------------------------------------------------------------------------------//
+// GEL
+// ------------------------------------------------------------------------------------------------------------------------//
+
+$gel-namespace: "gel-";
+$gel-type-enable--font-family: true;
+$mq-responsive: true;
+$gel-width-enable--markup-output: true;
+$gel-layout-enable--whitespace-fix: true;
+$gel-spacing-enable--margins: true;
+$gel-spacing-enable--margins-large: true;
+$gel-spacing-enable--margins-huge: true;
+$gel-spacing-enable--paddings: true;
+$gel-spacing-enable--paddings-large: true;
+$gel-spacing-enable--paddings-huge: true;
+$gel-spacing-enable--margins-none: true;
+$gel-spacing-enable--paddingd-none: true;
+$gel-base-font-size: 16px;
+
+// ------------------------------------------------------------------------------------------------------------------------//
+// BREAKPOINTS
+// ------------------------------------------------------------------------------------------------------------------------//
+
+$breakpoints: (
+    mc:     320px,
+    xs:     480px,
+    fc:     600px,
+    s:      768px,
+    m:      1008px,
+    l:      1280px
+);

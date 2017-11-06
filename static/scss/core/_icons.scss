@@ -1,0 +1,424 @@
+.icon {
+    position: relative;
+
+    @extend %inline-block;
+
+    width: 64px;
+    height: 64px;
+
+    &.icon--xs {
+        width: $gel-spacing-unit;
+        height: $gel-spacing-unit;
+    }
+
+    &.icon--s {
+        width: double($gel-spacing-unit);
+        height: double($gel-spacing-unit);
+    }
+
+    &.icon--m {
+        width: 48px;
+        height: 48px;
+
+        @include bp(m, max-width) {
+            width: quadruple($gel-spacing-unit);
+            height: quadruple($gel-spacing-unit);
+
+            &.icon--bg {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        @include bp(s, max-width) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &.icon--xl {
+        width: 80px;
+        height: 80px;
+    }
+
+    &.icon--m-xl {
+        width: 48px;
+        height: 48px;
+
+        @include bp(l, max-width) {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &.icon--center {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .btn.centered & {
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        left: $gel-spacing-unit * 2;
+        margin: auto;
+    }
+
+    @include bp(m, max-width) {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__row {
+        @extend .row;
+        margin-bottom: double($gel-spacing-unit);
+    }
+
+    &__col {
+        @extend .col;
+        width: gel-columns(1, 6);
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 64px;
+        width: 100%;
+        background-color: palette(brand, a);
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        .icon__svg {
+            cursor: pointer;
+            padding: double($gel-spacing-unit);
+
+            svg {
+                @include transition(all .5s ease);
+                fill: palette(shades, white);
+            }
+
+            &:hover {
+                svg {
+                    fill: palette(brand, c);
+                }
+            }
+        }
+    }
+
+    &__id {
+        position: relative;
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        background-color: #201532;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: palette(shades, white);
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.icon--bg {
+    background: palette(brand, a);
+
+    .icon__svg {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.no-svg {
+    svg {
+        display: none !important;
+    }
+}
+
+.icon__svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    @extend %inline-block;
+
+    width: 100%;
+    height: 100%;
+
+    > svg {
+        width: 100%;
+        height: 100%;
+
+        @extend %inline-block;
+
+        vertical-align: middle;
+    }
+
+    .no-js & {
+        svg {
+            display: none !important;
+        }
+    }
+
+    .icon--white &,
+    .icon--search & {
+        svg {
+            fill: palette(shades, white);
+        }
+    }
+
+    .icon--align-top & {
+        svg {
+            vertical-align: top;
+        }
+    }
+
+    .icon--bg & {
+        float: left;
+
+        svg {
+            float: left;
+            fill: palette(shades, white);
+        }
+    }
+}
+
+.icon--search {
+    width: 100%;
+}
+
+.icon--logo {
+    width: 200px;
+    height: 30px;
+
+    .icon__svg > svg {
+        vertical-align: top;
+    }
+}
+
+.icon__falback {
+    display: none !important;
+}
+
+.no-svg .icon__falback,
+.no-js .icon__falback {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.icon__caption {
+    @extend .sr-only;
+    color: palette(shades, white);
+}
+
+.gel-icon-loading {
+    background-position: -32px -64px;
+    -webkit-animation-name: gel-spin;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: gel-spin;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: gel-spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-moz-keyframes gel-spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes gel-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes gel-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Core icons
+category: Core - Icons
+---
+
+```html_example
+<div class="icon__row">
+
+    <!-- Article Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-white.png" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-white.png" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Article</div>
+    </div>
+
+    <!-- Blog Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/academy-icon-blog.png" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/academy-icon-blog.png" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Blog</div>
+    </div>
+
+    <!-- Video Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-video"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-video-white.png" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-video-white.png" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Video</div>
+    </div>
+
+    <!-- Podcast Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-podcast-white.png" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-podcast-white.png" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Podcast</div>
+    </div>
+
+    <!-- Classroom Course Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/academy-icon-classroom-white.png" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/academy-icon-classroom-white.png" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Classroom</div>
+    </div>
+
+    <!-- Online Course Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-pc-white.png" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-pc-white.png" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Online</div>
+    </div>
+
+</div>
+
+<div class="icon__row">
+    <!-- Collections Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-collection-white.png" alt="data icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-collection-white.png" alt="data icon"/><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Collections</div>
+    </div>
+
+    <!-- Guide Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-revision-guide-white.png" alt="data icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-revision-guide-white.png" alt="data icon"/><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Guide</div>
+    </div>
+
+    <!-- Down Chevron Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-down"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="data icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="data icon"/><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Down Chevron</div>
+    </div>
+
+    <!-- Tick Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-yes"></use></svg>
+            </span>
+        </div>
+        <div class="icon__id">Tick</div>
+    </div>
+
+    <!-- Cross Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-no"></use></svg>
+            </span>
+        </div>
+        <div class="icon__id">Cross</div>
+    </div>
+
+    <!-- Search Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-search"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-search-purple.png" alt="Search" /></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-search-purple.png" alt="Search" /><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Search</div>
+    </div>
+</div>
+
+<div class="icon__row">
+    <!-- Back to Top Icon -->
+    <div class="icon__col">
+        <div class="icon__wrapper">
+            <span class="icon__svg">
+                <svg><use xlink:href="#gel-icon-to-top"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-to-top.png"  alt="media icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-to-top.png" alt="media icon"/><![endif]-->
+            </span>
+        </div>
+        <div class="icon__id">Top</div>
+    </div>
+</div>
+```
+*/

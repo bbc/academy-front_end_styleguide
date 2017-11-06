@@ -1,0 +1,316 @@
+/* ==========================================================================
+   BASE ACCORDION STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.accordion {
+
+    //* =======================ELEMENT
+    &__list {
+        @extend #{gel(pica)};
+        margin-bottom: $gel-spacing-unit;
+        list-style: none;
+    }
+
+    &__intro {
+        @extend #{gel(pica)};
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        color: palette(shades, white);
+        padding: $gel-spacing-unit 40px $gel-spacing-unit $gel-spacing-unit;
+        background-color: palette(brand, a);
+
+        &__question-heading {
+            @extend .link;
+            color: palette(shades, white);
+            text-decoration: none;
+            margin: 0;
+            border: none;
+        }
+
+        &:hover {
+            color: palette(shades, white);
+            background-color: palette(brand, b);
+
+            .accordion__link__question-heading {
+                color: palette(shades, white);
+            }
+        }
+
+        &__icon {
+            @extend .icon__svg;
+            padding: 0;
+            position: absolute;
+            left: auto;
+            right: 0;
+            width: 40px;
+            height: double($gel-spacing-unit);
+
+                svg {
+                    fill: palette(shades, white);
+                }
+        }
+
+        &.show {
+            background-color: palette(brand, b);
+            .accordion__link__icon {
+                svg {
+                    -o-transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+
+                   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1.8369701987210297e-16, M12=-1, M21=1, M22=-1.8369701987210297e-16, SizingMethod='auto expand')";
+
+                   filter: progid:DXImageTransform.Microsoft.Matrix(
+                            M11=-1.8369701987210297e-16,
+                            M12=-1,
+                            M21=1,
+                            M22=-1.8369701987210297e-16,
+                            SizingMethod='auto expand');
+                   -moz-transform-origin: 30px 50% 0px;
+                   -moz-transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    &__answer {
+        display: none;
+        padding: $gel-spacing-unit;
+        background-color: palette(shades, white);
+
+        &:focus {
+            outline: none;
+        }
+
+        &.show {
+            display: block;
+        }
+
+        p {
+            @extend #{gel(pica)};
+        }
+
+        h3 {
+            @extend p;
+        }
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+
+    }
+
+    @include bp(s, min-width, portrait) {
+        &__list {
+            margin-bottom: double($gel-spacing-unit);
+        }
+
+        &__link {
+            padding: double($gel-spacing-unit) 52px double($gel-spacing-unit) double($gel-spacing-unit);
+            &__icon {
+                width: 60px;
+                height: 60px;
+                padding: 15px 0px 19px;
+            }
+        }
+
+        &__answer {
+            padding: double($gel-spacing-unit);
+        }
+    }
+
+    @include bp(m, min-width) {
+    }
+
+    @include bp(l, min-width) {
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Accordion
+category: Modules - Accordion
+---
+
+Collapsable accordion using JS and is static open without JS
+
+```html_example
+<div class="accordion">
+    <ul class="accordion__list">
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq1">
+                    <h2 class="accordion__link__question-heading">What courses should and shouldn't be assigned to me?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <h3>I don't need to do a course / Who assigned this course to me?</h3><p>Unfortunately the Academy is unable to assess or change individual's mandatory training requirements, as that task needs to be done by line managers with a detailed knowledge of each individual's role. Changes are then made by trained Mandatory Training SuperUsers. <a href="http://academy.gateway.bbc.co.uk/Content/MandatorySuperUser" target="_blank"><strong>Find a SuperUser who covers your area</strong></a>.</p><h3>I've done a course already but it is asking me to do it again.</h3><p>In the first instance it is worth talking to your line manager. Some courses expire and some have similar names. Face-to-face courses can take up to two weeks to appear on your record. If you took a face-to-face course more than two weeks ago and your training record doesn't reflect that please email <a href="mailto:Academy.Enquiries@bbc.co.uk"><strong>Academy Enquiries</strong>.</a></p><p>If you are being asked to complete an online course you believe to have already completed please check <a href="#faq8"><strong>here</strong></a>.</p><h3>What mandatory training do I need to do?</h3><p>Unfortunately the Academy is unable to assess individual’s mandatory training requirements, as that task needs to be done by line managers with a detailed knowledge of each individual’s role. However the advice below is consistent for all staff, and includes links to further information.<u></u><u></u></p><p>All BBC staff must attain the<strong>&nbsp;<a href="http://academy.gateway.bbc.co.uk/courses/data-protection-2013-mandatory/13097" target="_blank">Data Protection 2013 - Mandatory</a></strong>&nbsp;and either&nbsp;<a href="http://academy.gateway.bbc.co.uk/courses/safety-at-work-2014/13204" target="_blank"><strong>Safety at Work 2014</strong></a>,&nbsp;for those who are mostly office based, or&nbsp;<a href="http://academy.gateway.bbc.co.uk/courses/production-safety-2014/13164" target="_blank"><strong>Production Safety 2014</strong></a>, for those who work mostly on a production but don’t manage safety or write/approve risk assessments. In addition, anyone on their first contract with the BBC of six months or more must also attend the BBC induction Upfront.</p><p>Then, dependent on role, anyone joining the BBC or moving to a new role may need to complete additional training. Their line manager should be able to discuss this with them, based on the criteria for attendance. <a href="http://academy.gateway.bbc.co.uk/MandatoryTraining/About" target="_blank"><strong>Further information about mandatory training</strong></a>, including lists of current SuperUsers.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq2">
+                    <h2 class="accordion__link__question-heading">Some courses I had in the old system didn't transfer over</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>Due to the differences in the way the current systems and myDevelopment work, it was only possible to migrate data of any <strong>completed</strong> online courses into the new system.</p><p>Any classroom or online courses you completed in the past five years have been migrated from the existing learning system into myDevelopment. In addition, all completed mandatory courses that do not expire will be migrated, regardless of when they were completed.</p><p>All partially completed online courses had to be finished by 3 September 2015 in order for them to be transferred across to the new system as complete. Any progress would have been lost and the course will need to be started again from the very beginning. If you had any incomplete mandatory courses you would have been directly emailed that this event would occur.</p><p>Only data for completed online courses for the past five years was imported into the new system. In addition, all completed mandatory courses that do not expire were migrated, regardless of when they were completed. If this does not answer your query please contact the <a href="mailto:Academy.Enquiries@bbc.co.uk"><strong>Academy helpdesk</strong></a>, providing your network login ID and staff number.</p><p>If you believe some online records, such as those for contractors, should have been transferred over please contact <a href="mailto:Academy.Enquiries@bbc.co.uk"><strong>academy.enquiries@bbc.co.uk</strong></a>.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq3">
+                    <h2 class="accordion__link__question-heading">How do I cancel a course?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p><strong>Access requirements:</strong></p><p>We wish to make all of our courses and events as accessible and inclusive as possible.</p><p>If you have any access requirements, please contact us before the course/event - preferably at or before the time of booking.  We will discuss with you the venue, timings, content and any equipment or materials that will be used during the course/event, and agree any adjustments that can be made to meet your specific requirements.</p><p style="border-top:1px solid #cdc9c2;"><br><strong>Course cancellations:</strong></p><p>You must contact your Line Manager or Training Authoriser if you have to cancel your place or are unable to attend on the day of a course/event. Most training is funded centrally by the BBC and no charge is made to individual departments.  However, in the event of late cancellations and non-attendance, a charge will be made to individual departments on the following basis:</p><ul class="list--outside"><li>Cancellations made more than two weeks before the first day of the course incur no charge</li><li>Cancellations made in the two weeks before the first day of the course will incur a charge of 50% of the course fee</li><li>Cancellations made on the first day of the course, or failure to attend, will be charged at the full cost of the course</li></ul><p><strong>Substitute delegates:</strong></p><p>Substitute delegates will be accepted at any time and in such circumstances, no cancellation charge will be made.</p><p><strong>Waitlist Bookings:</strong></p><p>If you have been added to a waiting list for a place on a  training course, a place may become available for you at any time between the  time of your wait list request and the day before the course. If a place  becomes available a booking will be automatically made for you.</p><p>If you do not attend, or cancel less than two weeks before the start of the  course, a charge will be made to your department's cost centre. You can  cancel your waitlist booking on myDevelopment at any point if you can no longer  attend on that date or if the training is no longer required.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq4">
+                    <h2 class="accordion__link__question-heading">Are there any training / helpcards  available?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>There are a number of different online modules of training available as well as numerous helpcards. Here is the <a href="http://academy.gateway.bbc.co.uk/courses/mydevelopment-user-guide/13665" target="_blank"><strong>training material</strong></a>.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq5">
+                    <h2 class="accordion__link__question-heading">What do I need to access myDevelopment?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>For a member of public service BBC staff, once you are connected to the BBC network you will automatically be signed into the system using your network login credentials.</p><p>For freelancers, you will need to use a login and password. These will be provided to you once your line manager has requested them.</p><p>BBC Worldwide manages its own mandatory training through W:People. If you have any questions around mandatory training in BBC Worldwide, please contact <a href="mailto:wpeople@bbc.com"><strong>wpeople@bbc.com</strong></a>.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq6">
+                    <h2 class="accordion__link__question-heading">Locations, cancellations and costs.</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <h3>Locations</h3><p>Training takes place at BBC offices in London (New Broadcasting House, Old Broadcasting House and the Broadcast Centre), Wood Norton, Salford and other regional BBC offices. You can find travel directions for all of these locations on the <a href="http://explore.gateway.bbc.co.uk/workplace/workplace/findabuilding.aspx"><strong>BBC Workplace</strong></a> website. The site also provides maps and local area information. If you require accommodation and/or travel arrangements for your training you can book this yourself through <a href="http://explore.gateway.bbc.co.uk/GatewayCMS03Live/buybookorder.aspx"><strong>Gateway</strong></a>.</p><h3>Cancellations</h3><p>For most courses, cancellations made more than two weeks prior to the course date incur no charge. Cancellations made in the last two weeks before the course date will incur a 50% course fee. Late cancellations or non-attendance on the day will be charged at the full course fee.</p><p>In both cases, if a substitute delegate is provided the cancellation fee will be waived. Courses are not confirmed until you have received a confirmation email and the Academy will not be liable for any travel or other expenses booked prior to this.</p><h3>Costs</h3><p>Training is free for licence fee-funded divisions, whereas non-licence-funded departments, commercial subsidiaries and charities are charged for their training. We are obliged by the BBC’s Fair Trading Guidelines to charge at commercial rates which will comprise the internal course cost plus an overhead and a margin.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq7">
+                    <h2 class="accordion__link__question-heading">Can freelancers attend BBC training courses?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>In some circumstances it is appropriate for the BBC to train freelancers. Please email the <strong><a href="mailto:Academy.Enquiries@bbc.co.uk">Academy Enquiries</a></strong> team with details of the request.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq8">
+                    <h2 class="accordion__link__question-heading">Who approves my bookings?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>During the booking process you are able to see who will authorise your booking. If you are still awaiting approval you should contact them. If they are unavailable, you may re-submit your booking request to another authoriser in the list.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq9">
+                    <h2 class="accordion__link__question-heading">I've finished, so why isn't my online course showing as completed?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>Online courses have multiple sections. It is most likely something hasn't been completed. Please check your contents/progress menu in top right corner of your online course menu. Every section that is complete will have a tick next to it. You will have a pop-up message on your screen when you have completed every section.</p><p>If every section is marked as complete, have a look at your training history on myDevelopment to see if your course appears. It might be worth refreshing the page by clicking the refresh button on your browser, or by pressing F5 on your keyboard. If your status doesn't update, call our helpdesk for assistance. Internal: 0819191 or External: 0303 081 9191.</p><p>It is worth noting that some courses expire and some have similar names or get updated, so please check the course you are being asked to complete is the correct one.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq10">
+                    <h2 class="accordion__link__question-heading">How do we use your training records?</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>Face-to-face and online training course records are stored on myDevelopment. These records are available to managers, admin teams and other internal staff who use the records to ensure that you have completed mandatory training.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq11">
+                    <h2 class="accordion__link__question-heading">My online course isn't working.</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <p>If the course hasn't appeared then it is most likely your pop-up blocker is stopping it from showing. If you disable your pop-up blocker and then press the 'launch again' button at the bottom of the online tracking page your course should appear.</p><p>Links on how to do this can be found on the online tracking page and a guide on how to do this in Google Chrome can be found in the answer to Question 1 <a href="http://academy.gateway.bbc.co.uk/content/mydevelopmenthelp" target="_blank"><strong>here</strong></a>.</p><p>Some online modules, like 'Editorial Standards', contain Flash content. If you're prompted to download or install a newer version of the Flash Player ignore these messages and contact IT Support on ext 0440 for assistance.</p><p>You might also see a white box on your screen where you expected to see content. This is a problem relating to the version of the Flash Player installed on your PC. It's easy to fix but you need to contact IT Support on ext 0440 to do this.</p><p>If your course is up and running but one or more videos are not playing, try closing down all course-related content and open it up again. Streaming videos rely on a constant internet connection and can break if there are any fluctuations in this.</p>
+                    </div>
+                </li>
+                <li class="accordion__item">
+                    <a class="accordion__link istats-notrack" href="#" id="faq12">
+                    <h2 class="accordion__link__question-heading">Contact us</h2>
+                    <span class="accordion__link__icon">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-down"></use></svg>
+                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]-->
+                    </span>
+                    </a>
+                    <div class="accordion__answer" tabindex="-1">
+                        <h3>Issues with myDevelopment:</h3><p><strong>Including:</strong></p><ul class="list--outside"><li>You are unable to login or access myDevelopment</li><li>How to use myDevelopment</li><li>Issues with your myDevelopment profile (e.g. line manager or authoriser issues)</li><li>To request custom reports</li></ul><p></p><p>Please contact: <strong><a href="mailto:bbchr@bbc.co.uk">bbchr@bbc.co.uk</a></strong></p><hr><br><p>Having issues completing online courses?</p><p>Cant find the course you are looking for?</p><p>Got a general enquiry?</p><p>If you would like to get in touch you can email us at:<strong><a href="mailto:academy.enquiries@bbc.co.uk">Academy.Enquiries@bbc.co.uk</a></strong></p><p>Alternatively you can call us on:<strong> 0819191 (internal)   /  0303 081 9191 (external)</strong></p><hr><br><p>If possible please supply your <strong>Staff number</strong> and your <strong>Login ID</strong> when contacting us.</p>
+                    </div>
+                </li>
+    </ul>
+
+</div>
+```
+
+NUNJUKS
+
+```
+<div class="accordion">
+    <ul class="accordion__list">
+    {% for item in faqs %}
+        <li class="accordion__item">
+            <a class="accordion__link istats-notrack" href="#" id="{{ item.id }}">
+            <h2 class="accordion__link__question-heading">{{ item.question }}</h2><span class="accordion__link__icon"><svg>
+            <use xlink:href="#gel-icon-down"></use></svg> <noscript><img alt="media icon" class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png"></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-down-white.png" alt="media icon"/><![endif]--></span></a>
+            <div class="accordion__answer" tabindex="-1">
+                {{ item.answer | safe }}
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+```
+
+*/

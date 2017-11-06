@@ -1,0 +1,407 @@
+/* ==========================================================================
+   BASE herousel STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.herousel {
+    display: block;
+    margin: 0;
+
+    & + .wrapper {
+        margin-top: quadruple($gel-spacing-unit);
+    }
+
+    //* =======================ELEMENT
+    &__list {
+        margin: 0;
+        list-style: none;
+    }
+    &__item {
+        &.slick-slide {
+            @include transform(scale(1));
+            width: 298px;
+        }
+
+        &.slick-active {
+            .card__tags {
+                transition-delay: .5s;
+                opacity: 1;
+                bottom: 36px;
+            }
+            .card__heading {
+                transition-delay: .4s;
+                opacity: 1;
+                bottom: 8px;
+            }
+            .card__data__wrapper {
+                transition-delay: .4s;
+                opacity: 1;
+                bottom: 8px;
+                margin: 0;
+            }
+        }
+
+        &.slick-cloned {
+        }
+
+        &.slick-next {
+        }
+
+        &.slick-center {
+            .herousel__item__wrapper {
+                @include transition(all .6s ease-in-out);
+                @include transform(scale(1));
+
+                .herousel__item__darken {
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &__darken {
+            @include transition(all .6s ease-in-out);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: palette(shades, black);
+            opacity: 0.7;
+            z-index: 2;
+        }
+        
+        .card {
+            @include transition(all .6s ease-in-out);
+            margin-bottom: 0;
+
+            &:hover {
+                .card__heading {
+                    color: palette(shades, white);
+                }
+            }
+        }
+
+        .card__inner {
+            position: relative;
+            float: left;
+            width: 100%;
+        }
+
+        .card__tags {
+            @include transition(all .3s ease-in-out);
+            @extend .h4;
+            position: absolute;
+            opacity: 0;
+            bottom: 10px;
+            left: 0;
+            font-weight: normal;
+            z-index: 2;
+            color: palette(shades, white);
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .card__heading {
+            @include transition(all .4s ease-in-out);
+            @extend .h2;
+            color: white;
+            position: absolute;
+            opacity: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            margin: 0;
+            max-width: 95%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .card__data__wrapper {
+            @include transition(all .4s ease-in-out);
+            position: absolute;
+            opacity: 0;
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+        }
+
+        .card__date {
+            color: palette(shades, white);
+        }
+
+        .card__tag a {
+           color: palette(shades, white);
+        }
+
+        .data__icon__svg svg {
+            fill: palette(shades, white);
+        }
+
+        .card__media {
+            width: 100%;
+            z-index: 0;
+
+            figure {
+                @include gradientOverlayBottom();
+                padding-bottom: 60%;
+            }
+        }
+
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        width: quadruple($gel-spacing-unit);
+        height: quadruple($gel-spacing-unit);
+        background-color: palette(shades, white);
+        border: none;
+        z-index: 4;
+
+        &:hover {
+            .herousel__button__icon__svg {
+                svg {
+                    fill: palette(brand, a);
+                }
+            }
+        }
+
+        &__icon {
+            @extend .icon;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: quadruple($gel-spacing-unit);
+            height: quadruple($gel-spacing-unit);
+
+            &__svg {
+                @extend .icon__svg;
+                padding: 0 8px;
+                
+                svg {
+                    fill: palette(brand, a);
+                }
+            }
+        }
+
+        &--next {
+            @extend .herousel__button;
+            right: 7px;
+        }
+        &--prev {
+            @extend .herousel__button;
+            right: 42px;
+        }
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(mc, min-width) {
+        &__item {
+            &.slick-slide {
+                width: 380px;
+            }
+        }
+    }
+
+    @include bp(xs, min-width) {
+        &__item {
+            &.slick-slide {
+                width: 448px;
+            }
+            &.slick-active {
+                .card__tags {
+                    bottom: 36px;
+                }
+                .card__heading {
+                    bottom: 8px;
+                }
+            }
+        }
+    }
+
+    @include bp(s, min-width, portrait) {
+        margin: 0;
+        
+        &__item {
+            &.slick-slide {
+                width: 735px;
+            }
+            &.slick-active {
+                .card__tags {
+                    bottom: 56px;
+                }
+                .card__heading {
+                    bottom: 16px;
+                }
+                .card__data__wrapper {
+                    bottom: 28px;
+                }
+            }
+            .card__tags {
+                bottom: 40px;
+                left: 0;
+            }
+
+            .card__heading {
+                left: 0;
+            }
+            .card__data__wrapper {
+                bottom: 28px;
+            }
+            .card__media {
+                figure {
+                    padding-bottom: 42%;
+                }
+            }
+        }
+
+        &__button {
+            margin-top: quadruple(-$gel-spacing-unit);
+            width: 64px;
+            height: 64px;
+
+            &__icon {
+                width: 64px;
+                height: 64px;
+
+                &__svg {
+                    padding: double($gel-spacing-unit);
+                }
+            }
+
+            &--next {
+                right: 21px;
+            }
+            &--prev {
+                right: 92px;
+            }
+        }
+    }
+
+    @include bp(m, min-width, true) {
+        &__item {
+            &.slick-slide {
+                width: 976px;
+            }
+            &.slick-active {
+                .card__tags {
+                    bottom: 56px;
+                }
+                .card__heading {
+                    bottom: 16px;
+                }
+                .card__data__wrapper {
+                    bottom: 28px;
+                }
+            }
+        }
+    }
+
+    @include bp(l, min-width) {
+        &__item {
+            &.slick-slide {
+                width: 1248px;
+            }
+        }
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Herousel
+category: Modules - Herousel
+---
+
+Module description goes here
+
+```html_example
+<div class="herousel">
+    <ul class="herousel__list js-herousel">
+
+        <li class="herousel__item">
+            <div class="herousel__item__wrapper">
+                <div class="herousel__item__darken"></div>
+                <div class="card">
+                    <a href="#" class="card__media-link">
+                        <div class="card__inner">
+                            <span class="card__tags">Featured</span>
+                            <h2 class="card__heading">Herousel item 1</h2>
+                            <div class="card__media">
+                                <figure>
+                                    <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p04lx2mq.jpg" alt="" onerror="this.style.display='none'">
+                                    <figcaption class="icon__caption">Herousel item 1</figcaption>
+                                </figure>
+                            </div>
+                            <!-- End Card Media. -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- End Hero item card. -->
+        </li>
+
+        <li class="herousel__item">
+            <div class="herousel__item__wrapper">
+                <div class="herousel__item__darken"></div>
+                <div class="card">
+                    <a href="#" class="card__media-link">
+                        <div class="card__inner">
+                            <span class="card__tags">Featured</span>
+                            <h2 class="card__heading">Herousel item 2</h2>
+                            <div class="card__media">
+                                <figure>
+                                    <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p044zptd.jpg" alt="" onerror="this.style.display='none'">
+                                    <figcaption class="icon__caption">Herousel item 2</figcaption>
+                                </figure>
+                            </div>
+                            <!-- End Card Media. -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- End Hero item card. -->
+        </li>
+
+        <li class="herousel__item">
+            <div class="herousel__item__wrapper">
+                <div class="herousel__item__darken"></div>
+                <div class="card">
+                    <a href="#" class="card__media-link">
+                        <div class="card__inner">
+                            <span class="card__tags">Featured</span>
+                            <h2 class="card__heading">Herousel item 3</h2>
+                            <div class="card__media">
+                                <figure>
+                                    <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p044rzd7.jpg" alt="" onerror="this.style.display='none'">
+                                    <figcaption class="icon__caption">Herousel item 3</figcaption>
+                                </figure>
+                            </div>
+                            <!-- End Card Media. -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- End Hero item card. -->
+        </li>
+
+    </ul>
+</div>
+```
+
+NUNJUKS
+
+```
+
+```
+
+*/

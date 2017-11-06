@@ -1,0 +1,206 @@
+/* ==========================================================================
+   BASE A to Z FILTER STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.azfilter {
+    margin-bottom: quadruple($gel-spacing-unit);
+    padding: double($gel-spacing-unit) 0 0;
+    background-color: palette(brand, f);
+
+    //* =======================ELEMENT
+    &__wrapper {
+        @extend .wrapper;
+    }
+
+    &__row {
+        @extend .row;
+    }
+
+    &__col {
+        @extend .col;
+    }
+
+    &__heading {
+        font-weight: normal;
+        display: block;
+        color: palette(shades, white);
+        margin-bottom: double($gel-spacing-unit);
+        margin-top: 0;
+    }
+
+    &__list {
+        @extend .row;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        @extend .col;
+        width: gel-columns(1, 7);
+        margin-bottom: $gel-spacing-unit;
+    }
+
+    &__button {
+        width: 100%;
+        padding: $gel-spacing-unit 0;
+        color: palette(shades, white);
+        border: none;
+        background-color: palette(brand, a);
+        font-weight: normal;
+        text-align: center;
+
+        &:hover, &:focus, &.active {
+            color: palette(brand, a);
+            background-color: palette(brand, h);
+        }
+
+        &:disabled {
+            color: palette(type, grey);
+            background-color: palette(brand, f);
+            cursor: not-allowed;
+
+            &:hover {
+                color: palette(type, grey);
+            }
+        }
+    }
+
+    &__char {
+        outline: none;
+        margin-bottom: $gel-spacing-unit;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+    }
+
+    @include bp(s, min-width, portrait) {
+        padding: quadruple($gel-spacing-unit) 0;
+    }
+
+    @include bp(m, min-width) {
+        &__item {
+            width: gel-columns(1, 14);
+        }
+    }
+
+    @include bp(l, min-width) {
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: A-Z Filter
+category: Modules - A-Z Filter
+---
+
+Module description goes here
+
+```html_example
+<section class="azfilter">
+    <h6 class="sr-only">Filter courses by A-Z</h6>
+    <div class="azfilter__wrapper">
+        <div class="azfilter__row">
+            <div class="azfilter__col">
+                <h1 class="azfilter__heading">Courses A to Z</h1>
+                <form>
+                    <ul id="azfilter__list" class="azfilter__list">
+                        <li class="azfilter__item">
+                            <button type="button" href="#a" class="azfilter__button"><span class="sr-only"> Go to letter </span>A</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#b" class="azfilter__button"><span class="sr-only"> Go to letter </span>B</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#c" class="azfilter__button"><span class="sr-only"> Go to letter </span>C</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#d" class="azfilter__button"><span class="sr-only"> Go to letter </span>D</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#e" class="azfilter__button"><span class="sr-only"> Go to letter </span>E</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#f" class="azfilter__button"><span class="sr-only"> Go to letter </span>F</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#g" class="azfilter__button"><span class="sr-only"> Go to letter </span>G</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#h" class="azfilter__button"><span class="sr-only"> Go to letter </span>H</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#i" class="azfilter__button"><span class="sr-only"> Go to letter </span>I</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#j" class="azfilter__button"><span class="sr-only"> Go to letter </span>J</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#" class="azfilter__button" disabled="disabled" tabindex="-1"><span class="sr-only"> Go to letter </span>K</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#l" class="azfilter__button"><span class="sr-only"> Go to letter </span>L</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#m" class="azfilter__button"><span class="sr-only"> Go to letter </span>M</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#n" class="azfilter__button"><span class="sr-only"> Go to letter </span>N</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#o" class="azfilter__button"><span class="sr-only"> Go to letter </span>O</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#p" class="azfilter__button"><span class="sr-only"> Go to letter </span>P</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#q" class="azfilter__button"><span class="sr-only"> Go to letter </span>Q</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#r" class="azfilter__button"><span class="sr-only"> Go to letter </span>R</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#s" class="azfilter__button"><span class="sr-only"> Go to letter </span>S</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#t" class="azfilter__button"><span class="sr-only"> Go to letter </span>T</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#u" class="azfilter__button"><span class="sr-only"> Go to letter </span>U</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#v" class="azfilter__button"><span class="sr-only"> Go to letter </span>V</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#w" class="azfilter__button"><span class="sr-only"> Go to letter </span>W</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#x" class="azfilter__button" disabled="disabled" tabindex="-1"><span class="sr-only"> Go to letter </span>X</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#y" class="azfilter__button" disabled="disabled" tabindex="-1"><span class="sr-only"> Go to letter </span>Y</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#z" class="azfilter__button" disabled="disabled" tabindex="-1"><span class="sr-only"> Go to letter </span>Z</button>
+                        </li>
+                        <li class="azfilter__item">
+                            <button type="button" href="#1" class="azfilter__button"><span class="sr-only"> Go to numbers </span>0-9</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+*/

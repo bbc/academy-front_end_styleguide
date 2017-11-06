@@ -1,0 +1,35 @@
+/* ==========================================================================
+   BASE CODE STYLES
+   ========================================================================== */
+
+
+//* ===========================BLOCK
+pre {
+    padding: double($gel-spacing-unit);
+    background-color: palette(brand, e);
+    margin: quadruple($gel-spacing-unit) 0;
+
+    code {
+        @extend #{gel(brevier)};
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        color: palette(shades, white);
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Pre code 
+category: Core - Code
+---
+```html_example
+<pre>
+    <code>
+        Jack:   Hello. How are you?
+        Jill:   I'm great.  Thanks for asking.
+    </code>
+</pre>
+```
+*/

@@ -1,0 +1,174 @@
+#academy-beta-overlay a, #academy-beta-overlay abbr, #academy-beta-overlay acronym, #academy-beta-overlay address, #academy-beta-overlay applet, #academy-beta-overlay article, #academy-beta-overlay aside, #academy-beta-overlay audio, #academy-beta-overlay b, #academy-beta-overlay big, #academy-beta-overlay blockquote, #academy-beta-overlay canvas, #academy-beta-overlay caption, #academy-beta-overlay center, #academy-beta-overlay cite, #academy-beta-overlay code, #academy-beta-overlay dd, #academy-beta-overlay del, #academy-beta-overlay details, #academy-beta-overlay dfn, #academy-beta-overlay div, #academy-beta-overlay dl, #academy-beta-overlay dt, #academy-beta-overlay em, #academy-beta-overlay embed, #academy-beta-overlay fieldset, #academy-beta-overlay figcaption, #academy-beta-overlay figure, #academy-beta-overlay footer, #academy-beta-overlay form, #academy-beta-overlay h1, #academy-beta-overlay h2, #academy-beta-overlay h3, #academy-beta-overlay h4, #academy-beta-overlay h5, #academy-beta-overlay h6, #academy-beta-overlay header, #academy-beta-overlay hgroup, #academy-beta-overlay i, #academy-beta-overlay iframe, #academy-beta-overlay img, #academy-beta-overlay ins, #academy-beta-overlay kbd, #academy-beta-overlay label, #academy-beta-overlay legend, #academy-beta-overlay li, #academy-beta-overlay mark, #academy-beta-overlay menu, #academy-beta-overlay nav, #academy-beta-overlay object, #academy-beta-overlay ol, #academy-beta-overlay output, #academy-beta-overlay p, #academy-beta-overlay pre, #academy-beta-overlay q, #academy-beta-overlay ruby, #academy-beta-overlay s, #academy-beta-overlay samp, #academy-beta-overlay section, #academy-beta-overlay small, #academy-beta-overlay span, #academy-beta-overlay strike, #academy-beta-overlay strong, #academy-beta-overlay sub, #academy-beta-overlay summary, #academy-beta-overlay sup, #academy-beta-overlay table, #academy-beta-overlay tbody, #academy-beta-overlay td, #academy-beta-overlay tfoot, #academy-beta-overlay th, #academy-beta-overlay thead, #academy-beta-overlay time, #academy-beta-overlay tr, #academy-beta-overlay tt, #academy-beta-overlay u, #academy-beta-overlay ul, #academy-beta-overlay var, #academy-beta-overlay video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, freesans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.2;
+    text-align: left;
+    vertical-align: baseline;
+}
+#academy-beta-overlay article, #academy-beta-overlay aside, #academy-beta-overlay details, #academy-beta-overlay figcaption, #academy-beta-overlay figure, #academy-beta-overlay footer, #academy-beta-overlay header, #academy-beta-overlay hgroup, #academy-beta-overlay menu, #academy-beta-overlay nav, #academy-beta-overlay section {
+    display: block;
+}
+#academy-beta-overlay ol, #academy-beta-overlay ul {
+    list-style: none;
+}
+#academy-beta-overlay blockquote, #academy-beta-overlay q {
+    quotes: none;
+}
+#academy-beta-overlay blockquote:after, #academy-beta-overlay blockquote:before, #academy-beta-overlay q:after, #academy-beta-overlay q:before {
+    content: '';
+    content: none;
+}
+#academy-beta-overlay table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#academy-beta-overlay {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #353535;
+    background-color: rgba(53, 53, 53, .9);
+    font-family: Arial, Helvetica, freesans, sans-serif;
+    color: #fff;
+}
+#academy-beta-overlay a, #academy-beta-overlay button {
+    cursor: pointer;
+}
+#academy-beta-overlay .beta__layout {
+    box-sizing: border-box;
+    max-width: 976px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 0;
+    position: relative;
+    overflow: hidden;
+}
+@media (max-width:1008px) {
+    #academy-beta-overlay .beta__layout {
+    padding: 16px;
+}
+}#academy-beta-overlay .beta__layout .beta__layout-item {
+    display: block;
+    float: left;
+}
+#academy-beta-overlay .beta__layout .beta__layout-item--info {
+    width: 55%}
+#academy-beta-overlay .beta__layout .beta__layout-item--info .beta__layout-item--info--container {
+    padding-right: 20px;
+}
+@media (max-width:599px) {
+    #academy-beta-overlay .beta__layout .beta__layout-item--info {
+    width: 100%;
+    margin-bottom: 16px;
+    padding-top: 4px;
+}
+}#academy-beta-overlay .beta__layout .beta__layout-item--controls {
+    position: absolute;
+    right: 20px;
+}
+@media (max-width:1008px) {
+    #academy-beta-overlay .beta__layout .beta__layout-item--controls {
+    right: 40px;
+}
+}@media (max-width:899px) {
+    #academy-beta-overlay .beta__layout .beta__layout-item--controls {
+    width: 36%}
+}@media (max-width:599px) {
+    #academy-beta-overlay .beta__layout .beta__layout-item--controls {
+    right: initial;
+    width: 100%;
+    position: relative;
+}
+}#academy-beta-overlay .beta__heading {
+    margin: 0 0 4px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+}
+#academy-beta-overlay .beta__info {
+    font-size: 16px;
+}
+#academy-beta-overlay .beta__info-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+#academy-beta-overlay button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#academy-beta-overlay .beta__button {
+    display: block;
+    float: left;
+    margin: 0;
+    border: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.2;
+    background-color: transparent;
+}
+#academy-beta-overlay .beta__button--blue {
+    background-color: #41AFDE;
+    color: #353535;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    border: 1px solid #41AFDE;
+    box-sizing: border-box;
+}
+#academy-beta-overlay .beta__button--border {
+    color: #fff;
+    border: 1px solid #fff;
+}
+@media (max-width:899px) {
+    #academy-beta-overlay .beta__button--blue {
+    margin-right: 0;
+}
+#academy-beta-overlay .beta__button {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+}
+}#academy-beta-overlay .button__icon {
+    background: url(../img/svg-fallbacks/survey_icon.png) center center no-repeat;
+    background: url(../img/svg/survey_icon.svg) center center no-repeat, linear-gradient(transparent, transparent);
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+#academy-beta-overlay .beta__dismiss {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+}
+#academy-beta-overlay .beta__dismiss .dismiss__icon {
+    background: url(../img/svg-fallbacks/x_icon.png) center center no-repeat;
+    background: url(../img/svg/x_icon.svg) center center no-repeat, linear-gradient(transparent, transparent);
+    background-size: contain;
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+#academy-beta-overlay.isbeta #back-to-old-button, #academy-beta-overlay.isbeta #survey-button, #academy-beta-overlay.isbeta .beta__dismiss {
+    display: block;
+}

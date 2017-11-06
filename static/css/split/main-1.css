@@ -1,0 +1,7397 @@
+.animated {
+  animation-duration: 4.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 4.5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 4.5s;
+  -moz-animation-fill-mode: both;
+  -moz-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 2s;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -moz-animation-name: pulse;
+  -moz-animation-duration: 2s;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+.event__speaker-copy .role,
+h6,
+p,
+.accordion__answer h3,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+figure,
+table,
+th,
+td,
+caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.event__speaker-copy .role,
+h6 {
+  font-weight: normal;
+}
+
+u,
+ins {
+  text-decoration: none;
+}
+
+ins {
+  border-bottom: 1px solid;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.gel-wrap {
+  max-width: 1008px;
+  margin: 0 auto;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+@media (min-width: 63em) {
+  .gel-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .lt-ie9 .gel-wrap {
+    width: 1008px;
+  }
+}
+
+.gel-layout {
+  margin-right: 0;
+  margin-left: -8px;
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+}
+
+@media (min-width: 37.5em) {
+  .gel-layout {
+    margin-left: -16px;
+  }
+}
+
+.opera-only :-o-prefocus,
+.gel-layout {
+  word-spacing: -0.43em;
+}
+
+.gel-layout__item {
+  width: 100%;
+  padding-left: 8px;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+
+@media (min-width: 37.5em) {
+  .gel-layout__item {
+    padding-left: 16px;
+  }
+}
+
+.gel-canon,
+h1,
+.h1,
+.hero__heading,
+.gel-canon-bold {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 32px;
+  line-height: 2rem;
+}
+
+.gel-canon-bold {
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -.0625rem;
+}
+
+.gel-trafalgar,
+h2,
+.h2,
+.page-title,
+.card--fullwidth .card__heading,
+.herousel__item .card__heading,
+.featured__item--main .card__body .card__heading,
+.search--block .search__input,
+.gel-trafalgar-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+.gel-trafalgar-bold {
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -.0625rem;
+}
+
+.gel-double-pica,
+h3,
+.h3,
+.sidebar .card--fullwidth .card__heading,
+.sidebar--left .card--fullwidth .card__heading,
+.sidebar--right .card--fullwidth .card__heading,
+.sidebar--article .card--fullwidth .card__heading,
+.sidebar--course .card--fullwidth .card__heading,
+.sub-title,
+.section__title,
+.section__title--nointro,
+.scroll-carousel__heading,
+.scroll-carousel__heading--nointro,
+.scroll-carousel-p__heading--nointro,
+.featured__heading,
+.collections__sections__menu,
+.collections__subheading,
+.language__heading,
+.scroll-carousel-p__heading,
+blockquote,
+blockquote p,
+blockquote .accordion__answer h3,
+.accordion__answer blockquote h3,
+.gel-double-pica-bold {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+
+.gel-double-pica-bold {
+  font-weight: bold;
+  letter-spacing: -1px;
+  letter-spacing: -.0625rem;
+}
+
+.gel-great-primer,
+h4,
+.h4,
+.sidebar__heading,
+.divider__message,
+.alert--charges .alert__heading,
+.card--panel .card__heading,
+.dates__date,
+.herousel__item .card__tags,
+.featured__item--sub .card__heading,
+.course__content blockquote p,
+.course__content blockquote .accordion__answer h3,
+.accordion__answer .course__content blockquote h3,
+.no-results__heading,
+.error-page__heading,
+.tabs__more,
+.scroll-carousel__available,
+.event__info-add .dates__time p,
+.event__info-add .dates__time .accordion__answer h3,
+.accordion__answer .event__info-add .dates__time h3,
+.event__info-add .dates__location p,
+.event__info-add .dates__location .accordion__answer h3,
+.accordion__answer .event__info-add .dates__location h3,
+.event__info .button p,
+.event__info .button--blue p,
+.event__info .button--orange p,
+.event__info .tabs__button p,
+.event__info .similar__button p,
+.event__info .featured__button p,
+.event__info .button--detection p,
+.event__info .button--404 p,
+.event__info .card__button p,
+.event__info .course__skip p,
+.event__info .dropdown__button p,
+.event__info .dates__button p,
+.event__info .pocket__button p,
+.event__info .no-js .nav--base__button p,
+.no-js .event__info .nav--base__button p,
+.event__info .button .accordion__answer h3,
+.accordion__answer .event__info .button h3,
+.event__info .button--blue .accordion__answer h3,
+.accordion__answer .event__info .button--blue h3,
+.event__info .button--orange .accordion__answer h3,
+.accordion__answer .event__info .button--orange h3,
+.event__info .tabs__button .accordion__answer h3,
+.accordion__answer .event__info .tabs__button h3,
+.event__info .similar__button .accordion__answer h3,
+.accordion__answer .event__info .similar__button h3,
+.event__info .featured__button .accordion__answer h3,
+.accordion__answer .event__info .featured__button h3,
+.event__info .button--detection .accordion__answer h3,
+.accordion__answer .event__info .button--detection h3,
+.event__info .button--404 .accordion__answer h3,
+.accordion__answer .event__info .button--404 h3,
+.event__info .card__button .accordion__answer h3,
+.accordion__answer .event__info .card__button h3,
+.event__info .course__skip .accordion__answer h3,
+.accordion__answer .event__info .course__skip h3,
+.event__info .dropdown__button .accordion__answer h3,
+.accordion__answer .event__info .dropdown__button h3,
+.event__info .dates__button .accordion__answer h3,
+.accordion__answer .event__info .dates__button h3,
+.event__info .pocket__button .accordion__answer h3,
+.accordion__answer .event__info .pocket__button h3,
+.event__info .no-js .nav--base__button .accordion__answer h3,
+.accordion__answer .event__info .no-js .nav--base__button h3,
+.no-js .event__info .nav--base__button .accordion__answer h3,
+.accordion__answer .no-js .event__info .nav--base__button h3,
+.scroll-carousel-p__available,
+.gel-great-primer-bold {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 22px;
+  line-height: 1.375rem;
+}
+
+.gel-great-primer-bold {
+  font-weight: bold;
+}
+
+.gel-pica,
+p,
+.accordion__answer h3,
+blockquote .attribution,
+.results-found,
+a,
+.link,
+a--blue,
+.link--blue,
+.alert--charges .alert__link,
+.alert--charges .alert__link--inline,
+.alert--charges .alert__link--back,
+.sidebar-left .page__tag a,
+.accordion__link__question-heading,
+table,
+.table,
+.alert,
+.alert__container,
+.alert--info,
+.alert--warning,
+.alert--error,
+.alert--success,
+.alert--noentry,
+.alert--charges,
+.alert__message,
+.alert__message--green,
+ul,
+.list,
+ul--simple,
+.list--simple,
+.dates__list,
+.collections__sections,
+.language__dropdown,
+.downloads__list,
+ul--outside,
+.list--outside,
+ul--notes,
+.list--notes,
+.search__input,
+.card__heading,
+.card__resources,
+.article__content,
+.article__section,
+.sidebar-left .page__tag,
+.course__content p,
+#vid-caption,
+.no-results__sub-heading,
+.error-page__sub-heading,
+.data__copy,
+.tabs__item,
+.tabs__link,
+.dates__spaces__title,
+.dates__spaces__title--full,
+.hero__description,
+.hero--homepage .hero__description,
+.accordion__list,
+.accordion__intro,
+.accordion__answer p,
+.language__change span,
+.event__speaker-copy .name,
+.no-js .video__player:after,
+.no-js span[data-type="BBC-PID"]:after,
+.no-js span[data-type="BBC-SID"]:after,
+.gel-pica-bold {
+  font-size: 15px;
+  font-size: .9375rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+
+.gel-pica-bold {
+  font-weight: bold;
+}
+
+.gel-long-primer,
+.nav__link,
+.language__selector__link,
+.detection__link,
+.card__description,
+.card__data__wrapper .card__date,
+.card__tag,
+.card__content-type,
+.dropdown__options .dropdown__item a,
+.language__change span,
+.downloads__name,
+.gel-long-primer-bold {
+  font-size: 15px;
+  font-size: .9375rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+}
+
+.gel-long-primer-bold {
+  font-weight: bold;
+}
+
+.gel-brevier,
+h5,
+.event__speaker-copy .role,
+.h5,
+.language__dropdown__link,
+.language__dropdown__link--close,
+h6,
+.h6,
+small,
+.small,
+.ratio__text,
+.sortby__label,
+pre code,
+ul__link,
+.list__link,
+.card__flag,
+.card__data,
+.card__data p,
+.card__data .accordion__answer h3,
+.accordion__answer .card__data h3,
+.card--collections .card__media-icon__tag,
+.no-results__link,
+.error-page__link,
+.dates__time p,
+.dates__time .accordion__answer h3,
+.accordion__answer .dates__time h3,
+.dates__location p,
+.dates__location .accordion__answer h3,
+.accordion__answer .dates__location h3,
+.dates__spaces__copy,
+.hero--collections .card__media-icon__tag,
+.content-block__description,
+.collections__sections__link,
+.gel-brevier-bold {
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 16px;
+  line-height: 1rem;
+}
+
+.gel-brevier-bold {
+  font-weight: bold;
+}
+
+.gel-minion,
+.grid__item,
+.colour__swatch,
+.colour__swatch--brand-a,
+.colour__swatch--brand-b,
+.colour__swatch--brand-c,
+.colour__swatch--brand-d,
+.colour__swatch--brand-e,
+.colour__swatch--brand-f,
+.colour__swatch--brand-g,
+.colour__swatch--brand-h,
+.colour__swatch--brand-i,
+.colour__swatch--white,
+.colour__swatch--lightergray,
+.colour__swatch--lightgray,
+.colour__swatch--gray,
+.colour__swatch--darkergray,
+.colour__swatch--darkgray,
+.colour__swatch--black,
+.colour__swatch--alert-info,
+.colour__swatch--alert-warning,
+.colour__swatch--alert-error,
+.colour__swatch--alert-success,
+.colour__copy,
+.video-p--duration,
+.video-p--tag,
+.gel-minion-bold {
+  font-size: 12px;
+  font-size: .75rem;
+  line-height: 16px;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.gel-minion-bold {
+  font-weight: bold;
+}
+
+.gel-articlebody,
+.article__content>p,
+.article__section>p,
+.accordion__answer .article__content>h3,
+.accordion__answer .article__section>h3 {
+  font-size: 15px;
+  font-size: .9375rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 25em) {
+  .gel-canon,
+  h1,
+  .h1,
+  .hero__heading,
+  .gel-canon-bold {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 36px;
+    line-height: 2.25rem;
+  }
+
+  .gel-trafalgar,
+  h2,
+  .h2,
+  .page-title,
+  .card--fullwidth .card__heading,
+  .herousel__item .card__heading,
+  .featured__item--main .card__body .card__heading,
+  .search--block .search__input,
+  .gel-trafalgar-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+
+  .gel-double-pica,
+  h3,
+  .h3,
+  .sidebar .card--fullwidth .card__heading,
+  .sidebar--left .card--fullwidth .card__heading,
+  .sidebar--right .card--fullwidth .card__heading,
+  .sidebar--article .card--fullwidth .card__heading,
+  .sidebar--course .card--fullwidth .card__heading,
+  .sub-title,
+  .section__title,
+  .section__title--nointro,
+  .scroll-carousel__heading,
+  .scroll-carousel__heading--nointro,
+  .scroll-carousel-p__heading--nointro,
+  .featured__heading,
+  .collections__sections__menu,
+  .collections__subheading,
+  .language__heading,
+  .scroll-carousel-p__heading,
+  blockquote,
+  blockquote p,
+  blockquote .accordion__answer h3,
+  .accordion__answer blockquote h3,
+  .gel-double-pica-bold {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+
+  .gel-great-primer,
+  h4,
+  .h4,
+  .sidebar__heading,
+  .divider__message,
+  .alert--charges .alert__heading,
+  .card--panel .card__heading,
+  .dates__date,
+  .herousel__item .card__tags,
+  .featured__item--sub .card__heading,
+  .course__content blockquote p,
+  .course__content blockquote .accordion__answer h3,
+  .accordion__answer .course__content blockquote h3,
+  .no-results__heading,
+  .error-page__heading,
+  .tabs__more,
+  .scroll-carousel__available,
+  .event__info-add .dates__time p,
+  .event__info-add .dates__time .accordion__answer h3,
+  .accordion__answer .event__info-add .dates__time h3,
+  .event__info-add .dates__location p,
+  .event__info-add .dates__location .accordion__answer h3,
+  .accordion__answer .event__info-add .dates__location h3,
+  .event__info .button p,
+  .event__info .button--blue p,
+  .event__info .button--orange p,
+  .event__info .tabs__button p,
+  .event__info .similar__button p,
+  .event__info .featured__button p,
+  .event__info .button--detection p,
+  .event__info .button--404 p,
+  .event__info .card__button p,
+  .event__info .course__skip p,
+  .event__info .dropdown__button p,
+  .event__info .dates__button p,
+  .event__info .pocket__button p,
+  .event__info .no-js .nav--base__button p,
+  .no-js .event__info .nav--base__button p,
+  .event__info .button .accordion__answer h3,
+  .accordion__answer .event__info .button h3,
+  .event__info .button--blue .accordion__answer h3,
+  .accordion__answer .event__info .button--blue h3,
+  .event__info .button--orange .accordion__answer h3,
+  .accordion__answer .event__info .button--orange h3,
+  .event__info .tabs__button .accordion__answer h3,
+  .accordion__answer .event__info .tabs__button h3,
+  .event__info .similar__button .accordion__answer h3,
+  .accordion__answer .event__info .similar__button h3,
+  .event__info .featured__button .accordion__answer h3,
+  .accordion__answer .event__info .featured__button h3,
+  .event__info .button--detection .accordion__answer h3,
+  .accordion__answer .event__info .button--detection h3,
+  .event__info .button--404 .accordion__answer h3,
+  .accordion__answer .event__info .button--404 h3,
+  .event__info .card__button .accordion__answer h3,
+  .accordion__answer .event__info .card__button h3,
+  .event__info .course__skip .accordion__answer h3,
+  .accordion__answer .event__info .course__skip h3,
+  .event__info .dropdown__button .accordion__answer h3,
+  .accordion__answer .event__info .dropdown__button h3,
+  .event__info .dates__button .accordion__answer h3,
+  .accordion__answer .event__info .dates__button h3,
+  .event__info .pocket__button .accordion__answer h3,
+  .accordion__answer .event__info .pocket__button h3,
+  .event__info .no-js .nav--base__button .accordion__answer h3,
+  .accordion__answer .event__info .no-js .nav--base__button h3,
+  .no-js .event__info .nav--base__button .accordion__answer h3,
+  .accordion__answer .no-js .event__info .nav--base__button h3,
+  .scroll-carousel-p__available,
+  .gel-great-primer-bold {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+
+  .gel-great-primer-bold {
+    letter-spacing: -1px;
+    letter-spacing: -.0625rem;
+  }
+
+  .gel-pica,
+  p,
+  .accordion__answer h3,
+  blockquote .attribution,
+  .results-found,
+  a,
+  .link,
+  a--blue,
+  .link--blue,
+  .alert--charges .alert__link,
+  .alert--charges .alert__link--inline,
+  .alert--charges .alert__link--back,
+  .sidebar-left .page__tag a,
+  .accordion__link__question-heading,
+  table,
+  .table,
+  .alert,
+  .alert__container,
+  .alert--info,
+  .alert--warning,
+  .alert--error,
+  .alert--success,
+  .alert--noentry,
+  .alert--charges,
+  .alert__message,
+  .alert__message--green,
+  ul,
+  .list,
+  ul--simple,
+  .list--simple,
+  .dates__list,
+  .collections__sections,
+  .language__dropdown,
+  .downloads__list,
+  ul--outside,
+  .list--outside,
+  ul--notes,
+  .list--notes,
+  .search__input,
+  .card__heading,
+  .card__resources,
+  .article__content,
+  .article__section,
+  .sidebar-left .page__tag,
+  .course__content p,
+  #vid-caption,
+  .no-results__sub-heading,
+  .error-page__sub-heading,
+  .data__copy,
+  .tabs__item,
+  .tabs__link,
+  .dates__spaces__title,
+  .dates__spaces__title--full,
+  .hero__description,
+  .hero--homepage .hero__description,
+  .accordion__list,
+  .accordion__intro,
+  .accordion__answer p,
+  .language__change span,
+  .event__speaker-copy .name,
+  .no-js .video__player:after,
+  .no-js span[data-type="BBC-PID"]:after,
+  .no-js span[data-type="BBC-SID"]:after,
+  .gel-pica-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
+
+  .gel-long-primer,
+  .nav__link,
+  .language__selector__link,
+  .detection__link,
+  .card__description,
+  .card__data__wrapper .card__date,
+  .card__tag,
+  .card__content-type,
+  .dropdown__options .dropdown__item a,
+  .language__change span,
+  .downloads__name,
+  .gel-long-primer-bold {
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+
+  .gel-brevier,
+  h5,
+  .event__speaker-copy .role,
+  .h5,
+  .language__dropdown__link,
+  .language__dropdown__link--close,
+  h6,
+  .h6,
+  small,
+  .small,
+  .ratio__text,
+  .sortby__label,
+  pre code,
+  ul__link,
+  .list__link,
+  .card__flag,
+  .card__data,
+  .card__data p,
+  .card__data .accordion__answer h3,
+  .accordion__answer .card__data h3,
+  .card--collections .card__media-icon__tag,
+  .no-results__link,
+  .error-page__link,
+  .dates__time p,
+  .dates__time .accordion__answer h3,
+  .accordion__answer .dates__time h3,
+  .dates__location p,
+  .dates__location .accordion__answer h3,
+  .accordion__answer .dates__location h3,
+  .dates__spaces__copy,
+  .hero--collections .card__media-icon__tag,
+  .content-block__description,
+  .collections__sections__link,
+  .gel-brevier-bold {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+
+  .gel-minion,
+  .grid__item,
+  .colour__swatch,
+  .colour__swatch--brand-a,
+  .colour__swatch--brand-b,
+  .colour__swatch--brand-c,
+  .colour__swatch--brand-d,
+  .colour__swatch--brand-e,
+  .colour__swatch--brand-f,
+  .colour__swatch--brand-g,
+  .colour__swatch--brand-h,
+  .colour__swatch--brand-i,
+  .colour__swatch--white,
+  .colour__swatch--lightergray,
+  .colour__swatch--lightgray,
+  .colour__swatch--gray,
+  .colour__swatch--darkergray,
+  .colour__swatch--darkgray,
+  .colour__swatch--black,
+  .colour__swatch--alert-info,
+  .colour__swatch--alert-warning,
+  .colour__swatch--alert-error,
+  .colour__swatch--alert-success,
+  .colour__copy,
+  .video-p--duration,
+  .video-p--tag,
+  .gel-minion-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+  .gel-articlebody,
+  .article__content>p,
+  .article__section>p,
+  .accordion__answer .article__content>h3,
+  .accordion__answer .article__section>h3 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .gel-canon,
+  h1,
+  .h1,
+  .hero__heading,
+  .gel-canon-bold {
+    font-size: 52px;
+    font-size: 3.25rem;
+    line-height: 56px;
+    line-height: 3.5rem;
+  }
+
+  .gel-trafalgar,
+  h2,
+  .h2,
+  .page-title,
+  .card--fullwidth .card__heading,
+  .herousel__item .card__heading,
+  .featured__item--main .card__body .card__heading,
+  .search--block .search__input,
+  .gel-trafalgar-bold {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+  }
+
+  .gel-double-pica,
+  h3,
+  .h3,
+  .sidebar .card--fullwidth .card__heading,
+  .sidebar--left .card--fullwidth .card__heading,
+  .sidebar--right .card--fullwidth .card__heading,
+  .sidebar--article .card--fullwidth .card__heading,
+  .sidebar--course .card--fullwidth .card__heading,
+  .sub-title,
+  .section__title,
+  .section__title--nointro,
+  .scroll-carousel__heading,
+  .scroll-carousel__heading--nointro,
+  .scroll-carousel-p__heading--nointro,
+  .featured__heading,
+  .collections__sections__menu,
+  .collections__subheading,
+  .language__heading,
+  .scroll-carousel-p__heading,
+  blockquote,
+  blockquote p,
+  blockquote .accordion__answer h3,
+  .accordion__answer blockquote h3,
+  .gel-double-pica-bold {
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+  }
+
+  .gel-great-primer,
+  h4,
+  .h4,
+  .sidebar__heading,
+  .divider__message,
+  .alert--charges .alert__heading,
+  .card--panel .card__heading,
+  .dates__date,
+  .herousel__item .card__tags,
+  .featured__item--sub .card__heading,
+  .course__content blockquote p,
+  .course__content blockquote .accordion__answer h3,
+  .accordion__answer .course__content blockquote h3,
+  .no-results__heading,
+  .error-page__heading,
+  .tabs__more,
+  .scroll-carousel__available,
+  .event__info-add .dates__time p,
+  .event__info-add .dates__time .accordion__answer h3,
+  .accordion__answer .event__info-add .dates__time h3,
+  .event__info-add .dates__location p,
+  .event__info-add .dates__location .accordion__answer h3,
+  .accordion__answer .event__info-add .dates__location h3,
+  .event__info .button p,
+  .event__info .button--blue p,
+  .event__info .button--orange p,
+  .event__info .tabs__button p,
+  .event__info .similar__button p,
+  .event__info .featured__button p,
+  .event__info .button--detection p,
+  .event__info .button--404 p,
+  .event__info .card__button p,
+  .event__info .course__skip p,
+  .event__info .dropdown__button p,
+  .event__info .dates__button p,
+  .event__info .pocket__button p,
+  .event__info .no-js .nav--base__button p,
+  .no-js .event__info .nav--base__button p,
+  .event__info .button .accordion__answer h3,
+  .accordion__answer .event__info .button h3,
+  .event__info .button--blue .accordion__answer h3,
+  .accordion__answer .event__info .button--blue h3,
+  .event__info .button--orange .accordion__answer h3,
+  .accordion__answer .event__info .button--orange h3,
+  .event__info .tabs__button .accordion__answer h3,
+  .accordion__answer .event__info .tabs__button h3,
+  .event__info .similar__button .accordion__answer h3,
+  .accordion__answer .event__info .similar__button h3,
+  .event__info .featured__button .accordion__answer h3,
+  .accordion__answer .event__info .featured__button h3,
+  .event__info .button--detection .accordion__answer h3,
+  .accordion__answer .event__info .button--detection h3,
+  .event__info .button--404 .accordion__answer h3,
+  .accordion__answer .event__info .button--404 h3,
+  .event__info .card__button .accordion__answer h3,
+  .accordion__answer .event__info .card__button h3,
+  .event__info .course__skip .accordion__answer h3,
+  .accordion__answer .event__info .course__skip h3,
+  .event__info .dropdown__button .accordion__answer h3,
+  .accordion__answer .event__info .dropdown__button h3,
+  .event__info .dates__button .accordion__answer h3,
+  .accordion__answer .event__info .dates__button h3,
+  .event__info .pocket__button .accordion__answer h3,
+  .accordion__answer .event__info .pocket__button h3,
+  .event__info .no-js .nav--base__button .accordion__answer h3,
+  .accordion__answer .event__info .no-js .nav--base__button h3,
+  .no-js .event__info .nav--base__button .accordion__answer h3,
+  .accordion__answer .no-js .event__info .nav--base__button h3,
+  .scroll-carousel-p__available,
+  .gel-great-primer-bold {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+
+  .gel-pica,
+  p,
+  .accordion__answer h3,
+  blockquote .attribution,
+  .results-found,
+  a,
+  .link,
+  a--blue,
+  .link--blue,
+  .alert--charges .alert__link,
+  .alert--charges .alert__link--inline,
+  .alert--charges .alert__link--back,
+  .sidebar-left .page__tag a,
+  .accordion__link__question-heading,
+  table,
+  .table,
+  .alert,
+  .alert__container,
+  .alert--info,
+  .alert--warning,
+  .alert--error,
+  .alert--success,
+  .alert--noentry,
+  .alert--charges,
+  .alert__message,
+  .alert__message--green,
+  ul,
+  .list,
+  ul--simple,
+  .list--simple,
+  .dates__list,
+  .collections__sections,
+  .language__dropdown,
+  .downloads__list,
+  ul--outside,
+  .list--outside,
+  ul--notes,
+  .list--notes,
+  .search__input,
+  .card__heading,
+  .card__resources,
+  .article__content,
+  .article__section,
+  .sidebar-left .page__tag,
+  .course__content p,
+  #vid-caption,
+  .no-results__sub-heading,
+  .error-page__sub-heading,
+  .data__copy,
+  .tabs__item,
+  .tabs__link,
+  .dates__spaces__title,
+  .dates__spaces__title--full,
+  .hero__description,
+  .hero--homepage .hero__description,
+  .accordion__list,
+  .accordion__intro,
+  .accordion__answer p,
+  .language__change span,
+  .event__speaker-copy .name,
+  .no-js .video__player:after,
+  .no-js span[data-type="BBC-PID"]:after,
+  .no-js span[data-type="BBC-SID"]:after,
+  .gel-pica-bold {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+
+  .gel-long-primer,
+  .nav__link,
+  .language__selector__link,
+  .detection__link,
+  .card__description,
+  .card__data__wrapper .card__date,
+  .card__tag,
+  .card__content-type,
+  .dropdown__options .dropdown__item a,
+  .language__change span,
+  .downloads__name,
+  .gel-long-primer-bold {
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
+
+  .gel-brevier,
+  h5,
+  .event__speaker-copy .role,
+  .h5,
+  .language__dropdown__link,
+  .language__dropdown__link--close,
+  h6,
+  .h6,
+  small,
+  .small,
+  .ratio__text,
+  .sortby__label,
+  pre code,
+  ul__link,
+  .list__link,
+  .card__flag,
+  .card__data,
+  .card__data p,
+  .card__data .accordion__answer h3,
+  .accordion__answer .card__data h3,
+  .card--collections .card__media-icon__tag,
+  .no-results__link,
+  .error-page__link,
+  .dates__time p,
+  .dates__time .accordion__answer h3,
+  .accordion__answer .dates__time h3,
+  .dates__location p,
+  .dates__location .accordion__answer h3,
+  .accordion__answer .dates__location h3,
+  .dates__spaces__copy,
+  .hero--collections .card__media-icon__tag,
+  .content-block__description,
+  .collections__sections__link,
+  .gel-brevier-bold {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+
+  .gel-minion,
+  .grid__item,
+  .colour__swatch,
+  .colour__swatch--brand-a,
+  .colour__swatch--brand-b,
+  .colour__swatch--brand-c,
+  .colour__swatch--brand-d,
+  .colour__swatch--brand-e,
+  .colour__swatch--brand-f,
+  .colour__swatch--brand-g,
+  .colour__swatch--brand-h,
+  .colour__swatch--brand-i,
+  .colour__swatch--white,
+  .colour__swatch--lightergray,
+  .colour__swatch--lightgray,
+  .colour__swatch--gray,
+  .colour__swatch--darkergray,
+  .colour__swatch--darkgray,
+  .colour__swatch--black,
+  .colour__swatch--alert-info,
+  .colour__swatch--alert-warning,
+  .colour__swatch--alert-error,
+  .colour__swatch--alert-success,
+  .colour__copy,
+  .video-p--duration,
+  .video-p--tag,
+  .gel-minion-bold {
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+  .gel-articlebody,
+  .article__content>p,
+  .article__section>p,
+  .accordion__answer .article__content>h3,
+  .accordion__answer .article__section>h3 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+
+  .n-no-touchevents .gel-canon,
+  .n-no-touchevents h1,
+  .n-no-touchevents .h1,
+  .n-no-touchevents .hero__heading,
+  .n-no-touchevents .gel-canon-bold {
+    font-size: 44px;
+    font-size: 2.75rem;
+    line-height: 48px;
+    line-height: 3rem;
+  }
+
+  .n-no-touchevents .gel-trafalgar,
+  .n-no-touchevents h2,
+  .n-no-touchevents .h2,
+  .n-no-touchevents .page-title,
+  .n-no-touchevents .card--fullwidth .card__heading,
+  .card--fullwidth .n-no-touchevents .card__heading,
+  .n-no-touchevents .herousel__item .card__heading,
+  .herousel__item .n-no-touchevents .card__heading,
+  .n-no-touchevents .featured__item--main .card__body .card__heading,
+  .featured__item--main .card__body .n-no-touchevents .card__heading,
+  .n-no-touchevents .search--block .search__input,
+  .search--block .n-no-touchevents .search__input,
+  .n-no-touchevents .gel-trafalgar-bold {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 36px;
+    line-height: 2.25rem;
+  }
+
+  .n-no-touchevents .gel-double-pica,
+  .n-no-touchevents h3,
+  .n-no-touchevents .h3,
+  .n-no-touchevents .sidebar .card--fullwidth .card__heading,
+  .sidebar .card--fullwidth .n-no-touchevents .card__heading,
+  .n-no-touchevents .sidebar--left .card--fullwidth .card__heading,
+  .sidebar--left .card--fullwidth .n-no-touchevents .card__heading,
+  .n-no-touchevents .sidebar--right .card--fullwidth .card__heading,
+  .sidebar--right .card--fullwidth .n-no-touchevents .card__heading,
+  .n-no-touchevents .sidebar--article .card--fullwidth .card__heading,
+  .sidebar--article .card--fullwidth .n-no-touchevents .card__heading,
+  .n-no-touchevents .sidebar--course .card--fullwidth .card__heading,
+  .sidebar--course .card--fullwidth .n-no-touchevents .card__heading,
+  .n-no-touchevents .sub-title,
+  .n-no-touchevents .section__title,
+  .n-no-touchevents .section__title--nointro,
+  .n-no-touchevents .scroll-carousel__heading,
+  .n-no-touchevents .scroll-carousel__heading--nointro,
+  .n-no-touchevents .scroll-carousel-p__heading--nointro,
+  .n-no-touchevents .featured__heading,
+  .n-no-touchevents .collections__sections__menu,
+  .n-no-touchevents .collections__subheading,
+  .n-no-touchevents .language__heading,
+  .n-no-touchevents .scroll-carousel-p__heading,
+  .n-no-touchevents blockquote,
+  .n-no-touchevents blockquote p,
+  blockquote .n-no-touchevents p,
+  .n-no-touchevents blockquote .accordion__answer h3,
+  blockquote .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer blockquote h3,
+  .accordion__answer blockquote .n-no-touchevents h3,
+  .n-no-touchevents .gel-double-pica-bold {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+
+  .n-no-touchevents .gel-great-primer,
+  .n-no-touchevents h4,
+  .n-no-touchevents .h4,
+  .n-no-touchevents .sidebar__heading,
+  .n-no-touchevents .divider__message,
+  .n-no-touchevents .alert--charges .alert__heading,
+  .alert--charges .n-no-touchevents .alert__heading,
+  .n-no-touchevents .card--panel .card__heading,
+  .card--panel .n-no-touchevents .card__heading,
+  .n-no-touchevents .dates__date,
+  .n-no-touchevents .herousel__item .card__tags,
+  .herousel__item .n-no-touchevents .card__tags,
+  .n-no-touchevents .featured__item--sub .card__heading,
+  .featured__item--sub .n-no-touchevents .card__heading,
+  .n-no-touchevents .course__content blockquote p,
+  .course__content blockquote .n-no-touchevents p,
+  .n-no-touchevents .course__content blockquote .accordion__answer h3,
+  .course__content blockquote .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .course__content blockquote h3,
+  .accordion__answer .course__content blockquote .n-no-touchevents h3,
+  .n-no-touchevents .no-results__heading,
+  .n-no-touchevents .error-page__heading,
+  .n-no-touchevents .tabs__more,
+  .n-no-touchevents .scroll-carousel__available,
+  .n-no-touchevents .event__info-add .dates__time p,
+  .event__info-add .dates__time .n-no-touchevents p,
+  .n-no-touchevents .event__info-add .dates__time .accordion__answer h3,
+  .event__info-add .dates__time .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info-add .dates__time h3,
+  .accordion__answer .event__info-add .dates__time .n-no-touchevents h3,
+  .n-no-touchevents .event__info-add .dates__location p,
+  .event__info-add .dates__location .n-no-touchevents p,
+  .n-no-touchevents .event__info-add .dates__location .accordion__answer h3,
+  .event__info-add .dates__location .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info-add .dates__location h3,
+  .accordion__answer .event__info-add .dates__location .n-no-touchevents h3,
+  .n-no-touchevents .event__info .button p,
+  .event__info .button .n-no-touchevents p,
+  .n-no-touchevents .event__info .button--blue p,
+  .event__info .button--blue .n-no-touchevents p,
+  .n-no-touchevents .event__info .button--orange p,
+  .event__info .button--orange .n-no-touchevents p,
+  .n-no-touchevents .event__info .tabs__button p,
+  .event__info .tabs__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .similar__button p,
+  .event__info .similar__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .featured__button p,
+  .event__info .featured__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .button--detection p,
+  .event__info .button--detection .n-no-touchevents p,
+  .n-no-touchevents .event__info .button--404 p,
+  .event__info .button--404 .n-no-touchevents p,
+  .n-no-touchevents .event__info .card__button p,
+  .event__info .card__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .course__skip p,
+  .event__info .course__skip .n-no-touchevents p,
+  .n-no-touchevents .event__info .dropdown__button p,
+  .event__info .dropdown__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .dates__button p,
+  .event__info .dates__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .pocket__button p,
+  .event__info .pocket__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .no-js .nav--base__button p,
+  .event__info .no-js .nav--base__button .n-no-touchevents p,
+  .n-no-touchevents .no-js .event__info .nav--base__button p,
+  .no-js .event__info .nav--base__button .n-no-touchevents p,
+  .n-no-touchevents .event__info .button .accordion__answer h3,
+  .event__info .button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .button h3,
+  .accordion__answer .event__info .button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .button--blue .accordion__answer h3,
+  .event__info .button--blue .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .button--blue h3,
+  .accordion__answer .event__info .button--blue .n-no-touchevents h3,
+  .n-no-touchevents .event__info .button--orange .accordion__answer h3,
+  .event__info .button--orange .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .button--orange h3,
+  .accordion__answer .event__info .button--orange .n-no-touchevents h3,
+  .n-no-touchevents .event__info .tabs__button .accordion__answer h3,
+  .event__info .tabs__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .tabs__button h3,
+  .accordion__answer .event__info .tabs__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .similar__button .accordion__answer h3,
+  .event__info .similar__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .similar__button h3,
+  .accordion__answer .event__info .similar__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .featured__button .accordion__answer h3,
+  .event__info .featured__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .featured__button h3,
+  .accordion__answer .event__info .featured__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .button--detection .accordion__answer h3,
+  .event__info .button--detection .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .button--detection h3,
+  .accordion__answer .event__info .button--detection .n-no-touchevents h3,
+  .n-no-touchevents .event__info .button--404 .accordion__answer h3,
+  .event__info .button--404 .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .button--404 h3,
+  .accordion__answer .event__info .button--404 .n-no-touchevents h3,
+  .n-no-touchevents .event__info .card__button .accordion__answer h3,
+  .event__info .card__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .card__button h3,
+  .accordion__answer .event__info .card__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .course__skip .accordion__answer h3,
+  .event__info .course__skip .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .course__skip h3,
+  .accordion__answer .event__info .course__skip .n-no-touchevents h3,
+  .n-no-touchevents .event__info .dropdown__button .accordion__answer h3,
+  .event__info .dropdown__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .dropdown__button h3,
+  .accordion__answer .event__info .dropdown__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .dates__button .accordion__answer h3,
+  .event__info .dates__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .dates__button h3,
+  .accordion__answer .event__info .dates__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .pocket__button .accordion__answer h3,
+  .event__info .pocket__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .pocket__button h3,
+  .accordion__answer .event__info .pocket__button .n-no-touchevents h3,
+  .n-no-touchevents .event__info .no-js .nav--base__button .accordion__answer h3,
+  .event__info .no-js .nav--base__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .event__info .no-js .nav--base__button h3,
+  .accordion__answer .event__info .no-js .nav--base__button .n-no-touchevents h3,
+  .n-no-touchevents .no-js .event__info .nav--base__button .accordion__answer h3,
+  .no-js .event__info .nav--base__button .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .no-js .event__info .nav--base__button h3,
+  .accordion__answer .no-js .event__info .nav--base__button .n-no-touchevents h3,
+  .n-no-touchevents .scroll-carousel-p__available,
+  .n-no-touchevents .gel-great-primer-bold {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+
+  .n-no-touchevents .gel-pica,
+  .n-no-touchevents p,
+  .n-no-touchevents .accordion__answer h3,
+  .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents blockquote .attribution,
+  blockquote .n-no-touchevents .attribution,
+  .n-no-touchevents .results-found,
+  .n-no-touchevents a,
+  .n-no-touchevents .link,
+  .n-no-touchevents a--blue,
+  .n-no-touchevents .link--blue,
+  .n-no-touchevents .alert--charges .alert__link,
+  .alert--charges .n-no-touchevents .alert__link,
+  .n-no-touchevents .alert--charges .alert__link--inline,
+  .alert--charges .n-no-touchevents .alert__link--inline,
+  .n-no-touchevents .alert--charges .alert__link--back,
+  .alert--charges .n-no-touchevents .alert__link--back,
+  .n-no-touchevents .sidebar-left .page__tag a,
+  .sidebar-left .page__tag .n-no-touchevents a,
+  .n-no-touchevents .accordion__link__question-heading,
+  .n-no-touchevents table,
+  .n-no-touchevents .table,
+  .n-no-touchevents .alert,
+  .n-no-touchevents .alert__container,
+  .n-no-touchevents .alert--info,
+  .n-no-touchevents .alert--warning,
+  .n-no-touchevents .alert--error,
+  .n-no-touchevents .alert--success,
+  .n-no-touchevents .alert--noentry,
+  .n-no-touchevents .alert--charges,
+  .n-no-touchevents .alert__message,
+  .n-no-touchevents .alert__message--green,
+  .n-no-touchevents ul,
+  .n-no-touchevents .list,
+  .n-no-touchevents ul--simple,
+  .n-no-touchevents .list--simple,
+  .n-no-touchevents .dates__list,
+  .n-no-touchevents .collections__sections,
+  .n-no-touchevents .language__dropdown,
+  .n-no-touchevents .downloads__list,
+  .n-no-touchevents ul--outside,
+  .n-no-touchevents .list--outside,
+  .n-no-touchevents ul--notes,
+  .n-no-touchevents .list--notes,
+  .n-no-touchevents .search__input,
+  .n-no-touchevents .card__heading,
+  .n-no-touchevents .card__resources,
+  .n-no-touchevents .article__content,
+  .n-no-touchevents .article__section,
+  .n-no-touchevents .sidebar-left .page__tag,
+  .sidebar-left .n-no-touchevents .page__tag,
+  .n-no-touchevents .course__content p,
+  .course__content .n-no-touchevents p,
+  .n-no-touchevents #vid-caption,
+  .n-no-touchevents .no-results__sub-heading,
+  .n-no-touchevents .error-page__sub-heading,
+  .n-no-touchevents .data__copy,
+  .n-no-touchevents .tabs__item,
+  .n-no-touchevents .tabs__link,
+  .n-no-touchevents .dates__spaces__title,
+  .n-no-touchevents .dates__spaces__title--full,
+  .n-no-touchevents .hero__description,
+  .n-no-touchevents .accordion__list,
+  .n-no-touchevents .accordion__intro,
+  .n-no-touchevents .accordion__answer p,
+  .accordion__answer .n-no-touchevents p,
+  .n-no-touchevents .language__change span,
+  .language__change .n-no-touchevents span,
+  .n-no-touchevents .event__speaker-copy .name,
+  .event__speaker-copy .n-no-touchevents .name,
+  .n-no-touchevents .no-js .video__player:after,
+  .no-js .n-no-touchevents .video__player:after,
+  .n-no-touchevents .no-js span[data-type="BBC-PID"]:after,
+  .no-js .n-no-touchevents span[data-type="BBC-PID"]:after,
+  .n-no-touchevents .no-js span[data-type="BBC-SID"]:after,
+  .no-js .n-no-touchevents span[data-type="BBC-SID"]:after,
+  .n-no-touchevents .gel-pica-bold {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
+
+  .n-no-touchevents .gel-long-primer,
+  .n-no-touchevents .nav__link,
+  .n-no-touchevents .language__selector__link,
+  .n-no-touchevents .detection__link,
+  .n-no-touchevents .card__description,
+  .n-no-touchevents .card__data__wrapper .card__date,
+  .card__data__wrapper .n-no-touchevents .card__date,
+  .n-no-touchevents .card__tag,
+  .n-no-touchevents .card__content-type,
+  .n-no-touchevents .dropdown__options .dropdown__item a,
+  .dropdown__options .dropdown__item .n-no-touchevents a,
+  .n-no-touchevents .language__change span,
+  .language__change .n-no-touchevents span,
+  .n-no-touchevents .downloads__name,
+  .n-no-touchevents .gel-long-primer-bold {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+  }
+
+  .n-no-touchevents .gel-brevier,
+  .n-no-touchevents h5,
+  .n-no-touchevents .event__speaker-copy .role,
+  .event__speaker-copy .n-no-touchevents .role,
+  .n-no-touchevents .h5,
+  .n-no-touchevents .language__dropdown__link,
+  .n-no-touchevents .language__dropdown__link--close,
+  .n-no-touchevents h6,
+  .n-no-touchevents .h6,
+  .n-no-touchevents small,
+  .n-no-touchevents .small,
+  .n-no-touchevents .ratio__text,
+  .n-no-touchevents .sortby__label,
+  .n-no-touchevents pre code,
+  pre .n-no-touchevents code,
+  .n-no-touchevents ul__link,
+  .n-no-touchevents .list__link,
+  .n-no-touchevents .card__flag,
+  .n-no-touchevents .card__data,
+  .n-no-touchevents .card__data p,
+  .card__data .n-no-touchevents p,
+  .n-no-touchevents .card__data .accordion__answer h3,
+  .card__data .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .card__data h3,
+  .accordion__answer .card__data .n-no-touchevents h3,
+  .n-no-touchevents .card--collections .card__media-icon__tag,
+  .card--collections .n-no-touchevents .card__media-icon__tag,
+  .n-no-touchevents .no-results__link,
+  .n-no-touchevents .error-page__link,
+  .n-no-touchevents .dates__time p,
+  .dates__time .n-no-touchevents p,
+  .n-no-touchevents .dates__time .accordion__answer h3,
+  .dates__time .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .dates__time h3,
+  .accordion__answer .dates__time .n-no-touchevents h3,
+  .n-no-touchevents .dates__location p,
+  .dates__location .n-no-touchevents p,
+  .n-no-touchevents .dates__location .accordion__answer h3,
+  .dates__location .accordion__answer .n-no-touchevents h3,
+  .n-no-touchevents .accordion__answer .dates__location h3,
+  .accordion__answer .dates__location .n-no-touchevents h3,
+  .n-no-touchevents .dates__spaces__copy,
+  .n-no-touchevents .hero--collections .card__media-icon__tag,
+  .hero--collections .n-no-touchevents .card__media-icon__tag,
+  .n-no-touchevents .content-block__description,
+  .n-no-touchevents .collections__sections__link,
+  .n-no-touchevents .gel-brevier-bold {
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+  .n-no-touchevents .gel-minion,
+  .n-no-touchevents .grid__item,
+  .n-no-touchevents .colour__swatch,
+  .n-no-touchevents .colour__swatch--brand-a,
+  .n-no-touchevents .colour__swatch--brand-b,
+  .n-no-touchevents .colour__swatch--brand-c,
+  .n-no-touchevents .colour__swatch--brand-d,
+  .n-no-touchevents .colour__swatch--brand-e,
+  .n-no-touchevents .colour__swatch--brand-f,
+  .n-no-touchevents .colour__swatch--brand-g,
+  .n-no-touchevents .colour__swatch--brand-h,
+  .n-no-touchevents .colour__swatch--brand-i,
+  .n-no-touchevents .colour__swatch--white,
+  .n-no-touchevents .colour__swatch--lightergray,
+  .n-no-touchevents .colour__swatch--lightgray,
+  .n-no-touchevents .colour__swatch--gray,
+  .n-no-touchevents .colour__swatch--darkergray,
+  .n-no-touchevents .colour__swatch--darkgray,
+  .n-no-touchevents .colour__swatch--black,
+  .n-no-touchevents .colour__swatch--alert-info,
+  .n-no-touchevents .colour__swatch--alert-warning,
+  .n-no-touchevents .colour__swatch--alert-error,
+  .n-no-touchevents .colour__swatch--alert-success,
+  .n-no-touchevents .colour__copy,
+  .n-no-touchevents .video-p--duration,
+  .n-no-touchevents .video-p--tag,
+  .n-no-touchevents .gel-minion-bold {
+    font-size: 12px;
+    font-size: .75rem;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+  .n-no-touchevents .gel-articlebody,
+  .n-no-touchevents .article__content>p,
+  .n-no-touchevents .article__section>p,
+  .n-no-touchevents .accordion__answer .article__content>h3,
+  .accordion__answer .n-no-touchevents .article__content>h3,
+  .n-no-touchevents .accordion__answer .article__section>h3,
+  .accordion__answer .n-no-touchevents .article__section>h3 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, freesans, sans-serif;
+}
+
+.gel-1\/1 {
+  width: 100% !important;
+}
+
+.gel-1\/2 {
+  width: 50% !important;
+}
+
+.gel-1\/3 {
+  width: 33.33333% !important;
+}
+
+.gel-2\/3 {
+  width: 66.66667% !important;
+}
+
+.gel-1\/4 {
+  width: 25% !important;
+}
+
+.gel-2\/4 {
+  width: 50% !important;
+}
+
+.gel-3\/4 {
+  width: 75% !important;
+}
+
+.gel-1\/5 {
+  width: 20% !important;
+}
+
+.gel-2\/5 {
+  width: 40% !important;
+}
+
+.gel-3\/5 {
+  width: 60% !important;
+}
+
+.gel-4\/5 {
+  width: 80% !important;
+}
+
+.gel-1\/8 {
+  width: 12.5% !important;
+}
+
+.gel-2\/8 {
+  width: 25% !important;
+}
+
+.gel-3\/8 {
+  width: 37.5% !important;
+}
+
+.gel-4\/8 {
+  width: 50% !important;
+}
+
+.gel-5\/8 {
+  width: 62.5% !important;
+}
+
+.gel-6\/8 {
+  width: 75% !important;
+}
+
+.gel-7\/8 {
+  width: 87.5% !important;
+}
+
+.gel-1\/10 {
+  width: 10% !important;
+}
+
+.gel-2\/10 {
+  width: 20% !important;
+}
+
+.gel-3\/10 {
+  width: 30% !important;
+}
+
+.gel-4\/10 {
+  width: 40% !important;
+}
+
+.gel-5\/10 {
+  width: 50% !important;
+}
+
+.gel-6\/10 {
+  width: 60% !important;
+}
+
+.gel-7\/10 {
+  width: 70% !important;
+}
+
+.gel-8\/10 {
+  width: 80% !important;
+}
+
+.gel-9\/10 {
+  width: 90% !important;
+}
+
+.gel-1\/12 {
+  width: 8.33333% !important;
+}
+
+.gel-2\/12 {
+  width: 16.66667% !important;
+}
+
+.gel-3\/12 {
+  width: 25% !important;
+}
+
+.gel-4\/12 {
+  width: 33.33333% !important;
+}
+
+.gel-5\/12 {
+  width: 41.66667% !important;
+}
+
+.gel-6\/12 {
+  width: 50% !important;
+}
+
+.gel-7\/12 {
+  width: 58.33333% !important;
+}
+
+.gel-8\/12 {
+  width: 66.66667% !important;
+}
+
+.gel-9\/12 {
+  width: 75% !important;
+}
+
+.gel-10\/12 {
+  width: 83.33333% !important;
+}
+
+.gel-11\/12 {
+  width: 91.66667% !important;
+}
+
+.gel-1\/24 {
+  width: 4.16667% !important;
+}
+
+.gel-2\/24 {
+  width: 8.33333% !important;
+}
+
+.gel-3\/24 {
+  width: 12.5% !important;
+}
+
+.gel-4\/24 {
+  width: 16.66667% !important;
+}
+
+.gel-5\/24 {
+  width: 20.83333% !important;
+}
+
+.gel-6\/24 {
+  width: 25% !important;
+}
+
+.gel-7\/24 {
+  width: 29.16667% !important;
+}
+
+.gel-8\/24 {
+  width: 33.33333% !important;
+}
+
+.gel-9\/24 {
+  width: 37.5% !important;
+}
+
+.gel-10\/24 {
+  width: 41.66667% !important;
+}
+
+.gel-11\/24 {
+  width: 45.83333% !important;
+}
+
+.gel-12\/24 {
+  width: 50% !important;
+}
+
+.gel-13\/24 {
+  width: 54.16667% !important;
+}
+
+.gel-14\/24 {
+  width: 58.33333% !important;
+}
+
+.gel-15\/24 {
+  width: 62.5% !important;
+}
+
+.gel-16\/24 {
+  width: 66.66667% !important;
+}
+
+.gel-17\/24 {
+  width: 70.83333% !important;
+}
+
+.gel-18\/24 {
+  width: 75% !important;
+}
+
+.gel-19\/24 {
+  width: 79.16667% !important;
+}
+
+.gel-20\/24 {
+  width: 83.33333% !important;
+}
+
+.gel-21\/24 {
+  width: 87.5% !important;
+}
+
+.gel-22\/24 {
+  width: 91.66667% !important;
+}
+
+.gel-23\/24 {
+  width: 95.83333% !important;
+}
+
+@media (min-width: 25em) {
+  .gel-bp-s-1\/1 {
+    width: 100% !important;
+  }
+
+  .gel-bp-s-1\/2 {
+    width: 50% !important;
+  }
+
+  .gel-bp-s-1\/3 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-s-2\/3 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-s-1\/4 {
+    width: 25% !important;
+  }
+
+  .gel-bp-s-2\/4 {
+    width: 50% !important;
+  }
+
+  .gel-bp-s-3\/4 {
+    width: 75% !important;
+  }
+
+  .gel-bp-s-1\/5 {
+    width: 20% !important;
+  }
+
+  .gel-bp-s-2\/5 {
+    width: 40% !important;
+  }
+
+  .gel-bp-s-3\/5 {
+    width: 60% !important;
+  }
+
+  .gel-bp-s-4\/5 {
+    width: 80% !important;
+  }
+
+  .gel-bp-s-1\/8 {
+    width: 12.5% !important;
+  }
+
+  .gel-bp-s-2\/8 {
+    width: 25% !important;
+  }
+
+  .gel-bp-s-3\/8 {
+    width: 37.5% !important;
+  }
+
+  .gel-bp-s-4\/8 {
+    width: 50% !important;
+  }
+
+  .gel-bp-s-5\/8 {
+    width: 62.5% !important;
+  }
+
+  .gel-bp-s-6\/8 {
+    width: 75% !important;
+  }
+
+  .gel-bp-s-7\/8 {
+    width: 87.5% !important;
+  }
+
+  .gel-bp-s-1\/10 {
+    width: 10% !important;
+  }
+
+  .gel-bp-s-2\/10 {
+    width: 20% !important;
+  }
+
+  .gel-bp-s-3\/10 {
+    width: 30% !important;
+  }
+
+  .gel-bp-s-4\/10 {
+    width: 40% !important;
+  }
+
+  .gel-bp-s-5\/10 {
+    width: 50% !important;
+  }
+
+  .gel-bp-s-6\/10 {
+    width: 60% !important;
+  }
+
+  .gel-bp-s-7\/10 {
+    width: 70% !important;
+  }
+
+  .gel-bp-s-8\/10 {
+    width: 80% !important;
+  }
+
+  .gel-bp-s-9\/10 {
+    width: 90% !important;
+  }
+
+  .gel-bp-s-1\/12 {
+    width: 8.33333% !important;
+  }
+
+  .gel-bp-s-2\/12 {
+    width: 16.66667% !important;
+  }
+
+  .gel-bp-s-3\/12 {
+    width: 25% !important;
+  }
+
+  .gel-bp-s-4\/12 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-s-5\/12 {
+    width: 41.66667% !important;
+  }
+
+  .gel-bp-s-6\/12 {
+    width: 50% !important;
+  }
+
+  .gel-bp-s-7\/12 {
+    width: 58.33333% !important;
+  }
+
+  .gel-bp-s-8\/12 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-s-9\/12 {
+    width: 75% !important;
+  }
+
+  .gel-bp-s-10\/12 {
+    width: 83.33333% !important;
+  }
+
+  .gel-bp-s-11\/12 {
+    width: 91.66667% !important;
+  }
+
+  .gel-bp-s-1\/24 {
+    width: 4.16667% !important;
+  }
+
+  .gel-bp-s-2\/24 {
+    width: 8.33333% !important;
+  }
+
+  .gel-bp-s-3\/24 {
+    width: 12.5% !important;
+  }
+
+  .gel-bp-s-4\/24 {
+    width: 16.66667% !important;
+  }
+
+  .gel-bp-s-5\/24 {
+    width: 20.83333% !important;
+  }
+
+  .gel-bp-s-6\/24 {
+    width: 25% !important;
+  }
+
+  .gel-bp-s-7\/24 {
+    width: 29.16667% !important;
+  }
+
+  .gel-bp-s-8\/24 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-s-9\/24 {
+    width: 37.5% !important;
+  }
+
+  .gel-bp-s-10\/24 {
+    width: 41.66667% !important;
+  }
+
+  .gel-bp-s-11\/24 {
+    width: 45.83333% !important;
+  }
+
+  .gel-bp-s-12\/24 {
+    width: 50% !important;
+  }
+
+  .gel-bp-s-13\/24 {
+    width: 54.16667% !important;
+  }
+
+  .gel-bp-s-14\/24 {
+    width: 58.33333% !important;
+  }
+
+  .gel-bp-s-15\/24 {
+    width: 62.5% !important;
+  }
+
+  .gel-bp-s-16\/24 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-s-17\/24 {
+    width: 70.83333% !important;
+  }
+
+  .gel-bp-s-18\/24 {
+    width: 75% !important;
+  }
+
+  .gel-bp-s-19\/24 {
+    width: 79.16667% !important;
+  }
+
+  .gel-bp-s-20\/24 {
+    width: 83.33333% !important;
+  }
+
+  .gel-bp-s-21\/24 {
+    width: 87.5% !important;
+  }
+
+  .gel-bp-s-22\/24 {
+    width: 91.66667% !important;
+  }
+
+  .gel-bp-s-23\/24 {
+    width: 95.83333% !important;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .gel-bp-m-1\/1 {
+    width: 100% !important;
+  }
+
+  .gel-bp-m-1\/2 {
+    width: 50% !important;
+  }
+
+  .gel-bp-m-1\/3 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-m-2\/3 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-m-1\/4 {
+    width: 25% !important;
+  }
+
+  .gel-bp-m-2\/4 {
+    width: 50% !important;
+  }
+
+  .gel-bp-m-3\/4 {
+    width: 75% !important;
+  }
+
+  .gel-bp-m-1\/5 {
+    width: 20% !important;
+  }
+
+  .gel-bp-m-2\/5 {
+    width: 40% !important;
+  }
+
+  .gel-bp-m-3\/5 {
+    width: 60% !important;
+  }
+
+  .gel-bp-m-4\/5 {
+    width: 80% !important;
+  }
+
+  .gel-bp-m-1\/8 {
+    width: 12.5% !important;
+  }
+
+  .gel-bp-m-2\/8 {
+    width: 25% !important;
+  }
+
+  .gel-bp-m-3\/8 {
+    width: 37.5% !important;
+  }
+
+  .gel-bp-m-4\/8 {
+    width: 50% !important;
+  }
+
+  .gel-bp-m-5\/8 {
+    width: 62.5% !important;
+  }
+
+  .gel-bp-m-6\/8 {
+    width: 75% !important;
+  }
+
+  .gel-bp-m-7\/8 {
+    width: 87.5% !important;
+  }
+
+  .gel-bp-m-1\/10 {
+    width: 10% !important;
+  }
+
+  .gel-bp-m-2\/10 {
+    width: 20% !important;
+  }
+
+  .gel-bp-m-3\/10 {
+    width: 30% !important;
+  }
+
+  .gel-bp-m-4\/10 {
+    width: 40% !important;
+  }
+
+  .gel-bp-m-5\/10 {
+    width: 50% !important;
+  }
+
+  .gel-bp-m-6\/10 {
+    width: 60% !important;
+  }
+
+  .gel-bp-m-7\/10 {
+    width: 70% !important;
+  }
+
+  .gel-bp-m-8\/10 {
+    width: 80% !important;
+  }
+
+  .gel-bp-m-9\/10 {
+    width: 90% !important;
+  }
+
+  .gel-bp-m-1\/12 {
+    width: 8.33333% !important;
+  }
+
+  .gel-bp-m-2\/12 {
+    width: 16.66667% !important;
+  }
+
+  .gel-bp-m-3\/12 {
+    width: 25% !important;
+  }
+
+  .gel-bp-m-4\/12 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-m-5\/12 {
+    width: 41.66667% !important;
+  }
+
+  .gel-bp-m-6\/12 {
+    width: 50% !important;
+  }
+
+  .gel-bp-m-7\/12 {
+    width: 58.33333% !important;
+  }
+
+  .gel-bp-m-8\/12 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-m-9\/12 {
+    width: 75% !important;
+  }
+
+  .gel-bp-m-10\/12 {
+    width: 83.33333% !important;
+  }
+
+  .gel-bp-m-11\/12 {
+    width: 91.66667% !important;
+  }
+
+  .gel-bp-m-1\/24 {
+    width: 4.16667% !important;
+  }
+
+  .gel-bp-m-2\/24 {
+    width: 8.33333% !important;
+  }
+
+  .gel-bp-m-3\/24 {
+    width: 12.5% !important;
+  }
+
+  .gel-bp-m-4\/24 {
+    width: 16.66667% !important;
+  }
+
+  .gel-bp-m-5\/24 {
+    width: 20.83333% !important;
+  }
+
+  .gel-bp-m-6\/24 {
+    width: 25% !important;
+  }
+
+  .gel-bp-m-7\/24 {
+    width: 29.16667% !important;
+  }
+
+  .gel-bp-m-8\/24 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-m-9\/24 {
+    width: 37.5% !important;
+  }
+
+  .gel-bp-m-10\/24 {
+    width: 41.66667% !important;
+  }
+
+  .gel-bp-m-11\/24 {
+    width: 45.83333% !important;
+  }
+
+  .gel-bp-m-12\/24 {
+    width: 50% !important;
+  }
+
+  .gel-bp-m-13\/24 {
+    width: 54.16667% !important;
+  }
+
+  .gel-bp-m-14\/24 {
+    width: 58.33333% !important;
+  }
+
+  .gel-bp-m-15\/24 {
+    width: 62.5% !important;
+  }
+
+  .gel-bp-m-16\/24 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-m-17\/24 {
+    width: 70.83333% !important;
+  }
+
+  .gel-bp-m-18\/24 {
+    width: 75% !important;
+  }
+
+  .gel-bp-m-19\/24 {
+    width: 79.16667% !important;
+  }
+
+  .gel-bp-m-20\/24 {
+    width: 83.33333% !important;
+  }
+
+  .gel-bp-m-21\/24 {
+    width: 87.5% !important;
+  }
+
+  .gel-bp-m-22\/24 {
+    width: 91.66667% !important;
+  }
+
+  .gel-bp-m-23\/24 {
+    width: 95.83333% !important;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .gel-bp-l-1\/1 {
+    width: 100% !important;
+  }
+
+  .gel-bp-l-1\/2 {
+    width: 50% !important;
+  }
+
+  .gel-bp-l-1\/3 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-l-2\/3 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-l-1\/4 {
+    width: 25% !important;
+  }
+
+  .gel-bp-l-2\/4 {
+    width: 50% !important;
+  }
+
+  .gel-bp-l-3\/4 {
+    width: 75% !important;
+  }
+
+  .gel-bp-l-1\/5 {
+    width: 20% !important;
+  }
+
+  .gel-bp-l-2\/5 {
+    width: 40% !important;
+  }
+
+  .gel-bp-l-3\/5 {
+    width: 60% !important;
+  }
+
+  .gel-bp-l-4\/5 {
+    width: 80% !important;
+  }
+
+  .gel-bp-l-1\/8 {
+    width: 12.5% !important;
+  }
+
+  .gel-bp-l-2\/8 {
+    width: 25% !important;
+  }
+
+  .gel-bp-l-3\/8 {
+    width: 37.5% !important;
+  }
+
+  .gel-bp-l-4\/8 {
+    width: 50% !important;
+  }
+
+  .gel-bp-l-5\/8 {
+    width: 62.5% !important;
+  }
+
+  .gel-bp-l-6\/8 {
+    width: 75% !important;
+  }
+
+  .gel-bp-l-7\/8 {
+    width: 87.5% !important;
+  }
+
+  .gel-bp-l-1\/10 {
+    width: 10% !important;
+  }
+
+  .gel-bp-l-2\/10 {
+    width: 20% !important;
+  }
+
+  .gel-bp-l-3\/10 {
+    width: 30% !important;
+  }
+
+  .gel-bp-l-4\/10 {
+    width: 40% !important;
+  }
+
+  .gel-bp-l-5\/10 {
+    width: 50% !important;
+  }
+
+  .gel-bp-l-6\/10 {
+    width: 60% !important;
+  }
+
+  .gel-bp-l-7\/10 {
+    width: 70% !important;
+  }
+
+  .gel-bp-l-8\/10 {
+    width: 80% !important;
+  }
+
+  .gel-bp-l-9\/10 {
+    width: 90% !important;
+  }
+
+  .gel-bp-l-1\/12 {
+    width: 8.33333% !important;
+  }
+
+  .gel-bp-l-2\/12 {
+    width: 16.66667% !important;
+  }
+
+  .gel-bp-l-3\/12 {
+    width: 25% !important;
+  }
+
+  .gel-bp-l-4\/12 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-l-5\/12 {
+    width: 41.66667% !important;
+  }
+
+  .gel-bp-l-6\/12 {
+    width: 50% !important;
+  }
+
+  .gel-bp-l-7\/12 {
+    width: 58.33333% !important;
+  }
+
+  .gel-bp-l-8\/12 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-l-9\/12 {
+    width: 75% !important;
+  }
+
+  .gel-bp-l-10\/12 {
+    width: 83.33333% !important;
+  }
+
+  .gel-bp-l-11\/12 {
+    width: 91.66667% !important;
+  }
+
+  .gel-bp-l-1\/24 {
+    width: 4.16667% !important;
+  }
+
+  .gel-bp-l-2\/24 {
+    width: 8.33333% !important;
+  }
+
+  .gel-bp-l-3\/24 {
+    width: 12.5% !important;
+  }
+
+  .gel-bp-l-4\/24 {
+    width: 16.66667% !important;
+  }
+
+  .gel-bp-l-5\/24 {
+    width: 20.83333% !important;
+  }
+
+  .gel-bp-l-6\/24 {
+    width: 25% !important;
+  }
+
+  .gel-bp-l-7\/24 {
+    width: 29.16667% !important;
+  }
+
+  .gel-bp-l-8\/24 {
+    width: 33.33333% !important;
+  }
+
+  .gel-bp-l-9\/24 {
+    width: 37.5% !important;
+  }
+
+  .gel-bp-l-10\/24 {
+    width: 41.66667% !important;
+  }
+
+  .gel-bp-l-11\/24 {
+    width: 45.83333% !important;
+  }
+
+  .gel-bp-l-12\/24 {
+    width: 50% !important;
+  }
+
+  .gel-bp-l-13\/24 {
+    width: 54.16667% !important;
+  }
+
+  .gel-bp-l-14\/24 {
+    width: 58.33333% !important;
+  }
+
+  .gel-bp-l-15\/24 {
+    width: 62.5% !important;
+  }
+
+  .gel-bp-l-16\/24 {
+    width: 66.66667% !important;
+  }
+
+  .gel-bp-l-17\/24 {
+    width: 70.83333% !important;
+  }
+
+  .gel-bp-l-18\/24 {
+    width: 75% !important;
+  }
+
+  .gel-bp-l-19\/24 {
+    width: 79.16667% !important;
+  }
+
+  .gel-bp-l-20\/24 {
+    width: 83.33333% !important;
+  }
+
+  .gel-bp-l-21\/24 {
+    width: 87.5% !important;
+  }
+
+  .gel-bp-l-22\/24 {
+    width: 91.66667% !important;
+  }
+
+  .gel-bp-l-23\/24 {
+    width: 95.83333% !important;
+  }
+}
+
+.wrapper,
+.wrapper--full,
+.wrapper--collection,
+.wrapper--art,
+.nav__wrapper,
+.card__wrapper,
+.back-to-top,
+.similar__wrapper,
+.content-block--full .content-block__wrapper,
+.scroll-carousel__wrapper,
+.social__wrapper,
+.azfilter__wrapper,
+.collections__sections__wrapper,
+.scroll-carousel-p__wrapper,
+.no-js .carousel {
+  width: 100%;
+  max-width: 1008px;
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  z-index: 1;
+}
+
+.wrapper:after,
+.wrapper--full:after,
+.wrapper--collection:after,
+.wrapper--art:after,
+.nav__wrapper:after,
+.card__wrapper:after,
+.back-to-top:after,
+.similar__wrapper:after,
+.content-block--full .content-block__wrapper:after,
+.scroll-carousel__wrapper:after,
+.social__wrapper:after,
+.azfilter__wrapper:after,
+.collections__sections__wrapper:after,
+.scroll-carousel-p__wrapper:after,
+.no-js .carousel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper--full {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.wrapper--narrow {
+  width: 100%;
+  background: #fff;
+  padding: 8px;
+}
+
+.wrapper--narrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper--collection {
+  margin-top: -310px;
+}
+
+.wrapper--article {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 930px;
+  background: #fff;
+  padding: 0 16px;
+}
+
+.wrapper--course {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 0 16px;
+}
+
+.wrapper--art {
+  overflow: hidden;
+}
+
+.wrapper:focus,
+.wrapper--full:focus,
+.wrapper--collection:focus,
+.wrapper--art:focus,
+.nav__wrapper:focus,
+.card__wrapper:focus,
+.back-to-top:focus,
+.similar__wrapper:focus,
+.content-block--full .content-block__wrapper:focus,
+.scroll-carousel__wrapper:focus,
+.social__wrapper:focus,
+.azfilter__wrapper:focus,
+.collections__sections__wrapper:focus,
+.scroll-carousel-p__wrapper:focus,
+.no-js .carousel:focus {
+  outline: none;
+}
+
+@media (min-width: 320px) {
+  .wrapper,
+  .wrapper--full,
+  .wrapper--collection,
+  .wrapper--art,
+  .nav__wrapper,
+  .card__wrapper,
+  .back-to-top,
+  .similar__wrapper,
+  .content-block--full .content-block__wrapper,
+  .scroll-carousel__wrapper,
+  .social__wrapper,
+  .azfilter__wrapper,
+  .collections__sections__wrapper,
+  .scroll-carousel-p__wrapper,
+  .no-js .carousel {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .wrapper--full {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wrapper--narrow {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 480px) {
+  .wrapper,
+  .wrapper--full,
+  .wrapper--collection,
+  .wrapper--art,
+  .nav__wrapper,
+  .card__wrapper,
+  .back-to-top,
+  .similar__wrapper,
+  .content-block--full .content-block__wrapper,
+  .scroll-carousel__wrapper,
+  .social__wrapper,
+  .azfilter__wrapper,
+  .collections__sections__wrapper,
+  .scroll-carousel-p__wrapper,
+  .no-js .carousel {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper--narrow {
+    padding: 16px 120px;
+  }
+
+  .wrapper--collection {
+    margin-top: -380px;
+    padding: 16px 32px;
+  }
+
+  .wrapper--article {
+    padding: 0 32px 32px 0;
+  }
+
+  .wrapper--art {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1008px) {
+  .wrapper--collection {
+    margin-top: -560px;
+  }
+
+  .wrapper--art {
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper,
+  .wrapper--full,
+  .wrapper--collection,
+  .wrapper--art,
+  .nav__wrapper,
+  .card__wrapper,
+  .back-to-top,
+  .similar__wrapper,
+  .content-block--full .content-block__wrapper,
+  .scroll-carousel__wrapper,
+  .social__wrapper,
+  .azfilter__wrapper,
+  .collections__sections__wrapper,
+  .scroll-carousel-p__wrapper,
+  .no-js .carousel {
+    max-width: 1280px;
+  }
+
+  .wrapper--narrow {
+    padding: 16px 240px;
+  }
+}
+
+.row,
+.row--article,
+.sidebar__container,
+.icon__row,
+.grid__row,
+.colour__row,
+ul__row,
+.list__row,
+.card__data,
+.loadmore,
+.tabs__row,
+.pocket__content,
+.similar__content,
+.content-block__row,
+.social__row,
+.featured__row,
+.azfilter__row,
+.azfilter__list,
+.language__row,
+.tags__row,
+.event-row {
+  position: relative;
+  margin-right: 0;
+  margin-left: -8px;
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
+  text-rendering: optimizespeed;
+  letter-spacing: -0.31em;
+}
+
+.row:after,
+.row--article:after,
+.sidebar__container:after,
+.icon__row:after,
+.grid__row:after,
+.colour__row:after,
+ul__row:after,
+.list__row:after,
+.card__data:after,
+.loadmore:after,
+.tabs__row:after,
+.pocket__content:after,
+.similar__content:after,
+.content-block__row:after,
+.social__row:after,
+.featured__row:after,
+.azfilter__row:after,
+.azfilter__list:after,
+.language__row:after,
+.tags__row:after,
+.event-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row--article {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .row,
+  .row--article,
+  .sidebar__container,
+  .icon__row,
+  .grid__row,
+  .colour__row,
+  ul__row,
+  .list__row,
+  .card__data,
+  .loadmore,
+  .tabs__row,
+  .pocket__content,
+  .similar__content,
+  .content-block__row,
+  .social__row,
+  .featured__row,
+  .azfilter__row,
+  .azfilter__list,
+  .language__row,
+  .tags__row,
+  .event-row {
+    margin-left: -16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row--article {
+    display: block;
+  }
+}
+
+@media (min-width: 1008px) {
+  .row--article {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .row--article {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.col,
+.main,
+.main--left,
+.main--right,
+.main--article,
+.main--course,
+.sidebar,
+.sidebar--left,
+.sidebar--right,
+.sidebar--article,
+.sidebar--course,
+.logo--translated .logo__link,
+.icon__col,
+.grid__col,
+.grid__col--1,
+.grid__col--2,
+.grid__col--3,
+.grid__col--4,
+.grid__col--5,
+.grid__col--6,
+.grid__col--7,
+.grid__col--8,
+.grid__col--9,
+.grid__col--10,
+.grid__col--11,
+.grid__col--12,
+.hero .col--1,
+.hero--collections .col--1,
+.hero .col--2,
+.hero--collections .col--2,
+.colour__col,
+ul__col,
+.list__col,
+ul__col--1,
+.list__col--1,
+ul__col--2,
+.list__col--2,
+ul__col--3,
+.list__col--3,
+ul__col--4,
+.list__col--4,
+.search--block .search__heading,
+.card__type,
+.card--result .card__type,
+.card--placeholder .card__type,
+.card--result .card__length,
+.card--placeholder .card__length,
+.card--related,
+.sidebar-left,
+.loadmore__container,
+.tabs__col,
+.dates__col,
+.pocket__item,
+.similar__item,
+.content-block__col,
+.content-block__col--1,
+.content-block__col--2,
+.content-block__col--3,
+.content-block__col--4,
+.content-block__col--5,
+.content-block__col--6,
+.social__col,
+.featured,
+.featured__col,
+.featured__item,
+.featured__item--main,
+.featured__item--sub,
+.azfilter__col,
+.azfilter__item,
+.language__col,
+.tags__col,
+.tags__col--main,
+.tags__col--3,
+.tags__col--list,
+.event-col-1,
+.event-col-3-4,
+.event-col-1-4 {
+  display: inline-block;
+  zoom: 1;
+  width: 100%;
+  padding-left: 8px;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+
+.col:after,
+.main:after,
+.main--left:after,
+.main--right:after,
+.main--article:after,
+.main--course:after,
+.sidebar:after,
+.sidebar--left:after,
+.sidebar--right:after,
+.sidebar--article:after,
+.sidebar--course:after,
+.logo--translated .logo__link:after,
+.icon__col:after,
+.grid__col:after,
+.grid__col--1:after,
+.grid__col--2:after,
+.grid__col--3:after,
+.grid__col--4:after,
+.grid__col--5:after,
+.grid__col--6:after,
+.grid__col--7:after,
+.grid__col--8:after,
+.grid__col--9:after,
+.grid__col--10:after,
+.grid__col--11:after,
+.grid__col--12:after,
+.hero .col--1:after,
+.hero--collections .col--1:after,
+.hero .col--2:after,
+.hero--collections .col--2:after,
+.colour__col:after,
+ul__col:after,
+.list__col:after,
+ul__col--1:after,
+.list__col--1:after,
+ul__col--2:after,
+.list__col--2:after,
+ul__col--3:after,
+.list__col--3:after,
+ul__col--4:after,
+.list__col--4:after,
+.search--block .search__heading:after,
+.card__type:after,
+.card--result .card__type:after,
+.card--placeholder .card__type:after,
+.card--result .card__length:after,
+.card--placeholder .card__length:after,
+.card--related:after,
+.sidebar-left:after,
+.loadmore__container:after,
+.tabs__col:after,
+.dates__col:after,
+.pocket__item:after,
+.similar__item:after,
+.content-block__col:after,
+.content-block__col--1:after,
+.content-block__col--2:after,
+.content-block__col--3:after,
+.content-block__col--4:after,
+.content-block__col--5:after,
+.content-block__col--6:after,
+.social__col:after,
+.featured:after,
+.featured__col:after,
+.featured__item:after,
+.featured__item--main:after,
+.featured__item--sub:after,
+.azfilter__col:after,
+.azfilter__item:after,
+.language__col:after,
+.tags__col:after,
+.tags__col--main:after,
+.tags__col--3:after,
+.tags__col--list:after,
+.event-col-1:after,
+.event-col-3-4:after,
+.event-col-1-4:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .col,
+  .main,
+  .main--left,
+  .main--right,
+  .main--article,
+  .main--course,
+  .sidebar,
+  .sidebar--left,
+  .sidebar--right,
+  .sidebar--article,
+  .sidebar--course,
+  .logo--translated .logo__link,
+  .icon__col,
+  .grid__col,
+  .grid__col--1,
+  .grid__col--2,
+  .grid__col--3,
+  .grid__col--4,
+  .grid__col--5,
+  .grid__col--6,
+  .grid__col--7,
+  .grid__col--8,
+  .grid__col--9,
+  .grid__col--10,
+  .grid__col--11,
+  .grid__col--12,
+  .hero .col--1,
+  .hero--collections .col--1,
+  .hero .col--2,
+  .hero--collections .col--2,
+  .colour__col,
+  ul__col,
+  .list__col,
+  ul__col--1,
+  .list__col--1,
+  ul__col--2,
+  .list__col--2,
+  ul__col--3,
+  .list__col--3,
+  ul__col--4,
+  .list__col--4,
+  .search--block .search__heading,
+  .card__type,
+  .card--result .card__type,
+  .card--placeholder .card__type,
+  .card--result .card__length,
+  .card--placeholder .card__length,
+  .card--related,
+  .sidebar-left,
+  .loadmore__container,
+  .tabs__col,
+  .dates__col,
+  .pocket__item,
+  .similar__item,
+  .content-block__col,
+  .content-block__col--1,
+  .content-block__col--2,
+  .content-block__col--3,
+  .content-block__col--4,
+  .content-block__col--5,
+  .content-block__col--6,
+  .social__col,
+  .featured,
+  .featured__col,
+  .featured__item,
+  .featured__item--main,
+  .featured__item--sub,
+  .azfilter__col,
+  .azfilter__item,
+  .language__col,
+  .tags__col,
+  .tags__col--main,
+  .tags__col--3,
+  .tags__col--list,
+  .event-col-1,
+  .event-col-3-4,
+  .event-col-1-4 {
+    padding-left: 16px;
+  }
+}
+
+.main--left {
+  float: left;
+}
+
+.main--right {
+  float: right;
+}
+
+.main--article {
+  float: left;
+}
+
+.main--course .article {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .main--left {
+    width: 66.66667%;
+  }
+
+  .main--right {
+    width: 66.66667%;
+  }
+}
+
+@media (min-width: 1008px) {
+  .main--article {
+    width: 75%;
+    background: #fff;
+  }
+
+  .main--course {
+    width: 75%;
+    background: #fff;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main--article {
+    width: 58.33333%;
+  }
+
+  .main--course {
+    width: 58.33333%;
+  }
+}
+
+.sidebar,
+.sidebar--left,
+.sidebar--right,
+.sidebar--article,
+.sidebar--course {
+  margin-bottom: 8px;
+}
+
+.sidebar__heading {
+  font-weight: normal !important;
+  margin-top: 32px;
+}
+
+.sidebar .card--fullwidth:last-of-type,
+.sidebar--left .card--fullwidth:last-of-type,
+.sidebar--right .card--fullwidth:last-of-type,
+.sidebar--article .card--fullwidth:last-of-type,
+.sidebar--course .card--fullwidth:last-of-type {
+  margin: 16px 0 !important;
+}
+
+.sidebar .card--fullwidth .card__heading,
+.sidebar--left .card--fullwidth .card__heading,
+.sidebar--right .card--fullwidth .card__heading,
+.sidebar--article .card--fullwidth .card__heading,
+.sidebar--course .card--fullwidth .card__heading {
+  font-weight: normal !important;
+}
+
+.sidebar .card--fullwidth .card__inner,
+.sidebar--left .card--fullwidth .card__inner,
+.sidebar--right .card--fullwidth .card__inner,
+.sidebar--article .card--fullwidth .card__inner,
+.sidebar--course .card--fullwidth .card__inner {
+  padding: 16px 0;
+}
+
+.sidebar .card--fullwidth .card__body--left,
+.sidebar--left .card--fullwidth .card__body--left,
+.sidebar--right .card--fullwidth .card__body--left,
+.sidebar--article .card--fullwidth .card__body--left,
+.sidebar--course .card--fullwidth .card__body--left {
+  width: 100%;
+}
+
+.sidebar .card--fullwidth .card__body--right,
+.sidebar--left .card--fullwidth .card__body--right,
+.sidebar--right .card--fullwidth .card__body--right,
+.sidebar--article .card--fullwidth .card__body--right,
+.sidebar--course .card--fullwidth .card__body--right {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.sidebar .card--fullwidth .card__body--right a,
+.sidebar--left .card--fullwidth .card__body--right a,
+.sidebar--right .card--fullwidth .card__body--right a,
+.sidebar--article .card--fullwidth .card__body--right a,
+.sidebar--course .card--fullwidth .card__body--right a {
+  width: 100%;
+}
+
+.sidebar--left {
+  float: left;
+}
+
+.sidebar--left .list--simple,
+.sidebar--left .dates__list,
+.sidebar--left .collections__sections,
+.sidebar--left .language__dropdown,
+.sidebar--left .downloads__list {
+  position: relative;
+}
+
+.sidebar--right {
+  float: right;
+}
+
+.sidebar--article {
+  background-color: #e4e4e4;
+}
+
+.sidebar--course {
+  background-color: #e4e4e4;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .sidebar,
+  .sidebar--left,
+  .sidebar--right,
+  .sidebar--article,
+  .sidebar--course {
+    margin-bottom: 16px;
+  }
+
+  .sidebar__container {
+    padding-right: 16px;
+  }
+
+  .sidebar--left {
+    width: 33.33333%;
+  }
+
+  .sidebar--left .list--simple,
+  .sidebar--left .dates__list,
+  .sidebar--left .collections__sections,
+  .sidebar--left .language__dropdown,
+  .sidebar--left .downloads__list {
+    position: relative;
+  }
+
+  .sidebar--left .list--simple.sticky,
+  .sidebar--left .sticky.dates__list,
+  .sidebar--left .sticky.collections__sections,
+  .sidebar--left .sticky.language__dropdown,
+  .sidebar--left .sticky.downloads__list {
+    position: fixed;
+    top: 0;
+  }
+
+  .sidebar--left .list--simple.sticky .list__title,
+  .sidebar--left .sticky.dates__list .list__title,
+  .sidebar--left .sticky.collections__sections .list__title,
+  .sidebar--left .sticky.language__dropdown .list__title,
+  .sidebar--left .sticky.downloads__list .list__title {
+    margin-top: 16px;
+  }
+
+  .sidebar--course {
+    width: calc(100% - double($gel-spacing-unit));
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1008px) {
+  .sidebar,
+  .sidebar--left,
+  .sidebar--right,
+  .sidebar--article,
+  .sidebar--course {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+
+  .sidebar__container {
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .sidebar--article {
+    width: 25%;
+  }
+
+  .sidebar--course {
+    width: 25%;
+    margin-bottom: 16px;
+  }
+
+  .sidebar--left {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sidebar,
+  .sidebar--left,
+  .sidebar--right,
+  .sidebar--article,
+  .sidebar--course {
+    width: 30%;
+  }
+
+  .sidebar--article {
+    width: 25%;
+  }
+
+  .sidebar--course {
+    width: 25%;
+  }
+
+  .sidebar--left {
+    width: 33.33333%;
+  }
+}
+
+.diagonal {
+  z-index: 1;
+  padding: 3em;
+}
+
+.diagonal:before {
+  position: absolute;
+  content: '';
+  -webkit-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  -ms-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 75%;
+  background: inherit;
+}
+
+.set__bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .set__bg {
+    background-color: white;
+  }
+}
+
+.full--white {
+  background-color: #fff;
+}
+
+.n-touchevents .scroll-carousel--dates .scroll-carousel__container,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__viewport,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--1,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--2,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--3,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--4,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--5,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--6,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--7,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--8,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--9,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--10,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--11,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--12,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--13,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--14,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--15,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--16,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--17,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--18,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--19,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--20,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--21,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--22,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--23,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--24,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--25,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--26,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--27,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--28,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--29,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--30,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--31,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--32,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--33,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--34,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--35,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--36,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--37,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--38,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--39,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--40,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--41,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--42,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--43,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--44,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--45,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--46,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--47,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--48,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--49,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--50,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--51,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--52,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--53,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--54,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--55,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--56,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--57,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--58,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--59,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--60,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--61,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--62,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--63,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--64,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--65,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--66,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--67,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--68,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--69,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--70,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--71,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--72,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--73,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--74,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--75,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--76,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--77,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--78,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--79,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--80,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--81,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--82,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--83,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--84,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--85,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--86,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--87,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--88,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--89,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--90,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--91,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--92,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--93,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--94,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--95,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--96,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--97,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--98,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--99,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__list--100,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--1,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--1,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--2,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--2,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--3,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--3,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--4,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--4,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--5,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--5,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--6,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--6,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--7,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--7,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--8,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--8,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--9,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--9,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--10,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--10,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--11,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--11,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--12,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--12,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--13,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--13,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--14,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--14,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--15,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--15,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--16,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--16,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--17,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--17,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--18,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--18,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--19,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--19,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--20,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--20,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--21,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--21,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--22,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--22,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--23,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--23,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--24,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--24,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--25,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--25,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--26,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--26,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--27,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--27,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--28,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--28,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--29,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--29,
+.n-touchevents .scroll-carousel--dates .event__info .scroll-carousel--event .scroll-carousel__list--30,
+.event__info .scroll-carousel--event .n-touchevents .scroll-carousel--dates .scroll-carousel__list--30,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--1,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--2,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--3,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--4,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--5,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--6,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--7,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--8,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--9,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--10,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--11,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--12,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--13,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--14,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--15,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--16,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--17,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--18,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--19,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--20,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--21,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--22,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--23,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--24,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--25,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--26,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--27,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--28,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--29,
+.n-touchevents .scroll-carousel--dates .scroll-carousel-p__list--30,
+.n-touchevents .scroll-carousel--dates .scroll-carousel__item {
+  height: 310px !important;
+}
+
+.n-touchevents .dates__spaces__copy {
+  width: 47%;
+}
+
+@media (min-width: 768px) {
+  .n-touchevents .course__header__heading {
+    width: 65%;
+  }
+}
+
+.rtl #orb-modules {
+  direction: rtl;
+  font-family: "BBCNassim Bold", "BBCNassim";
+}
+
+.rtl #orb-search-form {
+  position: relative;
+}
+
+.rtl #orb-search-button {
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.rtl .sidebar-left {
+  float: right;
+}
+
+.rtl .header .row,
+.rtl .header--narrow .row,
+.rtl .header .row--article,
+.rtl .header--narrow .row--article,
+.rtl .header .sidebar__container,
+.rtl .header--narrow .sidebar__container,
+.rtl .header .icon__row,
+.rtl .header--narrow .icon__row,
+.rtl .header .grid__row,
+.rtl .header--narrow .grid__row,
+.rtl .header .colour__row,
+.rtl .header--narrow .colour__row,
+.rtl .header ul__row,
+.rtl .header--narrow ul__row,
+.rtl .header .list__row,
+.rtl .header--narrow .list__row,
+.rtl .header .card__data,
+.rtl .header--narrow .card__data,
+.rtl .header .loadmore,
+.rtl .header--narrow .loadmore,
+.rtl .header .tabs__row,
+.rtl .header--narrow .tabs__row,
+.rtl .header .pocket__content,
+.rtl .header--narrow .pocket__content,
+.rtl .header .similar__content,
+.rtl .header--narrow .similar__content,
+.rtl .header .content-block__row,
+.rtl .header--narrow .content-block__row,
+.rtl .header .social__row,
+.rtl .header--narrow .social__row,
+.rtl .header .featured__row,
+.rtl .header--narrow .featured__row,
+.rtl .header .azfilter__row,
+.rtl .header--narrow .azfilter__row,
+.rtl .header .azfilter__list,
+.rtl .header--narrow .azfilter__list,
+.rtl .header .language__row,
+.rtl .header--narrow .language__row,
+.rtl .header .tags__row,
+.rtl .header--narrow .tags__row,
+.rtl .header .event-row,
+.rtl .header--narrow .event-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.rtl .logo,
+.rtl .logo--translated {
+  float: right;
+  margin: 8px 24px 0 0;
+}
+
+.rtl .header.search-open .search,
+.rtl .search-open.header--narrow .search,
+.rtl .search-open.header--narrow .search {
+  padding-left: 0;
+  padding-right: 0;
+  right: 16px;
+  left: 0;
+}
+
+.rtl .hero--homepage .hero__heading,
+.rtl .hero--homepage .hero__description {
+  text-align: right;
+}
+
+.rtl .card__media-icon__tag {
+  padding-right: 32px !important;
+  padding-left: 8px !important;
+}
+
+.rtl .search {
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+  width: calc(100% - 310px);
+  left: 100px;
+}
+
+.rtl .search__input {
+  float: left;
+  text-align: right;
+  padding-left: 56px;
+  padding-right: 10px;
+}
+
+.rtl .search__button,
+.rtl .search__button--clear {
+  left: 0;
+  right: auto;
+  z-index: 10;
+}
+
+.rtl .search__button__wrapper {
+  right: auto;
+  left: 0;
+}
+
+.rtl .search__button--clear {
+  left: 40px;
+}
+
+.rtl .search__button--close {
+  float: left;
+  margin-left: 16px;
+  margin-right: 0;
+}
+
+.rtl .search__tooltip {
+  right: 5%;
+  left: auto;
+}
+
+.rtl .search__tooltip--box:after {
+  left: 64px;
+  right: auto;
+}
+
+.rtl .search--block .search__button--clear {
+  left: 64px;
+  right: auto;
+}
+
+.rtl .nav,
+.rtl .nav--wide,
+.rtl .no-js .nav--base,
+.no-js .rtl .nav--base {
+  left: 0;
+  right: auto;
+  padding-left: 0;
+}
+
+.rtl .nav__list {
+  text-align: right;
+  float: left;
+}
+
+.rtl .nav__menu-btn {
+  float: left;
+  margin: 0 0 0 8px;
+}
+
+.rtl .nav .ellipses,
+.rtl .nav--wide .ellipses,
+.rtl .no-js .nav--base .ellipses,
+.no-js .rtl .nav--base .ellipses {
+  padding: 0;
+}
+
+.rtl .language__selector {
+  float: left;
+}
+
+.rtl .tabs__item {
+  float: right;
+}
+
+.rtl .tabs__item:first-child .tabs__link {
+  padding-right: 0;
+  padding-left: 32px;
+}
+
+.rtl .tabs__more {
+  float: left;
+}
+
+.rtl .tabs__more .tabs__link {
+  padding-right: 32px;
+  padding-left: 0;
+}
+
+.rtl .tabs--filter .tabs__item:first-child {
+  padding: 12px 0 12px 16px;
+}
+
+.rtl .tabs__overflow li:first-child .tabs__link {
+  padding-right: 16px;
+}
+
+.rtl .card__media {
+  float: right;
+}
+
+.rtl .card__media-icon {
+  left: auto;
+  right: 0;
+}
+
+.rtl .card__body {
+  float: right;
+}
+
+.rtl .card__body--left {
+  float: right;
+}
+
+.rtl .card__body--right {
+  float: left;
+}
+
+.rtl .card__data {
+  float: right;
+}
+
+.rtl .card__data__wrapper {
+  left: auto;
+  right: 52%;
+}
+
+.rtl .card__data__wrapper .data__icon__svg {
+  right: 0;
+  left: auto;
+}
+
+.rtl .card__data__wrapper .data__icon__svg+.card__date {
+  padding-right: 24px;
+  padding-left: 0;
+}
+
+.rtl .card__data-icon {
+  float: right;
+}
+
+.rtl .card__date {
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+.rtl .card__type {
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+.rtl .card__tag {
+  border-right: 1px solid #dcdcdc;
+  padding-right: 8px;
+  border-left: none;
+}
+
+.rtl .card--featured .card__data__wrapper {
+  right: 8px;
+}
+
+.rtl .card--featured .card__tag {
+  border-right: 1px solid #dcdcdc;
+  padding-right: 8px;
+  border-left: none;
+}
+
+.rtl .card--sub .card__data__wrapper {
+  right: 8px;
+}
+
+.rtl .card--sub .card__tag {
+  border-right: 1px solid #dcdcdc;
+  padding-right: 8px;
+  border-left: none;
+}
+
+.rtl .content-block--featured {
+  direction: rtl;
+}
+
+.rtl .scroll-carousel__item {
+  margin-right: 16px;
+}
+
+.rtl .scroll-carousel__item .card__data__wrapper {
+  right: 8px;
+}
+
+.rtl .divider__icon {
+  left: auto;
+  right: 0;
+}
+
+.rtl .divider__message {
+  float: right;
+  padding-left: 16px;
+  padding-right: 0;
+}
+
+.rtl .divider--bestmatch .divider__message {
+  margin-right: 32px;
+  padding-right: 16px;
+}
+
+.rtl .dropdown__button {
+  padding-left: 32px;
+  padding-right: 0;
+}
+
+.rtl .data__icon {
+  float: right;
+}
+
+.rtl .dates__location p,
+.rtl .dates__location .accordion__answer h3,
+.accordion__answer .rtl .dates__location h3 {
+  padding: 0 20px 0 0;
+}
+
+.rtl .podcast__button {
+  padding-left: 32px;
+}
+
+.rtl .accordion__link {
+  padding: 16px 16px 16px 52px;
+}
+
+.rtl .accordion__link__icon {
+  right: auto;
+  left: 0;
+}
+
+.rtl .scroll-carousel__list,
+.rtl .scroll-carousel__list--1,
+.rtl .scroll-carousel__list--2,
+.rtl .scroll-carousel__list--3,
+.rtl .scroll-carousel__list--4,
+.rtl .scroll-carousel__list--5,
+.rtl .scroll-carousel__list--6,
+.rtl .scroll-carousel__list--7,
+.rtl .scroll-carousel__list--8,
+.rtl .scroll-carousel__list--9,
+.rtl .scroll-carousel__list--10,
+.rtl .scroll-carousel__list--11,
+.rtl .scroll-carousel__list--12,
+.rtl .scroll-carousel__list--13,
+.rtl .scroll-carousel__list--14,
+.rtl .scroll-carousel__list--15,
+.rtl .scroll-carousel__list--16,
+.rtl .scroll-carousel__list--17,
+.rtl .scroll-carousel__list--18,
+.rtl .scroll-carousel__list--19,
+.rtl .scroll-carousel__list--20,
+.rtl .scroll-carousel__list--21,
+.rtl .scroll-carousel__list--22,
+.rtl .scroll-carousel__list--23,
+.rtl .scroll-carousel__list--24,
+.rtl .scroll-carousel__list--25,
+.rtl .scroll-carousel__list--26,
+.rtl .scroll-carousel__list--27,
+.rtl .scroll-carousel__list--28,
+.rtl .scroll-carousel__list--29,
+.rtl .scroll-carousel__list--30,
+.rtl .scroll-carousel__list--31,
+.rtl .scroll-carousel__list--32,
+.rtl .scroll-carousel__list--33,
+.rtl .scroll-carousel__list--34,
+.rtl .scroll-carousel__list--35,
+.rtl .scroll-carousel__list--36,
+.rtl .scroll-carousel__list--37,
+.rtl .scroll-carousel__list--38,
+.rtl .scroll-carousel__list--39,
+.rtl .scroll-carousel__list--40,
+.rtl .scroll-carousel__list--41,
+.rtl .scroll-carousel__list--42,
+.rtl .scroll-carousel__list--43,
+.rtl .scroll-carousel__list--44,
+.rtl .scroll-carousel__list--45,
+.rtl .scroll-carousel__list--46,
+.rtl .scroll-carousel__list--47,
+.rtl .scroll-carousel__list--48,
+.rtl .scroll-carousel__list--49,
+.rtl .scroll-carousel__list--50,
+.rtl .scroll-carousel__list--51,
+.rtl .scroll-carousel__list--52,
+.rtl .scroll-carousel__list--53,
+.rtl .scroll-carousel__list--54,
+.rtl .scroll-carousel__list--55,
+.rtl .scroll-carousel__list--56,
+.rtl .scroll-carousel__list--57,
+.rtl .scroll-carousel__list--58,
+.rtl .scroll-carousel__list--59,
+.rtl .scroll-carousel__list--60,
+.rtl .scroll-carousel__list--61,
+.rtl .scroll-carousel__list--62,
+.rtl .scroll-carousel__list--63,
+.rtl .scroll-carousel__list--64,
+.rtl .scroll-carousel__list--65,
+.rtl .scroll-carousel__list--66,
+.rtl .scroll-carousel__list--67,
+.rtl .scroll-carousel__list--68,
+.rtl .scroll-carousel__list--69,
+.rtl .scroll-carousel__list--70,
+.rtl .scroll-carousel__list--71,
+.rtl .scroll-carousel__list--72,
+.rtl .scroll-carousel__list--73,
+.rtl .scroll-carousel__list--74,
+.rtl .scroll-carousel__list--75,
+.rtl .scroll-carousel__list--76,
+.rtl .scroll-carousel__list--77,
+.rtl .scroll-carousel__list--78,
+.rtl .scroll-carousel__list--79,
+.rtl .scroll-carousel__list--80,
+.rtl .scroll-carousel__list--81,
+.rtl .scroll-carousel__list--82,
+.rtl .scroll-carousel__list--83,
+.rtl .scroll-carousel__list--84,
+.rtl .scroll-carousel__list--85,
+.rtl .scroll-carousel__list--86,
+.rtl .scroll-carousel__list--87,
+.rtl .scroll-carousel__list--88,
+.rtl .scroll-carousel__list--89,
+.rtl .scroll-carousel__list--90,
+.rtl .scroll-carousel__list--91,
+.rtl .scroll-carousel__list--92,
+.rtl .scroll-carousel__list--93,
+.rtl .scroll-carousel__list--94,
+.rtl .scroll-carousel__list--95,
+.rtl .scroll-carousel__list--96,
+.rtl .scroll-carousel__list--97,
+.rtl .scroll-carousel__list--98,
+.rtl .scroll-carousel__list--99,
+.rtl .scroll-carousel__list--100,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--1,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--1,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--2,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--2,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--3,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--3,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--4,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--4,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--5,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--5,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--6,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--6,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--7,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--7,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--8,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--8,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--9,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--9,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--10,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--10,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--11,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--11,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--12,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--12,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--13,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--13,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--14,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--14,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--15,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--15,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--16,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--16,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--17,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--17,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--18,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--18,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--19,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--19,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--20,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--20,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--21,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--21,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--22,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--22,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--23,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--23,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--24,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--24,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--25,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--25,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--26,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--26,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--27,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--27,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--28,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--28,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--29,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--29,
+.rtl .event__info .scroll-carousel--event .scroll-carousel__list--30,
+.event__info .scroll-carousel--event .rtl .scroll-carousel__list--30,
+.rtl .scroll-carousel-p__list--1,
+.rtl .scroll-carousel-p__list--2,
+.rtl .scroll-carousel-p__list--3,
+.rtl .scroll-carousel-p__list--4,
+.rtl .scroll-carousel-p__list--5,
+.rtl .scroll-carousel-p__list--6,
+.rtl .scroll-carousel-p__list--7,
+.rtl .scroll-carousel-p__list--8,
+.rtl .scroll-carousel-p__list--9,
+.rtl .scroll-carousel-p__list--10,
+.rtl .scroll-carousel-p__list--11,
+.rtl .scroll-carousel-p__list--12,
+.rtl .scroll-carousel-p__list--13,
+.rtl .scroll-carousel-p__list--14,
+.rtl .scroll-carousel-p__list--15,
+.rtl .scroll-carousel-p__list--16,
+.rtl .scroll-carousel-p__list--17,
+.rtl .scroll-carousel-p__list--18,
+.rtl .scroll-carousel-p__list--19,
+.rtl .scroll-carousel-p__list--20,
+.rtl .scroll-carousel-p__list--21,
+.rtl .scroll-carousel-p__list--22,
+.rtl .scroll-carousel-p__list--23,
+.rtl .scroll-carousel-p__list--24,
+.rtl .scroll-carousel-p__list--25,
+.rtl .scroll-carousel-p__list--26,
+.rtl .scroll-carousel-p__list--27,
+.rtl .scroll-carousel-p__list--28,
+.rtl .scroll-carousel-p__list--29,
+.rtl .scroll-carousel-p__list--30 {
+  left: auto;
+  right: 87px;
+}
+
+.rtl .scroll-carousel__item {
+  margin-left: 16px;
+  margin-right: 0;
+  float: right;
+}
+
+.rtl .scroll-carousel__buttons {
+  right: auto;
+  left: 97px;
+}
+
+@media (min-width: 768px) {
+  .rtl .logo,
+  .rtl .logo--translated {
+    float: right;
+    margin: 0 0 0 0;
+  }
+
+  .rtl .logo--translated {
+    float: right;
+    margin: 0 16px 0 0;
+  }
+
+  .rtl .nav,
+  .rtl .nav--wide,
+  .rtl .no-js .nav--base,
+  .no-js .rtl .nav--base {
+    left: 0;
+    right: auto;
+  }
+
+  .rtl .nav__list {
+    text-align: right;
+    float: left;
+  }
+
+  .rtl .nav__overflow {
+    right: 83px;
+    text-align: right;
+    left: auto;
+  }
+
+  .rtl .nav__overflow .nav__item,
+  .rtl .nav__overflow .nav__item--language {
+    float: right;
+  }
+
+  .rtl .card__data__wrapper {
+    right: 16px;
+  }
+
+  .rtl .card--featured .card__data__wrapper {
+    right: auto;
+    left: 35.6%;
+  }
+
+  .rtl .search {
+    left: 20px;
+  }
+
+  .rtl .search__tooltip {
+    right: 50%;
+    width: 330px;
+    margin-right: -220px;
+  }
+
+  .rtl .search__tooltip--box:after {
+    bottom: 100%;
+    right: auto;
+    left: 50%;
+  }
+
+  .rtl .search__tooltip--message:before {
+    content: "To begin your search please enter a search term and click the submit button.";
+  }
+
+  .rtl .scroll-carousel__item .card__data__wrapper {
+    right: 16px;
+  }
+
+  .rtl .hero--homepage .hero__grad {
+    background: linear-gradient(to left, rgba(0,0,0,0.8) 25%, transparent 76%);
+    filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=1)";
+  }
+}
+
+@media (min-width: 1008px) {
+  .rtl .set__bg {
+    left: auto;
+    right: 0;
+  }
+
+  .rtl .sidebar--article {
+    padding-right: 16px;
+    padding-left: 0px;
+  }
+
+  .rtl .wrapper--article {
+    padding: 0 0 32px 32px;
+  }
+
+  .rtl .main--article {
+    padding-left: 0;
+    float: right;
+  }
+
+  .rtl .main--article .data--article {
+    right: -197px;
+    left: auto;
+  }
+
+  .rtl .search {
+    width: 375px;
+  }
+
+  .rtl .search__tooltip {
+    margin-right: -200px;
+  }
+
+  .rtl .nav__list {
+    text-align: right;
+    float: right;
+  }
+
+  .rtl .nav__item,
+  .rtl .nav__item--language {
+    border-left: none;
+    border-right: 1px solid #525284;
+  }
+
+  .rtl .nav__item:first-of-type,
+  .rtl .nav__item--language:first-of-type {
+    border-right: none;
+  }
+
+  .rtl .nav__item--language {
+    right: auto;
+    left: 16px;
+    border-right: none;
+  }
+
+  .rtl .nav__item:last-of-type .nav__link,
+  .rtl .nav__item--language:last-of-type .nav__link,
+  .rtl .nav__item:last-of-type .language__selector__link,
+  .rtl .nav__item--language:last-of-type .language__selector__link,
+  .rtl .nav__item:last-of-type .detection__link,
+  .rtl .nav__item--language:last-of-type .detection__link {
+    padding-left: 0;
+  }
+
+  .rtl .card--featured .card__data__wrapper {
+    right: auto;
+    left: 21.8%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .rtl .nav,
+  .rtl .nav--wide,
+  .rtl .no-js .nav--base,
+  .no-js .rtl .nav--base {
+    left: 0;
+    right: auto;
+  }
+
+  .rtl .nav__overflow {
+    right: 333px;
+  }
+
+  .rtl .search__tooltip {
+    margin-right: -334px;
+  }
+
+  .rtl .card--featured .card__data__wrapper {
+    right: 16px;
+    left: auto;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, freesans, sans-serif !important;
+  font-size: 16px;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, freesans, sans-serif !important;
+  background-color: #e4e4e4;
+}
+
+#blq-global *,
+#blq-global *:before,
+#blq-global *:after,
+#orb-banner *,
+#orb-banner *:before,
+#orb-banner *:after,
+#orb-footer *,
+#orb-footer *:before,
+#orb-footer *:after {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+#se-searchbox-app *,
+#orb-search-form * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+#academy-content {
+  outline: none;
+}
+
+#academy-content:focus {
+  outline: none;
+}
+
+.mq-output {
+  display: block;
+  background: aliceblue;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 0 0 10px 0;
+  z-index: 100;
+}
+
+.mq-output:after {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  border-radius: 0 10px 0 0;
+  z-index: 100;
+  content: "BP - min 0px";
+  background: #4A8A94;
+}
+
+@media (min-width: 320px) {
+  .mq-output:after {
+    content: "BP - mc - min 400px";
+    background: #4A8A94;
+  }
+}
+
+@media (min-width: 480px) {
+  .mq-output:after {
+    content: "BP - xs - min 480px";
+    background: #4A8A94;
+  }
+}
+
+@media (min-width: 600px) {
+  .mq-output:after {
+    content: "BP - fc - min 600px";
+    background: #4A8A94;
+  }
+}
+
+@media (min-width: 768px) {
+  .mq-output:after {
+    content: "BP - s - min 768px";
+    background: #4A8A94;
+  }
+}
+
+@media (min-width: 1008px) {
+  .mq-output:after {
+    content: "BP - m - min 1008px";
+    background: #75C98A;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mq-output:after {
+    content: "BP - l - min 1280px";
+    background: #C9E86C;
+  }
+}
+
+audio,
+canvas,
+progress,
+video,
+.gel-layout__item,
+.icon,
+.divider__icon,
+.alert__icon,
+.alert__icon--lrg,
+.search__icon,
+.card__media-icon,
+.course__skip__icon,
+.data__icon,
+.dropdown__icon,
+.tabs__more-icon,
+.dates__icon,
+.herousel__button__icon,
+.pocket__icon,
+.social__icon,
+.social__icon--twitter,
+.social__icon--youtube,
+.social__icon--facebook,
+.social__icon--medium,
+.social__icon--instagram,
+.social__icon--soundcloud,
+.social__icon--yammer,
+.featured__button__icon,
+.collections__sections__menu__icon,
+.language__icon,
+.downloads__icon,
+.event__info-add .dates__icon,
+.icon__svg,
+.divider__icon__svg,
+.alert__icon__svg,
+.card__flag__svg,
+.card__media-icon__svg,
+.card__data-icon__svg,
+.card__date__svg,
+.course__skip__svg,
+.data__icon__svg,
+.dropdown__icon__svg,
+.tabs__more-icon__svg,
+.dates__svg,
+.herousel__button__icon__svg,
+.pocket__icon__svg,
+.social__icon__svg,
+.featured__button__icon__svg,
+.accordion__link__icon,
+.collections__sections__menu__svg,
+.language__icon__svg,
+.sortby__icon,
+.detection__icon__svg,
+.event__info-add .dates__svg,
+.icon__svg>svg,
+.divider__icon__svg>svg,
+.alert__icon__svg>svg,
+.card__flag__svg>svg,
+.card__media-icon__svg>svg,
+.card__data-icon__svg>svg,
+.card__date__svg>svg,
+.course__skip__svg>svg,
+.data__icon__svg>svg,
+.dropdown__icon__svg>svg,
+.tabs__more-icon__svg>svg,
+.dates__svg>svg,
+.herousel__button__icon__svg>svg,
+.pocket__icon__svg>svg,
+.social__icon__svg>svg,
+.featured__button__icon__svg>svg,
+.accordion__link__icon>svg,
+.collections__sections__menu__svg>svg,
+.language__icon__svg>svg,
+.sortby__icon>svg,
+.detection__icon__svg>svg,
+.event__info-add .dates__svg>svg {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.ie8 audio,
+.ie8 canvas,
+.ie8 progress,
+.ie8 video,
+.ie8 .gel-layout__item,
+.ie8 .icon,
+.ie8 .divider__icon,
+.ie8 .alert__icon,
+.ie8 .alert__icon--lrg,
+.ie8 .search__icon,
+.ie8 .card__media-icon,
+.ie8 .course__skip__icon,
+.ie8 .data__icon,
+.ie8 .dropdown__icon,
+.ie8 .tabs__more-icon,
+.ie8 .dates__icon,
+.ie8 .herousel__button__icon,
+.ie8 .pocket__icon,
+.ie8 .social__icon,
+.ie8 .social__icon--twitter,
+.ie8 .social__icon--youtube,
+.ie8 .social__icon--facebook,
+.ie8 .social__icon--medium,
+.ie8 .social__icon--instagram,
+.ie8 .social__icon--soundcloud,
+.ie8 .social__icon--yammer,
+.ie8 .featured__button__icon,
+.ie8 .collections__sections__menu__icon,
+.ie8 .language__icon,
+.ie8 .downloads__icon,
+.ie8 .icon__svg,
+.ie8 .divider__icon__svg,
+.ie8 .alert__icon__svg,
+.ie8 .card__flag__svg,
+.ie8 .card__media-icon__svg,
+.ie8 .card__data-icon__svg,
+.ie8 .card__date__svg,
+.ie8 .course__skip__svg,
+.ie8 .data__icon__svg,
+.ie8 .dropdown__icon__svg,
+.ie8 .tabs__more-icon__svg,
+.ie8 .dates__svg,
+.ie8 .herousel__button__icon__svg,
+.ie8 .pocket__icon__svg,
+.ie8 .social__icon__svg,
+.ie8 .featured__button__icon__svg,
+.ie8 .accordion__link__icon,
+.ie8 .collections__sections__menu__svg,
+.ie8 .language__icon__svg,
+.ie8 .sortby__icon,
+.ie8 .detection__icon__svg,
+.ie8 .icon__svg>svg,
+.ie8 .divider__icon__svg>svg,
+.ie8 .alert__icon__svg>svg,
+.ie8 .card__flag__svg>svg,
+.ie8 .card__media-icon__svg>svg,
+.ie8 .card__data-icon__svg>svg,
+.ie8 .card__date__svg>svg,
+.ie8 .course__skip__svg>svg,
+.ie8 .data__icon__svg>svg,
+.ie8 .dropdown__icon__svg>svg,
+.ie8 .tabs__more-icon__svg>svg,
+.ie8 .dates__svg>svg,
+.ie8 .herousel__button__icon__svg>svg,
+.ie8 .pocket__icon__svg>svg,
+.ie8 .social__icon__svg>svg,
+.ie8 .featured__button__icon__svg>svg,
+.ie8 .accordion__link__icon>svg,
+.ie8 .collections__sections__menu__svg>svg,
+.ie8 .language__icon__svg>svg,
+.ie8 .sortby__icon>svg,
+.ie8 .detection__icon__svg>svg,
+.ie8 .event__info-add .dates__svg>svg {
+  margin-right: 1px;
+}
+
+.sr-only,
+.ratio__caption,
+.icon__caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: none;
+}
+
+.skip-link {
+  min-height: 2.27em;
+  padding: .462em 12px .308em;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  display: block;
+  z-index: 1;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  position: absolute;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  clip: auto;
+  color: #333;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.mb {
+  margin-bottom: 16px;
+}
+
+.ratio,
+.card__media figure,
+.article__figure,
+.course__pic,
+.no-js .video__player,
+.no-js span[data-type="BBC-PID"],
+.no-js span[data-type="BBC-SID"] {
+  max-width: 100%;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  background-color: #dcdcdc;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='188.549' height='53.7' viewBox='0 0 188.549 53.7'%3E%3Cg fill='%23BCBCBC'%3E%3Cpath d='M167.4 7.486C157.21 5.75 145.644 9.65 141.51 19.82c-2.09 5.136-1.91 10.947.68 15.862 2.465 4.677 6.707 8.138 11.72 9.775 6.405 2.092 13.94 1.575 20.168-.89.52-.206 3.098-.98 3.098-1.56V35.86c-7.855 5.022-20.712 7.69-27.348-.816-3.1-3.973-3.508-9.774-1.21-14.225 2.49-4.855 7.842-7.423 13.13-7.613 5.45-.195 10.32 1.74 15.02 4.3v-6.66c0-.194.09-.496-.108-.575-.942-.378-1.896-.73-2.853-1.066-2.09-.735-4.23-1.32-6.408-1.72zM131.46.016H187.807c.618 0 .7-.15.7.462v52.316c0 .51.218.905-.327.905h-56.646c-.17 0-.073-1.383-.073-1.555V.016zM87.62 29.62v10.55h6.85s.136-.003.36-.012c.23-.01.557-.02.95-.055.75-.07 1.726-.205 2.675-.526.86-.29 1.698-.725 2.336-1.364.247-.246.45-.503.615-.762.538-.846.674-1.705.703-2.193.016-.212.015-.334.015-.334s.003-.096 0-.26c-.007-.203-.032-.6-.14-1.02-.13-.5-.37-1.082-.802-1.612-.08-.1-.167-.2-.265-.298-.188-.188-.39-.37-.614-.533-.374-.276-.802-.513-1.268-.716-.615-.265-1.305-.464-2.06-.605-.39-.074-.8-.135-1.22-.173-.26-.026-.52-.044-.79-.06-.233-.014-.478-.024-.723-.024-2.43 0-6.62-.004-6.62-.004zM87.62 13.58v10.002h3.316s.22 0 .513-.008c.228-.008.502-.023.744-.036.683-.05 1.627-.146 2.57-.41.186-.052.37-.11.553-.173.74-.263 1.45-.648 2-1.19.44-.432.73-.912.92-1.38.236-.57.32-1.12.354-1.507.03-.347.03-.567.03-.567s.006-.163-.01-.423c-.02-.437-.112-1.145-.454-1.827-.167-.326-.395-.64-.702-.945-.374-.37-.826-.65-1.313-.866-.932-.413-2-.577-2.9-.637-.39-.026-.748-.03-1.05-.03-.68-.002-4.57-.002-4.57-.002zM80.694 7.544v38.662h14.554s7.1.195 11.017-3.724c3.188-3.188 2.96-6.88 2.96-6.88s.23-3.853-2.724-6.807c-2.515-2.516-5.728-3.186-5.728-3.186s1.45-.682 2.566-1.797c.52-.523 2.38-2.2 2.38-6.273 0-4.104-2.73-6.463-2.73-6.463s-2.992-3.534-9.746-3.534H80.694zM65.73.016h57.045V53.7H65.73V.016zM21.89 29.62v10.55h6.848s.138-.003.36-.012c.233-.01.56-.02.954-.055.746-.07 1.723-.205 2.673-.526.86-.29 1.697-.725 2.337-1.364.246-.246.45-.503.613-.762.538-.846.673-1.705.703-2.193.016-.212.014-.334.014-.334s.004-.096 0-.26c-.008-.203-.03-.6-.14-1.02-.128-.5-.37-1.082-.8-1.612-.082-.1-.17-.2-.266-.298-.19-.188-.393-.37-.615-.533-.374-.276-.802-.513-1.27-.716-.613-.265-1.302-.464-2.06-.605-.387-.074-.798-.135-1.217-.173-.26-.026-.52-.044-.79-.06-.233-.014-.48-.024-.723-.024-2.43 0-6.62-.004-6.62-.004zM21.89 13.58v10.002h3.316s.22 0 .513-.008c.228-.008.502-.023.745-.036.683-.05 1.626-.146 2.57-.41.185-.052.37-.11.552-.173.74-.263 1.45-.648 2.002-1.19.437-.432.727-.912.92-1.38.233-.57.315-1.12.35-1.507.03-.347.03-.567.03-.567s.006-.163-.008-.423c-.023-.437-.114-1.145-.457-1.827-.166-.326-.393-.64-.7-.945-.374-.37-.826-.65-1.313-.866-.934-.413-2.002-.577-2.902-.637-.39-.026-.748-.03-1.052-.03-.68-.002-4.57-.002-4.57-.002zM14.964 7.544v38.662h14.554s7.097.195 11.016-3.724c3.19-3.188 2.96-6.88 2.96-6.88s.232-3.853-2.723-6.807c-2.515-2.516-5.728-3.186-5.728-3.186s1.45-.682 2.566-1.797c.52-.523 2.38-2.2 2.38-6.273 0-4.104-2.73-6.463-2.73-6.463s-2.99-3.534-9.746-3.534H14.964zM0 .016h57.044V53.7H0V.016z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  margin: 0;
+}
+
+.ratio img,
+.card__media figure img,
+.article__figure img,
+.course__pic img,
+.no-js .video__player img,
+.no-js span[data-type="BBC-PID"] img,
+.no-js span[data-type="BBC-SID"] img {
+  opacity: 1;
+}
+
+.ie8 .ratio img,
+.ie8 .card__media figure img,
+.card__media .ie8 figure img,
+.ie8 .article__figure img,
+.ie8 .course__pic img,
+.ie8 .no-js .video__player img,
+.no-js .ie8 .video__player img,
+.ie8 .no-js span[data-type="BBC-PID"] img,
+.no-js .ie8 span[data-type="BBC-PID"] img,
+.ie8 .no-js span[data-type="BBC-SID"] img,
+.no-js .ie8 span[data-type="BBC-SID"] img,
+.ie9 .ratio img,
+.ie9 .card__media figure img,
+.card__media .ie9 figure img,
+.ie9 .article__figure img,
+.ie9 .course__pic img,
+.ie9 .no-js .video__player img,
+.no-js .ie9 .video__player img,
+.ie9 .no-js span[data-type="BBC-PID"] img,
+.no-js .ie9 span[data-type="BBC-PID"] img,
+.ie9 .no-js span[data-type="BBC-SID"] img,
+.no-js .ie9 span[data-type="BBC-SID"] img {
+  opacity: 1 !important;
+}
+
+.ratio--2-1,
+.tabs--sidebar .card--panel .card__media figure,
+.featured__item--sub .card__media figure {
+  padding-bottom: 50%;
+}
+
+.ratio--4-3 {
+  padding-bottom: 75%;
+}
+
+.ratio--3-2 {
+  padding-bottom: 66.66666667%;
+}
+
+.ratio--16-9,
+.card__media figure {
+  padding-bottom: 56.25%;
+}
+
+.ratio__text {
+  color: #121260;
+}
+
+@-webkit-keyframes gel-fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gel-fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h1,
+.h1,
+.hero__heading {
+  font-weight: bold;
+}
+
+h2,
+.h2,
+.page-title,
+.card--fullwidth .card__heading,
+.herousel__item .card__heading,
+.featured__item--main .card__body .card__heading {
+  font-weight: bold;
+}
+
+h3,
+.h3,
+.sidebar .card--fullwidth .card__heading,
+.sidebar--left .card--fullwidth .card__heading,
+.sidebar--right .card--fullwidth .card__heading,
+.sidebar--article .card--fullwidth .card__heading,
+.sidebar--course .card--fullwidth .card__heading,
+.sub-title,
+.section__title,
+.section__title--nointro,
+.scroll-carousel__heading,
+.scroll-carousel__heading--nointro,
+.scroll-carousel-p__heading--nointro,
+.featured__heading,
+.collections__sections__menu,
+.collections__subheading,
+.language__heading,
+.scroll-carousel-p__heading {
+  font-weight: bold;
+}
+
+h4,
+.h4,
+.sidebar__heading,
+.divider__message,
+.alert--charges .alert__heading,
+.card--panel .card__heading,
+.dates__date,
+.herousel__item .card__tags,
+.featured__item--sub .card__heading {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+h5,
+.event__speaker-copy .role,
+.h5,
+.language__dropdown__link,
+.language__dropdown__link--close,
+h6,
+.h6 {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+p,
+.accordion__answer h3 {
+  margin-bottom: 16px;
+}
+
+p,
+.accordion__answer h3 {
+  line-height: 1.2rem;
+}
+
+p:empty,
+.accordion__answer h3:empty {
+  display: none;
+}
+
+blockquote {
+  position: relative;
+  display: block;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  margin: 48px 0;
+  padding: 32px 0 0;
+}
+
+blockquote:before {
+  background-image: url("/academy/static/img/svg-fallbacks/gel-icon-quote.png");
+  background-image: none,url("/academy/static/img/svg/gel-icon-quote.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 0;
+  margin-left: 0;
+  display: block;
+  content: '';
+}
+
+blockquote .attribution {
+  display: block;
+  margin-top: 16px;
+}
+
+.exampleOutput blockquote:before {
+  background-image: url("../img/svg-fallbacks/gel-icon-quote.png");
+  background-image: none,url("../img/svg/gel-icon-quote.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 0;
+  margin-left: 0;
+  display: block;
+  content: '';
+}
+
+address {
+  margin-bottom: 16px;
+  font-style: normal;
+  line-height: 1.42857143;
+}
+
+address strong {
+  font-weight: bold;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  cursor: normal !important;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+dl dt {
+  font-weight: bold;
+}
+
+dl dt,
+dl dd {
+  line-height: 1.42857143;
+}
+
+dl dd {
+  margin-left: 0;
+}
+
+.page-title {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    margin-top: 32px;
+  }
+}
+
+.sub-title {
+  font-weight: normal;
+}
+
+.results-found {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .search--block .suggestions__title {
+    display: block;
+  }
+}
+
+.section__title {
+  margin-bottom: 8px;
+}
+
+.section__title--nointro {
+  margin-bottom: 16px;
+}
+
+.section__intro {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1008px) {
+  .section__intro {
+    max-width: 70%;
+  }
+}
+
+.logo,
+.logo--translated {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  float: left;
+  margin: 8px 0 0 16px;
+  padding: 0;
+  overflow: hidden;
+  width: 155px;
+  height: 26px;
+}
+
+.logo__link {
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+.logo__icon {
+  position: relative;
+  margin: 0;
+  width: 160px;
+  height: 24px;
+}
+
+.logo__icon title {
+  color: #fff;
+}
+
+.logo__container--forstyleguide {
+  float: left;
+  width: 100%;
+  padding: 16px;
+  background-color: #121260;
+}
+
+.logo--translated {
+  overflow: visible;
+}
+
+.logo--translated .logo__link {
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
+  padding: 0;
+  color: #fff;
+}
+
+@media (min-width: 320px) {
+  .logo,
+  .logo--translated {
+    margin: 8px 0 0 24px;
+  }
+}
+
+@media (min-width: 480px) {
+  .logo,
+  .logo--translated {
+    margin: 8px 0 0 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo,
+  .logo--translated {
+    margin: 8px 0 0 32px;
+    overflow: visible;
+  }
+
+  .logo.open,
+  .open.logo--translated {
+    width: 150px;
+  }
+}
+
+@media (min-width: 1008px) {
+  .logo,
+  .logo--translated {
+    width: 200px;
+    height: 42px;
+    padding-top: 0;
+    margin: 0 0 0 16px;
+  }
+
+  .logo.open,
+  .open.logo--translated {
+    width: 200px;
+  }
+
+  .logo__icon {
+    width: 200px;
+    height: 40px;
+  }
+
+  .logo--translated {
+    width: auto;
+  }
+
+  .logo--translated .logo__link {
+    line-height: 42px;
+  }
+}
+
+pre {
+  padding: 16px;
+  background-color: #1A1A1A;
+  margin: 32px 0;
+}
+
+pre code {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  line-height: 0;
+  display: block;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border: none;
+  line-height: 1;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+a,
+.link,
+a--blue,
+.link--blue,
+.alert--charges .alert__link,
+.alert--charges .alert__link--inline,
+.alert--charges .alert__link--back,
+.sidebar-left .page__tag a,
+.accordion__link__question-heading {
+  color: #1A1A1A;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid #dcdcdc;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+a:hover,
+.link:hover,
+a--blue:hover,
+.link--blue:hover,
+.alert--charges .alert__link:hover,
+.alert--charges .alert__link--inline:hover,
+.alert--charges .alert__link--back:hover,
+.sidebar-left .page__tag a:hover,
+.accordion__link__question-heading:hover {
+  color: #53565a;
+}
+
+a--blue,
+.link--blue,
+.alert--charges .alert__link,
+.alert--charges .alert__link--inline,
+.alert--charges .alert__link--back,
+.sidebar-left .page__tag a {
+  color: #3e46a4;
+  padding: 0 0 3px 0px;
+  margin: 0;
+}
+
+#orb-modules a[href*="//"]:not([href*="bbc.co"]) {
+  position: relative;
+  padding-right: 23px;
+}
+
+#orb-modules a[href*="//"]:not([href*="bbc.co"]):after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link.png") 50% 50% no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 74%;
+}
+
+#orb-modules .card__button--event a[href*="//"]:not([href*="bbc.co"]) {
+  position: relative;
+  padding-right: 23px;
+}
+
+#orb-modules .card__button--event a[href*="//"]:not([href*="bbc.co"]):after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 74%;
+}
+
+.exampleOutput a[href*="//"]:not([href*="bbc.co"]) {
+  position: relative;
+  padding-right: 23px;
+}
+
+.exampleOutput a[href*="//"]:not([href*="bbc.co"]):after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  background: url("../img/svg-fallbacks/gel-icon-external-link.png") 50% 50% no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 74%;
+}
+
+.button,
+.button--blue,
+.button--orange,
+.tabs__button,
+.similar__button,
+.featured__button,
+.button--detection,
+.button--404,
+.card__button,
+.course__skip,
+.dropdown__button,
+.dates__button,
+.pocket__button,
+.no-js .nav--base__button {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #121260;
+  padding: 16px;
+  border-bottom: none;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.button:hover,
+.button--blue:hover,
+.button--orange:hover,
+.tabs__button:hover,
+.similar__button:hover,
+.featured__button:hover,
+.button--detection:hover,
+.button--404:hover,
+.card__button:hover,
+.course__skip:hover,
+.dropdown__button:hover,
+.dates__button:hover,
+.pocket__button:hover,
+.no-js .nav--base__button:hover {
+  color: #fff;
+}
+
+.button--blue {
+  background-color: #121260;
+}
+
+.button--orange,
+.tabs__button,
+.similar__button,
+.featured__button {
+  text-align: left;
+  background-color: #888b8d;
+}
+
+.button--orange:hover,
+.tabs__button:hover,
+.similar__button:hover,
+.featured__button:hover {
+  color: #fff;
+}
+
+.button--detection {
+  float: right;
+  margin-top: 32px;
+}
+
+.button--404 {
+  float: right;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .button,
+  .button--blue,
+  .button--orange,
+  .tabs__button,
+  .similar__button,
+  .featured__button,
+  .button--detection,
+  .button--404,
+  .card__button,
+  .course__skip,
+  .dropdown__button,
+  .dates__button,
+  .pocket__button,
+  .no-js .nav--base__button {
+    min-width: 200px;
+  }
+}
+
+.icon,
+.divider__icon,
+.alert__icon,
+.alert__icon--lrg,
+.search__icon,
+.card__media-icon,
+.course__skip__icon,
+.data__icon,
+.dropdown__icon,
+.tabs__more-icon,
+.dates__icon,
+.herousel__button__icon,
+.pocket__icon,
+.social__icon,
+.social__icon--twitter,
+.social__icon--youtube,
+.social__icon--facebook,
+.social__icon--medium,
+.social__icon--instagram,
+.social__icon--soundcloud,
+.social__icon--yammer,
+.featured__button__icon,
+.collections__sections__menu__icon,
+.language__icon,
+.downloads__icon,
+.event__info-add .dates__icon {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.icon.icon--xs,
+.icon--xs.divider__icon,
+.icon--xs.alert__icon,
+.icon--xs.alert__icon--lrg,
+.icon--xs.search__icon,
+.icon--xs.card__media-icon,
+.icon--xs.course__skip__icon,
+.icon--xs.data__icon,
+.icon--xs.dropdown__icon,
+.icon--xs.tabs__more-icon,
+.icon--xs.dates__icon,
+.icon--xs.herousel__button__icon,
+.icon--xs.pocket__icon,
+.icon--xs.social__icon,
+.icon--xs.social__icon--twitter,
+.icon--xs.social__icon--youtube,
+.icon--xs.social__icon--facebook,
+.icon--xs.social__icon--medium,
+.icon--xs.social__icon--instagram,
+.icon--xs.social__icon--soundcloud,
+.icon--xs.social__icon--yammer,
+.icon--xs.featured__button__icon,
+.icon--xs.collections__sections__menu__icon,
+.icon--xs.language__icon,
+.icon--xs.downloads__icon {
+  width: 8px;
+  height: 8px;
+}
+
+.icon.icon--s,
+.icon--s.divider__icon,
+.icon--s.alert__icon,
+.icon--s.alert__icon--lrg,
+.icon--s.search__icon,
+.icon--s.card__media-icon,
+.icon--s.course__skip__icon,
+.icon--s.data__icon,
+.icon--s.dropdown__icon,
+.icon--s.tabs__more-icon,
+.icon--s.dates__icon,
+.icon--s.herousel__button__icon,
+.icon--s.pocket__icon,
+.icon--s.social__icon,
+.icon--s.social__icon--twitter,
+.icon--s.social__icon--youtube,
+.icon--s.social__icon--facebook,
+.icon--s.social__icon--medium,
+.icon--s.social__icon--instagram,
+.icon--s.social__icon--soundcloud,
+.icon--s.social__icon--yammer,
+.icon--s.featured__button__icon,
+.icon--s.collections__sections__menu__icon,
+.icon--s.language__icon,
+.icon--s.downloads__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon.icon--m,
+.icon--m.divider__icon,
+.icon--m.alert__icon,
+.icon--m.alert__icon--lrg,
+.icon--m.search__icon,
+.icon--m.card__media-icon,
+.icon--m.course__skip__icon,
+.icon--m.data__icon,
+.icon--m.dropdown__icon,
+.icon--m.tabs__more-icon,
+.icon--m.dates__icon,
+.icon--m.herousel__button__icon,
+.icon--m.pocket__icon,
+.icon--m.social__icon,
+.icon--m.social__icon--twitter,
+.icon--m.social__icon--youtube,
+.icon--m.social__icon--facebook,
+.icon--m.social__icon--medium,
+.icon--m.social__icon--instagram,
+.icon--m.social__icon--soundcloud,
+.icon--m.social__icon--yammer,
+.icon--m.featured__button__icon,
+.icon--m.collections__sections__menu__icon,
+.icon--m.language__icon,
+.icon--m.downloads__icon {
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 1008px) {
+  .icon.icon--m,
+  .icon--m.divider__icon,
+  .icon--m.alert__icon,
+  .icon--m.alert__icon--lrg,
+  .icon--m.search__icon,
+  .icon--m.card__media-icon,
+  .icon--m.course__skip__icon,
+  .icon--m.data__icon,
+  .icon--m.dropdown__icon,
+  .icon--m.tabs__more-icon,
+  .icon--m.dates__icon,
+  .icon--m.herousel__button__icon,
+  .icon--m.pocket__icon,
+  .icon--m.social__icon,
+  .icon--m.social__icon--twitter,
+  .icon--m.social__icon--youtube,
+  .icon--m.social__icon--facebook,
+  .icon--m.social__icon--medium,
+  .icon--m.social__icon--instagram,
+  .icon--m.social__icon--soundcloud,
+  .icon--m.social__icon--yammer,
+  .icon--m.featured__button__icon,
+  .icon--m.collections__sections__menu__icon,
+  .icon--m.language__icon,
+  .icon--m.downloads__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon.icon--m.icon--bg,
+  .icon--m.icon--bg.divider__icon,
+  .icon--m.icon--bg.alert__icon,
+  .icon--m.icon--bg.alert__icon--lrg,
+  .icon--m.icon--bg.search__icon,
+  .icon--m.icon--bg.card__media-icon,
+  .icon--m.icon--bg.course__skip__icon,
+  .icon--m.icon--bg.data__icon,
+  .icon--m.icon--bg.dropdown__icon,
+  .icon--m.icon--bg.tabs__more-icon,
+  .icon--m.icon--bg.dates__icon,
+  .icon--m.icon--bg.herousel__button__icon,
+  .icon--m.icon--bg.pocket__icon,
+  .icon--m.icon--bg.social__icon,
+  .icon--m.icon--bg.social__icon--twitter,
+  .icon--m.icon--bg.social__icon--youtube,
+  .icon--m.icon--bg.social__icon--facebook,
+  .icon--m.icon--bg.social__icon--medium,
+  .icon--m.icon--bg.social__icon--instagram,
+  .icon--m.icon--bg.social__icon--soundcloud,
+  .icon--m.icon--bg.social__icon--yammer,
+  .icon--m.icon--bg.featured__button__icon,
+  .icon--m.icon--bg.collections__sections__menu__icon,
+  .icon--m.icon--bg.language__icon,
+  .icon--m.icon--bg.downloads__icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon.icon--m,
+  .icon--m.divider__icon,
+  .icon--m.alert__icon,
+  .icon--m.alert__icon--lrg,
+  .icon--m.search__icon,
+  .icon--m.card__media-icon,
+  .icon--m.course__skip__icon,
+  .icon--m.data__icon,
+  .icon--m.dropdown__icon,
+  .icon--m.tabs__more-icon,
+  .icon--m.dates__icon,
+  .icon--m.herousel__button__icon,
+  .icon--m.pocket__icon,
+  .icon--m.social__icon,
+  .icon--m.social__icon--twitter,
+  .icon--m.social__icon--youtube,
+  .icon--m.social__icon--facebook,
+  .icon--m.social__icon--medium,
+  .icon--m.social__icon--instagram,
+  .icon--m.social__icon--soundcloud,
+  .icon--m.social__icon--yammer,
+  .icon--m.featured__button__icon,
+  .icon--m.collections__sections__menu__icon,
+  .icon--m.language__icon,
+  .icon--m.downloads__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.icon.icon--xl,
+.icon--xl.divider__icon,
+.icon--xl.alert__icon,
+.icon--xl.alert__icon--lrg,
+.icon--xl.search__icon,
+.icon--xl.card__media-icon,
+.icon--xl.course__skip__icon,
+.icon--xl.data__icon,
+.icon--xl.dropdown__icon,
+.icon--xl.tabs__more-icon,
+.icon--xl.dates__icon,
+.icon--xl.herousel__button__icon,
+.icon--xl.pocket__icon,
+.icon--xl.social__icon,
+.icon--xl.social__icon--twitter,
+.icon--xl.social__icon--youtube,
+.icon--xl.social__icon--facebook,
+.icon--xl.social__icon--medium,
+.icon--xl.social__icon--instagram,
+.icon--xl.social__icon--soundcloud,
+.icon--xl.social__icon--yammer,
+.icon--xl.featured__button__icon,
+.icon--xl.collections__sections__menu__icon,
+.icon--xl.language__icon,
+.icon--xl.downloads__icon {
+  width: 80px;
+  height: 80px;
+}
+
+.icon.icon--m-xl,
+.icon--m-xl.divider__icon,
+.icon--m-xl.alert__icon,
+.icon--m-xl.alert__icon--lrg,
+.icon--m-xl.search__icon,
+.icon--m-xl.card__media-icon,
+.icon--m-xl.course__skip__icon,
+.icon--m-xl.data__icon,
+.icon--m-xl.dropdown__icon,
+.icon--m-xl.tabs__more-icon,
+.icon--m-xl.dates__icon,
+.icon--m-xl.herousel__button__icon,
+.icon--m-xl.pocket__icon,
+.icon--m-xl.social__icon,
+.icon--m-xl.social__icon--twitter,
+.icon--m-xl.social__icon--youtube,
+.icon--m-xl.social__icon--facebook,
+.icon--m-xl.social__icon--medium,
+.icon--m-xl.social__icon--instagram,
+.icon--m-xl.social__icon--soundcloud,
+.icon--m-xl.social__icon--yammer,
+.icon--m-xl.featured__button__icon,
+.icon--m-xl.collections__sections__menu__icon,
+.icon--m-xl.language__icon,
+.icon--m-xl.downloads__icon {
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 1280px) {
+  .icon.icon--m-xl,
+  .icon--m-xl.divider__icon,
+  .icon--m-xl.alert__icon,
+  .icon--m-xl.alert__icon--lrg,
+  .icon--m-xl.search__icon,
+  .icon--m-xl.card__media-icon,
+  .icon--m-xl.course__skip__icon,
+  .icon--m-xl.data__icon,
+  .icon--m-xl.dropdown__icon,
+  .icon--m-xl.tabs__more-icon,
+  .icon--m-xl.dates__icon,
+  .icon--m-xl.herousel__button__icon,
+  .icon--m-xl.pocket__icon,
+  .icon--m-xl.social__icon,
+  .icon--m-xl.social__icon--twitter,
+  .icon--m-xl.social__icon--youtube,
+  .icon--m-xl.social__icon--facebook,
+  .icon--m-xl.social__icon--medium,
+  .icon--m-xl.social__icon--instagram,
+  .icon--m-xl.social__icon--soundcloud,
+  .icon--m-xl.social__icon--yammer,
+  .icon--m-xl.featured__button__icon,
+  .icon--m-xl.collections__sections__menu__icon,
+  .icon--m-xl.language__icon,
+  .icon--m-xl.downloads__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.icon.icon--center,
+.icon--center.divider__icon,
+.icon--center.alert__icon,
+.icon--center.alert__icon--lrg,
+.icon--center.search__icon,
+.icon--center.card__media-icon,
+.icon--center.course__skip__icon,
+.icon--center.data__icon,
+.icon--center.dropdown__icon,
+.icon--center.tabs__more-icon,
+.icon--center.dates__icon,
+.icon--center.herousel__button__icon,
+.icon--center.pocket__icon,
+.icon--center.social__icon,
+.icon--center.social__icon--twitter,
+.icon--center.social__icon--youtube,
+.icon--center.social__icon--facebook,
+.icon--center.social__icon--medium,
+.icon--center.social__icon--instagram,
+.icon--center.social__icon--soundcloud,
+.icon--center.social__icon--yammer,
+.icon--center.featured__button__icon,
+.icon--center.collections__sections__menu__icon,
+.icon--center.language__icon,
+.icon--center.downloads__icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.btn.centered .icon,
+.btn.centered .divider__icon,
+.btn.centered .alert__icon,
+.btn.centered .alert__icon--lrg,
+.btn.centered .search__icon,
+.btn.centered .card__media-icon,
+.btn.centered .course__skip__icon,
+.btn.centered .data__icon,
+.btn.centered .dropdown__icon,
+.btn.centered .tabs__more-icon,
+.btn.centered .dates__icon,
+.btn.centered .herousel__button__icon,
+.btn.centered .pocket__icon,
+.btn.centered .social__icon,
+.btn.centered .social__icon--twitter,
+.btn.centered .social__icon--youtube,
+.btn.centered .social__icon--facebook,
+.btn.centered .social__icon--medium,
+.btn.centered .social__icon--instagram,
+.btn.centered .social__icon--soundcloud,
+.btn.centered .social__icon--yammer,
+.btn.centered .featured__button__icon,
+.btn.centered .collections__sections__menu__icon,
+.btn.centered .language__icon,
+.btn.centered .downloads__icon {
+  position: absolute;
+  top: -2px;
+  bottom: 0;
+  left: 16px;
+  margin: auto;
+}
+
+@media (max-width: 1008px) {
+  .icon,
+  .divider__icon,
+  .alert__icon,
+  .alert__icon--lrg,
+  .search__icon,
+  .card__media-icon,
+  .course__skip__icon,
+  .data__icon,
+  .dropdown__icon,
+  .tabs__more-icon,
+  .dates__icon,
+  .herousel__button__icon,
+  .pocket__icon,
+  .social__icon,
+  .social__icon--twitter,
+  .social__icon--youtube,
+  .social__icon--facebook,
+  .social__icon--medium,
+  .social__icon--instagram,
+  .social__icon--soundcloud,
+  .social__icon--yammer,
+  .featured__button__icon,
+  .collections__sections__menu__icon,
+  .language__icon,
+  .downloads__icon,
+  .event__info-add .dates__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.icon__row {
+  margin-bottom: 16px;
+}
+
+.icon__col {
+  width: 16.66667%;
+}
+
+.icon__wrapper {
+  position: relative;
+  height: 64px;
+  width: 100%;
+  background-color: #121260;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.icon__wrapper .icon__svg,
+.icon__wrapper .divider__icon__svg,
+.icon__wrapper .alert__icon__svg,
+.icon__wrapper .card__flag__svg,
+.icon__wrapper .card__media-icon__svg,
+.icon__wrapper .card__data-icon__svg,
+.icon__wrapper .card__date__svg,
+.icon__wrapper .course__skip__svg,
+.icon__wrapper .data__icon__svg,
+.icon__wrapper .dropdown__icon__svg,
+.icon__wrapper .tabs__more-icon__svg,
+.icon__wrapper .dates__svg,
+.icon__wrapper .herousel__button__icon__svg,
+.icon__wrapper .pocket__icon__svg,
+.icon__wrapper .social__icon__svg,
+.icon__wrapper .featured__button__icon__svg,
+.icon__wrapper .accordion__link__icon,
+.icon__wrapper .collections__sections__menu__svg,
+.icon__wrapper .language__icon__svg,
+.icon__wrapper .sortby__icon,
+.icon__wrapper .detection__icon__svg {
+  cursor: pointer;
+  padding: 16px;
+}
+
+.icon__wrapper .icon__svg svg,
+.icon__wrapper .divider__icon__svg svg,
+.icon__wrapper .alert__icon__svg svg,
+.icon__wrapper .card__flag__svg svg,
+.icon__wrapper .card__media-icon__svg svg,
+.icon__wrapper .card__data-icon__svg svg,
+.icon__wrapper .card__date__svg svg,
+.icon__wrapper .course__skip__svg svg,
+.icon__wrapper .data__icon__svg svg,
+.icon__wrapper .dropdown__icon__svg svg,
+.icon__wrapper .tabs__more-icon__svg svg,
+.icon__wrapper .dates__svg svg,
+.icon__wrapper .herousel__button__icon__svg svg,
+.icon__wrapper .pocket__icon__svg svg,
+.icon__wrapper .social__icon__svg svg,
+.icon__wrapper .featured__button__icon__svg svg,
+.icon__wrapper .accordion__link__icon svg,
+.icon__wrapper .collections__sections__menu__svg svg,
+.icon__wrapper .language__icon__svg svg,
+.icon__wrapper .sortby__icon svg,
+.icon__wrapper .detection__icon__svg svg {
+  transition: all 0.5s ease;
+  fill: #fff;
+}
+
+.icon__wrapper .icon__svg:hover svg,
+.icon__wrapper .divider__icon__svg:hover svg,
+.icon__wrapper .alert__icon__svg:hover svg,
+.icon__wrapper .card__flag__svg:hover svg,
+.icon__wrapper .card__media-icon__svg:hover svg,
+.icon__wrapper .card__data-icon__svg:hover svg,
+.icon__wrapper .card__date__svg:hover svg,
+.icon__wrapper .course__skip__svg:hover svg,
+.icon__wrapper .data__icon__svg:hover svg,
+.icon__wrapper .dropdown__icon__svg:hover svg,
+.icon__wrapper .tabs__more-icon__svg:hover svg,
+.icon__wrapper .dates__svg:hover svg,
+.icon__wrapper .herousel__button__icon__svg:hover svg,
+.icon__wrapper .pocket__icon__svg:hover svg,
+.icon__wrapper .social__icon__svg:hover svg,
+.icon__wrapper .featured__button__icon__svg:hover svg,
+.icon__wrapper .accordion__link__icon:hover svg,
+.icon__wrapper .collections__sections__menu__svg:hover svg,
+.icon__wrapper .language__icon__svg:hover svg,
+.icon__wrapper .sortby__icon:hover svg,
+.icon__wrapper .detection__icon__svg:hover svg {
+  fill: #fff;
+}
+
+.icon__id {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  background-color: #201532;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.icon--bg {
+  background: #121260;
+}
+
+.icon--bg .icon__svg,
+.icon--bg .divider__icon__svg,
+.icon--bg .alert__icon__svg,
+.icon--bg .card__flag__svg,
+.icon--bg .card__media-icon__svg,
+.icon--bg .card__data-icon__svg,
+.icon--bg .card__date__svg,
+.icon--bg .course__skip__svg,
+.icon--bg .data__icon__svg,
+.icon--bg .dropdown__icon__svg,
+.icon--bg .tabs__more-icon__svg,
+.icon--bg .dates__svg,
+.icon--bg .herousel__button__icon__svg,
+.icon--bg .pocket__icon__svg,
+.icon--bg .social__icon__svg,
+.icon--bg .featured__button__icon__svg,
+.icon--bg .accordion__link__icon,
+.icon--bg .collections__sections__menu__svg,
+.icon--bg .language__icon__svg,
+.icon--bg .sortby__icon,
+.icon--bg .detection__icon__svg {
+  width: 50%;
+  height: 50%;
+}
+
+.no-svg svg {
+  display: none !important;
+}
+
+.icon__svg,
+.divider__icon__svg,
+.alert__icon__svg,
+.card__flag__svg,
+.card__media-icon__svg,
+.card__data-icon__svg,
+.card__date__svg,
+.course__skip__svg,
+.data__icon__svg,
+.dropdown__icon__svg,
+.tabs__more-icon__svg,
+.dates__svg,
+.herousel__button__icon__svg,
+.pocket__icon__svg,
+.social__icon__svg,
+.featured__button__icon__svg,
+.accordion__link__icon,
+.collections__sections__menu__svg,
+.language__icon__svg,
+.sortby__icon,
+.detection__icon__svg,
+.event__info-add .dates__svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.icon__svg>svg,
+.divider__icon__svg>svg,
+.alert__icon__svg>svg,
+.card__flag__svg>svg,
+.card__media-icon__svg>svg,
+.card__data-icon__svg>svg,
+.card__date__svg>svg,
+.course__skip__svg>svg,
+.data__icon__svg>svg,
+.dropdown__icon__svg>svg,
+.tabs__more-icon__svg>svg,
+.dates__svg>svg,
+.herousel__button__icon__svg>svg,
+.pocket__icon__svg>svg,
+.social__icon__svg>svg,
+.featured__button__icon__svg>svg,
+.accordion__link__icon>svg,
+.collections__sections__menu__svg>svg,
+.language__icon__svg>svg,
+.sortby__icon>svg,
+.detection__icon__svg>svg,
+.event__info-add .dates__svg>svg {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.no-js .icon__svg svg,
+.no-js .divider__icon__svg svg,
+.no-js .alert__icon__svg svg,
+.no-js .card__flag__svg svg,
+.no-js .card__media-icon__svg svg,
+.no-js .card__data-icon__svg svg,
+.no-js .card__date__svg svg,
+.no-js .course__skip__svg svg,
+.no-js .data__icon__svg svg,
+.no-js .dropdown__icon__svg svg,
+.no-js .tabs__more-icon__svg svg,
+.no-js .dates__svg svg,
+.no-js .herousel__button__icon__svg svg,
+.no-js .pocket__icon__svg svg,
+.no-js .social__icon__svg svg,
+.no-js .featured__button__icon__svg svg,
+.no-js .accordion__link__icon svg,
+.no-js .collections__sections__menu__svg svg,
+.no-js .language__icon__svg svg,
+.no-js .sortby__icon svg,
+.no-js .detection__icon__svg svg {
+  display: none !important;
+}
+
+.icon--white .icon__svg svg,
+.icon--white .divider__icon__svg svg,
+.icon--white .alert__icon__svg svg,
+.icon--white .card__flag__svg svg,
+.icon--white .card__media-icon__svg svg,
+.icon--white .card__data-icon__svg svg,
+.icon--white .card__date__svg svg,
+.icon--white .course__skip__svg svg,
+.icon--white .data__icon__svg svg,
+.icon--white .dropdown__icon__svg svg,
+.icon--white .tabs__more-icon__svg svg,
+.icon--white .dates__svg svg,
+.icon--white .herousel__button__icon__svg svg,
+.icon--white .pocket__icon__svg svg,
+.icon--white .social__icon__svg svg,
+.icon--white .featured__button__icon__svg svg,
+.icon--white .accordion__link__icon svg,
+.icon--white .collections__sections__menu__svg svg,
+.icon--white .language__icon__svg svg,
+.icon--white .sortby__icon svg,
+.icon--white .detection__icon__svg svg,
+.icon--search .icon__svg svg,
+.search__icon .icon__svg svg,
+.icon--search .divider__icon__svg svg,
+.search__icon .divider__icon__svg svg,
+.icon--search .alert__icon__svg svg,
+.search__icon .alert__icon__svg svg,
+.icon--search .card__flag__svg svg,
+.search__icon .card__flag__svg svg,
+.icon--search .card__media-icon__svg svg,
+.search__icon .card__media-icon__svg svg,
+.icon--search .card__data-icon__svg svg,
+.search__icon .card__data-icon__svg svg,
+.icon--search .card__date__svg svg,
+.search__icon .card__date__svg svg,
+.icon--search .course__skip__svg svg,
+.search__icon .course__skip__svg svg,
+.icon--search .data__icon__svg svg,
+.search__icon .data__icon__svg svg,
+.icon--search .dropdown__icon__svg svg,
+.search__icon .dropdown__icon__svg svg,
+.icon--search .tabs__more-icon__svg svg,
+.search__icon .tabs__more-icon__svg svg,
+.icon--search .dates__svg svg,
+.search__icon .dates__svg svg,
+.icon--search .herousel__button__icon__svg svg,
+.search__icon .herousel__button__icon__svg svg,
+.icon--search .pocket__icon__svg svg,
+.search__icon .pocket__icon__svg svg,
+.icon--search .social__icon__svg svg,
+.search__icon .social__icon__svg svg,
+.icon--search .featured__button__icon__svg svg,
+.search__icon .featured__button__icon__svg svg,
+.icon--search .accordion__link__icon svg,
+.search__icon .accordion__link__icon svg,
+.icon--search .collections__sections__menu__svg svg,
+.search__icon .collections__sections__menu__svg svg,
+.icon--search .language__icon__svg svg,
+.search__icon .language__icon__svg svg,
+.icon--search .sortby__icon svg,
+.search__icon .sortby__icon svg,
+.icon--search .detection__icon__svg svg,
+.search__icon .detection__icon__svg svg {
+  fill: #fff;
+}
+
+.icon--align-top .icon__svg svg,
+.icon--align-top .divider__icon__svg svg,
+.icon--align-top .alert__icon__svg svg,
+.icon--align-top .card__flag__svg svg,
+.icon--align-top .card__media-icon__svg svg,
+.icon--align-top .card__data-icon__svg svg,
+.icon--align-top .card__date__svg svg,
+.icon--align-top .course__skip__svg svg,
+.icon--align-top .data__icon__svg svg,
+.icon--align-top .dropdown__icon__svg svg,
+.icon--align-top .tabs__more-icon__svg svg,
+.icon--align-top .dates__svg svg,
+.icon--align-top .herousel__button__icon__svg svg,
+.icon--align-top .pocket__icon__svg svg,
+.icon--align-top .social__icon__svg svg,
+.icon--align-top .featured__button__icon__svg svg,
+.icon--align-top .accordion__link__icon svg,
+.icon--align-top .collections__sections__menu__svg svg,
+.icon--align-top .language__icon__svg svg,
+.icon--align-top .sortby__icon svg,
+.icon--align-top .detection__icon__svg svg {
+  vertical-align: top;
+}
+
+.icon--bg .icon__svg,
+.icon--bg .divider__icon__svg,
+.icon--bg .alert__icon__svg,
+.icon--bg .card__flag__svg,
+.icon--bg .card__media-icon__svg,
+.icon--bg .card__data-icon__svg,
+.icon--bg .card__date__svg,
+.icon--bg .course__skip__svg,
+.icon--bg .data__icon__svg,
+.icon--bg .dropdown__icon__svg,
+.icon--bg .tabs__more-icon__svg,
+.icon--bg .dates__svg,
+.icon--bg .herousel__button__icon__svg,
+.icon--bg .pocket__icon__svg,
+.icon--bg .social__icon__svg,
+.icon--bg .featured__button__icon__svg,
+.icon--bg .accordion__link__icon,
+.icon--bg .collections__sections__menu__svg,
+.icon--bg .language__icon__svg,
+.icon--bg .sortby__icon,
+.icon--bg .detection__icon__svg {
+  float: left;
+}
+
+.icon--bg .icon__svg svg,
+.icon--bg .divider__icon__svg svg,
+.icon--bg .alert__icon__svg svg,
+.icon--bg .card__flag__svg svg,
+.icon--bg .card__media-icon__svg svg,
+.icon--bg .card__data-icon__svg svg,
+.icon--bg .card__date__svg svg,
+.icon--bg .course__skip__svg svg,
+.icon--bg .data__icon__svg svg,
+.icon--bg .dropdown__icon__svg svg,
+.icon--bg .tabs__more-icon__svg svg,
+.icon--bg .dates__svg svg,
+.icon--bg .herousel__button__icon__svg svg,
+.icon--bg .pocket__icon__svg svg,
+.icon--bg .social__icon__svg svg,
+.icon--bg .featured__button__icon__svg svg,
+.icon--bg .accordion__link__icon svg,
+.icon--bg .collections__sections__menu__svg svg,
+.icon--bg .language__icon__svg svg,
+.icon--bg .sortby__icon svg,
+.icon--bg .detection__icon__svg svg {
+  float: left;
+  fill: #fff;
+}
+
+.icon--search,
+.search__icon {
+  width: 100%;
+}
+
+.icon--logo {
+  width: 200px;
+  height: 30px;
+}
+
+.icon--logo .icon__svg>svg,
+.icon--logo .divider__icon__svg>svg,
+.icon--logo .alert__icon__svg>svg,
+.icon--logo .card__flag__svg>svg,
+.icon--logo .card__media-icon__svg>svg,
+.icon--logo .card__data-icon__svg>svg,
+.icon--logo .card__date__svg>svg,
+.icon--logo .course__skip__svg>svg,
+.icon--logo .data__icon__svg>svg,
+.icon--logo .dropdown__icon__svg>svg,
+.icon--logo .tabs__more-icon__svg>svg,
+.icon--logo .dates__svg>svg,
+.icon--logo .herousel__button__icon__svg>svg,
+.icon--logo .pocket__icon__svg>svg,
+.icon--logo .social__icon__svg>svg,
+.icon--logo .featured__button__icon__svg>svg,
+.icon--logo .accordion__link__icon>svg,
+.icon--logo .collections__sections__menu__svg>svg,
+.icon--logo .language__icon__svg>svg,
+.icon--logo .sortby__icon>svg,
+.icon--logo .detection__icon__svg>svg,
+.icon--logo .event__info-add .dates__svg>svg {
+  vertical-align: top;
+}
+
+.icon__falback {
+  display: none !important;
+}
+
+.no-svg .icon__falback,
+.no-js .icon__falback {
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.icon__caption {
+  color: #fff;
+}
+
+.gel-icon-loading {
+  background-position: -32px -64px;
+  -webkit-animation-name: gel-spin;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: gel-spin;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  animation-name: gel-spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes gel-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes gel-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.grid__item {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  background-color: #b3b3b3;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background-color: #e6e6e6;
+}
+
+.grid__col--1 {
+  width: 100%;
+}
+
+.grid__col--2 {
+  width: 50%;
+}
+
+.grid__col--3 {
+  width: 33.33333%;
+}
+
+.grid__col--4 {
+  width: 25%;
+}
+
+.grid__col--5 {
+  width: 20%;
+}
+
+.grid__col--6 {
+  width: 16.66667%;
+}
+
+.grid__col--7 {
+  width: 14.28571%;
+}
+
+.grid__col--8 {
+  width: 12.5%;
+}
+
+.grid__col--9 {
+  width: 11.11111%;
+}
+
+.grid__col--10 {
+  width: 10%;
+}
+
+.grid__col--11 {
+  width: 9.09091%;
+}
+
+.grid__col--12 {
+  width: 8.33333%;
+}
+
+table,
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+table__container,
+.table__container {
+  width: 100%;
+  overflow-y: auto;
+}
+
+table thead,
+table__head,
+.table thead,
+.table__head {
+  vertical-align: bottom;
+}
+
+table tr:nth-child(even),
+table__row:nth-child(even),
+.table tr:nth-child(even),
+.table__row:nth-child(even) {
+  background-color: #F7F7F7;
+}
+
+table td,
+table__cell,
+.table td,
+.table__cell {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 12px 8px;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+table td:first-child,
+table__cell:first-child,
+.table td:first-child,
+.table__cell:first-child {
+  border-left: 0;
+}
+
+table p,
+table .accordion__answer h3,
+.accordion__answer table h3,
+.table p,
+.table .accordion__answer h3,
+.accordion__answer .table h3 {
+  margin: 0;
+}
+
+.colour__col {
+  width: 25%;
+}
+
+.colour__swatch,
+.colour__swatch--brand-a,
+.colour__swatch--brand-b,
+.colour__swatch--brand-c,
+.colour__swatch--brand-d,
+.colour__swatch--brand-e,
+.colour__swatch--brand-f,
+.colour__swatch--brand-g,
+.colour__swatch--brand-h,
+.colour__swatch--brand-i,
+.colour__swatch--white,
+.colour__swatch--lightergray,
+.colour__swatch--lightgray,
+.colour__swatch--gray,
+.colour__swatch--darkergray,
+.colour__swatch--darkgray,
+.colour__swatch--black,
+.colour__swatch--alert-info,
+.colour__swatch--alert-warning,
+.colour__swatch--alert-error,
+.colour__swatch--alert-success {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.colour__swatch--brand-a {
+  background-color: #121260;
+}
+
+.colour__swatch--brand-b {
+  background-color: #53565a;
+}
+
+.colour__swatch--brand-c {
+  background-color: #fff;
+}
+
+.colour__swatch--brand-d {
+  background-color: #e4e4e4;
+}
+
+.colour__swatch--brand-e {
+  background-color: #1A1A1A;
+}
+
+.colour__swatch--brand-f {
+  background-color: #0a0a35;
+}
+
+.colour__swatch--brand-g {
+  background-color: #EC712F;
+}
+
+.colour__swatch--brand-h {
+  background-color: #d9e1e2;
+}
+
+.colour__swatch--brand-i {
+  background-color: #888b8d;
+}
+
+.colour__swatch--white {
+  background-color: #fff;
+}
+
+.colour__swatch--lightergray {
+  background-color: #e6e6e6;
+}
+
+.colour__swatch--lightgray {
+  background-color: #ccc;
+}
+
+.colour__swatch--gray {
+  background-color: #b3b3b3;
+}
+
+.colour__swatch--darkergray {
+  background-color: #999;
+}
+
+.colour__swatch--darkgray {
+  background-color: gray;
+}
+
+.colour__swatch--black {
+  background-color: #000;
+}
+
+.colour__swatch--alert-info {
+  background-color: #4babcc;
+}
+
+.colour__swatch--alert-warning {
+  background-color: #ffdc48;
+}
+
+.colour__swatch--alert-error {
+  background-color: #fa453d;
+}
+
+.colour__swatch--alert-success {
+  background-color: #02CA9C;
+}
+
+.colour__space {
+  height: 150px;
+}
+
+.colour__copy {
+  font-size: 11px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  padding: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.divider,
+.divider--pocket {
+  display: block;
+  border: 0;
+  height: 4px;
+  width: 100%;
+  margin: 8px 0 16px;
+  background-color: #000;
+}
+
+.divider__icon {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  background-color: #121260;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+}
+
+.divider__icon__svg {
+  padding: 8px;
+}
+
+.divider__icon__svg svg {
+  fill: #fff;
+}
+
+.divider__message {
+  position: relative;
+  float: left;
+  color: #121260;
+  background: #E4E4E4;
+  padding-right: 16px;
+  z-index: 2;
+}
+
+.divider__line {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  z-index: 0;
+}
+
+.divider--end,
+.divider--bestmatch {
+  position: relative;
+  margin-top: 32px;
+}
+
+.divider--end:after,
+.divider--bestmatch:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.divider--end .divider__line,
+.divider--bestmatch .divider__line {
+  background-color: #121260;
+}
+
+.divider--bestmatch:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.divider--bestmatch__wrapper {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.divider--bestmatch .divider__message {
+  margin-left: 32px;
+  padding-left: 16px;
+}
+
+.divider--pocket {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  margin: 0;
+  background-color: #0a0a35;
+}
+
+.divider--pocket:before {
+  transition: all 0.5s ease;
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  opacity: .8;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent 0%, transparent 29%, rgba(0,0,0,0.55) 61%, rgba(0,0,0,0.99) 99%, #000 100%);
+}
+
+.divider--pocket.open:before {
+  transition: all 0.5s ease;
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  opacity: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent 0%, transparent 29%, rgba(0,0,0,0.55) 61%, rgba(0,0,0,0.99) 99%, #000 100%);
+}
+
+.alert,
+.alert__container,
+.alert--info,
+.alert--warning,
+.alert--error,
+.alert--success,
+.alert--noentry,
+.alert--charges {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #b3b3b3;
+  color: #fff;
+}
+
+.alert+.alert,
+.alert__container+.alert,
+.alert--info+.alert,
+.alert--warning+.alert,
+.alert--error+.alert,
+.alert--success+.alert,
+.alert--noentry+.alert,
+.alert--charges+.alert,
+.alert+.alert__container,
+.alert__container+.alert__container,
+.alert--info+.alert__container,
+.alert--warning+.alert__container,
+.alert--error+.alert__container,
+.alert--success+.alert__container,
+.alert--noentry+.alert__container,
+.alert--charges+.alert__container,
+.alert+.alert--info,
+.alert__container+.alert--info,
+.alert--info+.alert--info,
+.alert--warning+.alert--info,
+.alert--error+.alert--info,
+.alert--success+.alert--info,
+.alert--noentry+.alert--info,
+.alert--charges+.alert--info,
+.alert+.alert--warning,
+.alert__container+.alert--warning,
+.alert--info+.alert--warning,
+.alert--warning+.alert--warning,
+.alert--error+.alert--warning,
+.alert--success+.alert--warning,
+.alert--noentry+.alert--warning,
+.alert--charges+.alert--warning,
+.alert+.alert--error,
+.alert__container+.alert--error,
+.alert--info+.alert--error,
+.alert--warning+.alert--error,
+.alert--error+.alert--error,
+.alert--success+.alert--error,
+.alert--noentry+.alert--error,
+.alert--charges+.alert--error,
+.alert+.alert--success,
+.alert__container+.alert--success,
+.alert--info+.alert--success,
+.alert--warning+.alert--success,
+.alert--error+.alert--success,
+.alert--success+.alert--success,
+.alert--noentry+.alert--success,
+.alert--charges+.alert--success,
+.alert+.alert--noentry,
+.alert__container+.alert--noentry,
+.alert--info+.alert--noentry,
+.alert--warning+.alert--noentry,
+.alert--error+.alert--noentry,
+.alert--success+.alert--noentry,
+.alert--noentry+.alert--noentry,
+.alert--charges+.alert--noentry,
+.alert+.alert--charges,
+.alert__container+.alert--charges,
+.alert--info+.alert--charges,
+.alert--warning+.alert--charges,
+.alert--error+.alert--charges,
+.alert--success+.alert--charges,
+.alert--noentry+.alert--charges,
+.alert--charges+.alert--charges {
+  margin-top: 16px;
+}
+
+.alert__header {
+  display: table;
+  width: 100%;
+  padding: 16px;
+}
+
+.alert__section,
+.alert__section--white {
+  padding: 8px;
+}
+
+.alert__section+.alert__section,
+.alert__section--white+.alert__section,
+.alert__section+.alert__section--white,
+.alert__section--white+.alert__section--white {
+  margin-top: 8px;
+}
+
+.alert__section--white {
+  background-color: #fff;
+}
+
+.alert__body {
+  padding: 16px;
+}
+
+.alert__heading {
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.alert__message--green {
+  color: #02CA9C;
+}
+
+.alert__message:last-of-type,
+.alert__message--green:last-of-type {
+  margin-bottom: 0;
+}
+
+.alert__icon,
+.alert__icon--lrg {
+  display: inline-block;
+  margin-right: 4px;
+  width: 24px;
+  height: 18px;
+}
+
+.alert__icon--lrg {
+  height: 24px;
+}
+
+.alert__link,
+.alert__link--inline,
+.alert__link--back {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.alert__link--inline {
+  display: inline;
+}
+
+.alert__link--back {
+  margin-top: 32px;
+}
+
+.alert__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+.alert__modal.open {
+  display: block;
+  z-index: 999999;
+}
+
+.alert__container {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  max-width: 90%;
+  margin: 0;
+  background: #f7f7f5;
+  border: 1px solid #dbdbdb;
+  color: #1A1A1A;
+  padding: 16px;
+}
+
+.alert--info {
+  background-color: #4babcc;
+}
+
+.alert--warning {
+  background-color: #ffdc48;
+  color: #1A1A1A;
+}
+
+.alert--error {
+  background-color: #fa453d;
+  padding: 12px 16px 16px;
+}
+
+.alert--error .alert__message,
+.alert--error .alert__message--green {
+  display: inline;
+}
+
+.alert--error .alert__icon__svg svg {
+  fill: #fff;
+}
+
+.alert--success {
+  background-color: #02CA9C;
+  padding: 12px 16px 16px;
+}
+
+.alert--success .alert__message,
+.alert--success .alert__message--green {
+  display: inline;
+}
+
+.alert--success .alert__icon__svg svg {
+  fill: #fff;
+}
+
+.alert--noentry {
+  max-width: 100%;
+  margin: 0;
+  background: #f7f7f5;
+  border: none;
+  color: #1A1A1A;
+  padding: 32px 16px 48px;
+}
+
+.alert--charges {
+  border: none;
+  color: #1A1A1A;
+  padding: 0;
+  margin: 16px 0 0 0;
+  background: #ccc;
+}
+
+.alert--charges .alert__body {
+  padding: 8px;
+}
+
+.alert--charges .alert__header {
+  padding: 8px 8px 0;
+}
+
+.alert--charges .alert__heading {
+  margin: 0;
+}
+
+.alert--charges .alert__message,
+.alert--charges .alert__message--green {
+  margin-bottom: 4px;
+}
+
+.alert--charges .alert__icon,
+.alert--charges .alert__icon--lrg {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.alert--charges .alert__icon__svg {
+  fill: #fff;
+}
+
+@media (min-width: 768px) {
+  .alert__container {
+    top: 50%;
+    left: 50%;
+    max-width: 640px;
+    margin: -300px 0 0 -320px;
+    padding: 64px;
+  }
+
+  .alert--noentry {
+    max-width: 640px;
+    margin: 100px auto 130px;
+    border: 1px solid #dbdbdb;
+    padding: 64px;
+  }
+}
+
+@media (min-width: 1008px) {
+  .alert--charges {
+    margin: 16px 0 0 0;
+  }
+}
+
+ul,
+.list,
+ul--simple,
+.list--simple,
+.dates__list,
+.collections__sections,
+.language__dropdown,
+.downloads__list,
+ul--outside,
+.list--outside,
+ul--notes,
+.list--notes {
+  margin-bottom: 16px;
+  list-style: outside;
+}
+
+ul__row,
+.list__row {
+  margin-bottom: 64px;
+}
+
+ul__col,
+.list__col,
+ul__col--1,
+.list__col--1,
+ul__col--2,
+.list__col--2,
+ul__col--3,
+.list__col--3,
+ul__col--4,
+.list__col--4 {
+  margin: 8px 0;
+}
+
+ul__col--1,
+.list__col--1 {
+  width: 100%;
+}
+
+ul__col--2,
+.list__col--2 {
+  width: 100%;
+}
+
+ul__col--3,
+.list__col--3 {
+  width: 100%;
+}
+
+ul__col--4,
+.list__col--4 {
+  width: 50%;
+}
+
+ul__item,
+.list__item,
+.downloads__item {
+  margin-bottom: 24px;
+}
+
+ul__item a,
+.list__item a,
+.downloads__item a {
+  font-weight: normal;
+}
+
+ul__item--nav,
+.list__item--nav {
+  margin-bottom: 8px;
+}
+
+ul__item--nav a,
+.list__item--nav a {
+  border-bottom: none;
+}
+
+ul__title,
+.list__title {
+  font-weight: normal;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+ul--simple,
+.list--simple,
+.dates__list,
+.collections__sections,
+.language__dropdown,
+.downloads__list {
+  list-style: none;
+}
+
+ul--outside,
+.list--outside {
+  margin-left: 20px;
+}
+
+ul--notes,
+.list--notes {
+  margin: 16px 0 0;
+  padding: 16px 32px;
+  background: #e2e2e2;
+}
+
+@media (min-width: 768px) {
+  ul__col--1,
+  .list__col--1 {
+    width: 100%;
+  }
+
+  ul__col--2,
+  .list__col--2 {
+    width: 50%;
+  }
+
+  ul__col--3,
+  .list__col--3 {
+    width: 50%;
+  }
+
+  ul__col--4,
+  .list__col--4 {
+    width: 50%;
+  }
+
+  ul__section,
+  .list__section {
+    display: inline-block;
+    float: left;
+    width: 45%;
+  }
+
+  ul__section .h4,
+  ul__section .sidebar__heading,
+  ul__section .divider__message,
+  ul__section .alert--charges .alert__heading,
+  .alert--charges ul__section .alert__heading,
+  ul__section .card--panel .card__heading,
+  .card--panel ul__section .card__heading,
+  ul__section .dates__date,
+  ul__section .herousel__item .card__tags,
+  .herousel__item ul__section .card__tags,
+  ul__section .featured__item--sub .card__heading,
+  .featured__item--sub ul__section .card__heading,
+  .list__section .h4,
+  .list__section .sidebar__heading,
+  .list__section .divider__message,
+  .list__section .alert--charges .alert__heading,
+  .alert--charges .list__section .alert__heading,
+  .list__section .card--panel .card__heading,
+  .card--panel .list__section .card__heading,
+  .list__section .dates__date,
+  .list__section .herousel__item .card__tags,
+  .herousel__item .list__section .card__tags,
+  .list__section .featured__item--sub .card__heading,
+  .featured__item--sub .list__section .card__heading {
+    font-weight: normal;
+    margin-bottom: 32px;
+  }
+
+  ul__section:first-of-type,
+  .list__section:first-of-type {
+    margin-right: 10%;
+  }
+}
+
+@media (min-width: 1008px) {
+  ul__col--1,
+  .list__col--1 {
+    width: 100%;
+  }
+
+  ul__col--2,
+  .list__col--2 {
+    width: 50%;
+  }
+
+  ul__col--3,
+  .list__col--3 {
+    width: 33.33333%;
+  }
+
+  ul__col--4,
+  .list__col--4 {
+    width: 25%;
+  }
+}
+
+ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+ol li {
+  margin-bottom: 8px;
+}
+
+.header,
+.header--narrow {
+  padding: 8px 0;
+  background-color: #121260;
+  z-index: 2;
+}
+
+.header .wrapper,
+.header--narrow .wrapper,
+.header .wrapper--full,
+.header--narrow .wrapper--full,
+.header .wrapper--collection,
+.header--narrow .wrapper--collection,
+.header .wrapper--art,
+.header--narrow .wrapper--art,
+.header .nav__wrapper,
+.header--narrow .nav__wrapper,
+.header .card__wrapper,
+.header--narrow .card__wrapper,
+.header .back-to-top,
+.header--narrow .back-to-top,
+.header .similar__wrapper,
+.header--narrow .similar__wrapper,
+.header .content-block--full .content-block__wrapper,
+.content-block--full .header .content-block__wrapper,
+.header--narrow .content-block--full .content-block__wrapper,
+.content-block--full .header--narrow .content-block__wrapper,
+.header .scroll-carousel__wrapper,
+.header--narrow .scroll-carousel__wrapper,
+.header .social__wrapper,
+.header--narrow .social__wrapper,
+.header .azfilter__wrapper,
+.header--narrow .azfilter__wrapper,
+.header .collections__sections__wrapper,
+.header--narrow .collections__sections__wrapper,
+.header .scroll-carousel-p__wrapper,
+.header--narrow .scroll-carousel-p__wrapper,
+.header .no-js .carousel,
+.no-js .header .carousel,
+.header--narrow .no-js .carousel,
+.no-js .header--narrow .carousel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header.search-open .logo,
+.search-open.header--narrow .logo,
+.header.search-open .logo--translated,
+.search-open.header--narrow .logo--translated {
+  width: 0;
+  overflow: hidden;
+}
+
+.header.search-open .search,
+.search-open.header--narrow .search {
+  padding-left: 0;
+  width: calc(100% - 92px);
+  left: 24px;
+}
+
+.header.search-open .search__input,
+.search-open.header--narrow .search__input {
+  display: block;
+  opacity: 1;
+}
+
+.header.search-open .search__button,
+.search-open.header--narrow .search__button,
+.header.search-open .search__button--clear,
+.search-open.header--narrow .search__button--clear {
+  background-color: #fff;
+}
+
+.header.search-open .search__icon .icon__svg svg,
+.search-open.header--narrow .search__icon .icon__svg svg,
+.header.search-open .search__icon .divider__icon__svg svg,
+.search-open.header--narrow .search__icon .divider__icon__svg svg,
+.header.search-open .search__icon .alert__icon__svg svg,
+.search-open.header--narrow .search__icon .alert__icon__svg svg,
+.header.search-open .search__icon .card__flag__svg svg,
+.search-open.header--narrow .search__icon .card__flag__svg svg,
+.header.search-open .search__icon .card__media-icon__svg svg,
+.search-open.header--narrow .search__icon .card__media-icon__svg svg,
+.header.search-open .search__icon .card__data-icon__svg svg,
+.search-open.header--narrow .search__icon .card__data-icon__svg svg,
+.header.search-open .search__icon .card__date__svg svg,
+.search-open.header--narrow .search__icon .card__date__svg svg,
+.header.search-open .search__icon .course__skip__svg svg,
+.search-open.header--narrow .search__icon .course__skip__svg svg,
+.header.search-open .search__icon .data__icon__svg svg,
+.search-open.header--narrow .search__icon .data__icon__svg svg,
+.header.search-open .search__icon .dropdown__icon__svg svg,
+.search-open.header--narrow .search__icon .dropdown__icon__svg svg,
+.header.search-open .search__icon .tabs__more-icon__svg svg,
+.search-open.header--narrow .search__icon .tabs__more-icon__svg svg,
+.header.search-open .search__icon .dates__svg svg,
+.search-open.header--narrow .search__icon .dates__svg svg,
+.header.search-open .search__icon .herousel__button__icon__svg svg,
+.search-open.header--narrow .search__icon .herousel__button__icon__svg svg,
+.header.search-open .search__icon .pocket__icon__svg svg,
+.search-open.header--narrow .search__icon .pocket__icon__svg svg,
+.header.search-open .search__icon .social__icon__svg svg,
+.search-open.header--narrow .search__icon .social__icon__svg svg,
+.header.search-open .search__icon .featured__button__icon__svg svg,
+.search-open.header--narrow .search__icon .featured__button__icon__svg svg,
+.header.search-open .search__icon .accordion__link__icon svg,
+.search-open.header--narrow .search__icon .accordion__link__icon svg,
+.header.search-open .search__icon .collections__sections__menu__svg svg,
+.search-open.header--narrow .search__icon .collections__sections__menu__svg svg,
+.header.search-open .search__icon .language__icon__svg svg,
+.search-open.header--narrow .search__icon .language__icon__svg svg,
+.header.search-open .search__icon .sortby__icon svg,
+.search-open.header--narrow .search__icon .sortby__icon svg,
+.header.search-open .search__icon .detection__icon__svg svg,
+.search-open.header--narrow .search__icon .detection__icon__svg svg {
+  fill: #121260;
+}
+
+.header.search-open .search__open-btn,
+.search-open.header--narrow .search__open-btn {
+  z-index: -9999;
+}
+
+.header.search-open .search__button__wrapper,
+.search-open.header--narrow .search__button__wrapper {
+  display: block;
+}
+
+.header.search-open .search__button--close .search__icon .icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .icon__svg svg,
+.header.search-open .search__button--close .search__icon .divider__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .divider__icon__svg svg,
+.header.search-open .search__button--close .search__icon .alert__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .alert__icon__svg svg,
+.header.search-open .search__button--close .search__icon .card__flag__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .card__flag__svg svg,
+.header.search-open .search__button--close .search__icon .card__media-icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .card__media-icon__svg svg,
+.header.search-open .search__button--close .search__icon .card__data-icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .card__data-icon__svg svg,
+.header.search-open .search__button--close .search__icon .card__date__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .card__date__svg svg,
+.header.search-open .search__button--close .search__icon .course__skip__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .course__skip__svg svg,
+.header.search-open .search__button--close .search__icon .data__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .data__icon__svg svg,
+.header.search-open .search__button--close .search__icon .dropdown__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .dropdown__icon__svg svg,
+.header.search-open .search__button--close .search__icon .tabs__more-icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .tabs__more-icon__svg svg,
+.header.search-open .search__button--close .search__icon .dates__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .dates__svg svg,
+.header.search-open .search__button--close .search__icon .herousel__button__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .herousel__button__icon__svg svg,
+.header.search-open .search__button--close .search__icon .pocket__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .pocket__icon__svg svg,
+.header.search-open .search__button--close .search__icon .social__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .social__icon__svg svg,
+.header.search-open .search__button--close .search__icon .featured__button__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .featured__button__icon__svg svg,
+.header.search-open .search__button--close .search__icon .accordion__link__icon svg,
+.search-open.header--narrow .search__button--close .search__icon .accordion__link__icon svg,
+.header.search-open .search__button--close .search__icon .collections__sections__menu__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .collections__sections__menu__svg svg,
+.header.search-open .search__button--close .search__icon .language__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .language__icon__svg svg,
+.header.search-open .search__button--close .search__icon .sortby__icon svg,
+.search-open.header--narrow .search__button--close .search__icon .sortby__icon svg,
+.header.search-open .search__button--close .search__icon .detection__icon__svg svg,
+.search-open.header--narrow .search__button--close .search__icon .detection__icon__svg svg {
+  fill: #fff;
+}
+
+.header.menu-open .nav__menu-btn,
+.menu-open.header--narrow .nav__menu-btn {
+  color: #fff;
+}
+
+.header.menu-open .nav__menu-btn .stack,
+.menu-open.header--narrow .nav__menu-btn .stack {
+  background-color: #fff;
+}
+
+.header.menu-open .nav__menu-btn .stack:nth-child(2),
+.menu-open.header--narrow .nav__menu-btn .stack:nth-child(2) {
+  top: 19px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.header.menu-open .nav__menu-btn .stack:nth-child(3),
+.menu-open.header--narrow .nav__menu-btn .stack:nth-child(3) {
+  opacity: 0;
+  left: -60px;
+}
+
+.header.menu-open .nav__menu-btn .stack:nth-child(4),
+.menu-open.header--narrow .nav__menu-btn .stack:nth-child(4) {
+  top: 19px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+@media (min-width: 768px) {
+  .header,
+  .header--narrow {
+    padding: 16px 0 8px 0;
+  }
+
+  .header--narrow {
+    padding: 16px 0 64px;
+  }
+
+  .header.search-open .logo,
+  .search-open.header--narrow .logo,
+  .header.search-open .logo--translated,
+  .search-open.header--narrow .logo--translated {
+    width: 160px;
+  }
+}
+
+@media (min-width: 1008px) {
+  .header,
+  .header--narrow {
+    padding: 16px 0;
+  }
+
+  .header .wrapper,
+  .header--narrow .wrapper,
+  .header .wrapper--full,
+  .header--narrow .wrapper--full,
+  .header .wrapper--collection,
+  .header--narrow .wrapper--collection,
+  .header .wrapper--art,
+  .header--narrow .wrapper--art,
+  .header .nav__wrapper,
+  .header--narrow .nav__wrapper,
+  .header .card__wrapper,
+  .header--narrow .card__wrapper,
+  .header .back-to-top,
+  .header--narrow .back-to-top,
+  .header .similar__wrapper,
+  .header--narrow .similar__wrapper,
+  .header .content-block--full .content-block__wrapper,
+  .content-block--full .header .content-block__wrapper,
+  .header--narrow .content-block--full .content-block__wrapper,
+  .content-block--full .header--narrow .content-block__wrapper,
+  .header .scroll-carousel__wrapper,
+  .header--narrow .scroll-carousel__wrapper,
+  .header .social__wrapper,
+  .header--narrow .social__wrapper,
+  .header .azfilter__wrapper,
+  .header--narrow .azfilter__wrapper,
+  .header .collections__sections__wrapper,
+  .header--narrow .collections__sections__wrapper,
+  .header .scroll-carousel-p__wrapper,
+  .header--narrow .scroll-carousel-p__wrapper,
+  .header .no-js .carousel,
+  .no-js .header .carousel,
+  .header--narrow .no-js .carousel,
+  .no-js .header--narrow .carousel {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header.search-open .logo,
+  .search-open.header--narrow .logo,
+  .header.search-open .logo--translated,
+  .search-open.header--narrow .logo--translated {
+    width: 200px;
+  }
+}
+
+.search {
+  width: calc(100% - 350px);
+  position: absolute;
+  top: 0;
+  left: 244px;
+}
+
+.search__form {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+.search__form label {
+  color: #fff;
+}
+
+.search__input {
+  display: none;
+  background: white;
+  height: 100%;
+  width: 100%;
+  float: left;
+  border-radius: 0;
+  border: 0;
+  padding-left: 10px;
+  opacity: 0;
+}

@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    # WIDTHS - EXAMPLE
+\*------------------------------------*/
+
+// Include general GEL dependancies
+@import '../../gel-settings/globals';
+@import '../../gel-tools/math';
+@import '../../gel-tools/rem';
+@import 'mq';
+
+
+// Lets declare a few varaibles to test the output
+$gel-width-enable--markup-output: true !default;
+$gel-width-enable--legacy-output: false !default;
+
+
+// Import the widths component
+@import '../widths';
+
+
+// Lets test our mixins and functions
+.box {
+	width: gel-columns(4);
+	width: gel-columns(10);
+	width: gel-columns(1, 24);
+	width: gel-columns(1/24);
+	padding-left: gel-columns(1);
+	margin-left: gel-columns(18, 24);
+}
+
+.box--mixin {
+	@include gel-columns(4);
+	@include gel-columns(10);
+	@include gel-columns(1, 24);
+	@include gel-columns(18/24);
+}

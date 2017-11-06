@@ -1,0 +1,11 @@
+            @font-face {
+                font-family: "BBCNassim";                
+                src: url(TRIAL-Nassim-Regular.eot); /* For IE */
+                src: local('☺'), url(BBC-Nassim-Regular.ttf), url(BBC-Nassim-Regular.woff);
+            }
+            @font-face {
+                font-family: "BBCNassim Bold";
+				font-weight: bold;				
+                src: url(BBC-Nassim-Bold.eot); /* For IE */
+                src: local('☺'), url(BBC-Nassim-Bold.ttf), url(BBC-Nassim-Bold.woff);
+            }

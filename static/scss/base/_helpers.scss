@@ -1,0 +1,52 @@
+%inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+
+    .ie8 & {
+        margin-right: 1px;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: none;
+}
+
+.skip-link {
+    min-height: 2.27em;
+    padding: .462em 12px .308em;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: block;
+    z-index: 1;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 700;
+
+    &:focus {
+        position: absolute;
+        height: auto;
+        width: auto;
+        overflow: hidden;
+        clip:  auto;
+        color: #333;
+    }
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.mb {
+    margin-bottom: double($gel-spacing-unit);
+}
