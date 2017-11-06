@@ -1,0 +1,308 @@
+//* ===========================HEADINGS
+h1, .h1 {
+    @extend #{gel(canon)};
+    font-weight: bold;
+}
+
+h2, .h2 {
+    @extend #{gel(trafalgar)};
+    font-weight: bold;
+}
+
+h3, .h3 {
+    @extend #{gel(double-pica)};
+    font-weight: bold;
+}
+
+h4, .h4 {
+    @extend #{gel(great-primer)};
+    font-weight: bold;
+    margin-bottom: double($gel-spacing-unit);
+}
+
+h5, .h5, h6, .h6 {
+    @extend #{gel(brevier)};
+    font-weight: bold;
+    margin-bottom: double($gel-spacing-unit);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-bottom: double($gel-spacing-unit);
+}
+
+//* ===========================PARAGRAPH
+p {
+    @extend #{gel(pica)};
+    line-height: 1.2rem;
+
+    &:empty {
+        display: none;
+    }
+}
+
+//* ===========================SMALL
+small,.small {
+    @extend #{gel(brevier)};
+}
+
+//* ===========================BLOCKQUOTE
+blockquote {
+    @extend #{gel(double-pica)};
+    position: relative;
+    display: block;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin: 48px 0;
+    padding: quadruple($gel-spacing-unit) 0 0;
+    
+        &:before {
+            @include svg-bg-fallback(gel-icon-quote);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: double(-$gel-spacing-unit);
+            left: 0;
+            width: quadruple($gel-spacing-unit);
+            height: quadruple($gel-spacing-unit);
+            margin-top: 0;
+            margin-left: 0;
+            display: block;
+            content: '';
+        }
+
+        p {
+            @extend #{gel(double-pica)};
+        }
+
+        .attribution {
+            @extend #{gel(pica)};
+            display: block;
+            margin-top: double($gel-spacing-unit);
+        }
+}
+.exampleOutput {
+    blockquote {
+        &:before {
+            background-image: url("../img/svg-fallbacks/gel-icon-quote.png");
+            background-image: none,url("../img/svg/gel-icon-quote.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -16px;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            margin-top: 0;
+            margin-left: 0;
+            display: block;
+            content: '';
+        }
+    }
+}
+
+//* ===========================ADDRESS
+address {
+    margin-bottom: double($gel-spacing-unit);
+    font-style: normal;
+    line-height: 1.42857143;
+
+    //* =======================ELEMENT
+    strong {
+        font-weight: bold;
+    }
+}
+
+//* ===========================ABBREVIATION
+abbr[title], abbr[data-original-title] {
+    border-bottom: none!important;
+    text-decoration: none!important;
+    cursor: normal!important;
+}
+
+//* ===========================DESCRIPTION
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    //* =======================ELEMENT
+    dt {
+        font-weight: bold;
+    }
+    dt, dd {
+        line-height: 1.42857143;
+    }
+    dd {
+        margin-left: 0;
+    }
+}
+
+//* ===========================MISC
+.page-title {
+    @extend .h2;
+    margin-top: double($gel-spacing-unit);
+
+    @include bp(s, min-width, true) {
+      margin-top: quadruple($gel-spacing-unit);
+    }
+}
+
+.sub-title {
+    @extend .h3;
+    font-weight: normal;
+}
+
+.results-found {
+  @extend #{gel(pica)};
+  margin-bottom: quadruple($gel-spacing-unit);
+}
+
+.search--block {
+    .suggestions__title {
+        @include bp(s, min-width, true) {
+          display: block;
+        }
+    }
+}
+
+.section {
+    &__title {
+        @extend .h3;
+        margin-bottom: $gel-spacing-unit;
+
+        &--nointro {
+            @extend .h3;
+            margin-bottom: double($gel-spacing-unit);
+        }
+    }
+
+    &__intro {
+        margin-bottom: double($gel-spacing-unit);
+    }
+
+    @include bp(m, min-width) {
+        &__intro {
+            max-width: 70%;
+        }
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Headings
+category: Core - Typography
+---
+
+Block description:
+
+```html_example
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+```
+
+*/
+
+/*doc
+---
+title: Paragraph
+category: Core - Typography
+---
+
+Block description:
+
+```html_example
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius.</p>
+```
+
+*/
+
+/*doc
+---
+title: Blockquote
+category: Core - Typography
+---
+
+Block description:
+
+```html_example
+<blockquote>
+    "Social networking is a vital aspect to working in the media now and you can’t ignore it."
+    <span class="attribution">– Tom Du Croz</span>
+</blockquote>
+```
+
+*/
+
+/*doc
+---
+title: Small
+category: Core - Typography
+---
+
+Block description:
+
+```html_example
+<small>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. An est aliquid, quod te sua sponte delectet? Verum tamen cum de rebus grandioribus dicas, ipsae res verba rapiunt; Re mihi non aeque satisfacit, et quidem locis pluribus.
+</small>
+```
+
+*/
+
+/*doc
+---
+title: Address
+category: Core - Typography
+---
+
+Block description:
+
+```html_example
+<address>
+  <strong>BBC Academy</strong><br>
+  White City,<br>
+  201 Wood Ln,<br>
+  London W12 7TS<br>
+  <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+
+<address>
+  <strong>Full Name</strong><br>
+  <a href="mailto:#">first.last@example.com</a>
+</address>
+```
+
+*/
+
+/*doc
+---
+title: Description
+category: Core - Typography
+---
+
+Block description:
+
+```html_example
+<dl>
+  <dt>Lorem</dt>
+  <dd>Ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+</dl>
+<dl>
+  <dt>Sit sane ista voluptas</dt>
+  <dd>Itaque primos congressus copulationesque.</dd>
+</dl>
+<dl>
+  <dt>Praeclare hoc quidem</dt>
+  <dd>Sit sane ista voluptas. Itaque primos congressus copulationesque et consuetudinum.</dd>
+  <dd>Praeclare hoc quidem. Quis enim potest ea, quae probabilia videantur ei.</dd>
+</dl>
+```
+
+*/
+

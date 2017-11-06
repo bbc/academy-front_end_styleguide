@@ -1,0 +1,1479 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>BBC Academy Styleguide | Modules - Article</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="./static/css/main.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="./styleguide/theme-build/polyfill/html5shiv.js"></script>
+      <script src="./styleguide/theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+    <body class="cortana-body"  ng-controller="MainController">
+    
+    <div data-loaded-from="remote" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 48 32" id="gel-icon-3d"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M25 8h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H25V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8zm-14.1-6.2h1c1.2 0 2.6-.3 2.6-1.7 0-1-1-1.6-2.3-1.6-1.6 0-2.5.8-2.5 2.3h-3.7c.1-3.6 2.7-5.5 6.2-5.5 2.8 0 6.1 1.2 6.1 4.5 0 1.4-.8 2.9-2.3 3.2 1.9.5 2.8 1.8 2.8 3.7 0 3.7-3.4 5.2-6.6 5.2-3.8 0-6.9-1.9-6.6-6.1h3.7c0 1.9.9 2.9 2.9 2.9 1.4 0 2.6-.6 2.6-2 0-1.8-1.3-2.2-2.9-2.2h-1v-2.7z"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-audio-description"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M26 8h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H26V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8zM14 8h4.2l6 16h-4.3l-1-2.9h-5.6l-1 2.9H8l6-16zm.2 10h3.6L16 12.4 14.2 18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-continous-play"><path d="M24 0H0v24h24V0zm-3 21H3V3h18v18z"></path><path d="M28 5h-2v21H5v2h23"></path><path d="M30 8v22H8v2h24V8M8 6v12l9.6-6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-exit-fullscreen"><path d="M28 12h-8V4M4 12h8V4m16 16h-8v8M4 20h8v8M1 0h30v2H1zm0 30h30v2H1z"></path><path d="M0 0h2v32H0zm30 0h2v32h-2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-expand"><path d="M22 4v18H2V2h20m2-2H0v24h24V0zm-3 32h11V21"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-forward"><path d="M27 0h3v32h-3zm0 16L2 32v-8.2L15.3 16 2 8.2V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-fullscreen"><path d="M22 12v10H10V10h12m2-2H8v16h16V8zm-3-8h11v11M11 0H0v11m21 21h11V21M11 32H0V21"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-fx"><path d="M.3 7h13.3v3.8H4.9v3.7h7.4v3.6H4.9V25H.3V7zM20 15.5L14.1 7h5.5l3 5.6L25.9 7h5.3l-5.8 8.5 6.4 9.5H26l-3.4-6-3.6 6h-5.4l6.4-9.5z"></path></symbol><symbol viewBox="0 0 44 32" id="gel-icon-fx-off"><path d="M0 7h13.3v3.8H4.7v3.7h7.4v3.6H4.7V25H0V7zm19.7 8.5L13.9 7h5.5l3 5.6L25.6 7H31l-5.8 8.5 6.4 9.5h-5.7l-3.4-6-3.7 6h-5.4l6.3-9.5zm24.3-4L42.5 10 38 14.5 33.5 10 32 11.5l4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-hd"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M9 8h4.2v5.8h5.5V8h4.2v16h-4.2v-6.6h-5.5V24H9V8zm17 0h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H26V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-iplayer"><path d="M11 0H3v8h8V4.7L24 16 11 27.3V12H3v20h8l18-16"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-last-watched"><path d="M10.5 18.5c0 3 2.5 5.5 5.5 5.5s5.5-2.5 5.5-5.5S19 13 16 13s-5.5 2.5-5.5 5.5"></path><path d="M0 8v21h7l-1 3h15l-2-6H3V11h26v15h-8l1 3h10V8M4 4h24v2H4zm4-4h16v2H8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-listen"><path d="M21.4 4.8L20 6.2c2.5 2.5 4 6 4 9.8s-1.5 7.3-4 9.8l1.4 1.4C24.2 24.3 26 20.4 26 16c0-4.4-1.8-8.3-4.6-11.2z"></path><path d="M25.6.5L24.2 2c3.6 3.6 5.8 8.6 5.8 14s-2.2 10.4-5.8 14l1.4 1.4C29.6 27.5 32 22 32 16S29.6 4.5 25.6.5zM16 4l-6 6H0v12h10l6 6"></path></symbol><symbol viewBox="0 0 56 32" id="gel-icon-live"><path d="M0 0h56v32H0z"></path><path fill="#FFF" d="M4 7.9h4.2v12.4h7.5v3.6H4v-16zm13 0h4.2v16H17v-16zm15.8 16H28l-5-16h4.3l3.1 11.9 3.1-11.9H38l-5.2 16zm6.2-16h12.7v3.3h-8.6V14H51v3.2h-7.8v3H52v3.6H39V7.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-live-restart"><path d="M16 4h-1l2-2-2-2-6 6 6 6 2-2-2-2h1c5.5 0 10 4.5 10 10s-4.5 10-10 10S6 23.5 6 18H2c0 7.7 6.3 14 14 14s14-6.3 14-14S23.7 4 16 4"></path><path d="M10 10L6 6l4-4-2-2-6 6 6 6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-music"><path d="M12 6.6v14.9c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V14.6l14-5.3v7.2c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V0L12 6.6zM8 29c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm16-5c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"></path></symbol><symbol viewBox="0 0 44 32" id="gel-icon-music-off"><path d="M10 6.6v14.9c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V14.6l14-5.3v7.2c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V0L10 6.6zM6 29c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm16-5c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm22-12.5L42.5 10 38 14.5 33.5 10 32 11.5l4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-now-watching"><path d="M15 13v19l17-10m-19 2H0V0h4v20h9"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-parental"><circle cx="16" cy="16" r="16"></circle><path fill="#FFF" d="M23.4 24h-2.7l-.2-1.7c-1.1 1.5-3 2.1-4.5 2.1-4.8 0-8-3.7-8-8.3s3.1-8.3 8-8.3c3.3 0 6.8 1.8 7.2 5.8H19c-.1-1.4-1.5-2.2-3.2-2.2-2.7 0-3.7 2.4-3.7 4.7 0 2.4 1 4.7 3.7 4.7 2.1 0 3.4-1 3.7-2.4h-2.9v-3.1h6.7V24z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pause"><path d="M3 0h9v32H3zm17 0h9v32h-9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-play"><path d="M3 32l26-16L3 0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pop-out"><path d="M20 30H2V12h6v-2H0v22h22v-8h-2"></path><path d="M28 4v14H14V4h14m4-4H10v22h22V0z"></path></symbol><symbol viewBox="0 0 121 32" id="gel-icon-premier"><path d="M31.5 11.3h-3.3v3.6h3.5c1.3 0 1.9-.7 1.9-1.9 0-1.1-.9-1.7-2.1-1.7zm-15.5 0h-2.8v4.1H16c1.3 0 2.2-.5 2.2-2s-1-2.1-2.2-2.1zm90.4 0h-3.3v3.6h3.5c1.3 0 1.9-.7 1.9-1.9 0-1.1-.9-1.7-2.1-1.7z"></path><path d="M0 0v32h121V0H0zm16.6 18.7h-3.4V24H9V8h7.6c3 0 5.8 1.4 5.8 5.2 0 3.9-2.3 5.5-5.8 5.5zM34.2 24c-.4-.5-.4-2.1-.5-2.6-.1-1.6-.4-3.3-2.3-3.3h-3.2V24H24V8h8.2c2.8 0 5.6 1.3 5.6 4.5 0 1.7-.8 3.4-2.5 4 1.7.4 2.2 2.3 2.3 3.8 0 .7.1 3 .7 3.6h-4.1zm19.1 0h-13V8H53v3.3h-8.6v2.8h7.8v3.2h-7.8v3h8.8V24zm20.3 0h-3.9V11.9L66.2 24H63l-3.4-12.1V24h-3.9V8h6.1l2.8 10.7L67.4 8h6.1v16zm7.1 0h-4.2V8h4.2v16zm15.8 0h-13V8h12.7v3.3h-8.6v2.8h7.8v3.2h-7.8v3h8.8V24zm12.6 0c-.4-.5-.4-2.1-.5-2.6-.1-1.6-.4-3.3-2.3-3.3h-3.2V24h-4.2V8h8.2c2.8 0 5.6 1.3 5.6 4.5 0 1.7-.8 3.4-2.5 4 1.7.4 2.2 2.3 2.3 3.8 0 .7.1 3 .7 3.6h-4.1z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-preview"><path d="M16 12c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"></path><path d="M21 7.4c-1.3-.7-2.8-1.2-4.3-1.3h-1.4c-1.6.1-3 .6-4.3 1.3C5.3 10.1 0 16 0 16s5.3 5.9 10.9 8.6c1.3.7 2.8 1.2 4.3 1.3h1.4c1.6-.1 3-.6 4.3-1.3 5.6-2.7 11-8.6 11-8.6S26.7 10.1 21 7.4zM16 23c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-recent-activity"><path d="M16 28C9.4 28 4 22.6 4 16S9.4 4 16 4c.3 0 .7 0 1 .1v-4c-.3-.1-.7-.1-1-.1C7.2 0 0 7.2 0 16s7.2 16 16 16c6.3 0 11.7-3.6 14.3-8.9l-3.5-2c-1.9 4.1-6 6.9-10.8 6.9z"></path><path d="M15 6v10.6l8.8 5.1 1-1.8-7.8-4.5V6"></path><circle cx="30" cy="16" r="2"></circle><circle cx="28" cy="9" r="2"></circle><circle cx="23" cy="4" r="2"></circle></symbol><symbol viewBox="0 0 32 32" id="gel-icon-record"><circle cx="16" cy="16" r="16"></circle><path fill="#FFF" d="M23.9 24l-3.2-5.9c1.8-.7 2.8-2.3 2.8-5 0-3.8-2.8-5.1-5.8-5.1h-7.6v16h4.2v-5.3h2.5l2.9 5.3h4.2zm-9.6-12.6h2.8c1.3 0 2.2.6 2.2 2.1s-.9 2-2.2 2h-2.8v-4.1z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-replay"><path d="M25 18.5c0 5.2-4.3 9.5-9.5 9.5S6 23.7 6 18.5 10.3 9 15.5 9h.5V5h-.5C8 5 2 11 2 18.5S8 32 15.5 32 29 26 29 18.5V18h-4v.5z"></path><path d="M18 0v14l12-7"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-rewind"><path d="M2 0h3v32H2zm3 16L30 0v8.2L16.7 16 30 23.8V32"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-sd"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M26 8h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H26V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8zm-17-1.8c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.6-4.7-1.7-4.7-4.6C9.5 9 13 7.7 16 7.7c3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.7 4.6 1.7 4.6 4.6 0 4-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.3z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-series-catch-up"><path d="M10 5v22h22V5H10zm19 19H13V8h16v16zM5 27h3v-2H7V7h1V5H5M0 27h3v-2H2V7h1V5H0"></path><path d="M17 11v10l9-5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-series-stack"><path d="M4 6h22v22h2V4H4"></path><path d="M8 0v2h22v22h2V0"></path><path d="M0 32h24V8H0v24zm4-20h16v16H4V12z"></path></symbol><symbol viewBox="0 0 56 32" id="gel-icon-sign-language-22"><path d="M0 0h56v32H0z"></path><path fill="#FFF" d="M37.7 7.9h4.2v12.4h7.5v3.6H37.7v-16zM26.4 18.1c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.7-4.7-1.7-4.7-4.7 0-3.5 3.5-4.9 6.5-4.9 3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.6 4.6 1.7 4.6 4.6 0 4.1-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.3zM7.7 7.9h7.5c2.8 0 5.8.7 5.8 4 0 1.4-.8 2.6-2.1 3.2 1.7.5 2.8 2 2.8 3.8 0 3.8-2.8 5-6.2 5H7.7v-16zm4.1 6.3H15c.7 0 1.7-.4 1.7-1.5 0-1.2-.8-1.5-1.7-1.5h-3.2v3zm0 6.3h3.3c1.3 0 2.2-.5 2.2-1.8 0-1.4-1-1.9-2.2-1.9h-3.3v3.7z"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-sign-language-35"><path d="M0 32h48V0H0v32zm18.2-7.7c-3.7 0-6.9-1.6-6.9-5.7h4.2c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.7-4.7-1.7-4.7-4.6 0-3.5 3.5-4.9 6.5-4.9 3.2 0 6.4 1.5 6.4 5.2h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.7 4.6 1.7 4.6 4.6 0 3.9-3.4 5.2-6.9 5.2m20.6-.3H27.2V8h4.2v12.4h7.5V24z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-sound-off"><path d="M16.1 4l-6 6H.1v12h10l6 6m15.8-16.5L30.4 10l-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-subtitles"><path d="M0 0h32v32H0z"></path><path fill="#FFF" d="M13.2 18.6c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.6-4.7-1.7-4.7-4.6C9.5 9 13 7.7 16 7.7c3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.4.6 4.8 1.7 4.8 4.6 0 4.1-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.1z"></path></symbol><symbol viewBox="0 0 58 32" id="gel-icon-volume"><path d="M0 20h4v12H0zm6 0h4v12H6zm6 0h4v12h-4zm12 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm-36-8h4v20h-4z"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-widescreen"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M32.2 18.6c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.6-4.7-1.7-4.7-4.6C28.5 9 32 7.7 35 7.7c3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.7 4.6 1.7 4.6 4.6 0 4-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.3zM23.1 24H19l-2.2-11-2.2 11h-4.2L6 8h4.2l2.3 11.7L14.8 8h3.9l2.4 11.7L23.4 8h4.2l-4.5 16z"></path></symbol></svg></div>
+
+    <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="gel-icon-games-console"><path d="M8 7.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5S9.9 7.5 8 7.5z"></path><path d="M24 3c-2 0-3.9.8-5.3 2h-5.4C11.9 3.8 10 3 8 3c-4.4 0-8 3.6-8 8v18h6l6.4-10h7.1L26 29h6V11c0-4.4-3.6-8-8-8zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM8 17c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm12-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4 4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-mobile"><path d="M22 0v2H6v30h20V0h-4zm-9 28h-3v-2h3v2zm0-4h-3v-2h3v2zm0-4h-3v-2h3v2zm5 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4v-2h4v2zm4 8h-3v-2h3v2zm0-4h-3v-2h3v2zm0-4h-3v-2h3v2zm0-5H10V6h12v9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-mobile-smart"><path d="M6 0v32h20V0H6zm8 2h4v1h-4V2zm3 28h-2v-2h2v2zm7-3H8V4h16v23z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pc"><path d="M28 4v14H4V5h25m3-4H0v21h32V1zm-5.9 26l2.3 2H3.6l2.3-2h20.2m.9-2H5l-5 4v2h32v-2l-5-4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-radio"><path d="M30 7V1H2v6H0v24h32V7h-2zM4 3h24v4H4V3zm2 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm14 12c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-set-top-box"><path d="M16 4c4.7 0 9 1.7 12.3 4.5L29.6 7C25.9 3.9 21.2 2 16 2S6.1 3.9 2.4 7l1.3 1.5C7 5.7 11.3 4 16 4"></path><path d="M6.3 11.5L7.7 13c2.3-1.9 5.2-3 8.3-3 3.2 0 6.1 1.1 8.3 3l1.3-1.5C23 9.3 19.7 8 16 8s-7 1.3-9.7 3.5M7 21c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"></path><path d="M0 18v12h4l2-2h19l2 2h5V18H0zm7 8c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3m13-2h-2v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tablet"><path d="M2 0v32h28V0H2zm16 30h-4v-2h4v2zm8-4H6V4h20v22z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tv"><path d="M32 26V1H0v25h12v2.5H6V31h20v-2.5h-6V26h12zm-20-3.8H4V4.8h24v17.5H12z"></path></symbol></svg></div>
+
+    <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="gel-icon-blog"><path d="M7 18.6v6h6l.7-.6-6-6"></path><path d="M26-.4L9.3 16.4l6 6L26 11.6v18H2v-24h12v-2H0v28h28v-22l4-4"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-comments"><path d="M0 0v32l8-8h24V0H0zm4 10h18v4H4v-4zm24 10H4v-4h24v4zm0-12H4V4h24v4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-digg"><path fill="none" d="M3.1 13.4v5.9H5s.4 0 .4-.4V13H3.5s-.4 0-.4.4z"></path><path d="M5.7 6.5s-.4 0-.4.4v3.7h-5s-.4 0-.4.4v10.7h8.2s.4 0 .4-.4V6.5H5.7zm-.3 12.4c0 .4-.4.4-.4.4H3.1v-5.9c0-.4.4-.4.4-.4h1.9v5.9zM9.5 11v10.7h2.8s.4 0 .4-.4V10.6H9.9s-.4 0-.4.4zm.4-4.5s-.4 0-.4.4v2h2.8s.4 0 .4-.4v-2H9.9zm13.9 4.1s-.4 0-.4.4v10.7h5.4v1.4h-5s-.4 0-.4.4v2h8.2s.4 0 .4-.4V10.6h-8.2zm5 8.3c0 .4-.4.4-.4.4h-1.9v-5.9c0-.4.4-.4.4-.4h1.9v5.9zm-14.7-8.3s-.4 0-.4.4v10.7h5.4v1.4h-5s-.4 0-.4.4v2H22s.4 0 .4-.4V10.6h-8.3zm5.1 8.3c0 .4-.4.4-.4.4h-1.9v-5.9c0-.4.4-.4.4-.4h1.9v5.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-facebook"><path d="M12.1 32V17H8v-5.4h4.1V7c0-3.6 2.4-7 8-7 2.2 0 3.9.2 3.9.2l-.1 5.1h-3.6c-2 0-2.3.9-2.3 2.4v3.9h6l-.3 5.4H18v15h-5.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-favourites"><path d="M13 3h19v6H13zm4 10h15v6H17zm-4 10h19v6H13zm1-9H9V9H5v5H0v4h5v5h4v-5h5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-feedback"><path d="M14 2v6h6v8h6l6 6V2H14zm16 12h-8v-2h8v2zm0-4h-8V8h8v2zm0-4H16V4h14v2z"></path><path d="M0 24v6l6-6h12V10H0v14zm2-12h14v2H2v-2zm0 4h10v2H2v-2zm0 4h12v2H2v-2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-google-plus"><path d="M32 14.2h-4.2V10h-2.2v4.2h-4.2v2.1h4.2v4.2h2.2v-4.2H32M18.6 1.7h-2.5C17 2.5 19 4 19 7.2c0 3.1-1.8 4.6-3.6 6-.6.5-1.2 1.1-1.2 2.1 0 .9.6 1.4 1.1 1.8l1.5 1.2c1.9 1.6 3.6 3 3.6 5.9 0 3.9-4 8-11.4 8-6.1-.2-9-3.1-9-6.2 0-1.5.8-3.6 3.3-5.1 2.7-1.6 6.2-1.8 8.2-1.9-.6-.8-1.3-1.5-1.3-2.8 0-.7.2-1.1.4-1.6-.5 0-.9.1-1.4.1-4.5 0-7.1-3.3-7.1-6.6 0-1.9.6-4.2 2.4-5.8C7 .2 10.1 0 12.4 0h8.9l-2.7 1.7zM7.4 20.8c-.9.3-3.7 1.3-3.7 4.3s3 5.1 7.5 5.1c4.1 0 6.3-1.9 6.3-4.5 0-2.1-1.4-3.3-4.7-5.5h-1c-.3-.1-2.6 0-4.4.6M9.8 1.5c-1.1 0-2.3.4-3 1.3-.7.9-.9 2.1-.9 3.2 0 2.8 1.7 7.5 5.3 7.5 1.1 0 2.2-.6 2.9-1.3 1-1 1.1-2.2 1.1-3 0-3-1.8-7.7-5.4-7.7" fill="#010101"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-linkedin"><path d="M7.3 31.5V10.6H.4v20.9h6.9zM3.8 7.7c2.4 0 3.9-1.6 3.9-3.6S6.2.5 3.9.5C1.5.5 0 2.1 0 4.1s1.5 3.6 3.8 3.6zm7.3 23.8H18V19.8c0-.6 0-1.3.2-1.7.5-1.2 1.6-2.5 3.5-2.5 2.5 0 3.5 1.9 3.5 4.7v11.2H32v-12c0-6.4-3.4-9.4-7.9-9.4-3.7 0-5.3 2.1-6.2 3.5v-3H11c.2 1.9.1 20.9.1 20.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-my-radio"><path d="M30 7V1H2v6H0v24h12l2-5h11l2 5h5V7h-2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13.5 9c-3.6 0-6.5-2.9-6.5-6.5s2.9-6.5 6.5-6.5 6.5 2.9 6.5 6.5-2.9 6.5-6.5 6.5zM28 7H4V3h24v4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pinterest"><path d="M16 0C7.2 0 0 7.2 0 16c0 6.6 3.9 12.2 9.6 14.7 0-1.1 0-2.5.3-3.7.3-1.3 2.1-8.7 2.1-8.7s-.5-1-.5-2.5c0-2.4 1.4-4.1 3.1-4.1 1.5 0 2.2 1.1 2.2 2.4 0 1.5-.9 3.7-1.4 5.7-.4 1.7.9 3.1 2.5 3.1 3 0 5.1-3.9 5.1-8.5 0-3.5-2.4-6.1-6.7-6.1-4.9 0-7.9 3.6-7.9 7.7 0 1.4.4 2.4 1.1 3.1.3.4.3.5.2.9-.1.3-.3 1-.3 1.3-.1.4-.4.6-.8.4-2.2-.9-3.3-3.4-3.3-6.1 0-4.5 3.8-10 11.4-10 6.1 0 10.1 4.4 10.1 9.2 0 6.3-3.5 11-8.6 11-1.7 0-3.4-.9-3.9-2 0 0-.9 3.7-1.1 4.4-.3 1.2-1 2.5-1.6 3.4 1.4.4 3 .7 4.5.7 8.8 0 16-7.2 16-16S24.8 0 16 0z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-recommend"><path d="M16 28C9.4 28 4 22.6 4 16S9.4 4 16 4c3.1 0 6 1.2 8.1 3.2l-8.7 10.4-5.4-3.8-3 3.5 8.8 6.8 11-13.1 2.8-3.3C26.8 3.1 21.8 0 16 0 7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16h-4c0 6.6-5.4 12-12 12"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-share"><path d="M6.8 22.2c1.6 0 3-.7 4-1.8l9 4.8c-.1.4-.2.8-.2 1.3 0 3 2.5 5.5 5.5 5.5s5.5-2.4 5.5-5.5-2.5-5.5-5.5-5.5c-1.6 0-3 .7-4 1.8l-9.5-5.2-.1-2.8 9.7-5.5c1 1 2.3 1.5 3.8 1.5 3 0 5.5-2.5 5.5-5.5S28.2 0 25.2 0s-5.5 2.4-5.5 5.5c0 .6.1 1.1.2 1.6l-9.3 5.7c-1-.9-2.3-1.5-3.8-1.5-3 0-5.5 2.4-5.5 5.5.1 2.9 2.5 5.4 5.5 5.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-sign-in"><g fill="#1D1D1B"><path d="M1 1v30h30V1H1zm19.8 22.6L19.5 21h-7l-1.4 2.6C8.7 22 7 19.2 7 16c0-5 4-9 9-9s9 4 9 9c0 3.2-1.7 6-4.2 7.6z"></path><circle cx="16" cy="16" r="3.5"></circle></g></symbol><symbol viewBox="0 0 32 32" id="gel-icon-sign-out"><path fill="#1D1D1B" d="M1 1v30h30V1H1zm21.1 21.6l-.5-1.1c1.4-1.4 2.3-3.4 2.3-5.6 0-4.3-3.5-7.9-7.9-7.9s-7.9 3.7-7.9 8c0 2.7 1.4 5.2 3.5 6.6l.8-1.6h7l1.3 2.6c-1.3.9-2.9 1.4-4.7 1.4-5 0-9-4-9-9s4-9 9-9 9 4 9 9c0 2.6-1.1 5-2.9 6.6zM19.5 16c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-stumble-upon"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm0 13c-.8 0-1.5.7-1.6 1.5v3.1c-.1 2.2-1.9 3.9-4.1 3.9-2.2 0-4-1.7-4.1-3.9V16h2.5v1.6c0 .8.7 1.5 1.5 1.5s1.5-.6 1.5-1.5v-3.1c.1-2.2 1.9-3.9 4.1-3.9 2.2 0 4 1.7 4 3.9l-1.5.4-1-.4c.2-.9-.5-1.5-1.3-1.5zm9.7 4.6c-.1 2.2-1.9 3.9-4.1 3.9-2.2 0-4-1.7-4.1-3.9V16l1 .4L20 16v1.6c0 .8.7 1.5 1.5 1.5s1.5-.6 1.5-1.5V16h2.5v1.6z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-subscribe-to-podcast"><path d="M22 6c2.2 0 4.2.9 5.7 2.3l1.4-1.4C27.3 5.1 24.8 4 22 4s-5.3 1.1-7.1 2.9l1.4 1.4C17.8 6.9 19.8 6 22 6"></path><path d="M22 2c3.3 0 6.3 1.3 8.5 3.5L32 4.1C29.4 1.6 25.9 0 22 0c-3.9 0-7.4 1.6-9.9 4.1l1.4 1.4C15.7 3.3 18.7 2 22 2m-8 10H9V7H5v5H0v4h5v5h4v-5h5m12-2c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4m-10 5h12l-3 13h-6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-terms-conditions"><path d="M25 4v3h1v22H6V7h3v2h14V3h-4c0-1.7-1.3-3-3-3s-3 1.3-3 3H9v1H3v28h26V4h-4z"></path><path d="M11.5 16.2l-2 2.3 5.3 4.5 7.5-9-2.3-1.9-5.5 6.6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tumblr"><path d="M18 0v8.2h6.3V13h-6.4v8.3c0 1.9.2 2.8.4 3.3s.5.9 1 1.2c.5.3 1 .4 1.8.4.4 0 1.4-.1 2.5-.6l1.5 4.6c-.6.5-1.5 1.1-2.9 1.5-1.2.2-2 .3-3.2.3-1.4 0-2.3-.2-3.4-.6-1.1-.4-1.8-.9-2.6-1.6-.8-.7-1.3-1.4-1.7-2.2-.5-.8-1-2.2-1.1-3.8V13H7V8.8c1.2-.4 2.1-1 3-1.8 1.2-1.1 1.7-2 2.1-2.9.5-1 .9-2.5 1.1-4.1H18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-twitter"><path d="M32 6.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.7 3.8 24 3 22.2 3c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 3 1.8 6.5 2.9 10.2 2.9 12.1 0 18.7-10 18.7-18.7v-.9c1.2-.9 2.3-2 3.2-3.3z"></path></symbol></svg></div>
+
+    <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="gel-icon-360-image"><path d="M12.4 21.6c-4.9-.9-8.7-3.5-8.7-6.4 0-1.7 1.4-3.4 3.5-4.6L4.5 8.2C1.7 10 0 12.5 0 15.3c0 4.8 5.3 8.8 12.4 9.8V31l8.6-7.9-8.6-7.9v6.4z"></path><path d="M24 6.5V2H12V1h-2v1H8v12h16v-3.7c2.6 1.3 4.3 3.1 4.3 5s-1.7 3.7-4.2 4.9V24c4.7-1.8 7.9-5 7.9-8.7 0-3.8-3.2-7-8-8.8zM12 6h-2V4h2v2zm6 6c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path><circle cx="18" cy="8" r="2.2"></circle></symbol><symbol viewBox="0 0 32 32" id="gel-icon-activity"><path d="M27.2 12.9c1 .3 2.1.1 3-.4 1.9-1.1 2.6-3.5 1.5-5.4-1.1-1.9-3.5-2.6-5.4-1.5-1 .5-1.6 1.4-1.9 2.4l-.1-.2-3.6-6.4-7.2 4.1c.9.3 1.6.9 2.1 1.8 1.1 1.9.4 4.3-1.5 5.4-1.9 1.1-4.3.4-5.4-1.5-.6-.8-.7-1.8-.5-2.7l-7 4 4 6.9c-1.1-.4-2.3-.4-3.4.2C-.1 20.7-.8 23.1.3 25c1.1 1.9 3.5 2.6 5.4 1.5 1.1-.6 1.7-1.7 1.9-2.8l3.9 6.9 6.9-3.9c-.8-.3-1.4-.9-1.9-1.7-1.1-1.9-.4-4.3 1.5-5.4 1.9-1.1 4.3-.4 5.4 1.5.5.8.6 1.7.5 2.5l7.1-4-3.6-6.4-.2-.3z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-apps"><path d="M0 14h14V0H0v14zM3 2l8 5-8 5V2zm15 12h14V0H18v14zm2-2v-2l2 2h-2zm4-1l-3-3 6-6 3 3-6 6zM0 32h14V18H0v14zm2-11h1v-1h2v1h7v8H2v-8zm16 11h14V18H18v14zm3-11l2.6.5L25 19l1.4 2.5L29 21l-.5 2.6L31 25l-2.5 1.4.5 2.6-2.6-.5L25 31l-1.4-2.5-2.6.5.5-2.6L19 25l2.5-1.4L21 21z"></path><path d="M8 22c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3m0 5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-audio"><path d="M21.4 4.8L20 6.2c2.5 2.5 4 6 4 9.8s-1.5 7.3-4 9.8l1.4 1.4C24.2 24.3 26 20.4 26 16c0-4.4-1.8-8.3-4.6-11.2z"></path><path d="M25.6.5L24.2 2c3.6 3.6 5.8 8.6 5.8 14s-2.2 10.4-5.8 14l1.4 1.4C29.6 27.5 32 22 32 16S29.6 4.5 25.6.5zM16 4l-6 6H0v12h10l6 6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-chart"><path d="M1 9h8v23H1zm11 9h8v14h-8zM23 0h8v32h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-curriculum-key-fact"><path d="M12 26h8v2h-8zm1 6h6l1-2h-8m3-30h2v2h-2zm12 12h2v2h-2zM3 12h2v2H3zm2-9h2v2H5zm20 0h2v2h-2zM6 21h2v2H6zm18 0h2v2h-2zM16 4c-4.7 0-8.5 3.8-8.5 8.5 0 2.3.9 4.3 2.3 5.8S12 21.8 12 24h8c0-2.2.8-4.2 2.2-5.7 1.4-1.5 2.3-3.6 2.3-5.8C24.5 7.8 20.7 4 16 4zm4.7 12.9c-1.3 1.4-2.2 3.1-2.6 5.1h-4.4c-.4-1.9-1.2-3.7-2.5-5-1.1-1.2-1.8-2.8-1.8-4.5.1-3.6 3-6.5 6.6-6.5s6.5 2.9 6.5 6.5c0 1.7-.6 3.3-1.8 4.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-document"><path d="M21.3 3L27 8.7V29H5V3h16.3m.7-3H2v32h28V8l-8-8z"></path><path d="M10 13h12v3H10zm0 4h12v3H10zm0 4h12v3H10z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-game"><path d="M8 7.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5S9.9 7.5 8 7.5z"></path><path d="M24 3c-2 0-3.9.8-5.3 2h-5.4C11.9 3.8 10 3 8 3c-4.4 0-8 3.6-8 8v18h6l6.4-10h7.1L26 29h6V11c0-4.4-3.6-8-8-8zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM8 17c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm12-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4 4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-image"><path d="M9 5V3H4v2H0v24h32V5H9zm-2.5 8C5.1 13 4 11.9 4 10.5S5.1 8 6.5 8 9 9.1 9 10.5 7.9 13 6.5 13zM20 26c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9z"></path><path d="M20 11.5c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5-2.5-5.5-5.5-5.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-infographics"><path d="M24 18.1v-6.2c2.8-.5 5-2.9 5-5.9 0-3.3-2.7-6-6-6s-6 2.7-6 6c0 3 2.2 5.4 5 5.9v6.2c-1.3.2-2.5.7-3.4 1.5l-5.1-5.1c.3-.6.5-1.3.5-2C14 10 12 8 9.5 8S5 10 5 12.5 7 17 9.5 17c1 0 2-.4 2.7-.9l5 5c-.6.9-1 1.9-1.1 2.9H7.8c-.4-1.2-1.5-2-2.8-2-1.7 0-3 1.3-3 3s1.3 3 3 3c1.3 0 2.4-.8 2.8-2h8.3c.5 3.4 3.4 6 6.9 6 3.9 0 7-3.1 7-7 0-3.5-2.6-6.4-6-6.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-interactive"><path d="M12.5 0l-1 20-6-4-2 2 10 14h15V14l-3-1.4V17h-1v-4.8l-3-1.4V17h-1v-6.6l-3-1.4v8h-1V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-iptv-guide"><path d="M0 0h8v8H0zm12 0h20v8H12zm12 24h8v8h-8zM0 24h20v8H0zm0-12h32v8H0z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-list"><path d="M0 0v8h32V0M0 17v3h32v-8H0m0 17v3h32v-8H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-map"><path d="M25.1 17.2c1.2-1.8 1.9-3.9 1.9-6.2 0-6.1-4.9-11-11-11S5 4.9 5 11c0 2.3.7 4.4 1.9 6.2L16 32l9.1-14.8zM16 7c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-music-tracks"><path d="M16 13c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3"></path><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0m0 22c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6m8-6c0-4.4-3.6-8-8-8V6c5.5 0 10 4.5 10 10h-2zM16 4V2c7.7 0 14 6.3 14 14h-2c0-6.6-5.4-12-12-12"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-newsletter"><path d="M5 3h22v12h3V0H2v15h3"></path><path d="M10 12h12v3H10zm0 4h12v3H10zm0-8h12v3H10z"></path><path d="M29.5 16l-.5.3-13 8.1-13-8.1-.5-.3H0v16h32V16h-2.5zM29 29H3V17.5l13 8.1 13-8.1V29z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-podcast"><circle cx="16" cy="14" r="4"></circle><path d="M16 6c2.2 0 4.2.9 5.7 2.3l1.4-1.4C21.3 5.1 18.8 4 16 4s-5.3 1.1-7.1 2.9l1.4 1.4C11.8 6.9 13.8 6 16 6z"></path><path d="M16 2c3.3 0 6.3 1.3 8.5 3.5l1.4-1.4C23.4 1.6 19.9 0 16 0c-3.9 0-7.4 1.6-9.9 4.1l1.4 1.4C9.7 3.3 12.7 2 16 2zm3 30h-6l-3-13h12"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-quiz"><path d="M8 28c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4zm9-20.7c-3.3 0-4.5 2.7-4.5 5.5 0 2.7 1.2 5.4 4.5 5.4.5 0 1.3.1 1.5-.1l-1.9-1.7 1.7-1.8 2.2 1.9c.6-.8 1-2 1-3.7 0-2.8-1.2-5.5-4.5-5.5z"></path><path d="M16.9 0C8.7 0 2 5.9 2 13.1 2 20.2 8.8 26 17.1 26s15-5.9 14.9-13.1C32 5.8 25.2 0 16.9 0zm7.9 20.4l-1.7 1.7-2.1-1.8c-1.1.6-2.4.9-4 .9-5.1 0-8.1-3.7-8.1-8.4 0-4.8 3-8.5 8.1-8.5s8.1 3.7 8.1 8.5c0 2.3-.8 4.4-2.1 5.9l1.8 1.7z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-radio-dials"><circle cx="16" cy="3" r="3"></circle><circle cx="7" cy="7" r="3"></circle><circle cx="25" cy="7" r="3"></circle><circle cx="29" cy="16" r="3"></circle><circle cx="3" cy="16" r="3"></circle><circle cx="16" cy="29" r="3"></circle><circle cx="7" cy="25" r="3"></circle><circle cx="25" cy="25" r="3"></circle></symbol><symbol viewBox="0 0 32 32" id="gel-icon-revision-guide"><circle cx="16" cy="5" r="5"></circle><path d="M28 12.4l-5.1 2.3L21 12H11l-1.9 2.8L4 12.4v14.2L16 32l12-5.5V12.4zM6 15.5l9 4.1v9.8l-9-4.1v-9.8zm11 13.9v-9.8l9-4.1v9.8l-9 4.1z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-rss"><circle cx="5" cy="27" r="5"></circle><path d="M25 32h7C32 14.3 17.7 0 0 0v7c13.8 0 25 11.2 25 25z"></path><path d="M15 32h7c0-12.1-9.9-22-22-22v7c8.3 0 15 6.7 15 15z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-slideshow"><path d="M22 13l-5-3-5-3v12l5-3"></path><path d="M30 0H0v26h13.9l-3.5 6H13l2.9-5.1 2.9 5.1h2.6l-3.5-6H32V0h-2zm0 22H2V4h28v18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-special-content"><path d="M16 0l3.8 6.8L28 4l-2.8 8.2L32 16l-6.8 3.8L28 28l-8.2-2.8L16 32l-3.8-6.8L4 28l2.8-8.2L0 16l6.8-3.8L4 4l8.2 2.8"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-stations"><g fill="#000101"><path d="M13 16c0-1.7 1.3-3 3-3s3 1.3 3 3-1.3 3-3 3-3-1.3-3-3m10.1-7.1L21 11c2.7 2.7 2.7 7.2 0 9.9l2.1 2.1c3.9-3.8 3.9-10.2 0-14.1"></path><path d="M27.3 4.7l-2.1 2.1c5.1 5.1 5.1 13.3 0 18.4l2.1 2.1c6.3-6.2 6.3-16.4 0-22.6M8.9 23.1L11 21c-2.7-2.7-2.7-7.2 0-9.9L8.9 8.9C5 12.8 5 19.2 8.9 23.1"></path><path d="M4.7 27.3l2.1-2.1c-5.1-5.1-5.1-13.3 0-18.4L4.7 4.7c-6.3 6.2-6.3 16.4 0 22.6"></path></g></symbol><symbol viewBox="0 0 32 32" id="gel-icon-streams"><path d="M0 0h14v14H0zm18 0h14v14H18zM0 18h14v14H0zm18 0h14v14H18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-timeline"><path d="M26 8.5h6v6h-6zm-18 0h6v6H8zm-8 0h6v6H0zm24-2h-8v10h8v-10zm-2 8h-4v-6h4v6zm-9 11h14l-7-7"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tv-channels"><path d="M23 4v6l9-1V1M0 9l9 1V4L0 1m12 3h8v6h-8zm11 15l9 1v-8l-9 1M0 20l9-1v-6l-9-1m12 1h8v6h-8zm11 15l9 3v-8l-9-1M0 31l9-3v-6l-9 1m12-1h8v6h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tv-schedule"><path d="M0 0h6v6H0zm0 10h6v6H0zm0 10h6v6H0zM8 0h24v6H8zm20.7 16H32v-6H8v6h9.3c-1.3 1-2.3 2.4-2.8 4H8v6h6.5c1.2 3.5 4.6 6 8.5 6 5 0 9-4 9-9 0-2.8-1.3-5.3-3.3-7M23 30c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7"></path><path d="M27.6 25.2L24 22.5V18h-2v5.5l4.4 3.3"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-video"><path d="M3 32l26-16L3 0"></path></symbol></svg></div>
+
+    <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<symbol viewBox="0 240 800 120" id="gel-icon-logo">
+    <path fill="#FFFFFF" d="M50,241h12l53,118H98L82,324H32L17,359H0L50,241z M75,309l-19-42l-18,42H75z
+        "></path>
+    <path fill="#FFFFFF" d="M221,331v18c-12,6-26,10-42,10c-13,0-24-3-33-8c-9-5-16-12-21-21
+        c-5-9-8-19-8-30c0-17,6-31,18-43c12-11,27-17,45-17c12,0,26,3,41,10v18
+        c-13-8-27-12-40-12c-13,0-25,4-33,13c-9,9-13,19-13,32c0,13,4,24,13,32
+        c9,8,20,12,33,12C194,345,208,340,221,331z"></path>
+    <path fill="#FFFFFF" d="M284,241h12L348,359h-17l-16-35h-50L251,359h-17L284,241z M308,309l-19-42
+        l-18,42H308z"></path>
+    <path fill="#FFFFFF" d="M361,358V242h40c16,0,28,2,38,7c9,5,17,12,22,21c5,9,8,19,8,31
+        c0,8-2,16-4,23c-3,7-8,13-13,19c-6,5-12,10-20,13c-4,2-9,3-12,3s-11,1-21,1
+        H361z M398,257h-21v87h21c9,0,15-1,19-2c5-1,9-3,12-4c3-2,6-4,9-6
+        c8-9,12-19,12-32c0-12-4-23-13-31c-3-3-7-5-11-8c-4-2-8-3-11-4
+        C412,257,406,257,398,257z"></path>
+    <path fill="#FFFFFF" d="M490,242H556v15h-49v36h48v15h-48V344h51v15h-68V242z"></path>
+    <path fill="#FFFFFF" d="M668,242h16v117H667v-91l-36,45h-3l-37-45v91h-17V242h16l39,48L668,242z"></path>
+    <path fill="#FFFFFF" d="M780,242H800l-43,55v62h-17v-62L696,242h20l31,40L780,242z"></path>
+</symbol>
+<symbol viewBox="0 0 32 32" id="gel-icon-alarm"><path d="M17 17.4V11h-2v7.6l6.6 3.8 1-1.8M29.2 9c1.7-2.9.7-6.5-2.2-8.2C24.1-.9 20.5.1 18.8 3l10.4 6zM2.8 9C1.1 6.1 2.1 2.5 5 .8 7.9-.9 11.5.1 13.2 3L2.8 9z"></path><path d="M29 17.5C29 10.3 23.2 4 16 4S3 10.3 3 17.5c0 3.4 1.3 6.7 3.4 9L4 29l2.8 2.9 2.7-2.7c1.9 1.1 4.1 1.7 6.5 1.7 2.3 0 4.5-.6 6.5-1.7l2.7 2.7 2.8-2.8-2.4-2.7c2.1-2.2 3.4-5.5 3.4-8.9zM6.5 18c0-2.5 1-5.2 2.8-7 1.8-1.8 4.2-3 6.7-3 5.2 0 9.5 4.5 9.5 9.8s-4.3 9.6-9.5 9.6-9.5-4.2-9.5-9.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-alert"><path d="M16 2L0 30h32L16 2zm2 25h-4v-4h4v4zm-4-6V11h4v10h-4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-back-to-start"><path d="M2 0v32h3V0m25 0L5 16l25 16v-8l-13.3-8L30 8"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-calendar"><path d="M24 13h4v4h-4zM22 0h2v5h-2zM8 0h2v5H8zm11 13h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4H9zm15 5h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4H9zm-5 0h4v4H4zm15 5h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4H9zm-5 0h4v4H4z"></path><path d="M2 9h30V2h-7v4h-4V2H11v4H7V2H0v7m30 2v19H2V11H0v21h32V11"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-chapters"><path d="M8 0h24v8H8zm8 12h16v8H16zM8 24h24v8H8zm-8-1l12-7L0 9"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-countdown"><path d="M16.4 18.4V12h-2v7.6l6.6 3.8 1-1.8m2.982-16.725l4.242 4.242-2.828 2.83-4.243-4.244z"></path><path d="M15 6C7.8 6 2 11.8 2 19s5.8 13 13 13 13-5.8 13-13S22.2 6 15 6zm0 22.5c-5.2 0-9.5-4.3-9.5-9.5S9.8 9.5 15 9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5zM15 6c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm0-5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-degraded"><path d="M30 0h-9l2 2h7v28H2V2h7.2l8.6 8.6L9.4 19l7.8 9.5V19l8.2-8.1L14.5 0H0v32h32V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-down"><path d="M16 29L32 3h-7.2L16 18.3 7.2 3H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-download"><path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-duration"><path d="M17 15.4V6h-2v10.6l8.8 5.1 1-1.8"></path><path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4m0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-email"><path d="M16 19.4l16-15V3H0v26h32V8l-4 4v13H4V8.2l12 11.2zm0-2.8L5.8 7h20.4L16 16.6z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-embed"><path d="M10 6.2V0L0 10l10 10v-6.2L6.2 10M22 13.8V20l10-10L22 0v6.2l3.8 3.8m-14.397 3.183l7.78-7.778 1.413 1.414-7.778 7.776z"></path></symbol><symbol viewBox="0 0 36 32" id="gel-icon-embed-off-grid"><path d="M11 29v-7l-5-6 5-6V3L0 16M25 3v7l5 6-5 6v7l11-13m-23 9h2l8-18h-2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-embed-on-grid"><path d="M10 27v-6l-4.5-5 4.5-5V5L0 16M22 5v6l4.5 5-4.5 5v6l10-11m-20 8h2l6-16h-2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-expires"><path d="M16 0c-.3 0-.7 0-1 .1v4c.3-.1.7-.1 1-.1 6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16H0c0 8.8 7.2 16 16 16s16-7.2 16-16S24.8 0 16 0z"></path><path d="M23.8 21.7l1-1.8-7.8-4.5V6h-2v10.6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-export"><path d="M6 0v22.5l-6 6L3.5 32 22 13.5V21h5V5H11v5h7.5L8 20.5V2h22v22H15.8l-2 2H32V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-external-link"><path d="M12 0v5h11.5l-5 5H0v22h22V17.5l-2 2V30H2V12h14.5l-7.8 7.7 3.6 3.6L27 8.5V20h5V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-grid"><path d="M0 0h8v8H0zm0 12h8v8H0zm0 12h8v8H0zM12 0h8v8h-8zm0 12h8v8h-8zm0 12h8v8h-8zM24 0h8v8h-8zm0 12h8v8h-8zm0 12h8v8h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-help"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2 26h-4v-4h4v4zm2.6-10c-1.2.9-2.6 1.6-2.6 3.2v.8h-4v-1c0-2.4 1.4-3.4 2.5-4.3 1.1-.8 2.5-1.5 2.5-2.9 0-1.7-1.4-2.4-2.8-2.4-2 0-3.7 1.6-3.7 3.6H9c.1-4 3.1-6.8 7-6.8 5.1 0 7.3 3.1 7.3 5.2 0 2.7-1.5 3.7-2.7 4.6z"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-home"><path d="M16 5.4l-12 12v14.5h9V22h6v9.9h9V17.4l-12-12"></path><path d="M28 12V4h-4v4l-6.6-6.6L16 0l-1.4 1.4L0 16v2.8l16-16 16 16V16"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-info"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2 25h-4V13h4v12zm0-14h-4V7h4v4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-launch-application"><path d="M10 26H2v-6h2v-2H0v10h12v-6h-2m12 4h8v-6h-2v-2h4v10H20v-6h2"></path><path d="M6 20h20V4H6v16zm16-4H10V8h12v8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-link"><path d="M18.5 4.6l-1.7-1.7C13-1 6.7-1 2.9 2.9-1 6.7-1 13 2.9 16.8l3.4 3.4c3.8 3.8 10.1 3.8 13.9 0l-3.5-3.5c-1.9 1.9-5 1.9-7 0l-3.4-3.4c-1.9-1.9-1.9-5 0-7 1.9-1.9 5-1.9 7 0L15 8l3.5-3.4z"></path><path d="M13.4 27.4l1.7 1.7c3.8 3.8 10.1 3.8 13.9 0 3.8-3.8 4-10 .1-13.8l-3.5-3.5c-3.7-3.8-10-3.8-13.8 0l3.5 3.5c1.9-1.9 5-1.9 7 0l3.4 3.4c1.9 1.9 1.9 5 0 7-1.9 1.9-5 1.9-7 0L17 24l-3.6 3.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-list"><path d="M0 0v8h32V0M0 17v3h32v-8H0m0 17v3h32v-8H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-list-thumb"><path d="M0 0h8v8H0zm0 12h8v8H0zm0 12h8v8H0zM11 0v8h21V0M11 17v3h21v-8H11m0 17v3h21v-8H11"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-loading"><path d="M29.8 8l-3.5 2c1 1.8 1.6 3.8 1.6 6 0 6.6-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4V0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16c0-2.9-.8-5.6-2.2-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-location"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2 27.8V23h-4v4.8C9 27 5 23 4.2 18H9v-4H4.2C5 9 9 5 14 4.2V9h4V4.2C23 5 27 9 27.8 14H23v4h4.8c-.8 5-4.8 9-9.8 9.8z"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-lock"><path d="M25 13.9V8.3C25 3.7 20.9 0 16 0S7 3.7 7 8.3v5.6H3v18h26v-18h-4zM12 8.3c0-2 1.8-3.7 4-3.7s4 1.6 4 3.7v5.6h-8V8.3z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-more-horizontal"><path d="M0 12h8v8H0zm12 0h8v8h-8zm12 0h8v8h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-more-vertical"><path d="M12 0h8v8h-8zm0 12h8v8h-8zm0 12h8v8h-8z"></path></symbol><symbol viewBox="0 0 56 32" id="gel-icon-new"><path d="M0 0h56v32H0z"></path><path fill="#FFF" d="M4 7.9h4.3l5.6 9.8V7.9h3.9v16h-4.3L8 13.9v10H4v-16zm16.2 0h11.4v3.3h-7.2V14h6.5v3.2h-6.5v3h7.4v3.6H20.2V7.9zm28.3 16h-3.8l-2-11-2 11h-3.9l-3.9-16h3.8l2.1 11.7 2.1-11.7h3.6l2.1 11.7 2.1-11.7h3.8l-4 16z"></path></symbol><symbol viewBox="0 0 31.9 32" id="gel-icon-next"><path d="M29 16L3 0v7.2L17.6 16 3 24.8V32"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-no"><path d="M32 3.5L28.5 0 16 12.5 3.5 0 0 3.5 12.5 16 0 28.5 3.5 32 16 19.5 28.5 32l3.5-3.5L19.5 16"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-previous"><path d="M3 16l26 16v-7.2L14.4 16 29 7.2V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-print"><path d="M26 12V5l-5-5H6v12H0v12.1L5.9 30H6v2h20v-2h.1l5.9-5.9V12h-6zM8 12V2h12.2L24 5.8V18H8v-6zm0 18v-5h16v5H8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-quote"><path d="M0 17v15h15V17H7c.2-5.9 2.4-8.8 8-9.9V0C6.7 1.2.2 8.3 0 17zm32-9.9V0c-8.3 1.2-14.8 8.3-15 17v15h15V17h-8c.2-5.9 2.4-8.8 8-9.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-refresh"><path d="M32 0H20v12h4V7.1c2.4 2.2 4 5.4 4 8.9 0 6.6-5.4 12-12 12v4c8.8 0 16-7.2 16-16 0-4.8-2.1-9.1-5.4-12H32V0zM8 24.9c-2.4-2.2-4-5.4-4-8.9C4 9.4 9.4 4 16 4V0C7.2 0 0 7.2 0 16c0 4.8 2.1 9.1 5.4 12H0v4h12V20H8v4.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-search"><path d="M32 28.5l-8.2-8.2c3.4-5.1 2.9-12-1.6-16.4C19.7 1.3 16.3 0 13 0 9.7 0 6.3 1.3 3.8 3.8c-5.1 5.1-5.1 13.3 0 18.4C6.3 24.7 9.7 26 13 26c2.5 0 5.1-.7 7.3-2.2l8.2 8.2 3.5-3.5zM6.6 19.4C4.9 17.7 4 15.4 4 13s.9-4.7 2.6-6.4C8.3 4.9 10.6 4 13 4c2.4 0 4.7.9 6.4 2.6 3.5 3.5 3.5 9.2 0 12.7-1.7 1.7-4 2.6-6.4 2.6s-4.7-.8-6.4-2.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-settings"><path d="M31.7 19.7l-3.6-1.5c.3-1.5.3-3 0-4.5l3.6-1.5c.3-.1.4-.4.3-.7l-1.6-3.8c-.1-.3-.4-.4-.7-.3L26.1 9c-.9-1.3-1.9-2.3-3.2-3.2l1.5-3.6c.1-.3 0-.6-.3-.7L20.4 0c-.3-.1-.6 0-.7.3l-1.5 3.6c-1.5-.3-3-.3-4.5 0L12.2.3c-.1-.3-.4-.4-.7-.3L7.8 1.6c-.2.1-.4.4-.3.7L9 5.9C7.8 6.7 6.7 7.8 5.9 9L2.3 7.5c-.3-.1-.6.1-.7.3L0 11.6c-.1.3 0 .6.3.7l3.6 1.5c-.3 1.5-.3 3 0 4.5L.3 19.8c-.3.1-.4.4-.3.7l1.6 3.8c.1.3.4.4.7.3L5.9 23c.9 1.3 1.9 2.3 3.2 3.2l-1.5 3.6c-.1.3 0 .6.3.7l3.8 1.6c.3.1.6 0 .7-.3l1.5-3.6c1.5.3 3 .3 4.5 0l1.5 3.6c.1.3.4.4.7.3l3.8-1.6c.3-.1.4-.4.3-.7L23 26.1c1.3-.9 2.3-1.9 3.2-3.2l3.6 1.5c.3.1.6 0 .7-.3l1.6-3.8c0-.2-.2-.5-.4-.6zm-14.2 0c-2 .8-4.4-.1-5.2-2.2-.8-2 .1-4.4 2.2-5.2 2-.8 4.4.1 5.2 2.2.8 2-.1 4.4-2.2 5.2z"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-to-bottom"><path d="M0 26.9h32v3H0zm16 0L0 1.9h8.2L16 15.1l7.8-13.2H32"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-to-top"><path d="M0 1.9h32v3H0zm16 3l16 25h-8.2L16 16.6 8.2 29.9H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-toggle-horizontal"><path d="M25 16L0 32v-8l13-8L0 8.2V0"></path><path d="M21 0v2h9v28h-9v2h11V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-unlock"><path d="M23 0c-5 0-9 4.1-9 9v5H0v18h23V14h-4V9c0-2.2 1.8-4 4-4s4 1.8 4 4v5h5V9c0-4.9-4-9-9-9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-up"><path d="M16 3L0 29h7.2L16 13.7 24.8 29H32"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-vocab"><path d="M0 0v18h12.7l1.2 2 2.5 4 2.5-4 1.2-2H32V0H0zm22 14H4v-4h18v4zm6-6H4V4h24v4zM0 26h32v6H0z"></path></symbol><symbol viewBox="0 0 31.8 32" id="gel-icon-yes"><path d="M12.8 28.9l19-22.6L28 3.1 12.2 21.9l-9-7.5L0 18.2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-zoom-in"><path d="M15 20h-4v-5H6v-4h5V6h4v5h5v4h-5v5z"></path><path d="M32 28.5l-8.2-8.2c3.4-5.1 2.9-12-1.6-16.4C19.7 1.3 16.3 0 13 0 9.7 0 6.3 1.3 3.8 3.8c-5.1 5.1-5.1 13.3 0 18.4C6.3 24.7 9.7 26 13 26c2.5 0 5.1-.7 7.3-2.2l8.2 8.2 3.5-3.5zM6.6 19.4C4.9 17.7 4 15.4 4 13c0-2.4.9-4.7 2.6-6.4C8.3 4.9 10.6 4 13 4s4.7.9 6.4 2.6c3.5 3.5 3.5 9.2 0 12.7-1.7 1.7-4 2.6-6.4 2.6-2.4.1-4.7-.8-6.4-2.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-zoom-out"><path d="M6 15v-4h14v4H6z"></path><path d="M32 28.5l-8.2-8.2c3.4-5.1 2.9-12-1.6-16.4C19.7 1.3 16.3 0 13 0 9.7 0 6.3 1.3 3.8 3.8c-5.1 5.1-5.1 13.3 0 18.4C6.3 24.7 9.7 26 13 26c2.5 0 5.1-.7 7.3-2.2l8.2 8.2 3.5-3.5zM6.6 19.4C4.9 17.7 4 15.4 4 13c0-2.4.9-4.7 2.6-6.4C8.3 4.9 10.6 4 13 4s4.7.9 6.4 2.6c3.5 3.5 3.5 9.2 0 12.7-1.7 1.7-4 2.6-6.4 2.6-2.4.1-4.7-.8-6.4-2.5z"></path></symbol></svg></div>
+
+<div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<symbol viewBox="0 240 800 120" id="gel-icon-logo">
+    <path fill="#FFFFFF" d="M50,241h12l53,118H98L82,324H32L17,359H0L50,241z M75,309l-19-42l-18,42H75z
+        "></path>
+    <path fill="#FFFFFF" d="M221,331v18c-12,6-26,10-42,10c-13,0-24-3-33-8c-9-5-16-12-21-21
+        c-5-9-8-19-8-30c0-17,6-31,18-43c12-11,27-17,45-17c12,0,26,3,41,10v18
+        c-13-8-27-12-40-12c-13,0-25,4-33,13c-9,9-13,19-13,32c0,13,4,24,13,32
+        c9,8,20,12,33,12C194,345,208,340,221,331z"></path>
+    <path fill="#FFFFFF" d="M284,241h12L348,359h-17l-16-35h-50L251,359h-17L284,241z M308,309l-19-42
+        l-18,42H308z"></path>
+    <path fill="#FFFFFF" d="M361,358V242h40c16,0,28,2,38,7c9,5,17,12,22,21c5,9,8,19,8,31
+        c0,8-2,16-4,23c-3,7-8,13-13,19c-6,5-12,10-20,13c-4,2-9,3-12,3s-11,1-21,1
+        H361z M398,257h-21v87h21c9,0,15-1,19-2c5-1,9-3,12-4c3-2,6-4,9-6
+        c8-9,12-19,12-32c0-12-4-23-13-31c-3-3-7-5-11-8c-4-2-8-3-11-4
+        C412,257,406,257,398,257z"></path>
+    <path fill="#FFFFFF" d="M490,242H556v15h-49v36h48v15h-48V344h51v15h-68V242z"></path>
+    <path fill="#FFFFFF" d="M668,242h16v117H667v-91l-36,45h-3l-37-45v91h-17V242h16l39,48L668,242z"></path>
+    <path fill="#FFFFFF" d="M780,242H800l-43,55v62h-17v-62L696,242h20l31,40L780,242z"></path>
+</symbol>
+<symbol viewBox="302 370 1600 335" id="gel-icon-logo--mvp">
+    <path fill="#FFFFFF" d="M121,398.4h28.3l126.1,283.1h-41.2l-37.3-83.6h-121l-34.7,83.6H0L121,398.4z M180.2,561.9l-46.3-101.7
+        L91.4,561.9H180.2z"></path>
+    <path fill="#FFFFFF" d="M531.5,614.6v43.8c-29.6,15.4-63.1,24.5-101.7,24.5c-30.9,0-57.9-6.4-79.8-19.3
+        c-21.9-12.9-38.6-29.6-51.5-51.5c-12.9-21.9-19.3-46.3-19.3-72.1c0-41.2,14.2-74.6,43.8-102.9c28.3-27,64.3-41.2,106.8-41.2
+        c29.6,0,61.8,7.7,97.8,23.2v43.8c-32.2-19.3-64.3-28.3-95.2-28.3c-32.2,0-59.2,10.3-79.8,30.9c-21.9,20.6-32.2,46.3-32.2,75.9
+        c0,30.9,10.3,56.6,30.9,75.9c20.6,19.3,47.6,29.6,79.8,29.6C465.8,646.8,499.3,636.5,531.5,614.6z"></path>
+    <path fill="#FFFFFF" d="M680.8,398.4h28.3l126.1,283.1H794l-37.3-83.6H637l-34.7,83.6h-41.2L680.8,398.4z M739.9,561.9l-45-101.7
+        l-42.5,101.7H739.9z"></path>
+    <path fill="#FFFFFF" d="M866.1,680.3V399.7h95.2c38.6,0,68.2,5.1,90.1,16.7c21.9,11.6,39.9,28.3,52.8,50.2
+        c12.9,21.9,19.3,46.3,19.3,73.4c0,19.3-3.9,37.3-10.3,54c-7.7,16.7-18,32.2-30.9,45c-14.2,12.9-29.6,23.2-47.6,30.9
+        c-10.3,3.9-20.6,6.4-29.6,7.7c-9,1.3-25.7,2.6-50.2,2.6H866.1z M956.1,435.8H906v208.5h51.5c20.6,0,36-1.3,46.3-3.9
+        c11.6-2.6,20.6-6.4,28.3-10.3c7.7-3.9,14.2-9,20.6-15.4c19.3-20.6,29.6-45,29.6-75.9c0-29.6-10.3-55.3-30.9-73.4
+        c-7.7-7.7-16.7-12.9-25.7-18c-10.3-5.1-19.3-7.7-27-9C989.6,435.8,975.4,435.8,956.1,435.8z"></path>
+    <path fill="#FFFFFF" d="M1174.9,399.7h159.6v36h-118.4V522h114.5v36h-114.5v87.5h122.3v36h-163.4V399.7z"></path>
+    <path fill="#FFFFFF" d="M1603.4,399.7h37.3v280.5h-39.9V461.5l-86.2,108.1h-7.7l-87.5-108.1v218.8h-39.9V399.7h38.6l93.9,115.8
+        L1603.4,399.7z"></path>
+    <path fill="#FFFFFF" d="M1871.1,399.7h48.9l-104.2,132.5v148h-41.2v-148l-104.2-132.5h48.9l74.6,96.5L1871.1,399.7z"></path>
+    <path fill="#FFFFFF" d="M1992.6,456.6h-19v-56.1h14.7c4.6,0,8.2,0.6,10.8,1.9s4.6,3,5.9,5.1c1.4,2.2,2,4.7,2,7.6
+        c0,5.5-2.8,9.5-8.5,11.8c4.1,0.8,7.3,2.5,9.8,5.1c2.4,2.6,3.6,5.7,3.6,9.3c0,2.9-0.7,5.4-2.2,7.7c-1.5,2.2-3.6,4.1-6.5,5.5
+        C2000.4,455.9,1996.8,456.6,1992.6,456.6z M1988.5,407.6h-6.9v16.9h5.3c4.3,0,7.3-0.8,9.1-2.4c1.8-1.6,2.7-3.7,2.7-6.3
+        C1998.8,410.3,1995.4,407.6,1988.5,407.6z M1989.1,431.6h-7.5v17.8h7.9c4.4,0,7.4-0.3,8.9-1c1.6-0.7,2.8-1.7,3.8-3.2
+        c0.9-1.4,1.4-3,1.4-4.7c0-1.7-0.5-3.3-1.5-4.7c-1-1.4-2.4-2.5-4.3-3.2C1996,432,1993.1,431.6,1989.1,431.6z"></path>
+    <path fill="#FFFFFF" d="M2019.9,400.5h31.8v7.1h-23.8v17.1h23v7.2h-23v17.4h24.5v7.1h-32.5V400.5z"></path>
+    <path fill="#FFFFFF" d="M2056.2,400.4h46.8v7.1h-19.5v49h-8.1v-49h-19.2V400.4z"></path>
+    <path fill="#FFFFFF" d="M2120.3,400.2h5.6l25.1,56.4h-8.2l-7.5-16.6h-23.9l-7,16.6h-8.2L2120.3,400.2z M2132,432.8l-9-20.3
+        l-8.4,20.3H2132z"></path>
+</symbol>
+</svg>       </div>
+
+<div class="sr-only" style="display: none;">
+            <!--[if IE 9]>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 48 32" id="gel-icon-3d"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M25 8h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H25V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8zm-14.1-6.2h1c1.2 0 2.6-.3 2.6-1.7 0-1-1-1.6-2.3-1.6-1.6 0-2.5.8-2.5 2.3h-3.7c.1-3.6 2.7-5.5 6.2-5.5 2.8 0 6.1 1.2 6.1 4.5 0 1.4-.8 2.9-2.3 3.2 1.9.5 2.8 1.8 2.8 3.7 0 3.7-3.4 5.2-6.6 5.2-3.8 0-6.9-1.9-6.6-6.1h3.7c0 1.9.9 2.9 2.9 2.9 1.4 0 2.6-.6 2.6-2 0-1.8-1.3-2.2-2.9-2.2h-1v-2.7z"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-audio-description"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M26 8h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H26V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8zM14 8h4.2l6 16h-4.3l-1-2.9h-5.6l-1 2.9H8l6-16zm.2 10h3.6L16 12.4 14.2 18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-continous-play"><path d="M24 0H0v24h24V0zm-3 21H3V3h18v18z"></path><path d="M28 5h-2v21H5v2h23"></path><path d="M30 8v22H8v2h24V8M8 6v12l9.6-6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-exit-fullscreen"><path d="M28 12h-8V4M4 12h8V4m16 16h-8v8M4 20h8v8M1 0h30v2H1zm0 30h30v2H1z"></path><path d="M0 0h2v32H0zm30 0h2v32h-2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-expand"><path d="M22 4v18H2V2h20m2-2H0v24h24V0zm-3 32h11V21"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-forward"><path d="M27 0h3v32h-3zm0 16L2 32v-8.2L15.3 16 2 8.2V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-fullscreen"><path d="M22 12v10H10V10h12m2-2H8v16h16V8zm-3-8h11v11M11 0H0v11m21 21h11V21M11 32H0V21"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-fx"><path d="M.3 7h13.3v3.8H4.9v3.7h7.4v3.6H4.9V25H.3V7zM20 15.5L14.1 7h5.5l3 5.6L25.9 7h5.3l-5.8 8.5 6.4 9.5H26l-3.4-6-3.6 6h-5.4l6.4-9.5z"></path></symbol><symbol viewBox="0 0 44 32" id="gel-icon-fx-off"><path d="M0 7h13.3v3.8H4.7v3.7h7.4v3.6H4.7V25H0V7zm19.7 8.5L13.9 7h5.5l3 5.6L25.6 7H31l-5.8 8.5 6.4 9.5h-5.7l-3.4-6-3.7 6h-5.4l6.3-9.5zm24.3-4L42.5 10 38 14.5 33.5 10 32 11.5l4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-hd"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M9 8h4.2v5.8h5.5V8h4.2v16h-4.2v-6.6h-5.5V24H9V8zm17 0h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H26V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-iplayer"><path d="M11 0H3v8h8V4.7L24 16 11 27.3V12H3v20h8l18-16"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-last-watched"><path d="M10.5 18.5c0 3 2.5 5.5 5.5 5.5s5.5-2.5 5.5-5.5S19 13 16 13s-5.5 2.5-5.5 5.5"></path><path d="M0 8v21h7l-1 3h15l-2-6H3V11h26v15h-8l1 3h10V8M4 4h24v2H4zm4-4h16v2H8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-listen"><path d="M21.4 4.8L20 6.2c2.5 2.5 4 6 4 9.8s-1.5 7.3-4 9.8l1.4 1.4C24.2 24.3 26 20.4 26 16c0-4.4-1.8-8.3-4.6-11.2z"></path><path d="M25.6.5L24.2 2c3.6 3.6 5.8 8.6 5.8 14s-2.2 10.4-5.8 14l1.4 1.4C29.6 27.5 32 22 32 16S29.6 4.5 25.6.5zM16 4l-6 6H0v12h10l6 6"></path></symbol><symbol viewBox="0 0 56 32" id="gel-icon-live"><path d="M0 0h56v32H0z"></path><path fill="#FFF" d="M4 7.9h4.2v12.4h7.5v3.6H4v-16zm13 0h4.2v16H17v-16zm15.8 16H28l-5-16h4.3l3.1 11.9 3.1-11.9H38l-5.2 16zm6.2-16h12.7v3.3h-8.6V14H51v3.2h-7.8v3H52v3.6H39V7.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-live-restart"><path d="M16 4h-1l2-2-2-2-6 6 6 6 2-2-2-2h1c5.5 0 10 4.5 10 10s-4.5 10-10 10S6 23.5 6 18H2c0 7.7 6.3 14 14 14s14-6.3 14-14S23.7 4 16 4"></path><path d="M10 10L6 6l4-4-2-2-6 6 6 6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-music"><path d="M12 6.6v14.9c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V14.6l14-5.3v7.2c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V0L12 6.6zM8 29c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm16-5c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"></path></symbol><symbol viewBox="0 0 44 32" id="gel-icon-music-off"><path d="M10 6.6v14.9c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V14.6l14-5.3v7.2c-1.1-1-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V0L10 6.6zM6 29c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm16-5c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm22-12.5L42.5 10 38 14.5 33.5 10 32 11.5l4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-now-watching"><path d="M15 13v19l17-10m-19 2H0V0h4v20h9"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-parental"><circle cx="16" cy="16" r="16"></circle><path fill="#FFF" d="M23.4 24h-2.7l-.2-1.7c-1.1 1.5-3 2.1-4.5 2.1-4.8 0-8-3.7-8-8.3s3.1-8.3 8-8.3c3.3 0 6.8 1.8 7.2 5.8H19c-.1-1.4-1.5-2.2-3.2-2.2-2.7 0-3.7 2.4-3.7 4.7 0 2.4 1 4.7 3.7 4.7 2.1 0 3.4-1 3.7-2.4h-2.9v-3.1h6.7V24z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pause"><path d="M3 0h9v32H3zm17 0h9v32h-9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-play"><path d="M3 32l26-16L3 0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pop-out"><path d="M20 30H2V12h6v-2H0v22h22v-8h-2"></path><path d="M28 4v14H14V4h14m4-4H10v22h22V0z"></path></symbol><symbol viewBox="0 0 121 32" id="gel-icon-premier"><path d="M31.5 11.3h-3.3v3.6h3.5c1.3 0 1.9-.7 1.9-1.9 0-1.1-.9-1.7-2.1-1.7zm-15.5 0h-2.8v4.1H16c1.3 0 2.2-.5 2.2-2s-1-2.1-2.2-2.1zm90.4 0h-3.3v3.6h3.5c1.3 0 1.9-.7 1.9-1.9 0-1.1-.9-1.7-2.1-1.7z"></path><path d="M0 0v32h121V0H0zm16.6 18.7h-3.4V24H9V8h7.6c3 0 5.8 1.4 5.8 5.2 0 3.9-2.3 5.5-5.8 5.5zM34.2 24c-.4-.5-.4-2.1-.5-2.6-.1-1.6-.4-3.3-2.3-3.3h-3.2V24H24V8h8.2c2.8 0 5.6 1.3 5.6 4.5 0 1.7-.8 3.4-2.5 4 1.7.4 2.2 2.3 2.3 3.8 0 .7.1 3 .7 3.6h-4.1zm19.1 0h-13V8H53v3.3h-8.6v2.8h7.8v3.2h-7.8v3h8.8V24zm20.3 0h-3.9V11.9L66.2 24H63l-3.4-12.1V24h-3.9V8h6.1l2.8 10.7L67.4 8h6.1v16zm7.1 0h-4.2V8h4.2v16zm15.8 0h-13V8h12.7v3.3h-8.6v2.8h7.8v3.2h-7.8v3h8.8V24zm12.6 0c-.4-.5-.4-2.1-.5-2.6-.1-1.6-.4-3.3-2.3-3.3h-3.2V24h-4.2V8h8.2c2.8 0 5.6 1.3 5.6 4.5 0 1.7-.8 3.4-2.5 4 1.7.4 2.2 2.3 2.3 3.8 0 .7.1 3 .7 3.6h-4.1z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-preview"><path d="M16 12c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"></path><path d="M21 7.4c-1.3-.7-2.8-1.2-4.3-1.3h-1.4c-1.6.1-3 .6-4.3 1.3C5.3 10.1 0 16 0 16s5.3 5.9 10.9 8.6c1.3.7 2.8 1.2 4.3 1.3h1.4c1.6-.1 3-.6 4.3-1.3 5.6-2.7 11-8.6 11-8.6S26.7 10.1 21 7.4zM16 23c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-recent-activity"><path d="M16 28C9.4 28 4 22.6 4 16S9.4 4 16 4c.3 0 .7 0 1 .1v-4c-.3-.1-.7-.1-1-.1C7.2 0 0 7.2 0 16s7.2 16 16 16c6.3 0 11.7-3.6 14.3-8.9l-3.5-2c-1.9 4.1-6 6.9-10.8 6.9z"></path><path d="M15 6v10.6l8.8 5.1 1-1.8-7.8-4.5V6"></path><circle cx="30" cy="16" r="2"></circle><circle cx="28" cy="9" r="2"></circle><circle cx="23" cy="4" r="2"></circle></symbol><symbol viewBox="0 0 32 32" id="gel-icon-record"><circle cx="16" cy="16" r="16"></circle><path fill="#FFF" d="M23.9 24l-3.2-5.9c1.8-.7 2.8-2.3 2.8-5 0-3.8-2.8-5.1-5.8-5.1h-7.6v16h4.2v-5.3h2.5l2.9 5.3h4.2zm-9.6-12.6h2.8c1.3 0 2.2.6 2.2 2.1s-.9 2-2.2 2h-2.8v-4.1z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-replay"><path d="M25 18.5c0 5.2-4.3 9.5-9.5 9.5S6 23.7 6 18.5 10.3 9 15.5 9h.5V5h-.5C8 5 2 11 2 18.5S8 32 15.5 32 29 26 29 18.5V18h-4v.5z"></path><path d="M18 0v14l12-7"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-rewind"><path d="M2 0h3v32H2zm3 16L30 0v8.2L16.7 16 30 23.8V32"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-sd"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M26 8h6.9c4.9 0 7.8 3 7.8 7.9 0 5.2-3 8.1-7.8 8.1H26V8zm4.2 12.4h2c3.2-.1 4.4-1.3 4.4-4.5 0-2.9-1.6-4.3-4.4-4.3h-2v8.8zm-17-1.8c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.6-4.7-1.7-4.7-4.6C9.5 9 13 7.7 16 7.7c3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.7 4.6 1.7 4.6 4.6 0 4-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.3z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-series-catch-up"><path d="M10 5v22h22V5H10zm19 19H13V8h16v16zM5 27h3v-2H7V7h1V5H5M0 27h3v-2H2V7h1V5H0"></path><path d="M17 11v10l9-5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-series-stack"><path d="M4 6h22v22h2V4H4"></path><path d="M8 0v2h22v22h2V0"></path><path d="M0 32h24V8H0v24zm4-20h16v16H4V12z"></path></symbol><symbol viewBox="0 0 56 32" id="gel-icon-sign-language-22"><path d="M0 0h56v32H0z"></path><path fill="#FFF" d="M37.7 7.9h4.2v12.4h7.5v3.6H37.7v-16zM26.4 18.1c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.7-4.7-1.7-4.7-4.7 0-3.5 3.5-4.9 6.5-4.9 3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.6 4.6 1.7 4.6 4.6 0 4.1-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.3zM7.7 7.9h7.5c2.8 0 5.8.7 5.8 4 0 1.4-.8 2.6-2.1 3.2 1.7.5 2.8 2 2.8 3.8 0 3.8-2.8 5-6.2 5H7.7v-16zm4.1 6.3H15c.7 0 1.7-.4 1.7-1.5 0-1.2-.8-1.5-1.7-1.5h-3.2v3zm0 6.3h3.3c1.3 0 2.2-.5 2.2-1.8 0-1.4-1-1.9-2.2-1.9h-3.3v3.7z"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-sign-language-35"><path d="M0 32h48V0H0v32zm18.2-7.7c-3.7 0-6.9-1.6-6.9-5.7h4.2c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.7-4.7-1.7-4.7-4.6 0-3.5 3.5-4.9 6.5-4.9 3.2 0 6.4 1.5 6.4 5.2h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.7 4.6 1.7 4.6 4.6 0 3.9-3.4 5.2-6.9 5.2m20.6-.3H27.2V8h4.2v12.4h7.5V24z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-sound-off"><path d="M16.1 4l-6 6H.1v12h10l6 6m15.8-16.5L30.4 10l-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-subtitles"><path d="M0 0h32v32H0z"></path><path fill="#FFF" d="M13.2 18.6c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.6-4.7-1.7-4.7-4.6C9.5 9 13 7.7 16 7.7c3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.4.6 4.8 1.7 4.8 4.6 0 4.1-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.1z"></path></symbol><symbol viewBox="0 0 58 32" id="gel-icon-volume"><path d="M0 20h4v12H0zm6 0h4v12H6zm6 0h4v12h-4zm12 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm6 0h4v12h-4zm-36-8h4v20h-4z"></path></symbol><symbol viewBox="0 0 48 32" id="gel-icon-widescreen"><path d="M0 0h48v32H0z"></path><path fill="#FFF" d="M32.2 18.6c.1 1.9 1.3 2.5 3 2.5 1.3 0 2.6-.4 2.6-1.6 0-1.4-2.3-1.7-4.6-2.3-2.3-.6-4.7-1.7-4.7-4.6C28.5 9 32 7.7 35 7.7c3.2 0 6.4 1.5 6.4 5.1h-4.2c.1-1.5-1.3-1.9-2.6-1.9-.9 0-2 .3-2 1.4 0 1.2 2.3 1.5 4.6 2.1 2.3.7 4.6 1.7 4.6 4.6 0 4-3.4 5.3-7 5.3-3.7 0-6.9-1.6-6.9-5.7h4.3zM23.1 24H19l-2.2-11-2.2 11h-4.2L6 8h4.2l2.3 11.7L14.8 8h3.9l2.4 11.7L23.4 8h4.2l-4.5 16z"></path></symbol></svg></div>
+                <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="gel-icon-games-console"><path d="M8 7.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5S9.9 7.5 8 7.5z"></path><path d="M24 3c-2 0-3.9.8-5.3 2h-5.4C11.9 3.8 10 3 8 3c-4.4 0-8 3.6-8 8v18h6l6.4-10h7.1L26 29h6V11c0-4.4-3.6-8-8-8zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM8 17c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm12-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4 4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-mobile"><path d="M22 0v2H6v30h20V0h-4zm-9 28h-3v-2h3v2zm0-4h-3v-2h3v2zm0-4h-3v-2h3v2zm5 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4v-2h4v2zm4 8h-3v-2h3v2zm0-4h-3v-2h3v2zm0-4h-3v-2h3v2zm0-5H10V6h12v9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-mobile-smart"><path d="M6 0v32h20V0H6zm8 2h4v1h-4V2zm3 28h-2v-2h2v2zm7-3H8V4h16v23z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pc"><path d="M28 4v14H4V5h25m3-4H0v21h32V1zm-5.9 26l2.3 2H3.6l2.3-2h20.2m.9-2H5l-5 4v2h32v-2l-5-4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-radio"><path d="M30 7V1H2v6H0v24h32V7h-2zM4 3h24v4H4V3zm2 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm14 12c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-set-top-box"><path d="M16 4c4.7 0 9 1.7 12.3 4.5L29.6 7C25.9 3.9 21.2 2 16 2S6.1 3.9 2.4 7l1.3 1.5C7 5.7 11.3 4 16 4"></path><path d="M6.3 11.5L7.7 13c2.3-1.9 5.2-3 8.3-3 3.2 0 6.1 1.1 8.3 3l1.3-1.5C23 9.3 19.7 8 16 8s-7 1.3-9.7 3.5M7 21c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"></path><path d="M0 18v12h4l2-2h19l2 2h5V18H0zm7 8c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3m13-2h-2v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tablet"><path d="M2 0v32h28V0H2zm16 30h-4v-2h4v2zm8-4H6V4h20v22z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tv"><path d="M32 26V1H0v25h12v2.5H6V31h20v-2.5h-6V26h12zm-20-3.8H4V4.8h24v17.5H12z"></path></symbol></svg></div>
+                <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="gel-icon-blog"><path d="M7 18.6v6h6l.7-.6-6-6"></path><path d="M26-.4L9.3 16.4l6 6L26 11.6v18H2v-24h12v-2H0v28h28v-22l4-4"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-comments"><path d="M0 0v32l8-8h24V0H0zm4 10h18v4H4v-4zm24 10H4v-4h24v4zm0-12H4V4h24v4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-digg"><path fill="none" d="M3.1 13.4v5.9H5s.4 0 .4-.4V13H3.5s-.4 0-.4.4z"></path><path d="M5.7 6.5s-.4 0-.4.4v3.7h-5s-.4 0-.4.4v10.7h8.2s.4 0 .4-.4V6.5H5.7zm-.3 12.4c0 .4-.4.4-.4.4H3.1v-5.9c0-.4.4-.4.4-.4h1.9v5.9zM9.5 11v10.7h2.8s.4 0 .4-.4V10.6H9.9s-.4 0-.4.4zm.4-4.5s-.4 0-.4.4v2h2.8s.4 0 .4-.4v-2H9.9zm13.9 4.1s-.4 0-.4.4v10.7h5.4v1.4h-5s-.4 0-.4.4v2h8.2s.4 0 .4-.4V10.6h-8.2zm5 8.3c0 .4-.4.4-.4.4h-1.9v-5.9c0-.4.4-.4.4-.4h1.9v5.9zm-14.7-8.3s-.4 0-.4.4v10.7h5.4v1.4h-5s-.4 0-.4.4v2H22s.4 0 .4-.4V10.6h-8.3zm5.1 8.3c0 .4-.4.4-.4.4h-1.9v-5.9c0-.4.4-.4.4-.4h1.9v5.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-facebook"><path d="M12.1 32V17H8v-5.4h4.1V7c0-3.6 2.4-7 8-7 2.2 0 3.9.2 3.9.2l-.1 5.1h-3.6c-2 0-2.3.9-2.3 2.4v3.9h6l-.3 5.4H18v15h-5.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-favourites"><path d="M13 3h19v6H13zm4 10h15v6H17zm-4 10h19v6H13zm1-9H9V9H5v5H0v4h5v5h4v-5h5"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-feedback"><path d="M14 2v6h6v8h6l6 6V2H14zm16 12h-8v-2h8v2zm0-4h-8V8h8v2zm0-4H16V4h14v2z"></path><path d="M0 24v6l6-6h12V10H0v14zm2-12h14v2H2v-2zm0 4h10v2H2v-2zm0 4h12v2H2v-2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-google-plus"><path d="M32 14.2h-4.2V10h-2.2v4.2h-4.2v2.1h4.2v4.2h2.2v-4.2H32M18.6 1.7h-2.5C17 2.5 19 4 19 7.2c0 3.1-1.8 4.6-3.6 6-.6.5-1.2 1.1-1.2 2.1 0 .9.6 1.4 1.1 1.8l1.5 1.2c1.9 1.6 3.6 3 3.6 5.9 0 3.9-4 8-11.4 8-6.1-.2-9-3.1-9-6.2 0-1.5.8-3.6 3.3-5.1 2.7-1.6 6.2-1.8 8.2-1.9-.6-.8-1.3-1.5-1.3-2.8 0-.7.2-1.1.4-1.6-.5 0-.9.1-1.4.1-4.5 0-7.1-3.3-7.1-6.6 0-1.9.6-4.2 2.4-5.8C7 .2 10.1 0 12.4 0h8.9l-2.7 1.7zM7.4 20.8c-.9.3-3.7 1.3-3.7 4.3s3 5.1 7.5 5.1c4.1 0 6.3-1.9 6.3-4.5 0-2.1-1.4-3.3-4.7-5.5h-1c-.3-.1-2.6 0-4.4.6M9.8 1.5c-1.1 0-2.3.4-3 1.3-.7.9-.9 2.1-.9 3.2 0 2.8 1.7 7.5 5.3 7.5 1.1 0 2.2-.6 2.9-1.3 1-1 1.1-2.2 1.1-3 0-3-1.8-7.7-5.4-7.7" fill="#010101"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-linkedin"><path d="M7.3 31.5V10.6H.4v20.9h6.9zM3.8 7.7c2.4 0 3.9-1.6 3.9-3.6S6.2.5 3.9.5C1.5.5 0 2.1 0 4.1s1.5 3.6 3.8 3.6zm7.3 23.8H18V19.8c0-.6 0-1.3.2-1.7.5-1.2 1.6-2.5 3.5-2.5 2.5 0 3.5 1.9 3.5 4.7v11.2H32v-12c0-6.4-3.4-9.4-7.9-9.4-3.7 0-5.3 2.1-6.2 3.5v-3H11c.2 1.9.1 20.9.1 20.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-my-radio"><path d="M30 7V1H2v6H0v24h12l2-5h11l2 5h5V7h-2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13.5 9c-3.6 0-6.5-2.9-6.5-6.5s2.9-6.5 6.5-6.5 6.5 2.9 6.5 6.5-2.9 6.5-6.5 6.5zM28 7H4V3h24v4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-pinterest"><path d="M16 0C7.2 0 0 7.2 0 16c0 6.6 3.9 12.2 9.6 14.7 0-1.1 0-2.5.3-3.7.3-1.3 2.1-8.7 2.1-8.7s-.5-1-.5-2.5c0-2.4 1.4-4.1 3.1-4.1 1.5 0 2.2 1.1 2.2 2.4 0 1.5-.9 3.7-1.4 5.7-.4 1.7.9 3.1 2.5 3.1 3 0 5.1-3.9 5.1-8.5 0-3.5-2.4-6.1-6.7-6.1-4.9 0-7.9 3.6-7.9 7.7 0 1.4.4 2.4 1.1 3.1.3.4.3.5.2.9-.1.3-.3 1-.3 1.3-.1.4-.4.6-.8.4-2.2-.9-3.3-3.4-3.3-6.1 0-4.5 3.8-10 11.4-10 6.1 0 10.1 4.4 10.1 9.2 0 6.3-3.5 11-8.6 11-1.7 0-3.4-.9-3.9-2 0 0-.9 3.7-1.1 4.4-.3 1.2-1 2.5-1.6 3.4 1.4.4 3 .7 4.5.7 8.8 0 16-7.2 16-16S24.8 0 16 0z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-recommend"><path d="M16 28C9.4 28 4 22.6 4 16S9.4 4 16 4c3.1 0 6 1.2 8.1 3.2l-8.7 10.4-5.4-3.8-3 3.5 8.8 6.8 11-13.1 2.8-3.3C26.8 3.1 21.8 0 16 0 7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16h-4c0 6.6-5.4 12-12 12"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-share"><path d="M6.8 22.2c1.6 0 3-.7 4-1.8l9 4.8c-.1.4-.2.8-.2 1.3 0 3 2.5 5.5 5.5 5.5s5.5-2.4 5.5-5.5-2.5-5.5-5.5-5.5c-1.6 0-3 .7-4 1.8l-9.5-5.2-.1-2.8 9.7-5.5c1 1 2.3 1.5 3.8 1.5 3 0 5.5-2.5 5.5-5.5S28.2 0 25.2 0s-5.5 2.4-5.5 5.5c0 .6.1 1.1.2 1.6l-9.3 5.7c-1-.9-2.3-1.5-3.8-1.5-3 0-5.5 2.4-5.5 5.5.1 2.9 2.5 5.4 5.5 5.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-sign-in"><g fill="#1D1D1B"><path d="M1 1v30h30V1H1zm19.8 22.6L19.5 21h-7l-1.4 2.6C8.7 22 7 19.2 7 16c0-5 4-9 9-9s9 4 9 9c0 3.2-1.7 6-4.2 7.6z"></path><circle cx="16" cy="16" r="3.5"></circle></g></symbol><symbol viewBox="0 0 32 32" id="gel-icon-sign-out"><path fill="#1D1D1B" d="M1 1v30h30V1H1zm21.1 21.6l-.5-1.1c1.4-1.4 2.3-3.4 2.3-5.6 0-4.3-3.5-7.9-7.9-7.9s-7.9 3.7-7.9 8c0 2.7 1.4 5.2 3.5 6.6l.8-1.6h7l1.3 2.6c-1.3.9-2.9 1.4-4.7 1.4-5 0-9-4-9-9s4-9 9-9 9 4 9 9c0 2.6-1.1 5-2.9 6.6zM19.5 16c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-stumble-upon"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm0 13c-.8 0-1.5.7-1.6 1.5v3.1c-.1 2.2-1.9 3.9-4.1 3.9-2.2 0-4-1.7-4.1-3.9V16h2.5v1.6c0 .8.7 1.5 1.5 1.5s1.5-.6 1.5-1.5v-3.1c.1-2.2 1.9-3.9 4.1-3.9 2.2 0 4 1.7 4 3.9l-1.5.4-1-.4c.2-.9-.5-1.5-1.3-1.5zm9.7 4.6c-.1 2.2-1.9 3.9-4.1 3.9-2.2 0-4-1.7-4.1-3.9V16l1 .4L20 16v1.6c0 .8.7 1.5 1.5 1.5s1.5-.6 1.5-1.5V16h2.5v1.6z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-subscribe-to-podcast"><path d="M22 6c2.2 0 4.2.9 5.7 2.3l1.4-1.4C27.3 5.1 24.8 4 22 4s-5.3 1.1-7.1 2.9l1.4 1.4C17.8 6.9 19.8 6 22 6"></path><path d="M22 2c3.3 0 6.3 1.3 8.5 3.5L32 4.1C29.4 1.6 25.9 0 22 0c-3.9 0-7.4 1.6-9.9 4.1l1.4 1.4C15.7 3.3 18.7 2 22 2m-8 10H9V7H5v5H0v4h5v5h4v-5h5m12-2c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4m-10 5h12l-3 13h-6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-terms-conditions"><path d="M25 4v3h1v22H6V7h3v2h14V3h-4c0-1.7-1.3-3-3-3s-3 1.3-3 3H9v1H3v28h26V4h-4z"></path><path d="M11.5 16.2l-2 2.3 5.3 4.5 7.5-9-2.3-1.9-5.5 6.6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tumblr"><path d="M18 0v8.2h6.3V13h-6.4v8.3c0 1.9.2 2.8.4 3.3s.5.9 1 1.2c.5.3 1 .4 1.8.4.4 0 1.4-.1 2.5-.6l1.5 4.6c-.6.5-1.5 1.1-2.9 1.5-1.2.2-2 .3-3.2.3-1.4 0-2.3-.2-3.4-.6-1.1-.4-1.8-.9-2.6-1.6-.8-.7-1.3-1.4-1.7-2.2-.5-.8-1-2.2-1.1-3.8V13H7V8.8c1.2-.4 2.1-1 3-1.8 1.2-1.1 1.7-2 2.1-2.9.5-1 .9-2.5 1.1-4.1H18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-twitter"><path d="M32 6.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.7 3.8 24 3 22.2 3c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 3 1.8 6.5 2.9 10.2 2.9 12.1 0 18.7-10 18.7-18.7v-.9c1.2-.9 2.3-2 3.2-3.3z"></path></symbol></svg></div>
+                <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="gel-icon-360-image"><path d="M12.4 21.6c-4.9-.9-8.7-3.5-8.7-6.4 0-1.7 1.4-3.4 3.5-4.6L4.5 8.2C1.7 10 0 12.5 0 15.3c0 4.8 5.3 8.8 12.4 9.8V31l8.6-7.9-8.6-7.9v6.4z"></path><path d="M24 6.5V2H12V1h-2v1H8v12h16v-3.7c2.6 1.3 4.3 3.1 4.3 5s-1.7 3.7-4.2 4.9V24c4.7-1.8 7.9-5 7.9-8.7 0-3.8-3.2-7-8-8.8zM12 6h-2V4h2v2zm6 6c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path><circle cx="18" cy="8" r="2.2"></circle></symbol><symbol viewBox="0 0 32 32" id="gel-icon-activity"><path d="M27.2 12.9c1 .3 2.1.1 3-.4 1.9-1.1 2.6-3.5 1.5-5.4-1.1-1.9-3.5-2.6-5.4-1.5-1 .5-1.6 1.4-1.9 2.4l-.1-.2-3.6-6.4-7.2 4.1c.9.3 1.6.9 2.1 1.8 1.1 1.9.4 4.3-1.5 5.4-1.9 1.1-4.3.4-5.4-1.5-.6-.8-.7-1.8-.5-2.7l-7 4 4 6.9c-1.1-.4-2.3-.4-3.4.2C-.1 20.7-.8 23.1.3 25c1.1 1.9 3.5 2.6 5.4 1.5 1.1-.6 1.7-1.7 1.9-2.8l3.9 6.9 6.9-3.9c-.8-.3-1.4-.9-1.9-1.7-1.1-1.9-.4-4.3 1.5-5.4 1.9-1.1 4.3-.4 5.4 1.5.5.8.6 1.7.5 2.5l7.1-4-3.6-6.4-.2-.3z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-apps"><path d="M0 14h14V0H0v14zM3 2l8 5-8 5V2zm15 12h14V0H18v14zm2-2v-2l2 2h-2zm4-1l-3-3 6-6 3 3-6 6zM0 32h14V18H0v14zm2-11h1v-1h2v1h7v8H2v-8zm16 11h14V18H18v14zm3-11l2.6.5L25 19l1.4 2.5L29 21l-.5 2.6L31 25l-2.5 1.4.5 2.6-2.6-.5L25 31l-1.4-2.5-2.6.5.5-2.6L19 25l2.5-1.4L21 21z"></path><path d="M8 22c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3m0 5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-audio"><path d="M21.4 4.8L20 6.2c2.5 2.5 4 6 4 9.8s-1.5 7.3-4 9.8l1.4 1.4C24.2 24.3 26 20.4 26 16c0-4.4-1.8-8.3-4.6-11.2z"></path><path d="M25.6.5L24.2 2c3.6 3.6 5.8 8.6 5.8 14s-2.2 10.4-5.8 14l1.4 1.4C29.6 27.5 32 22 32 16S29.6 4.5 25.6.5zM16 4l-6 6H0v12h10l6 6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-chart"><path d="M1 9h8v23H1zm11 9h8v14h-8zM23 0h8v32h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-curriculum-key-fact"><path d="M12 26h8v2h-8zm1 6h6l1-2h-8m3-30h2v2h-2zm12 12h2v2h-2zM3 12h2v2H3zm2-9h2v2H5zm20 0h2v2h-2zM6 21h2v2H6zm18 0h2v2h-2zM16 4c-4.7 0-8.5 3.8-8.5 8.5 0 2.3.9 4.3 2.3 5.8S12 21.8 12 24h8c0-2.2.8-4.2 2.2-5.7 1.4-1.5 2.3-3.6 2.3-5.8C24.5 7.8 20.7 4 16 4zm4.7 12.9c-1.3 1.4-2.2 3.1-2.6 5.1h-4.4c-.4-1.9-1.2-3.7-2.5-5-1.1-1.2-1.8-2.8-1.8-4.5.1-3.6 3-6.5 6.6-6.5s6.5 2.9 6.5 6.5c0 1.7-.6 3.3-1.8 4.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-document"><path d="M21.3 3L27 8.7V29H5V3h16.3m.7-3H2v32h28V8l-8-8z"></path><path d="M10 13h12v3H10zm0 4h12v3H10zm0 4h12v3H10z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-game"><path d="M8 7.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5S9.9 7.5 8 7.5z"></path><path d="M24 3c-2 0-3.9.8-5.3 2h-5.4C11.9 3.8 10 3 8 3c-4.4 0-8 3.6-8 8v18h6l6.4-10h7.1L26 29h6V11c0-4.4-3.6-8-8-8zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM8 17c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm12-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4 4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4-4c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-image"><path d="M9 5V3H4v2H0v24h32V5H9zm-2.5 8C5.1 13 4 11.9 4 10.5S5.1 8 6.5 8 9 9.1 9 10.5 7.9 13 6.5 13zM20 26c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9z"></path><path d="M20 11.5c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5-2.5-5.5-5.5-5.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-infographics"><path d="M24 18.1v-6.2c2.8-.5 5-2.9 5-5.9 0-3.3-2.7-6-6-6s-6 2.7-6 6c0 3 2.2 5.4 5 5.9v6.2c-1.3.2-2.5.7-3.4 1.5l-5.1-5.1c.3-.6.5-1.3.5-2C14 10 12 8 9.5 8S5 10 5 12.5 7 17 9.5 17c1 0 2-.4 2.7-.9l5 5c-.6.9-1 1.9-1.1 2.9H7.8c-.4-1.2-1.5-2-2.8-2-1.7 0-3 1.3-3 3s1.3 3 3 3c1.3 0 2.4-.8 2.8-2h8.3c.5 3.4 3.4 6 6.9 6 3.9 0 7-3.1 7-7 0-3.5-2.6-6.4-6-6.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-interactive"><path d="M12.5 0l-1 20-6-4-2 2 10 14h15V14l-3-1.4V17h-1v-4.8l-3-1.4V17h-1v-6.6l-3-1.4v8h-1V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-iptv-guide"><path d="M0 0h8v8H0zm12 0h20v8H12zm12 24h8v8h-8zM0 24h20v8H0zm0-12h32v8H0z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-list"><path d="M0 0v8h32V0M0 17v3h32v-8H0m0 17v3h32v-8H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-map"><path d="M25.1 17.2c1.2-1.8 1.9-3.9 1.9-6.2 0-6.1-4.9-11-11-11S5 4.9 5 11c0 2.3.7 4.4 1.9 6.2L16 32l9.1-14.8zM16 7c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-music-tracks"><path d="M16 13c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3"></path><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0m0 22c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6m8-6c0-4.4-3.6-8-8-8V6c5.5 0 10 4.5 10 10h-2zM16 4V2c7.7 0 14 6.3 14 14h-2c0-6.6-5.4-12-12-12"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-newsletter"><path d="M5 3h22v12h3V0H2v15h3"></path><path d="M10 12h12v3H10zm0 4h12v3H10zm0-8h12v3H10z"></path><path d="M29.5 16l-.5.3-13 8.1-13-8.1-.5-.3H0v16h32V16h-2.5zM29 29H3V17.5l13 8.1 13-8.1V29z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-podcast"><circle cx="16" cy="14" r="4"></circle><path d="M16 6c2.2 0 4.2.9 5.7 2.3l1.4-1.4C21.3 5.1 18.8 4 16 4s-5.3 1.1-7.1 2.9l1.4 1.4C11.8 6.9 13.8 6 16 6z"></path><path d="M16 2c3.3 0 6.3 1.3 8.5 3.5l1.4-1.4C23.4 1.6 19.9 0 16 0c-3.9 0-7.4 1.6-9.9 4.1l1.4 1.4C9.7 3.3 12.7 2 16 2zm3 30h-6l-3-13h12"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-quiz"><path d="M8 28c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4zm9-20.7c-3.3 0-4.5 2.7-4.5 5.5 0 2.7 1.2 5.4 4.5 5.4.5 0 1.3.1 1.5-.1l-1.9-1.7 1.7-1.8 2.2 1.9c.6-.8 1-2 1-3.7 0-2.8-1.2-5.5-4.5-5.5z"></path><path d="M16.9 0C8.7 0 2 5.9 2 13.1 2 20.2 8.8 26 17.1 26s15-5.9 14.9-13.1C32 5.8 25.2 0 16.9 0zm7.9 20.4l-1.7 1.7-2.1-1.8c-1.1.6-2.4.9-4 .9-5.1 0-8.1-3.7-8.1-8.4 0-4.8 3-8.5 8.1-8.5s8.1 3.7 8.1 8.5c0 2.3-.8 4.4-2.1 5.9l1.8 1.7z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-radio-dials"><circle cx="16" cy="3" r="3"></circle><circle cx="7" cy="7" r="3"></circle><circle cx="25" cy="7" r="3"></circle><circle cx="29" cy="16" r="3"></circle><circle cx="3" cy="16" r="3"></circle><circle cx="16" cy="29" r="3"></circle><circle cx="7" cy="25" r="3"></circle><circle cx="25" cy="25" r="3"></circle></symbol><symbol viewBox="0 0 32 32" id="gel-icon-revision-guide"><circle cx="16" cy="5" r="5"></circle><path d="M28 12.4l-5.1 2.3L21 12H11l-1.9 2.8L4 12.4v14.2L16 32l12-5.5V12.4zM6 15.5l9 4.1v9.8l-9-4.1v-9.8zm11 13.9v-9.8l9-4.1v9.8l-9 4.1z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-rss"><circle cx="5" cy="27" r="5"></circle><path d="M25 32h7C32 14.3 17.7 0 0 0v7c13.8 0 25 11.2 25 25z"></path><path d="M15 32h7c0-12.1-9.9-22-22-22v7c8.3 0 15 6.7 15 15z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-slideshow"><path d="M22 13l-5-3-5-3v12l5-3"></path><path d="M30 0H0v26h13.9l-3.5 6H13l2.9-5.1 2.9 5.1h2.6l-3.5-6H32V0h-2zm0 22H2V4h28v18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-special-content"><path d="M16 0l3.8 6.8L28 4l-2.8 8.2L32 16l-6.8 3.8L28 28l-8.2-2.8L16 32l-3.8-6.8L4 28l2.8-8.2L0 16l6.8-3.8L4 4l8.2 2.8"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-stations"><g fill="#000101"><path d="M13 16c0-1.7 1.3-3 3-3s3 1.3 3 3-1.3 3-3 3-3-1.3-3-3m10.1-7.1L21 11c2.7 2.7 2.7 7.2 0 9.9l2.1 2.1c3.9-3.8 3.9-10.2 0-14.1"></path><path d="M27.3 4.7l-2.1 2.1c5.1 5.1 5.1 13.3 0 18.4l2.1 2.1c6.3-6.2 6.3-16.4 0-22.6M8.9 23.1L11 21c-2.7-2.7-2.7-7.2 0-9.9L8.9 8.9C5 12.8 5 19.2 8.9 23.1"></path><path d="M4.7 27.3l2.1-2.1c-5.1-5.1-5.1-13.3 0-18.4L4.7 4.7c-6.3 6.2-6.3 16.4 0 22.6"></path></g></symbol><symbol viewBox="0 0 32 32" id="gel-icon-streams"><path d="M0 0h14v14H0zm18 0h14v14H18zM0 18h14v14H0zm18 0h14v14H18z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-timeline"><path d="M26 8.5h6v6h-6zm-18 0h6v6H8zm-8 0h6v6H0zm24-2h-8v10h8v-10zm-2 8h-4v-6h4v6zm-9 11h14l-7-7"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tv-channels"><path d="M23 4v6l9-1V1M0 9l9 1V4L0 1m12 3h8v6h-8zm11 15l9 1v-8l-9 1M0 20l9-1v-6l-9-1m12 1h8v6h-8zm11 15l9 3v-8l-9-1M0 31l9-3v-6l-9 1m12-1h8v6h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-tv-schedule"><path d="M0 0h6v6H0zm0 10h6v6H0zm0 10h6v6H0zM8 0h24v6H8zm20.7 16H32v-6H8v6h9.3c-1.3 1-2.3 2.4-2.8 4H8v6h6.5c1.2 3.5 4.6 6 8.5 6 5 0 9-4 9-9 0-2.8-1.3-5.3-3.3-7M23 30c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7"></path><path d="M27.6 25.2L24 22.5V18h-2v5.5l4.4 3.3"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-video"><path d="M3 32l26-16L3 0"></path></symbol></svg></div>
+                <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 240 800 120" id="gel-icon-logo">
+                    <path fill="#FFFFFF" d="M50,241h12l53,118H98L82,324H32L17,359H0L50,241z M75,309l-19-42l-18,42H75z
+                        "></path>
+                    <path fill="#FFFFFF" d="M221,331v18c-12,6-26,10-42,10c-13,0-24-3-33-8c-9-5-16-12-21-21
+                        c-5-9-8-19-8-30c0-17,6-31,18-43c12-11,27-17,45-17c12,0,26,3,41,10v18
+                        c-13-8-27-12-40-12c-13,0-25,4-33,13c-9,9-13,19-13,32c0,13,4,24,13,32
+                        c9,8,20,12,33,12C194,345,208,340,221,331z"></path>
+                    <path fill="#FFFFFF" d="M284,241h12L348,359h-17l-16-35h-50L251,359h-17L284,241z M308,309l-19-42
+                        l-18,42H308z"></path>
+                    <path fill="#FFFFFF" d="M361,358V242h40c16,0,28,2,38,7c9,5,17,12,22,21c5,9,8,19,8,31
+                        c0,8-2,16-4,23c-3,7-8,13-13,19c-6,5-12,10-20,13c-4,2-9,3-12,3s-11,1-21,1
+                        H361z M398,257h-21v87h21c9,0,15-1,19-2c5-1,9-3,12-4c3-2,6-4,9-6
+                        c8-9,12-19,12-32c0-12-4-23-13-31c-3-3-7-5-11-8c-4-2-8-3-11-4
+                        C412,257,406,257,398,257z"></path>
+                    <path fill="#FFFFFF" d="M490,242H556v15h-49v36h48v15h-48V344h51v15h-68V242z"></path>
+                    <path fill="#FFFFFF" d="M668,242h16v117H667v-91l-36,45h-3l-37-45v91h-17V242h16l39,48L668,242z"></path>
+                    <path fill="#FFFFFF" d="M780,242H800l-43,55v62h-17v-62L696,242h20l31,40L780,242z"></path>
+                </symbol>
+                <symbol viewBox="0 0 32 32" id="gel-icon-alarm"><path d="M17 17.4V11h-2v7.6l6.6 3.8 1-1.8M29.2 9c1.7-2.9.7-6.5-2.2-8.2C24.1-.9 20.5.1 18.8 3l10.4 6zM2.8 9C1.1 6.1 2.1 2.5 5 .8 7.9-.9 11.5.1 13.2 3L2.8 9z"></path><path d="M29 17.5C29 10.3 23.2 4 16 4S3 10.3 3 17.5c0 3.4 1.3 6.7 3.4 9L4 29l2.8 2.9 2.7-2.7c1.9 1.1 4.1 1.7 6.5 1.7 2.3 0 4.5-.6 6.5-1.7l2.7 2.7 2.8-2.8-2.4-2.7c2.1-2.2 3.4-5.5 3.4-8.9zM6.5 18c0-2.5 1-5.2 2.8-7 1.8-1.8 4.2-3 6.7-3 5.2 0 9.5 4.5 9.5 9.8s-4.3 9.6-9.5 9.6-9.5-4.2-9.5-9.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-alert"><path d="M16 2L0 30h32L16 2zm2 25h-4v-4h4v4zm-4-6V11h4v10h-4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-back-to-start"><path d="M2 0v32h3V0m25 0L5 16l25 16v-8l-13.3-8L30 8"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-calendar"><path d="M24 13h4v4h-4zM22 0h2v5h-2zM8 0h2v5H8zm11 13h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4H9zm15 5h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4H9zm-5 0h4v4H4zm15 5h4v4h-4zm-5 0h4v4h-4zm-5 0h4v4H9zm-5 0h4v4H4z"></path><path d="M2 9h30V2h-7v4h-4V2H11v4H7V2H0v7m30 2v19H2V11H0v21h32V11"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-chapters"><path d="M8 0h24v8H8zm8 12h16v8H16zM8 24h24v8H8zm-8-1l12-7L0 9"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-countdown"><path d="M16.4 18.4V12h-2v7.6l6.6 3.8 1-1.8m2.982-16.725l4.242 4.242-2.828 2.83-4.243-4.244z"></path><path d="M15 6C7.8 6 2 11.8 2 19s5.8 13 13 13 13-5.8 13-13S22.2 6 15 6zm0 22.5c-5.2 0-9.5-4.3-9.5-9.5S9.8 9.5 15 9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5zM15 6c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm0-5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-degraded"><path d="M30 0h-9l2 2h7v28H2V2h7.2l8.6 8.6L9.4 19l7.8 9.5V19l8.2-8.1L14.5 0H0v32h32V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-down"><path d="M16 29L32 3h-7.2L16 18.3 7.2 3H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-download"><path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-duration"><path d="M17 15.4V6h-2v10.6l8.8 5.1 1-1.8"></path><path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4m0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-email"><path d="M16 19.4l16-15V3H0v26h32V8l-4 4v13H4V8.2l12 11.2zm0-2.8L5.8 7h20.4L16 16.6z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-embed"><path d="M10 6.2V0L0 10l10 10v-6.2L6.2 10M22 13.8V20l10-10L22 0v6.2l3.8 3.8m-14.397 3.183l7.78-7.778 1.413 1.414-7.778 7.776z"></path></symbol><symbol viewBox="0 0 36 32" id="gel-icon-embed-off-grid"><path d="M11 29v-7l-5-6 5-6V3L0 16M25 3v7l5 6-5 6v7l11-13m-23 9h2l8-18h-2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-embed-on-grid"><path d="M10 27v-6l-4.5-5 4.5-5V5L0 16M22 5v6l4.5 5-4.5 5v6l10-11m-20 8h2l6-16h-2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-expires"><path d="M16 0c-.3 0-.7 0-1 .1v4c.3-.1.7-.1 1-.1 6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16H0c0 8.8 7.2 16 16 16s16-7.2 16-16S24.8 0 16 0z"></path><path d="M23.8 21.7l1-1.8-7.8-4.5V6h-2v10.6"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-export"><path d="M6 0v22.5l-6 6L3.5 32 22 13.5V21h5V5H11v5h7.5L8 20.5V2h22v22H15.8l-2 2H32V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-external-link"><path d="M12 0v5h11.5l-5 5H0v22h22V17.5l-2 2V30H2V12h14.5l-7.8 7.7 3.6 3.6L27 8.5V20h5V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-grid"><path d="M0 0h8v8H0zm0 12h8v8H0zm0 12h8v8H0zM12 0h8v8h-8zm0 12h8v8h-8zm0 12h8v8h-8zM24 0h8v8h-8zm0 12h8v8h-8zm0 12h8v8h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-help"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2 26h-4v-4h4v4zm2.6-10c-1.2.9-2.6 1.6-2.6 3.2v.8h-4v-1c0-2.4 1.4-3.4 2.5-4.3 1.1-.8 2.5-1.5 2.5-2.9 0-1.7-1.4-2.4-2.8-2.4-2 0-3.7 1.6-3.7 3.6H9c.1-4 3.1-6.8 7-6.8 5.1 0 7.3 3.1 7.3 5.2 0 2.7-1.5 3.7-2.7 4.6z"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-home"><path d="M16 5.4l-12 12v14.5h9V22h6v9.9h9V17.4l-12-12"></path><path d="M28 12V4h-4v4l-6.6-6.6L16 0l-1.4 1.4L0 16v2.8l16-16 16 16V16"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-info"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2 25h-4V13h4v12zm0-14h-4V7h4v4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-launch-application"><path d="M10 26H2v-6h2v-2H0v10h12v-6h-2m12 4h8v-6h-2v-2h4v10H20v-6h2"></path><path d="M6 20h20V4H6v16zm16-4H10V8h12v8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-link"><path d="M18.5 4.6l-1.7-1.7C13-1 6.7-1 2.9 2.9-1 6.7-1 13 2.9 16.8l3.4 3.4c3.8 3.8 10.1 3.8 13.9 0l-3.5-3.5c-1.9 1.9-5 1.9-7 0l-3.4-3.4c-1.9-1.9-1.9-5 0-7 1.9-1.9 5-1.9 7 0L15 8l3.5-3.4z"></path><path d="M13.4 27.4l1.7 1.7c3.8 3.8 10.1 3.8 13.9 0 3.8-3.8 4-10 .1-13.8l-3.5-3.5c-3.7-3.8-10-3.8-13.8 0l3.5 3.5c1.9-1.9 5-1.9 7 0l3.4 3.4c1.9 1.9 1.9 5 0 7-1.9 1.9-5 1.9-7 0L17 24l-3.6 3.4z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-list"><path d="M0 0v8h32V0M0 17v3h32v-8H0m0 17v3h32v-8H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-list-thumb"><path d="M0 0h8v8H0zm0 12h8v8H0zm0 12h8v8H0zM11 0v8h21V0M11 17v3h21v-8H11m0 17v3h21v-8H11"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-loading"><path d="M29.8 8l-3.5 2c1 1.8 1.6 3.8 1.6 6 0 6.6-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4V0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16c0-2.9-.8-5.6-2.2-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-location"><path d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm2 27.8V23h-4v4.8C9 27 5 23 4.2 18H9v-4H4.2C5 9 9 5 14 4.2V9h4V4.2C23 5 27 9 27.8 14H23v4h4.8c-.8 5-4.8 9-9.8 9.8z"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-lock"><path d="M25 13.9V8.3C25 3.7 20.9 0 16 0S7 3.7 7 8.3v5.6H3v18h26v-18h-4zM12 8.3c0-2 1.8-3.7 4-3.7s4 1.6 4 3.7v5.6h-8V8.3z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-more-horizontal"><path d="M0 12h8v8H0zm12 0h8v8h-8zm12 0h8v8h-8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-more-vertical"><path d="M12 0h8v8h-8zm0 12h8v8h-8zm0 12h8v8h-8z"></path></symbol><symbol viewBox="0 0 56 32" id="gel-icon-new"><path d="M0 0h56v32H0z"></path><path fill="#FFF" d="M4 7.9h4.3l5.6 9.8V7.9h3.9v16h-4.3L8 13.9v10H4v-16zm16.2 0h11.4v3.3h-7.2V14h6.5v3.2h-6.5v3h7.4v3.6H20.2V7.9zm28.3 16h-3.8l-2-11-2 11h-3.9l-3.9-16h3.8l2.1 11.7 2.1-11.7h3.6l2.1 11.7 2.1-11.7h3.8l-4 16z"></path></symbol><symbol viewBox="0 0 31.9 32" id="gel-icon-next"><path d="M29 16L3 0v7.2L17.6 16 3 24.8V32"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-no"><path d="M32 3.5L28.5 0 16 12.5 3.5 0 0 3.5 12.5 16 0 28.5 3.5 32 16 19.5 28.5 32l3.5-3.5L19.5 16"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-previous"><path d="M3 16l26 16v-7.2L14.4 16 29 7.2V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-print"><path d="M26 12V5l-5-5H6v12H0v12.1L5.9 30H6v2h20v-2h.1l5.9-5.9V12h-6zM8 12V2h12.2L24 5.8V18H8v-6zm0 18v-5h16v5H8z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-quote"><path d="M0 17v15h15V17H7c.2-5.9 2.4-8.8 8-9.9V0C6.7 1.2.2 8.3 0 17zm32-9.9V0c-8.3 1.2-14.8 8.3-15 17v15h15V17h-8c.2-5.9 2.4-8.8 8-9.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-refresh"><path d="M32 0H20v12h4V7.1c2.4 2.2 4 5.4 4 8.9 0 6.6-5.4 12-12 12v4c8.8 0 16-7.2 16-16 0-4.8-2.1-9.1-5.4-12H32V0zM8 24.9c-2.4-2.2-4-5.4-4-8.9C4 9.4 9.4 4 16 4V0C7.2 0 0 7.2 0 16c0 4.8 2.1 9.1 5.4 12H0v4h12V20H8v4.9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-search"><path d="M32 28.5l-8.2-8.2c3.4-5.1 2.9-12-1.6-16.4C19.7 1.3 16.3 0 13 0 9.7 0 6.3 1.3 3.8 3.8c-5.1 5.1-5.1 13.3 0 18.4C6.3 24.7 9.7 26 13 26c2.5 0 5.1-.7 7.3-2.2l8.2 8.2 3.5-3.5zM6.6 19.4C4.9 17.7 4 15.4 4 13s.9-4.7 2.6-6.4C8.3 4.9 10.6 4 13 4c2.4 0 4.7.9 6.4 2.6 3.5 3.5 3.5 9.2 0 12.7-1.7 1.7-4 2.6-6.4 2.6s-4.7-.8-6.4-2.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-settings"><path d="M31.7 19.7l-3.6-1.5c.3-1.5.3-3 0-4.5l3.6-1.5c.3-.1.4-.4.3-.7l-1.6-3.8c-.1-.3-.4-.4-.7-.3L26.1 9c-.9-1.3-1.9-2.3-3.2-3.2l1.5-3.6c.1-.3 0-.6-.3-.7L20.4 0c-.3-.1-.6 0-.7.3l-1.5 3.6c-1.5-.3-3-.3-4.5 0L12.2.3c-.1-.3-.4-.4-.7-.3L7.8 1.6c-.2.1-.4.4-.3.7L9 5.9C7.8 6.7 6.7 7.8 5.9 9L2.3 7.5c-.3-.1-.6.1-.7.3L0 11.6c-.1.3 0 .6.3.7l3.6 1.5c-.3 1.5-.3 3 0 4.5L.3 19.8c-.3.1-.4.4-.3.7l1.6 3.8c.1.3.4.4.7.3L5.9 23c.9 1.3 1.9 2.3 3.2 3.2l-1.5 3.6c-.1.3 0 .6.3.7l3.8 1.6c.3.1.6 0 .7-.3l1.5-3.6c1.5.3 3 .3 4.5 0l1.5 3.6c.1.3.4.4.7.3l3.8-1.6c.3-.1.4-.4.3-.7L23 26.1c1.3-.9 2.3-1.9 3.2-3.2l3.6 1.5c.3.1.6 0 .7-.3l1.6-3.8c0-.2-.2-.5-.4-.6zm-14.2 0c-2 .8-4.4-.1-5.2-2.2-.8-2 .1-4.4 2.2-5.2 2-.8 4.4.1 5.2 2.2.8 2-.1 4.4-2.2 5.2z"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-to-bottom"><path d="M0 26.9h32v3H0zm16 0L0 1.9h8.2L16 15.1l7.8-13.2H32"></path></symbol><symbol viewBox="0 0 32 31.9" id="gel-icon-to-top"><path d="M0 1.9h32v3H0zm16 3l16 25h-8.2L16 16.6 8.2 29.9H0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-toggle-horizontal"><path d="M25 16L0 32v-8l13-8L0 8.2V0"></path><path d="M21 0v2h9v28h-9v2h11V0"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-unlock"><path d="M23 0c-5 0-9 4.1-9 9v5H0v18h23V14h-4V9c0-2.2 1.8-4 4-4s4 1.8 4 4v5h5V9c0-4.9-4-9-9-9z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-up"><path d="M16 3L0 29h7.2L16 13.7 24.8 29H32"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-vocab"><path d="M0 0v18h12.7l1.2 2 2.5 4 2.5-4 1.2-2H32V0H0zm22 14H4v-4h18v4zm6-6H4V4h24v4zM0 26h32v6H0z"></path></symbol><symbol viewBox="0 0 31.8 32" id="gel-icon-yes"><path d="M12.8 28.9l19-22.6L28 3.1 12.2 21.9l-9-7.5L0 18.2"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-zoom-in"><path d="M15 20h-4v-5H6v-4h5V6h4v5h5v4h-5v5z"></path><path d="M32 28.5l-8.2-8.2c3.4-5.1 2.9-12-1.6-16.4C19.7 1.3 16.3 0 13 0 9.7 0 6.3 1.3 3.8 3.8c-5.1 5.1-5.1 13.3 0 18.4C6.3 24.7 9.7 26 13 26c2.5 0 5.1-.7 7.3-2.2l8.2 8.2 3.5-3.5zM6.6 19.4C4.9 17.7 4 15.4 4 13c0-2.4.9-4.7 2.6-6.4C8.3 4.9 10.6 4 13 4s4.7.9 6.4 2.6c3.5 3.5 3.5 9.2 0 12.7-1.7 1.7-4 2.6-6.4 2.6-2.4.1-4.7-.8-6.4-2.5z"></path></symbol><symbol viewBox="0 0 32 32" id="gel-icon-zoom-out"><path d="M6 15v-4h14v4H6z"></path><path d="M32 28.5l-8.2-8.2c3.4-5.1 2.9-12-1.6-16.4C19.7 1.3 16.3 0 13 0 9.7 0 6.3 1.3 3.8 3.8c-5.1 5.1-5.1 13.3 0 18.4C6.3 24.7 9.7 26 13 26c2.5 0 5.1-.7 7.3-2.2l8.2 8.2 3.5-3.5zM6.6 19.4C4.9 17.7 4 15.4 4 13c0-2.4.9-4.7 2.6-6.4C8.3 4.9 10.6 4 13 4s4.7.9 6.4 2.6c3.5 3.5 3.5 9.2 0 12.7-1.7 1.7-4 2.6-6.4 2.6-2.4.1-4.7-.8-6.4-2.5z"></path></symbol></svg></div>
+                <div data-loaded-from="local" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 240 800 120" id="gel-icon-logo">
+                    <path fill="#FFFFFF" d="M50,241h12l53,118H98L82,324H32L17,359H0L50,241z M75,309l-19-42l-18,42H75z
+                        "></path>
+                    <path fill="#FFFFFF" d="M221,331v18c-12,6-26,10-42,10c-13,0-24-3-33-8c-9-5-16-12-21-21
+                        c-5-9-8-19-8-30c0-17,6-31,18-43c12-11,27-17,45-17c12,0,26,3,41,10v18
+                        c-13-8-27-12-40-12c-13,0-25,4-33,13c-9,9-13,19-13,32c0,13,4,24,13,32
+                        c9,8,20,12,33,12C194,345,208,340,221,331z"></path>
+                    <path fill="#FFFFFF" d="M284,241h12L348,359h-17l-16-35h-50L251,359h-17L284,241z M308,309l-19-42
+                        l-18,42H308z"></path>
+                    <path fill="#FFFFFF" d="M361,358V242h40c16,0,28,2,38,7c9,5,17,12,22,21c5,9,8,19,8,31
+                        c0,8-2,16-4,23c-3,7-8,13-13,19c-6,5-12,10-20,13c-4,2-9,3-12,3s-11,1-21,1
+                        H361z M398,257h-21v87h21c9,0,15-1,19-2c5-1,9-3,12-4c3-2,6-4,9-6
+                        c8-9,12-19,12-32c0-12-4-23-13-31c-3-3-7-5-11-8c-4-2-8-3-11-4
+                        C412,257,406,257,398,257z"></path>
+                    <path fill="#FFFFFF" d="M490,242H556v15h-49v36h48v15h-48V344h51v15h-68V242z"></path>
+                    <path fill="#FFFFFF" d="M668,242h16v117H667v-91l-36,45h-3l-37-45v91h-17V242h16l39,48L668,242z"></path>
+                    <path fill="#FFFFFF" d="M780,242H800l-43,55v62h-17v-62L696,242h20l31,40L780,242z"></path>
+                </symbol>
+                <symbol viewBox="302 370 1600 335" id="gel-icon-logo--mvp">
+                    <path fill="#FFFFFF" d="M121,398.4h28.3l126.1,283.1h-41.2l-37.3-83.6h-121l-34.7,83.6H0L121,398.4z M180.2,561.9l-46.3-101.7
+                        L91.4,561.9H180.2z"></path>
+                    <path fill="#FFFFFF" d="M531.5,614.6v43.8c-29.6,15.4-63.1,24.5-101.7,24.5c-30.9,0-57.9-6.4-79.8-19.3
+                        c-21.9-12.9-38.6-29.6-51.5-51.5c-12.9-21.9-19.3-46.3-19.3-72.1c0-41.2,14.2-74.6,43.8-102.9c28.3-27,64.3-41.2,106.8-41.2
+                        c29.6,0,61.8,7.7,97.8,23.2v43.8c-32.2-19.3-64.3-28.3-95.2-28.3c-32.2,0-59.2,10.3-79.8,30.9c-21.9,20.6-32.2,46.3-32.2,75.9
+                        c0,30.9,10.3,56.6,30.9,75.9c20.6,19.3,47.6,29.6,79.8,29.6C465.8,646.8,499.3,636.5,531.5,614.6z"></path>
+                    <path fill="#FFFFFF" d="M680.8,398.4h28.3l126.1,283.1H794l-37.3-83.6H637l-34.7,83.6h-41.2L680.8,398.4z M739.9,561.9l-45-101.7
+                        l-42.5,101.7H739.9z"></path>
+                    <path fill="#FFFFFF" d="M866.1,680.3V399.7h95.2c38.6,0,68.2,5.1,90.1,16.7c21.9,11.6,39.9,28.3,52.8,50.2
+                        c12.9,21.9,19.3,46.3,19.3,73.4c0,19.3-3.9,37.3-10.3,54c-7.7,16.7-18,32.2-30.9,45c-14.2,12.9-29.6,23.2-47.6,30.9
+                        c-10.3,3.9-20.6,6.4-29.6,7.7c-9,1.3-25.7,2.6-50.2,2.6H866.1z M956.1,435.8H906v208.5h51.5c20.6,0,36-1.3,46.3-3.9
+                        c11.6-2.6,20.6-6.4,28.3-10.3c7.7-3.9,14.2-9,20.6-15.4c19.3-20.6,29.6-45,29.6-75.9c0-29.6-10.3-55.3-30.9-73.4
+                        c-7.7-7.7-16.7-12.9-25.7-18c-10.3-5.1-19.3-7.7-27-9C989.6,435.8,975.4,435.8,956.1,435.8z"></path>
+                    <path fill="#FFFFFF" d="M1174.9,399.7h159.6v36h-118.4V522h114.5v36h-114.5v87.5h122.3v36h-163.4V399.7z"></path>
+                    <path fill="#FFFFFF" d="M1603.4,399.7h37.3v280.5h-39.9V461.5l-86.2,108.1h-7.7l-87.5-108.1v218.8h-39.9V399.7h38.6l93.9,115.8
+                        L1603.4,399.7z"></path>
+                    <path fill="#FFFFFF" d="M1871.1,399.7h48.9l-104.2,132.5v148h-41.2v-148l-104.2-132.5h48.9l74.6,96.5L1871.1,399.7z"></path>
+                    <path fill="#FFFFFF" d="M1992.6,456.6h-19v-56.1h14.7c4.6,0,8.2,0.6,10.8,1.9s4.6,3,5.9,5.1c1.4,2.2,2,4.7,2,7.6
+                        c0,5.5-2.8,9.5-8.5,11.8c4.1,0.8,7.3,2.5,9.8,5.1c2.4,2.6,3.6,5.7,3.6,9.3c0,2.9-0.7,5.4-2.2,7.7c-1.5,2.2-3.6,4.1-6.5,5.5
+                        C2000.4,455.9,1996.8,456.6,1992.6,456.6z M1988.5,407.6h-6.9v16.9h5.3c4.3,0,7.3-0.8,9.1-2.4c1.8-1.6,2.7-3.7,2.7-6.3
+                        C1998.8,410.3,1995.4,407.6,1988.5,407.6z M1989.1,431.6h-7.5v17.8h7.9c4.4,0,7.4-0.3,8.9-1c1.6-0.7,2.8-1.7,3.8-3.2
+                        c0.9-1.4,1.4-3,1.4-4.7c0-1.7-0.5-3.3-1.5-4.7c-1-1.4-2.4-2.5-4.3-3.2C1996,432,1993.1,431.6,1989.1,431.6z"></path>
+                    <path fill="#FFFFFF" d="M2019.9,400.5h31.8v7.1h-23.8v17.1h23v7.2h-23v17.4h24.5v7.1h-32.5V400.5z"></path>
+                    <path fill="#FFFFFF" d="M2056.2,400.4h46.8v7.1h-19.5v49h-8.1v-49h-19.2V400.4z"></path>
+                    <path fill="#FFFFFF" d="M2120.3,400.2h5.6l25.1,56.4h-8.2l-7.5-16.6h-23.9l-7,16.6h-8.2L2120.3,400.2z M2132,432.8l-9-20.3
+                        l-8.4,20.3H2132z"></path>
+                </symbol>
+                </svg>
+            <![endif]-->
+            <svg version="1.1" id="gel-icon-classroom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+                <g>
+                    <polygon points="0,5.6 0,22.6 3.4,22.6 3.2,20.8 1.9,20.8 1.9,7.5 30.1,7.5 30.1,20.8 28.8,20.8 28.6,22.6 32,22.6 
+                        32,5.6  "></polygon>
+                    <path d="M10.1,15.2c0-1.1-1-2.1-2.1-2.1s-2.1,1-2.1,2.1s1,2.1,2.1,2.1S10.1,16.3,10.1,15.2"></path>
+                    <polyline points="4.5,19.2 5.9,26.4 10.1,26.4 11.5,19.2 11.5,17.8 4.5,17.8 4.5,19.2  "></polyline>
+                    <path d="M18.1,15.2c0-1.1-1-2.1-2.1-2.1s-2.1,1-2.1,2.1s1,2.1,2.1,2.1S18.1,16.3,18.1,15.2"></path>
+                    <polyline points="12.5,19.2 13.9,26.4 18.1,26.4 19.5,19.2 19.5,17.8 12.5,17.8 12.5,19.2  "></polyline>
+                    <path d="M27,15.2c0-1.1-1-2.1-2.1-2.1c-1.1,0-2.1,1-2.1,2.1s1,2.1,2.1,2.1S27,16.3,27,15.2"></path>
+                    <polyline points="21.4,19.2 22.9,26.4 27,26.4 28.5,19.2 28.5,17.8 21.4,17.8 21.4,19.2    "></polyline>
+                </g>
+            </svg>
+            <svg version="1.1" id="gel-icon-star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 11.4" enable-background="new 0 0 12 11.4" xml:space="preserve">
+                <polygon fill="#3CFAEC" points="6,0 7.7,4 12,4.4 8.8,7.2 9.7,11.4 6,9.2 2.3,11.4 3.2,7.2 0,4.4 4.3,4 "></polygon>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="53" id="acad-facebook" viewBox="0 0 25 53"><path d="M8.3 2.7C10.3 0.8 13.2 0.1 15.9 0 18.8 0 21.6 0 24.5 0 24.5 3.1 24.5 6.1 24.5 9.1 22.6 9.1 20.8 9.2 18.9 9.1 17.8 9.1 16.6 10 16.3 11.1 16.3 13.2 16.3 15.2 16.3 17.3 19 17.3 21.8 17.3 24.5 17.3 24.3 20.2 23.9 23.1 23.5 26.1 21.1 26.1 18.7 26.1 16.3 26.1 16.3 34.8 16.3 43.5 16.3 52.2 12.7 52.2 9.1 52.2 5.6 52.2 5.5 43.5 5.6 34.8 5.5 26.1 3.8 26.1 2 26.1 0.3 26.1 0.3 23.1 0.3 20.2 0.3 17.3 2 17.3 3.8 17.3 5.5 17.3 5.6 14.4 5.5 11.6 5.6 8.8 5.8 6.5 6.6 4.2 8.3 2.7L8.3 2.7Z"></path></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" id="acad-instagram" viewBox="0 0 55 55"><defs><polygon points="0 54.3 54.2 54.3 54.2 0.1 0 0.1"></polygon></defs><g transform="translate(-929 -3027)translate(181 3027)translate(731.4 0)translate(17 0)"><mask><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path-1"></use></mask><path d="M27.1 0.1C19.8 0.1 18.8 0.1 15.9 0.2 13 0.4 11.1 0.8 9.4 1.5 7.6 2.2 6.1 3.1 4.6 4.6 3 6.1 2.1 7.7 1.4 9.4 0.8 11.2 0.3 13.1 0.2 16 0 18.9 0 19.8 0 27.2 0 34.6 0 35.5 0.2 38.4 0.3 41.3 0.8 43.2 1.4 45 2.1 46.7 3 48.3 4.6 49.8 6.1 51.3 7.6 52.2 9.4 52.9 11.1 53.6 13 54 15.9 54.2 18.8 54.3 19.8 54.3 27.1 54.3 34.5 54.3 35.4 54.3 38.3 54.2 41.2 54 43.2 53.6 44.9 52.9 46.7 52.2 48.2 51.3 49.7 49.8 51.2 48.3 52.1 46.7 52.8 45 53.5 43.2 53.9 41.3 54.1 38.4 54.2 35.5 54.2 34.6 54.2 27.2 54.2 19.8 54.2 18.9 54.1 16 53.9 13.1 53.5 11.2 52.8 9.4 52.1 7.7 51.2 6.1 49.7 4.6 48.2 3.1 46.7 2.2 44.9 1.5 43.2 0.8 41.2 0.4 38.3 0.2 35.4 0.1 34.5 0.1 27.1 0.1M27.1 5C34.4 5 35.2 5 38.1 5.1 40.7 5.2 42.2 5.7 43.1 6.1 44.4 6.6 45.3 7.1 46.2 8.1 47.2 9 47.8 9.9 48.3 11.2 48.6 12.2 49.1 13.6 49.2 16.2 49.3 19.1 49.3 20 49.3 27.2 49.3 34.4 49.3 35.3 49.2 38.2 49.1 40.8 48.6 42.2 48.3 43.2 47.8 44.5 47.2 45.4 46.2 46.3 45.3 47.3 44.4 47.8 43.1 48.3 42.2 48.7 40.7 49.2 38.1 49.3 35.2 49.4 34.4 49.4 27.1 49.4 19.9 49.4 19 49.4 16.2 49.3 13.5 49.2 12.1 48.7 11.1 48.3 9.9 47.8 9 47.3 8 46.3 7.1 45.4 6.5 44.5 6 43.2 5.6 42.2 5.2 40.8 5 38.2 4.9 35.3 4.9 34.4 4.9 27.2 4.9 20 4.9 19.1 5 16.2 5.2 13.6 5.6 12.2 6 11.2 6.5 9.9 7.1 9 8 8.1 9 7.1 9.9 6.6 11.1 6.1 12.1 5.7 13.5 5.2 16.2 5.1 19 5 19.9 5 27.1 5" mask="url(#mask-2)"></path><path d="M27.1 36.2C22.1 36.2 18.1 32.2 18.1 27.2 18.1 22.2 22.1 18.2 27.1 18.2 32.1 18.2 36.2 22.2 36.2 27.2 36.2 32.2 32.1 36.2 27.1 36.2M27.1 13.3C19.4 13.3 13.2 19.5 13.2 27.2 13.2 34.9 19.4 41.1 27.1 41.1 34.8 41.1 41 34.9 41 27.2 41 19.5 34.8 13.3 27.1 13.3"></path><path d="M44.8 12.7C44.8 14.5 43.4 16 41.6 16 39.8 16 38.3 14.5 38.3 12.7 38.3 10.9 39.8 9.5 41.6 9.5 43.4 9.5 44.8 10.9 44.8 12.7"></path></g></svg>
+            <!--end Instagram Icon-->
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="54" id="acad-medium" viewBox="0 0 64 54"><g transform="translate(-734 -3029)translate(181 3027)translate(550.8 2)translate(3 0)"><path d="M62.9 9.7C62.9 9.7 62.8 9.7 62.8 9.7L62.8 9.7 43.8 0.2C43.7 0.1 43.5 0.1 43.4 0.1 43.2 0 43 0 42.9 0 42.1 0 41.4 0.4 41 1L30.1 18.7 43.8 40.9 62.9 10C63 9.9 63 9.8 62.9 9.7"></path><polyline points="24 14.7 24 34.8 42 43.8 24 14.7"></polyline><path d="M44.7 45.1L59.6 52.5C61.5 53.4 63.1 52.8 63.1 51L63.1 15.5 44.7 45.1"></path><path d="M20.9 9.7L2.3 0.5C2 0.3 1.7 0.3 1.4 0.3 0.6 0.3 0 0.9 0 1.9L0 41.8C0 42.9 0.8 44.1 1.7 44.6L18.1 52.8C18.5 53 18.9 53.1 19.3 53.1 20.3 53.1 21 52.3 21 51L21 9.9C21 9.8 21 9.8 20.9 9.7"></path></g></svg>
+            <!--end Medium Icon-->
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="45" id="acad-soundcloud" viewBox="0 0 94 45"><path d="M4.5 23.1C4.3 23.1 4.2 23.3 4.1 23.6L3.2 32.8 4.1 41.8C4.2 42 4.3 42.2 4.5 42.2 4.7 42.2 4.9 42 4.9 41.8L6 32.8 4.9 23.6C4.9 23.3 4.7 23.1 4.5 23.1L4.5 23.1Z"></path><path d="M1.1 26.7C0.9 26.7 0.7 26.8 0.7 27.1L0 32.8 0.7 38.4C0.7 38.6 0.9 38.8 1.1 38.8 1.2 38.8 1.4 38.6 1.4 38.4L2.2 32.8 1.4 27.1C1.4 26.8 1.2 26.7 1.1 26.7L1.1 26.7Z"></path><path d="M8.2 21.3C8 21.3 7.8 21.5 7.7 21.8L6.9 32.8 7.7 43.3C7.8 43.6 8 43.8 8.2 43.8 8.4 43.8 8.6 43.6 8.7 43.3L9.7 32.8 8.7 21.8C8.6 21.5 8.4 21.3 8.2 21.3L8.2 21.3Z"></path><path d="M11.9 20.9C11.6 20.9 11.4 21.2 11.4 21.5L10.5 32.8 11.4 43.6C11.4 44 11.6 44.2 11.9 44.2 12.2 44.2 12.4 44 12.5 43.6L13.4 32.8 12.5 21.5C12.4 21.2 12.2 20.9 11.9 20.9L11.9 20.9Z"></path><path d="M16.3 22.4C16.2 22 16 21.7 15.6 21.7 15.3 21.7 15 22 15 22.4L14.2 32.8 15 43.7C15 44.1 15.3 44.4 15.6 44.4 16 44.4 16.2 44.1 16.3 43.7L17.2 32.8 16.3 22.4Z"></path><path d="M19.4 15.1C19 15.1 18.7 15.4 18.7 15.8L18 32.8 18.7 43.7C18.7 44.1 19 44.5 19.4 44.5 19.8 44.5 20.1 44.1 20.1 43.7L20.9 32.8 20.1 15.8C20.1 15.4 19.8 15.1 19.4 15.1L19.4 15.1Z"></path><path d="M23.2 11.2C22.7 11.2 22.4 11.5 22.4 12 22.4 12 21.7 32.8 21.7 32.8L22.4 43.7C22.4 44.2 22.7 44.6 23.2 44.6 23.6 44.6 23.9 44.2 23.9 43.7L23.9 43.7 24.7 32.8 23.9 12C23.9 11.5 23.6 11.2 23.2 11.2L23.2 11.2Z"></path><path d="M27 9.3C26.6 9.3 26.2 9.7 26.2 10.2L25.5 32.8 26.2 43.5C26.2 44.1 26.6 44.5 27 44.5 27.5 44.5 27.9 44.1 27.9 43.5L27.9 43.5 28.6 32.8 27.9 10.2C27.9 9.7 27.5 9.3 27 9.3L27 9.3Z"></path><path d="M31.8 9.5C31.8 8.9 31.4 8.4 30.9 8.4 30.4 8.4 30 8.9 29.9 9.5L29.4 32.8 29.9 43.5C30 44 30.4 44.5 30.9 44.5 31.4 44.5 31.8 44 31.8 43.5L32.5 32.8 31.8 9.5Z"></path><path d="M34.8 8.9C34.2 8.9 33.8 9.4 33.8 10.1L33.2 32.8 33.8 43.4C33.8 44 34.2 44.5 34.8 44.5 35.3 44.5 35.8 44 35.8 43.4L35.8 43.4 36.4 32.8 35.8 10.1C35.8 9.4 35.3 8.9 34.8 8.9L34.8 8.9Z"></path><path d="M38.7 9.7C38.1 9.7 37.6 10.2 37.6 10.9L37.1 32.8 37.6 43.3C37.6 44 38.1 44.5 38.7 44.5 39.3 44.5 39.8 44 39.8 43.3L39.8 43.3 40.4 32.8 39.8 10.9C39.8 10.2 39.3 9.7 38.7 9.7L38.7 9.7Z"></path><path d="M43.3 5.7C43.1 5.5 42.9 5.4 42.7 5.4 42.4 5.4 42.2 5.5 42 5.7 41.7 5.9 41.5 6.3 41.5 6.7L41.5 7 41 32.8C41 32.8 41.5 43.2 41.5 43.2L41.5 43.3C41.5 43.6 41.6 43.8 41.7 44.1 42 44.3 42.3 44.5 42.7 44.5 43 44.5 43.3 44.4 43.5 44.2 43.7 43.9 43.8 43.6 43.8 43.2L43.9 42.2 44.3 32.8 43.8 6.7C43.8 6.3 43.6 5.9 43.3 5.7L43.3 5.7Z"></path><path d="M47.2 3.2C47 3.1 46.8 3 46.6 3 46.3 3 46 3.1 45.8 3.3 45.5 3.6 45.3 4 45.3 4.4L45.3 4.5 44.8 32.8 45.1 38 45.3 43.1C45.3 43.8 45.9 44.5 46.6 44.5 47.3 44.5 47.8 43.8 47.9 43.1L47.9 43.1 48.4 32.8 47.9 4.4C47.8 3.9 47.6 3.4 47.2 3.2L47.2 3.2Z"></path><path d="M82.1 19.3C80.5 19.3 79 19.7 77.6 20.3 76.7 9 68 0 57.4 0 54.8 0 52.3 0.6 50 1.5 49.2 1.9 48.9 2.3 48.9 3L48.9 43C48.9 43.8 49.5 44.4 50.2 44.5 50.2 44.5 82.1 44.5 82.1 44.5 88.5 44.5 93.6 38.9 93.6 31.9 93.6 25 88.5 19.3 82.1 19.3L82.1 19.3Z"></path></svg>
+            <!--end SoundCloud Icon-->
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="47" id="acad-twitter" viewBox="0 0 57 47"><path d="M56.7 6.4C54.6 7.3 52.4 8 50 8.2 52.4 6.8 54.2 4.5 55.1 1.8 52.9 3.1 50.4 4.1 47.7 4.6 45.6 2.4 42.6 1 39.2 1 32.8 1 27.6 6.2 27.6 12.6 27.6 13.5 27.7 14.4 27.9 15.2 18.3 14.7 9.7 10.1 4 3.1 3 4.8 2.4 6.8 2.4 8.9 2.4 13 4.4 16.5 7.6 18.6 5.7 18.5 3.9 18 2.3 17.1 2.3 17.2 2.3 17.2 2.3 17.3 2.3 22.9 6.3 27.6 11.6 28.7 10.6 29 9.6 29.1 8.6 29.1 7.8 29.1 7.1 29 6.4 28.9 7.9 33.5 12.1 36.9 17.2 37 13.3 40.1 8.2 41.9 2.8 41.9 1.9 41.9 0.9 41.9 0 41.8 5.2 45.1 11.3 47 17.8 47 39.2 47 50.9 29.3 50.9 13.9 50.9 13.4 50.9 12.9 50.9 12.4 53.1 10.8 55.1 8.7 56.7 6.4"></path></svg>
+            <!--end Twitter Icon-->
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="48" id="acad-youtube" viewBox="0 0 68 48"><defs><polygon points="0 47.3 66.8 47.3 66.8 0 0 0"></polygon></defs><g transform="translate(-354 -3033)translate(181 3027)translate(169.6 6)translate(4 0)"><mask><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path-1"></use></mask><polyline mask="url(#mask-2)" points="42.4 24.1 26.5 13.5 44.6 23 42.4 24.1"></polyline><path d="M26.5 32.4L26.5 13.5 44.6 23 26.5 32.4 26.5 32.4ZM66.2 10.2C66.2 10.2 65.5 5.6 63.5 3.6 61 0.9 58.1 0.9 56.8 0.7 47.5 0 33.4 0 33.4 0L33.4 0C33.4 0 19.4 0 10 0.7 8.7 0.9 5.9 0.9 3.3 3.6 1.3 5.6 0.7 10.2 0.7 10.2 0.7 10.2 0 15.7 0 21.1L0 26.2C0 31.7 0.7 37.1 0.7 37.1 0.7 37.1 1.3 41.7 3.3 43.8 5.9 46.4 9.2 46.4 10.7 46.6 16 47.2 33.4 47.3 33.4 47.3 33.4 47.3 47.5 47.3 56.8 46.6 58.1 46.5 61 46.4 63.5 43.8 65.5 41.7 66.2 37.1 66.2 37.1 66.2 37.1 66.8 31.7 66.8 26.2L66.8 21.1C66.8 15.7 66.2 10.2 66.2 10.2L66.2 10.2Z" mask="url(#mask-2)"></path></g></svg>
+            <!--end YouTube Icon-->
+
+            <svg xmlns="http://www.w3.org/2000/svg" id="gel-icon-collection" viewBox="0 0 32 32"><title>  Collection Icon</title><desc>  Created with Sketch.</desc><g><g><g transform="translate(-402 -1065)translate(69 231.984375)translate(0 718)translate(318 0.285295)translate(15 115.019417)"><polygon points="4.3 25.5 11 25.5 25.5 25.5 25.5 4.3 27.5 4.3 27.5 27.5 4.3 27.5"></polygon><polygon points="8.2 31.3 8.2 29.4 29.4 29.4 29.4 8.2 31.3 8.2 31.3 31.3"></polygon><polygon points="0.4 23.6 23.6 23.6 23.6 0.4 0.4 0.4"></polygon></g></g></g></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" id="acad-logo" viewBox="0 0 228 37"><title>  ACADEMY</title><desc>  Created with Sketch.</desc><g fill="none"><g fill="#FFF"><path d="M15.1 0.8L18.6 0.8 34.4 36.2 29.2 36.2 24.5 25.8 9.6 25.8 5.2 36.2 0 36.2 15.1 0.8ZM22.5 21.3L16.8 8.6 11.5 21.3 22.5 21.3ZM64.4 28L64.4 33.6C60.7 35.6 56.5 36.6 51.6 36.6 47.7 36.6 44.4 35.8 41.6 34.2 38.9 32.6 36.7 30.5 35.1 27.7 33.6 24.9 32.8 21.9 32.8 18.7 32.8 13.6 34.6 9.3 38.2 5.8 41.9 2.3 46.4 0.6 51.7 0.6 55.4 0.6 59.5 1.6 64 3.5L64 8.9C59.9 6.5 55.9 5.4 52 5.4 48 5.4 44.6 6.6 42 9.2 39.3 11.7 38 14.9 38 18.7 38 22.6 39.3 25.8 41.9 28.2 44.5 30.7 47.9 32 51.9 32 56.2 32 60.3 30.7 64.4 28L64.4 28ZM81 0.8L84.5 0.8 100.3 36.2 95.1 36.2 90.4 25.8 75.5 25.8 71.1 36.2 65.9 36.2 81 0.8ZM88.4 21.3L82.7 8.6 77.4 21.3 88.4 21.3ZM102.1 36.1L102.1 1 113.9 1C118.7 1 122.5 1.8 125.3 3.2 128.1 4.6 130.3 6.7 131.9 9.5 133.6 12.3 134.4 15.3 134.4 18.6 134.4 21 133.9 23.2 133 25.4 132.1 27.5 130.8 29.4 129.1 31 127.4 32.7 125.4 34 123.2 34.8 121.9 35.3 120.6 35.7 119.5 35.9 118.4 36 116.3 36.1 113.2 36.1L102.1 36.1ZM113.4 5.5L107.1 5.5 107.1 31.7 113.5 31.7C116.1 31.7 118 31.5 119.4 31.1 120.8 30.8 122 30.4 122.9 29.8 123.8 29.3 124.7 28.7 125.4 27.9 127.9 25.4 129.2 22.2 129.2 18.4 129.2 14.6 127.9 11.5 125.3 9.1 124.4 8.2 123.3 7.5 122.1 6.9 120.9 6.4 119.7 6 118.7 5.8 117.6 5.6 115.8 5.5 113.4 5.5L113.4 5.5ZM138.6 1L158.5 1 158.5 5.5 143.6 5.5 143.6 16.2 158 16.2 158 20.7 143.6 20.7 143.6 31.7 159 31.7 159 36.1 138.6 36.1 138.6 1ZM190.2 1L194.9 1 194.9 36.2 189.8 36.2 189.8 8.8 179 22.4 178.1 22.4 167.1 8.8 167.1 36.2 162.1 36.2 162.1 1 166.8 1 178.5 15.5 190.2 1ZM221.5 1L227.6 1 214.6 17.6 214.6 36.2 209.4 36.2 209.4 17.6 196.5 1 202.5 1 211.9 13.2 221.5 1Z"></path></g></g></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" id="gel-icon-world" width="15" height="14" viewBox="0 0 15 14"><g><g><path d="M6.2 2.4L6.7 2.2 6.6 2.2 6.6 2.1 6.6 1.9 6.7 1.7 6.4 1.8 6.4 2 6.3 2.1 6.3 2.2 6.2 2.4ZM6 2.3L6.2 2.2 6.3 1.9 6 2.1 6 2.3ZM3.1 9.1C3.2 8.8 3.4 8.5 3.4 8.2 3.4 8.1 3.5 8.1 3.5 8.1 3.5 8 3.5 7.9 3.6 7.9 3.6 7.8 3.6 7.8 3.6 7.7 3.6 7.7 3.5 7.6 3.5 7.6 3.5 7.6 3.5 7.5 3.5 7.5 3.5 7.5 3.4 7.4 3.3 7.4L2.3 6.4 1.9 5.7C1.9 5.7 1.9 5.7 1.9 5.7 2.5 3.1 4.8 1.2 7.5 1.2 7.8 1.2 8.1 1.3 8.4 1.3L7.6 1.6C7.5 1.6 7.5 1.6 7.4 1.6 7.4 1.7 7.4 1.7 7.3 1.7 7.2 1.8 7.1 1.8 7.1 1.9 7.2 1.9 7.2 2 7.3 2 7.3 2 7.3 2 7.4 2 7.4 2.1 7.4 2.1 7.4 2.1L7.2 2.1 7.2 2.2C7.1 2.2 7.1 2.2 7.1 2.2 6.8 2.3 7 2.4 6.7 2.5 6.7 2.5 6.2 2.5 6.2 2.5L6.1 2.8C6.1 2.8 5.4 2.6 5.4 3.1 5.4 3.1 5.3 3.2 5.4 3.3 5.6 3.4 5.9 3.4 6.2 3.3 6.2 3.3 6.3 3.1 6.4 3.1 6.4 3.1 6.5 3.1 6.5 3.1 6.5 3 6.6 3 6.6 2.9 6.7 2.9 6.7 2.9 6.8 2.9 6.8 2.9 6.9 2.9 6.9 2.9 7 2.9 7.1 2.8 7.1 2.8L7.6 3.5 7.8 3.4 7.5 2.8 8.1 3.3 8.3 3.1C8.3 3.1 9 3.3 9.2 3.5 9.5 3.7 8.7 3.9 8.7 3.9 8.7 3.9 8.2 3.8 8.1 3.8 8.1 3.8 7.9 3.9 7.9 3.9 7.9 3.9 7.9 4 7.9 4 7.9 4 6.7 3.5 6.7 3.5 6.7 3.5 5 4.2 4.9 4.2 4.8 4.3 4.8 4.3 4.7 4.3 4.4 4.6 4.3 5 4.2 5.5 4.2 5.5 4.1 5.5 4.1 5.5 4.1 5.5 4.1 5.6 4.1 5.6 4.1 5.6 4.1 5.7 4.1 5.7 4.1 5.7 4.1 5.8 4.1 5.8 4.1 5.8 4.1 5.8 4.1 5.8 4.1 5.8 4.2 5.8 4.2 5.8 4.2 5.9 4.3 6.1 4.3 6.1 4.5 6.8 5.3 6.8 5.9 6.5 5.9 6.5 6 6.5 6 6.5 6.1 6.5 6.1 6.5 6.2 6.5 6.3 6.5 6.3 6.5 6.3 6.5 6.3 6.5 6.3 6.5 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.6 6.4 6.7 6.4 6.7 6.5 6.7 6.5 6.7 6.6 6.7 6.7 6.7 6.8 6.7 6.8 6.8 6.9 7.1 6.7 7.3 7 7.5 7 7.5 7 7.6 7 7.6 7.1 7.6 7.1 7.7 7.1 7.7 7.2 7.8 7.2 8 7.3 8.1 7.3 8.2 7.3 8.3 7.3 8.3 7.3 8.3 7.3 8.4 7.3 8.4 7.3 8.5 7.3 8.5 7.3 8.5 7.2 8.7 7.1 8.9 7.1 9.1 7.2 9.4 7.5 9.7 7.5 10.1L7.5 10.1C7.5 10.1 7.5 10.2 7.5 10.2 7.5 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.2 7.6 10.3 7.6 10.3 7.7 10.4 7.7 10.4 7.7 10.4 7.7 10.5 7.8 10.5 7.8 10.6 7.8 10.6 7.8 10.6 7.8 10.6 7.8 10.6 7.8 10.7 7.8 10.7 7.8 10.7 7.8 10.7 7.8 10.7 7.8 10.7 7.8 10.8 7.8 10.8 7.8 10.8 7.9 10.8 7.9 10.8 7.9 10.8 7.9 10.9 8 10.9 8 10.9 8.1 10.9 8.1 10.9 8.1 10.9 8.1 10.8 8.1 10.8 8.1 10.8 8.2 10.8 8.2 10.8 8.2 10.8 8.3 10.8 8.5 10.8L9.9 9C9.9 8.9 9.9 8.9 10 8.9 10.1 8.6 10.2 8.3 10.2 8 10.2 8 10.1 7.9 10.1 7.9 10 7.3 10.5 7 11 6.7 11 6.7 11 6.7 11 6.6 11.1 6.5 11.1 6.4 11.2 6.3 11.2 6.2 11.2 6.2 11.2 6.1 11.3 6.1 11.3 6 11.3 5.9 11.1 6 10.9 5.9 10.8 6 10.7 6 10.7 6 10.7 6 10.7 6 10.6 6 10.6 5.9 10.6 5.9 10.5 5.9 10.4 5.9 10.4 5.8 10.3 5.8 10.3 5.7 10.3 5.7 10.2 5.6 10.2 5.6 10.2 5.6 10.1 5.5 10.1 5.5 10 5.3 9.9 5.2 9.8 5.1 9.7 4.9 9.6 4.7 9.5 4.5 9.5 4.5 9.4 4.5 9.4 4.4 9.4 4.4 9.3 4.4 9.3 4.3 9.2 4.3 9.2 4.2 9.2 4.2 9.2 4.2 9.2 4.1 9.2 4.1 9.4 4 9.3 4.3 9.4 4.3 9.5 4.3 9.5 4.3 9.5 4.4 9.6 4.4 9.6 4.4 9.6 4.5 9.7 4.5 9.7 4.6 9.7 4.6 9.9 4.8 10 5 10.2 5.2 10.2 5.2 10.2 5.2 10.2 5.3 10.2 5.3 10.3 5.3 10.3 5.4 10.4 5.9 10.9 5.6 11.2 5.5 11.4 5.4 11.6 5.4 11.6 5.2 11.7 4.8 11.3 4.7 11 4.5L10.4 4C10.6 4 10.7 4.1 10.8 4.2 10.9 4.2 10.9 4.2 11 4.2 11.3 4.3 11.5 4.5 11.9 4.4 11.9 4.4 12 4.5 12 4.5 12 4.6 12 4.6 12 4.7 12 4.7 12 4.8 12 4.8 12.1 4.8 12.1 4.7 12.1 4.7 12.1 4.6 12.2 4.6 12.2 4.5 12.3 4.3 12.3 4 12.2 3.7 12.9 4.6 13.3 5.8 13.3 7 13.3 10.2 10.7 12.8 7.5 12.8 6.3 12.8 5.1 12.4 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.2 11.7 4.1 11.7 4.1 11.7 4.1 11.7 4.1 11.7 4.1 11.6 3.8 11.4 3.5 11.2 3.3 10.9 3.3 10.9 3.3 10.9 3.2 10.9 3.2 10.9 3.2 10.8 3.2 10.8 3.2 10.8 3.2 10.8 3.2 10.8 3.2 10.8 3.1 10.8 3.1 10.7L3.1 9.1ZM7.5 0C3.6 0 0.5 3.1 0.5 7 0.5 10.9 3.6 14 7.5 14 11.4 14 14.5 10.9 14.5 7 14.5 3.1 11.4 0 7.5 0L7.5 0ZM11.4 8.4L11.3 8.3 11.1 8.3 11 8.4 11 8.4 10.7 8.8 10.5 8.9 10.4 9 10.4 9 10.4 9.1 10.4 9.4 10.3 9.7 10.3 9.8 10.2 9.9 10.3 10 10.4 10.1 10.5 10.1 10.7 10 10.7 9.7 11.1 9 11.2 8.6 11.2 8.6 11.2 8.5 11.2 8.5C11.2 8.5 11.3 8.5 11.3 8.4L11.4 8.5 11.4 8.4ZM6.4 2.1C6.4 2 6.4 2 6.4 2 6.4 2 6.4 2 6.4 2.1L6.4 2.1Z"></path></g></g></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="gel-icon-label"><path d="M12.888.102L0 .08v12.75l19.252 19.09L31.98 19.194 12.888.104zm-5.734 9.56a2.52 2.52 0 0 1 0-5.042 2.52 2.52 0 1 1 0 5.04z" id="baLayer_2"></path></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="gel-icon-sign-in-nav"><g><path d="M1 1v30h30V1H1zm19.8 22.6L19.5 21h-7l-1.4 2.6C8.7 22 7 19.2 7 16c0-5 4-9 9-9s9 4 9 9c0 3.2-1.7 6-4.2 7.6z"></path><circle cx="16" cy="16" r="3.5"></circle></g></svg>
+        </div>
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Modules</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="modules_-_a-z_filter.html">A-Z Filter</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_accordion.html">Accordion</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="modules_-_article.html">Article</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_tags.html">Tags</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_back_to_top.html">Back to top</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_cards.html">Cards</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_collections.html">Collections</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_content_block.html">Content block</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_dates.html">Dates</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_dropdown.html">Dropdown</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_error_page.html">Error page</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_featured.html">Featured</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_header.html">Header</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_hero.html">Hero</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_herousel.html">Herousel</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_language.html">Language</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_pocket.html">Pocket</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_scroll_carousel.html">Scroll Carousel</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_search.html">Search</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_social.html">Social</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="modules_-_sort_by.html">Sort by</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="modules_-_tabs.html">Tabs</a></li>
+              
+            
+          
+          </ul>
+        
+          <h3>Core</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_colours.html">Colours</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="core_-_alerts.html">Alerts</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_links.html">Links</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="core_-_buttons.html">Buttons</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_icons.html">Icons</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_divider.html">Divider</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_grid.html">Grid</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_logo.html">Logo</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="core_-_lists.html">Lists</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_code.html">Code</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="core_-_table.html">Table</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>BBC Academy Styleguide - Article</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#Article">Article</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="Article" class="styleguide">Article</h1>
+
+<p>Example of an article with content</p>
+</div><div class="codeExample"><div class="exampleOutput">
+<article class="article">
+<header>
+<h1 class="page-title">Digital Season 2 - Belfast livestream</h1>
+
+<span class="card__flag mb">INTERNAL</span>
+
+<div class="data--article">
+    <div class="data__type">
+        <div class="data__icon">
+            <span class="data__icon__svg">
+                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-document"></use></svg>
+                    <noscript>&lt;img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-document-grey.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-document-grey.png" alt="media icon"/><![endif]-->
+            </span>
+        </div>
+
+            <p class="data__copy">Article</p>
+    </div>
+    <div class="data__type">
+        <div class="data__icon">
+            <span class="data__icon__svg">
+                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-duration"></use></svg>
+                <noscript>&lt;img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-date-grey.png" alt="date icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-date-grey.png" alt="date icon"/><![endif]-->
+            </span>
+        </div>
+        <p class="data__copy">22 Mar 2017</p>
+    </div>
+    <div class="data__type--block">
+    </div>
+</div>
+<p class="article__content">A special Masterclass session about how technical innovations can be used in storytelling.</p>
+</header>
+<section class="article__body">
+    <div class="article__media">
+        <figure class="article__figure">
+            <img src="https://ichef.bbc.co.uk/images/ic/832x468/p04x5c8s.jpg" alt="Digital Season 2 - Belfast livestream" onerror="this.style.display='none'" class="is-loaded">
+        </figure>
+    </div>
+<!--./ end hero feature -->
+
+<div class="article__content">
+    <p><strong>Masterclass “Have I Got News For You… Now”. Thursday 23 March. Live Streaming from 12pm -1pm</strong></p>
+<p>An insight into how broadcasters are pushing the boundaries of storytelling using technical innovations. How are they keeping up with the changing ways audiences are consuming factual content and how are they meeting the technical challenges?&nbsp; Hear from some of the industry leaders in news storytelling as they talk about their plans for a totally digital future.&nbsp; There will be a Q&amp;A session afterwards</p>
+<p>Hosted by award-winning BBC TV reporter <strong>Mark Simpson</strong>, the panel includes <strong>Ryan Broderick</strong>, Deputy Global News Director, Buzzfeed and <strong>Oliver Thereaux</strong>, Executive Producer, BBC R&amp;D&nbsp;&nbsp;&nbsp;</p>
+
+</div>
+<!--end article content-->
+
+</section>
+
+</article>
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"article"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;header&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"page-title"</span><span class="nt">&gt;</span>Digital Season 2 - Belfast livestream<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card__flag mb"</span><span class="nt">&gt;</span>INTERNAL<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"data--article"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"data__type"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"data__icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data__icon__svg"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;svg&gt;&lt;use</span> <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span> <span class="na">xlink:href=</span><span class="s">"#gel-icon-document"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+                    <span class="nt">&lt;noscript&gt;</span><span class="ni">&amp;lt;</span>img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-document-grey.png"  alt="media icon"/<span class="ni">&amp;gt;</span><span class="nt">&lt;/noscript&gt;</span><span class="c">&lt;!--[if lt IE 9]&gt;&lt;img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-document-grey.png" alt="media icon"/&gt;&lt;![endif]--&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"data__copy"</span><span class="nt">&gt;</span>Article<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"data__type"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"data__icon"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data__icon__svg"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;svg&gt;&lt;use</span> <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span> <span class="na">xlink:href=</span><span class="s">"#gel-icon-duration"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+                <span class="nt">&lt;noscript&gt;</span><span class="ni">&amp;lt;</span>img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-date-grey.png" alt="date icon"/<span class="ni">&amp;gt;</span><span class="nt">&lt;/noscript&gt;</span><span class="c">&lt;!--[if lt IE 9]&gt;&lt;img class="icon__falback" src="/academy/beta/static/img/svg-fallbacks/gel-icon-date-grey.png" alt="date icon"/&gt;&lt;![endif]--&gt;</span>
+            <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"data__copy"</span><span class="nt">&gt;</span>22 Mar 2017<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"data__type--block"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"article__content"</span><span class="nt">&gt;</span>A special Masterclass session about how technical innovations can be used in storytelling.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"article__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"article__media"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"article__figure"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://ichef.bbc.co.uk/images/ic/832x468/p04x5c8s.jpg"</span> <span class="na">alt=</span><span class="s">"Digital Season 2 - Belfast livestream"</span> <span class="na">onerror=</span><span class="s">"this.style.display='none'"</span> <span class="na">class=</span><span class="s">"is-loaded"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!--./ end hero feature --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"article__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Masterclass “Have I Got News For You… Now”. Thursday 23 March. Live Streaming from 12pm -1pm<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>An insight into how broadcasters are pushing the boundaries of storytelling using technical innovations. How are they keeping up with the changing ways audiences are consuming factual content and how are they meeting the technical challenges?<span class="ni">&amp;nbsp;</span> Hear from some of the industry leaders in news storytelling as they talk about their plans for a totally digital future.<span class="ni">&amp;nbsp;</span> There will be a Q<span class="ni">&amp;amp;</span>A session afterwards<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Hosted by award-winning BBC TV reporter <span class="nt">&lt;strong&gt;</span>Mark Simpson<span class="nt">&lt;/strong&gt;</span>, the panel includes <span class="nt">&lt;strong&gt;</span>Ryan Broderick<span class="nt">&lt;/strong&gt;</span>, Deputy Global News Director, Buzzfeed and <span class="nt">&lt;strong&gt;</span>Oliver Thereaux<span class="nt">&lt;/strong&gt;</span>, Executive Producer, BBC R<span class="ni">&amp;amp;</span>D<span class="ni">&amp;nbsp;&amp;nbsp;&amp;nbsp;</span><span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!--end article content--&gt;</span>
+
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;/article&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<p>NUNJUKS</p>
+</div><div class="codeBlock"><div class="highlight"><pre>
+</pre></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love for <a href="http://www.bbc.co.uk/academy">BBC Academy</a> !
+    </footer>  
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
+
+  <script src="./theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="./theme-build/js/main.js"></script>
+  <script type="text/javascript">
+
+    angular.module("cortana").controller("TypeaheadCtrl", function($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "A-Z Filter",
+              "breadcrumb": "Modules - A-Z Filter > A-Z Filter",
+              "path": "modules_-_a-z_filter.html#A-Z_Filter"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "A - Brand colours",
+              "breadcrumb": "Core - Colours > A - Brand colours",
+              "path": "core_-_colours.html#A_-_Brand_colours"
+              },
+            
+              
+              
+              {
+              "title": "B - Shades",
+              "breadcrumb": "Core - Colours > B - Shades",
+              "path": "core_-_colours.html#B_-_Shades"
+              },
+            
+              
+              
+              {
+              "title": "C - Alerts",
+              "breadcrumb": "Core - Colours > C - Alerts",
+              "path": "core_-_colours.html#C_-_Alerts"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Accordion",
+              "breadcrumb": "Modules - Accordion > Accordion",
+              "path": "modules_-_accordion.html#Accordion"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Address",
+              "breadcrumb": "Core - Typography > Address",
+              "path": "core_-_typography.html#Address"
+              },
+            
+              
+              
+              {
+              "title": "Blockquote",
+              "breadcrumb": "Core - Typography > Blockquote",
+              "path": "core_-_typography.html#Blockquote"
+              },
+            
+              
+              
+              {
+              "title": "Description",
+              "breadcrumb": "Core - Typography > Description",
+              "path": "core_-_typography.html#Description"
+              },
+            
+              
+              
+              {
+              "title": "Headings",
+              "breadcrumb": "Core - Typography > Headings",
+              "path": "core_-_typography.html#Headings"
+              },
+            
+              
+              
+              {
+              "title": "Paragraph",
+              "breadcrumb": "Core - Typography > Paragraph",
+              "path": "core_-_typography.html#Paragraph"
+              },
+            
+              
+              
+              {
+              "title": "Small",
+              "breadcrumb": "Core - Typography > Small",
+              "path": "core_-_typography.html#Small"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Alert",
+              "breadcrumb": "Core - Alerts > Alert",
+              "path": "core_-_alerts.html#Alert"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Article",
+              "breadcrumb": "Modules - Article > Article",
+              "path": "modules_-_article.html#Article"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Article tags",
+              "breadcrumb": "Modules - Tags > Article tags",
+              "path": "modules_-_tags.html#Article_tags"
+              },
+            
+              
+              
+              {
+              "title": "Tag page",
+              "breadcrumb": "Modules - Tags > Tag page",
+              "path": "modules_-_tags.html#Tag_page"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Back to top",
+              "breadcrumb": "Modules - Back to top > Back to top",
+              "path": "modules_-_back_to_top.html#Back_to_top"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Blue link",
+              "breadcrumb": "Core - Links > Blue link",
+              "path": "core_-_links.html#Blue_link"
+              },
+            
+              
+              
+              {
+              "title": "External link",
+              "breadcrumb": "Core - Links > External link",
+              "path": "core_-_links.html#External_link"
+              },
+            
+              
+              
+              {
+              "title": "Standard link",
+              "breadcrumb": "Core - Links > Standard link",
+              "path": "core_-_links.html#Standard_link"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Burger menu",
+              "breadcrumb": "Core - Buttons > Burger menu",
+              "path": "core_-_buttons.html#Burger_menu"
+              },
+            
+              
+              
+              {
+              "title": "Loadmore button",
+              "breadcrumb": "Core - Buttons > Loadmore button",
+              "path": "core_-_buttons.html#Loadmore_button"
+              },
+            
+              
+              
+              {
+              "title": "Orange button",
+              "breadcrumb": "Core - Buttons > Orange button",
+              "path": "core_-_buttons.html#Orange_button"
+              },
+            
+              
+              
+              {
+              "title": "Primary button",
+              "breadcrumb": "Core - Buttons > Primary button",
+              "path": "core_-_buttons.html#Primary_button"
+              },
+            
+              
+              
+              {
+              "title": "Take Course button",
+              "breadcrumb": "Core - Buttons > Take Course button",
+              "path": "core_-_buttons.html#Take_Course_button"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Card",
+              "breadcrumb": "Modules - Cards > Card",
+              "path": "modules_-_cards.html#Card"
+              },
+            
+              
+              
+              {
+              "title": "Card--collections",
+              "breadcrumb": "Modules - Cards > Card--collections",
+              "path": "modules_-_cards.html#Card--collections"
+              },
+            
+              
+              
+              {
+              "title": "Card--featured",
+              "breadcrumb": "Modules - Cards > Card--featured",
+              "path": "modules_-_cards.html#Card--featured"
+              },
+            
+              
+              
+              {
+              "title": "Card--panel",
+              "breadcrumb": "Modules - Cards > Card--panel",
+              "path": "modules_-_cards.html#Card--panel"
+              },
+            
+              
+              
+              {
+              "title": "Card--placeholder",
+              "breadcrumb": "Modules - Cards > Card--placeholder",
+              "path": "modules_-_cards.html#Card--placeholder"
+              },
+            
+              
+              
+              {
+              "title": "Card--result",
+              "breadcrumb": "Modules - Cards > Card--result",
+              "path": "modules_-_cards.html#Card--result"
+              },
+            
+              
+              
+              {
+              "title": "Card--sub",
+              "breadcrumb": "Modules - Cards > Card--sub",
+              "path": "modules_-_cards.html#Card--sub"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Collections",
+              "breadcrumb": "Modules - Collections > Collections",
+              "path": "modules_-_collections.html#Collections"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Content block",
+              "breadcrumb": "Modules - Content block > Content block",
+              "path": "modules_-_content_block.html#Content_block"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Core icons",
+              "breadcrumb": "Core - Icons > Core icons",
+              "path": "core_-_icons.html#Core_icons"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Dates",
+              "breadcrumb": "Modules - Dates > Dates",
+              "path": "modules_-_dates.html#Dates"
+              },
+            
+              
+              
+              {
+              "title": "Less than 3 Dates",
+              "breadcrumb": "Modules - Dates > Less than 3 Dates",
+              "path": "modules_-_dates.html#Less_than_3_Dates"
+              },
+            
+              
+              
+              {
+              "title": "No Dates",
+              "breadcrumb": "Modules - Dates > No Dates",
+              "path": "modules_-_dates.html#No_Dates"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Dropdown",
+              "breadcrumb": "Modules - Dropdown > Dropdown",
+              "path": "modules_-_dropdown.html#Dropdown"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "End of results divider",
+              "breadcrumb": "Core - Divider > End of results divider",
+              "path": "core_-_divider.html#End_of_results_divider"
+              },
+            
+              
+              
+              {
+              "title": "Grey divider",
+              "breadcrumb": "Core - Divider > Grey divider",
+              "path": "core_-_divider.html#Grey_divider"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Error page",
+              "breadcrumb": "Modules - Error page > Error page",
+              "path": "modules_-_error_page.html#Error_page"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Featured",
+              "breadcrumb": "Modules - Featured > Featured",
+              "path": "modules_-_featured.html#Featured"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid example",
+              "breadcrumb": "Core - Grid > Grid example",
+              "path": "core_-_grid.html#Grid_example"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Header",
+              "breadcrumb": "Modules - Header > Header",
+              "path": "modules_-_header.html#Header"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Hero",
+              "breadcrumb": "Modules - Hero > Hero",
+              "path": "modules_-_hero.html#Hero"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Herousel",
+              "breadcrumb": "Modules - Herousel > Herousel",
+              "path": "modules_-_herousel.html#Herousel"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Language",
+              "breadcrumb": "Modules - Language > Language",
+              "path": "modules_-_language.html#Language"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Logo",
+              "breadcrumb": "Core - Logo > Logo",
+              "path": "core_-_logo.html#Logo"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Ordered list",
+              "breadcrumb": "Core - Lists > Ordered list",
+              "path": "core_-_lists.html#Ordered_list"
+              },
+            
+              
+              
+              {
+              "title": "Simple list",
+              "breadcrumb": "Core - Lists > Simple list",
+              "path": "core_-_lists.html#Simple_list"
+              },
+            
+              
+              
+              {
+              "title": "Standard list",
+              "breadcrumb": "Core - Lists > Standard list",
+              "path": "core_-_lists.html#Standard_list"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pocket",
+              "breadcrumb": "Modules - Pocket > Pocket",
+              "path": "modules_-_pocket.html#Pocket"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Pre code",
+              "breadcrumb": "Core - Code > Pre code",
+              "path": "core_-_code.html#Pre_code"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Scroll Carousel",
+              "breadcrumb": "Modules - Scroll Carousel > Scroll Carousel",
+              "path": "modules_-_scroll_carousel.html#Scroll_Carousel"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Search",
+              "breadcrumb": "Modules - Search > Search",
+              "path": "modules_-_search.html#Search"
+              },
+            
+              
+              
+              {
+              "title": "Search block",
+              "breadcrumb": "Modules - Search > Search block",
+              "path": "modules_-_search.html#Search_block"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Social",
+              "breadcrumb": "Modules - Social > Social",
+              "path": "modules_-_social.html#Social"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Sort by",
+              "breadcrumb": "Modules - Sort by > Sort by",
+              "path": "modules_-_sort_by.html#Sort_by"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Standard table",
+              "breadcrumb": "Core - Table > Standard table",
+              "path": "core_-_table.html#Standard_table"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Tabs--filter",
+              "breadcrumb": "Modules - Tabs > Tabs--filter",
+              "path": "modules_-_tabs.html#Tabs--filter"
+              },
+            
+              
+              
+              {
+              "title": "Tabs--sidebar",
+              "breadcrumb": "Modules - Tabs > Tabs--sidebar",
+              "path": "modules_-_tabs.html#Tabs--sidebar"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    });
+
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="./static/js/main.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

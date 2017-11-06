@@ -1,0 +1,237 @@
+/* ==========================================================================
+   BASE NAVIGATION STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.nav {
+    display: none;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    //* =======================ELEMENT
+    &__wrapper {
+        @extend .wrapper;
+        position: relative;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: palette(shades, black);
+    }
+
+    &__item {
+        list-style: none;
+        display: block;
+
+        &--language {
+            @extend .nav__item;
+            margin: double($gel-spacing-unit) $gel-spacing-unit;
+        }
+    }
+
+    &__link {
+        @extend #{gel(long-primer)};
+        color: palette(shades, white);
+        border: none;
+        font-weight: 500;
+        display: block;
+        padding: double($gel-spacing-unit) 8px;
+        -webkit-font-smoothing: antialiased;
+        border-bottom: none;
+        &:after {
+            display:none;
+        }
+        &:hover {
+            color: palette(shades, white);
+        }
+    }
+
+    &__menu-btn {
+        position: relative;
+        width: auto;
+        height: 40px;
+        float: right;
+        background-color: palette(brand, a);
+        margin: 0 8px 0 8px;
+        border: 0;
+        border-radius: 0;
+        color: palette(shades, white);
+        text-align: right;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-rendering: auto;
+        padding: 0 8px 0 35px;
+        line-height: 40px !important;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.25);
+
+        &:hover {
+            color: palette(shades, white);
+        }
+
+        //* =======================ELEMENT
+        .stack {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 11px;
+            background-color: palette(shades, white);
+            border-radius: 0;
+            opacity: 1;
+            left: 14px;
+            top: 0;
+            transform: rotate(0deg);
+
+            &:nth-child(2) {
+                top: 15px;
+            }
+
+            &:nth-child(3) {
+                top: 19px;
+            }
+
+            &:nth-child(4) {
+                top: 23px;
+            }
+        }
+
+        .sr-only {
+            color: palette(shades, white);
+        }
+    }
+
+    //* =======================MODIFIER
+    &--wide {
+        @extend .nav;
+    }
+
+    &.menu-open {
+        display: block;
+    }
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(mc, min-width) {
+        &__menu-btn {
+            margin: 0 double($gel-spacing-unit) 0 $gel-spacing-unit;
+        }
+    }
+    @include bp(xs, min-width) {
+        &__menu-btn {
+            margin: 0 double($gel-spacing-unit) 0 $gel-spacing-unit;
+        }
+    }
+
+    @include bp(s, min-width, true) {
+        &__menu-btn {
+            margin: 0 double($gel-spacing-unit) $gel-spacing-unit double($gel-spacing-unit);
+        }
+    }
+
+    @include bp(m, min-width) {
+        display: block;
+        visibility: visible;
+
+        &__bar {
+            clear: both;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            overflow: hidden;
+            max-height: none;
+            border-top: 1px solid rgb(82, 82, 132);
+            background-color: palette(shades, black);
+        }
+
+        &__wrapper {
+            max-width: 1032px;
+        }
+
+        &__list {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 35px;
+            border: none;
+            background-color: palette(brand, a);
+        }
+
+        &__item {
+            list-style: none;
+            display: inline;
+            border-left: 1px solid rgb(82, 82, 132);
+            height: 35px;
+
+            &:first-of-type {
+                border-left: none;
+            }
+
+            &--language {
+                border-left: none;
+                position: absolute;
+                right: double($gel-spacing-unit);
+                top: 0;
+                margin: 0;
+            }
+
+            &.active {
+                .nav__link{
+                    border-bottom: 3px solid palette(shades, white);
+                }
+
+            }
+
+            &:first-of-type {
+                .nav__link {
+                    border-left: none;
+                }
+            }
+        }
+
+        &__menu-btn {
+            display: none;
+        }
+
+        &__link {
+            display: inline-block;
+            padding: 7px 12px;
+
+            &.expand {
+                background: url('/academy/static/img/nav-arrow.png') no-repeat;
+                background-position: 90% 13px;
+                padding-left: 10px;
+                padding-right: 23px;
+            }
+
+            &.expanded {
+                color: palette(brand, c);
+                background-position: 90% -35px;
+
+                &:hover {
+                    background-position: 90% -35px;
+                }
+            }
+
+            &:hover {
+                border-bottom: 3px solid palette(shades, white);
+                background-position: 90% 13px;
+            }
+        }
+    }
+
+    @include bp(l, min-width, true) {
+        &__wrapper {
+            max-width: 1304px;
+        }
+
+        &--wide {
+            width: 470px;
+        }
+    }
+}

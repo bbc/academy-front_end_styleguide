@@ -1,0 +1,363 @@
+/* ==========================================================================
+   BASE LANGUAGE STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.language {
+    //* =======================ELEMENT
+    &__wrapper {
+        direction: ltr;
+    }
+    &__row {
+        @extend .row;
+    }
+    &__col {
+        @extend .col;
+        width: gel-columns(1, 2);
+        margin: double($gel-spacing-unit) 0;
+    }
+    &__heading {
+        @extend .h3;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        margin: double($gel-spacing-unit) 0;
+    }
+    &__link {
+        font-weight: normal;
+    }
+    &__switch {
+        margin-bottom: quadruple($gel-spacing-unit);
+    }
+    &__change {
+        border-top: 1px solid palette(shades, lightgray);
+        line-height: 35px;
+        span {
+            @extend #{gel(pica)};
+            color: palette(shades, white);
+            display: inline;
+        }
+        .language__selector__link {
+            display: inline;
+        }
+    }
+    &__selector {
+        float: left;
+        width: 100%;
+        text-align: left; 
+        padding-left: 8px;
+        .nav__item {
+            &:hover {
+                border-bottom: 4px solid transparent;
+            }
+        }
+        &__link {
+            @extend .nav__link;
+
+        }
+    }
+    &__icon {
+        @extend .icon;
+        width: double($gel-spacing-unit);
+        height: double($gel-spacing-unit);
+        line-height: 24px;
+        &__svg {
+            @extend .icon__svg;
+            top: -3px;
+            padding: 0;
+            svg {
+                fill: palette(shades, white);
+            }
+        }
+    }
+    &__dropdown {
+        @extend .list--simple;
+        display: none;
+        position: relative;
+        text-align: left;
+        background-color: palette(links, tooltip);
+        &:after {
+            position: absolute;
+            top: -12px;
+            right: double($gel-spacing-unit);
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 12px 10px;
+            border-color: transparent transparent #333333 transparent;
+            line-height: 0px;
+            _border-color: #000000 #000000 #333333 #000000;
+            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+        }
+        &__item {
+            padding: $gel-spacing-unit 0;
+            &.active {
+                background: palette(brand, b);
+            }
+            &:last-of-type {
+                padding: 0;
+                .language__dropdown__link {
+                    width: 100%;
+                    border-top: 1px solid palette(shades, darkgray);
+                    text-align: right;
+                    padding: $gel-spacing-unit double($gel-spacing-unit) 12px;
+                }
+            }
+        }
+        .language__icon {
+            &__svg {
+                position: relative;
+                top: 0;
+                width: double($gel-spacing-unit);
+                height: double($gel-spacing-unit);
+                svg {
+                    fill: palette(shades, white);
+                }
+            }
+        }
+        &__link {
+            @extend .h5;
+            display: block;
+            color: palette(shades, white);
+            font-weight: normal;
+            margin: 0;
+            padding: 0 double($gel-spacing-unit);
+            border: none;
+            &.all {
+                font-weight: bold;
+                margin-bottom: $gel-spacing-unit;
+            }
+            &:hover {
+                color: palette(shades, white);
+            }
+            &--close {
+                @extend .language__dropdown__link;
+                .language__icon__svg {
+                    svg {
+                        &:hover {
+                            fill: palette(brand, c);
+                        }
+                    }
+                }
+            }
+        }
+    } //* =======================MODIFIER
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {}
+    @include bp(s, min-width, portrait) {}
+    @include bp(m, min-width) {
+        &__col {
+            width: gel-columns(1, 4);
+            margin: quadruple($gel-spacing-unit) 0;
+        }
+        &__change {
+            float: left;
+            border-top: none;
+            span {
+                @extend #{gel(long-primer)};
+                font-weight: 500;
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                padding-left: 12px;
+            }
+        }
+        &__selector {
+            float: none;
+            width: auto;
+            text-align: right;
+            padding-left: 0;
+            .nav__item {
+                &:hover {
+                    border-bottom: 3px solid transparent;
+                }
+            }
+            &__link {
+                padding: 0 12px 6px 12px !important;
+                &:hover {
+                    border-bottom: 3px solid palette(shades, white);
+                }
+            }
+        }
+    }
+    @include bp(l, min-width) {}
+}
+
+.switch {
+    &-button {
+        .language-page {
+            padding: 0 4px 6px 4px!important;
+            margin: 0px 4px;
+            &::after {
+                background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat !important;
+                background-size: 74% !important;
+                right: 5px !important;
+                bottom: 5px !important;
+                content: ' '; 
+            }
+        }
+        .language-page-public {
+            padding: 0 30px 6px 4px!important;
+            margin: 0px 8px;
+            &::after {
+                background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat !important;
+                background-size: 74% !important;
+                right: 5px !important;
+                bottom: 5px !important;
+                content: ' '; 
+                
+            }
+            &::before {
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                position: absolute;
+                right: -4px;
+                top: -2px;
+                content: ' ';
+                height: 17px;
+                width: 116px;
+            }
+        }
+    }
+    &-colour {
+        background-color: rgba(#484979, 0.5);
+        &:hover {
+            background-color: rgba(#484979, 1);
+        }
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Language
+category: Modules - Language
+---
+
+Module description goes here
+
+```html_example
+<section class="language">
+    <h6 class="sr-only">Languages content</h6>
+    <div class="language__row">
+        <div class="language__col">
+            <h2 class="language__heading">Africa</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/french" class="language__link" data-eng="French" data-trans="ACADÉMIE BBC">ACADÉMIE BBC</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/hausa" class="language__link" data-eng="Hausa" data-trans="CIBIYAR HORARWA TA BBC">CIBIYAR HORARWA TA BBC</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/kinyarwanda" class="language__link" data-eng="Kinyarwanda" data-trans="IKIGO CY'AMAHUGURWA CYA BBC">IKIGO CY'AMAHUGURWA CYA BBC</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/kirundi" class="language__link" data-eng="Kirundi" data-trans="SANGIRA UBUMENYI NA BBC">SANGIRA UBUMENYI NA BBC</a>
+                </li>
+                <li class="language__item">
+                    <a href="/academy/so/" class="language__link" data-eng="Somali" data-trans="Akademiyadda BBC">Akademiyadda BBC</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/swahili" class="language__link" data-eng="Swahili" data-trans="TAASISI YA MAFUNZO YA BBC">TAASISI YA MAFUNZO YA BBC</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="language__col">
+            <h2 class="language__heading">Asia (Central)</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="/academy/ky/" class="language__link" data-eng="Kyrgyz" data-trans="кыргыз">кыргыз</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/uzbek" class="language__link" data-eng="Uzbek" data-trans="БИ-БИ-СИ АКАДЕМИЯСИ">БИ-БИ-СИ АКАДЕМИЯСИ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="language__col">
+            <h2 class="language__heading">Asia (Pacific)</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/burmese" class="language__link" data-eng="Burmese" data-trans="Burmese">Burmese</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/chinese-simp" class="language__link" data-eng="Chinese (Simplified)" data-trans="BBC学院">BBC学院</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/chinese-trad" class="language__link" data-eng="Chinese (Traditional)" data-trans="BBC學院">BBC學院</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/indonesian" class="language__link" data-eng="Indonesian" data-trans="AKADEMI BBC">AKADEMI BBC</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/vietnamese" class="language__link" data-eng="Vietnamese" data-trans="HỌC VIỆN BBC">HỌC VIỆN BBC</a>
+                </li>
+            </ul>
+        </div>
+        <div class="language__col">
+            <h2 class="language__heading">Asia (South)</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="/academy/bn/" class="language__link" data-eng="Bengali" data-trans="বিবিসি একাডেমি">বিবিসি একাডেমি</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/hindi" class="language__link" data-eng="Hindi" data-trans="बीबीसी ऐकेडमी">बीबीसी ऐकेडमी</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/pashto" class="language__link" data-eng="Pashto" data-trans="د بي بي سي اکاډمي">د بي بي سي اکاډمي</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/urdu" class="language__link" data-eng="Urdu" data-trans="بی بی سی اکیڈمی">بی بی سی اکیڈمی</a>
+                </li>
+            </ul>
+        </div>
+        <div class="language__col">
+            <h2 class="language__heading">Europe</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="/academy/en/" class="language__link" data-eng="English" data-trans="English">English</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/russian" class="language__link" data-eng="Russian" data-trans="АКАДЕМИЯ Би-би-си">АКАДЕМИЯ Би-би-си</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/turkish" class="language__link" data-eng="Turkish" data-trans="BBC AKADEMİSİ">BBC AKADEMİSİ</a>
+                </li>
+                <li class="language__item">
+                    <a href="/academy/uk/" class="language__link" data-eng="Ukrainian" data-trans="Академія ВВС">Академія ВВС</a>
+                </li>
+            </ul>
+        </div>
+        <div class="language__col">
+            <h2 class="language__heading">Latin America</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="/academy/es/" class="language__link" data-eng="Spanish" data-trans="Español">Español</a>
+                </li>
+            </ul>
+        </div>
+        <div class="language__col">
+            <h2 class="language__heading">Middle East</h2>
+            <ul class="language__list">
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/arabic" class="language__link" data-eng="Arabic" data-trans="أكاديمية بي بي سي">أكاديمية بي بي سي</a>
+                </li>
+                <li class="language__item">
+                    <a href="http://www.bbc.co.uk/academy/persian" class="language__link" data-eng="Persian" data-trans="آکادمی بی‌بی‌سی">آکادمی بی‌بی‌سی</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+```
+
+NUNJUKS
+
+```
+
+```
+
+*/

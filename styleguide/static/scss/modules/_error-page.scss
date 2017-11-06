@@ -1,0 +1,88 @@
+/* ==========================================================================
+   BASE ERROR PAGE STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.error-page {
+    color: palette(type, grey);
+    padding: 70px $gel-spacing-unit*5;
+    text-align: center;
+
+    //* =======================ELEMENT
+    &__code {
+        font-size: 114px;
+        line-height: 152px;
+        margin-bottom: 38px;
+        font-weight: bold;
+    }
+
+    &__heading {
+        @extend #{gel(great-primer)};
+        margin-bottom: $gel-spacing-unit;
+    }
+
+    &__sub-heading {
+        @extend #{gel(pica)};
+    }
+
+    &__link {
+        @extend #{gel(brevier)};
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+
+    }
+
+    @include bp(s, min-width, true) {
+        &__404 {
+            font-size: 148px;
+        }
+    }
+
+    @include bp(m, min-width) {
+
+    }
+
+    @include bp(l, min-width) {
+
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Error page
+category: Modules - Error page
+---
+
+Module description goes here
+
+```html_example
+<div class="error-page">
+    <div class="error-page__code">500</div>
+    <h1 class="error-page__heading">Oops! Something went wrong!</h1>
+    <h2 class="error-page__sub-heading">Please try again a little later</h2>
+    <a href="#" class="error-page__link">Return to the homepage</a>
+</div>
+```
+
+NUNJUKS
+
+```
+<section>
+    <h6 class="sr-only">{{ '500-error1' | i18n }}</h6>
+    <div class="error-page">
+        <div class="error-page__code">{{ '500-error2' | i18n }}</div>
+        <h1 class="error-page__heading">{{ '500-error1' | i18n }}</h1>
+        <h2 class="error-page__sub-heading">{{ '500-error3' | i18n }}</h2>
+        <a href="/academy/" class="error-page__link">{{ '500-error4' | i18n }}</a>
+    </div>
+</section>
+<!-- End Error page. -->
+```
+
+*/

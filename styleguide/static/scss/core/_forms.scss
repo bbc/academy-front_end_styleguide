@@ -1,0 +1,23 @@
+/* ==========================================================================
+   BASE FORM STYLES
+   ========================================================================== */
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border: none;
+    line-height: 1;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='number'],
+textarea {
+  font-size: $gel-base-font-size;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.3s ease; 
+  opacity: 0;
+}

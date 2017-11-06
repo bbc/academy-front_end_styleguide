@@ -1,0 +1,14 @@
+# Bower
+bower_components/*
+
+# NPM
+node_modules/*
+
+# Misc
+.DS_Store
+.DS_Store?
+
+# Testing Files
+type-test.css
+type-test.scss
+*.scssc

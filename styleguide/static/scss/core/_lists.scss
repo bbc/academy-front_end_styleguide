@@ -1,0 +1,209 @@
+/* ==========================================================================
+   BASE LIST STYLES
+   ========================================================================== */
+
+
+//* ===========================BLOCK
+ul, .list {
+    @extend #{gel(pica)};
+    margin-bottom: double($gel-spacing-unit);
+    list-style: outside;
+
+    //* =======================ELEMENT
+    &__row {
+        @extend .row;
+        margin-bottom: 64px;
+    }
+
+    &__col {
+        @extend .col;
+        margin: $gel-spacing-unit 0;
+
+        &--1 {
+            @extend .list__col;
+            width: gel-columns(1, 1);
+        }
+        &--2 {
+            @extend .list__col;
+            width: gel-columns(1, 1);
+        }
+        &--3 {
+            @extend .list__col;
+            width: gel-columns(1, 1);
+        }
+        &--4 {
+            @extend .list__col;
+            width: gel-columns(1, 2);
+        }
+    }
+
+    &__item {
+        margin-bottom: $gel-spacing-unit*3;
+
+        a {
+            font-weight: normal;
+        }
+
+        &--nav {
+            margin-bottom: $gel-spacing-unit;
+
+            a{
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: normal;
+        margin-top: quadruple($gel-spacing-unit);
+        margin-bottom: $gel-spacing-unit
+    }
+
+    &__link {
+        @extend #{gel(brevier)};
+    }
+
+    //* =======================MODIFIER
+    &--simple {
+    	@extend .list;
+        list-style: none;
+    }
+
+    &--outside {
+        @extend .list;
+        margin-left: 20px;
+    }
+
+    &--notes {
+        @extend .list;
+        margin: double($gel-spacing-unit) 0 0;
+        padding: double($gel-spacing-unit) quadruple($gel-spacing-unit);
+        background: #e2e2e2; 
+    }
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+
+    @include bp(xs, min-width) {
+
+    }
+
+    @include bp(s, min-width, portrait) {
+        &__col {
+            &--1 {
+                width: gel-columns(1, 1);
+            }
+            &--2 {
+                width: gel-columns(1, 2);
+            }
+            &--3 {
+                width: gel-columns(1, 2);
+            }
+            &--4 {
+                width: gel-columns(1, 2);
+            }
+        }
+
+        &__section {
+            display: inline-block;
+            float: left;
+            width: 45%;
+
+            .h4 {
+                font-weight: normal;
+                margin-bottom: quadruple($gel-spacing-unit);
+            }
+
+            &:first-of-type {
+                margin-right: 10%;
+            }
+        }
+    }
+
+    @include bp(m, min-width) {
+        &__col {
+            &--1 {
+                width: gel-columns(1, 1);
+            }
+            &--2 {
+                width: gel-columns(1, 2);
+            }
+            &--3 {
+                width: gel-columns(1, 3);
+            }
+            &--4 {
+                width: gel-columns(1, 4);
+            }
+        }
+    }
+
+    @include bp(l, min-width) {
+
+    }
+}
+
+ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    li {
+        margin-bottom: $gel-spacing-unit;
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Standard list 
+category: Core - Lists
+---
+
+Standard list with bullets:
+
+```html_example
+<ul class="list">
+    <li class="list__item">List item one</li>
+    <li class="list__item">List item two</li>
+    <li class="list__item">List item three</li>
+    <li class="list__item">List item four with a <a href="#">link</a></li>
+</ul>
+```
+
+*/
+
+/*doc
+---
+title: Simple list 
+category: Core - Lists
+---
+
+List without bullets:
+
+```html_example
+<ul class="list--simple">
+    <li class="list__item">List item one</li>
+    <li class="list__item">List item two</li>
+    <li class="list__item">List item three</li>
+    <li class="list__item">List item four with a <a href="#">link</a></li>
+</ul>
+```
+*/
+
+/*doc
+---
+title: Ordered list 
+category: Core - Lists
+---
+
+List without bullets:
+
+```html_example
+<ol>
+    <li>List item one</li>
+    <li>List item two</li>
+    <li>List item three</li>
+    <li>List item four with a <a href="#">link</a></li>
+</ol>
+```
+*/
+

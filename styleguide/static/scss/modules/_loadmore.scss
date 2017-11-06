@@ -1,0 +1,88 @@
+/* ==========================================================================
+   BASE LOADMORE STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.loadmore {
+    @extend .row;
+
+    //* =======================ELEMENT
+    &__container {
+        @extend .col;
+        text-align:center;
+        padding: quadruple($gel-spacing-unit);
+    }
+
+    &__button {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        height: auto;
+        text-align: center;
+        text-decoration: none;
+        color: palette(shades, white);
+        background: palette(brand, a);
+        padding: double($gel-spacing-unit);
+        overflow: hidden;
+
+        &:after{
+            //content:'Load More';
+        }
+
+        &:hover {
+            color: palette(brand, c);
+        }
+    }
+
+    &__spinner {
+        width: 50px;
+        height: 50px;
+        background-color: palette(brand, a);
+        border-radius: 50%;
+
+        &:after {
+            box-sizing: content-box;
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            border: 0px solid ;
+            transform: translate(-50%, -50%);
+            animation: loading 0.9s ease-out forwards infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                border: 0px solid #e4e4e4;
+            }
+      
+            20% {
+                border: 8px solid #e4e4e4;
+                width: 0%;
+                height: 0%;
+            }
+      
+            100% {
+                border: 8px solid #e4e4e4;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+    }
+
+    @include bp(s, min-width, portrait) {
+    }
+
+    @include bp(m, min-width) {
+    }
+
+    @include bp(l, min-width) {
+    }
+}

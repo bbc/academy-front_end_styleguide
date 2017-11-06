@@ -1,0 +1,57 @@
+/* ==========================================================================
+   BASE DATA STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.data {
+    display: block;
+    color: palette(type, grey);
+    margin-bottom: double($gel-spacing-unit);
+    //* =======================ELEMENT
+    &__type {
+        position: relative;
+        display: inline-block;
+        &--block {
+            position: relative;
+            display: block;
+            margin-left: 0;
+        }
+    }
+    &__icon {
+        @extend .icon;
+        display: inline-block;
+        float: left;
+        width: 30px;
+        height: 35px;
+        &__svg {
+            @extend .icon__svg;
+            padding: $gel-spacing-unit;
+            svg {
+                fill: palette(type, grey);
+            }
+        }
+    }
+    &__copy {
+        @extend #{gel(pica)};
+        display: inline-block;
+        margin: 0;
+        height: 35px;
+        line-height: 35px !important;
+    }
+    //* =======================MODIFIER
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+        &__type {
+            &+.data__type {
+                //    margin-left: $gel-spacing-unit*3;
+            }
+        }
+    }
+    @include bp(s, min-width, true) {}
+    @include bp(m, min-width, true) {}
+    @include bp(l, min-width) {
+        &__type {
+            display: inline-block;
+        }
+    }
+}

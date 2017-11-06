@@ -1,0 +1,29 @@
+/* ==========================================================================
+   BASE LINK STYLES
+   ========================================================================== */
+
+
+//* ===========================BLOCK
+img {
+    max-width: 100%;
+    height: auto;
+    line-height: 0;
+    display: block;
+
+    //* =======================ELEMENT
+
+    //* =======================MODIFIER
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+    @include bp(xs, min-width) {
+    }
+
+    @include bp(s, min-width, portrait) {
+    }
+
+    @include bp(m, min-width) {
+    }
+
+    @include bp(l, min-width) {
+    }
+}

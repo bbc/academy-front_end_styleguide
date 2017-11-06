@@ -1,0 +1,302 @@
+/* ==========================================================================
+   BASE ALERT STYLES
+   ========================================================================== */
+
+//* ===========================BLOCK
+.alert {
+    @extend #{gel(pica)};
+    display: block;
+    width: 100%;
+    padding: double($gel-spacing-unit);
+    background-color: palette(shades, grey);
+    color: palette(shades, white);
+
+    + .alert {
+        margin-top: double($gel-spacing-unit);
+    }
+
+    //* =======================ELEMENT
+    &__header {
+        display: table;
+        width: 100%;
+        padding: double($gel-spacing-unit);
+    }
+
+    &__section {
+        padding: $gel-spacing-unit;
+
+        & + .alert__section {
+            margin-top: $gel-spacing-unit;
+        }
+
+        &--white {
+            @extend .alert__section;
+            background-color: palette(shades, white);
+        }
+    }
+
+    &__body {
+        padding: double($gel-spacing-unit);
+    }
+
+    &__heading {
+        display: inline-block;
+        font-weight: normal;
+        margin-bottom: double($gel-spacing-unit);
+    }
+
+    &__message {
+        @extend #{gel(pica)};
+
+        &--green {
+            @extend .alert__message;
+            color: palette(alerts, success);
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        @extend .icon;
+        display: inline-block;
+        margin-right: 4px;
+        width: 24px;
+        height: 18px;
+
+        &--lrg {
+            @extend .alert__icon;
+            height: 24px;
+        }
+
+        &__svg {
+            @extend .icon__svg;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: double($gel-spacing-unit);
+
+        &--inline {
+            @extend .alert__link;
+            display: inline;
+        }
+
+        &--back {
+            @extend .alert__link;
+            margin-top: quadruple($gel-spacing-unit);
+        }
+    }
+
+    &__modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+
+        &.open {
+            display: block;
+            z-index: 999999;
+        }
+    }
+
+    &__container {
+        @extend .alert;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        max-width: 90%;
+        margin: 0;
+        background: #f7f7f5;
+        border: 1px solid #dbdbdb;
+        color: palette(type, body);
+        padding: double($gel-spacing-unit);
+    }
+
+    //* =======================MODIFIER
+    &--info {
+        @extend .alert;
+        background-color: palette(alerts, info);
+    }
+    &--warning {
+        @extend .alert;
+        background-color: palette(alerts, warn);
+        color: palette(type, body);
+    }
+    &--error {
+        @extend .alert;
+        background-color: palette(alerts, error);
+        padding: 12px double($gel-spacing-unit) double($gel-spacing-unit);
+
+        .alert__message {
+            display: inline;
+        }
+
+        .alert__icon {
+            &__svg {
+                svg {
+                    fill: palette(shades, white);
+                }
+            }
+        }
+    }
+    &--success {
+        @extend .alert;
+        background-color: palette(alerts, success);
+        padding: 12px double($gel-spacing-unit) double($gel-spacing-unit);
+
+        .alert__message {
+            display: inline;
+        }
+
+        .alert__icon {
+            &__svg {
+                svg {
+                    fill: palette(shades, white);
+                }
+            }
+        }
+    }
+    &--noentry {
+        @extend .alert;
+        max-width: 100%;
+        margin: 0;
+        background: #f7f7f5;
+        border: none;
+        color: palette(type, body);
+        padding: quadruple($gel-spacing-unit) double($gel-spacing-unit) 48px;
+    }
+    &--charges {
+        @extend .alert;
+        border: none;
+        color: palette(type, body);
+        padding: 0;
+        margin: double($gel-spacing-unit) 0 0 0;
+        background: #ccc;
+
+        .alert__body {
+            padding: $gel-spacing-unit;
+        }
+
+        .alert__header {
+            padding: 8px 8px 0;
+        }
+
+        .alert__heading {
+            @extend .h4;
+            margin: 0;
+        }
+
+        .alert__message {
+            margin-bottom: halve($gel-spacing-unit);
+        }
+
+        .alert__icon {
+            display: table-cell;
+            vertical-align: middle;
+
+            &__svg {
+                fill: palette(shades, white);
+            }
+        }
+
+        .alert__link {
+            @extend .link--blue;
+        }
+    }
+
+    //* =======================BREAKPOINTS - xs, s, m, l
+
+    @include bp(xs, min-width) {
+
+    }
+
+    @include bp(s, min-width, portrait) {
+        &__container {
+            top: 50%;
+            left: 50%;
+            max-width: 640px;
+            margin: -300px 0 0 -320px;
+            padding: 64px;
+        }
+
+        &--noentry {
+            max-width: 640px;
+            margin: 100px auto 130px;
+            border: 1px solid #dbdbdb;
+            padding: 64px;
+        }
+    }
+
+    @include bp(m, min-width) {
+        &--charges {
+            margin: double($gel-spacing-unit) 0 0 0;
+        }
+    }
+
+    @include bp(l, min-width) {
+
+    }
+}
+
+//* ===========================STYLE GUIDE
+
+/*doc
+---
+title: Alert
+category: Core - Alerts
+---
+
+List styles can be modified by adding modifiers. Typically you'll want to use a `<ul>` element:
+
+```html_example
+<div class="alert">
+    I am a Standard alert panel
+</div>
+
+<div class="alert--info">
+    I am a Info alert panel
+</div>
+
+<div class="alert--warning">
+    I am a Warning alert panel
+</div>
+
+<div class="alert--error">
+    I am a Error alert panel
+</div>
+
+<div class="alert--error">
+    <div class="alert__icon">
+        <span class="alert__icon__svg">
+            <svg><use xlink:href="#gel-icon-no"></use></svg>
+            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-no.png" alt="cross icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-no.png" alt="cross icon"/><![endif]-->
+        </span>
+    </div>
+    <p class="alert__message">I am a Error alert panel with an icon</p>
+</div>
+
+<div class="alert--success">
+    I am a Success alert panel
+</div>
+
+<div class="alert--success">
+    <div class="alert__icon">
+        <span class="alert__icon__svg">
+            <svg><use xlink:href="#gel-icon-yes"></use></svg>
+            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-yes.png" alt="tick icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-yes.png" alt="tick icon"/><![endif]-->
+        </span>
+    </div>
+    <p class="alert__message">I am a Success alert panel with an icon</p>
+</div>
+```
+
+*/

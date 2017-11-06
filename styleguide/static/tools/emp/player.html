@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>BBC Player</title>
+	</head>
+	<body>
+	
+		<div id="mp-container">
+			<div id="mp"></div>
+		</div>
+
+		<div id="credits">
+			<h1>Data Protection</h1>	
+		</div>
+
+		<div id="footer">
+			<a class="more-link" href="http://www.bbc.co.uk/academy">Discover more from the BBC Academy</a>
+			<div class="strip">
+				<img class="bbc-logo" src="bbc-logo.svg" onerror="this.src='bbc-logo.png';this.onerror=null;" alt="BBC Logo" width="84" height="25">
+				<div class="links">
+					<a class="terms" href="http://www.bbc.co.uk/terms">Terms &amp; conditions</a> | <a class="help" href="http://www.bbc.co.uk/help">Help</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="json2.js"></script>
+		<script>
+			var onSSL = false;
+			var bbcRequireMap = {};
+			
+			if(window.location.protocol == 'https:') {
+				onSSL = true;
+			}
+			
+			if(onSSL) {
+				document.write('\x3Cscript src="https://static.bbc.co.uk/frameworks/requirejs/0.16.0/sharedmodules/require.js">\x3C/script>');
+			} else {
+				document.write('\x3Cscript src="http://static.bbci.co.uk/frameworks/requirejs/0.16.0/sharedmodules/require.js">\x3C/script>');
+			}
+		</script>
+		<script>
+		
+			if(onSSL) {
+				
+				bbcRequireMap = {
+					"jquery-1.9":	"https://static.bbc.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1",
+					"swfobject-2":	"https://static.bbc.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2",
+					"bump-3":		"https://emp.bbci.co.uk/emp/bump-3/bump-3"
+				}; 
+				
+			} else {
+				
+				bbcRequireMap = {
+					'jquery-1.9'	: 'http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1',
+					'swfobject-2'	: 'http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2',
+					'bump-3'		: 'http://emp.bbci.co.uk/emp/bump-3/bump-3'
+				};
+				
+			}
+
+			require({
+				paths : bbcRequireMap,
+				waitSeconds : 30
+			});
+
+
+			function getQueryParams() {
+
+				var paramsObject = {},
+					queryString = (location.search.length > 1 ? location.search.substring(1) : ""),
+					splitString = [],
+					nameValue = [],
+					name = '',
+					value = '';
+
+				if(queryString.length) {
+
+					splitString = queryString.split('&');
+
+					for(var i=0; i < splitString.length; i++) {
+
+						if(splitString[i].length) {
+
+							nameValue = splitString[i].split('=');
+
+							if(nameValue.length = 2) {
+
+								name = decodeURIComponent(nameValue[0]);
+
+								value = decodeURIComponent(nameValue[1]);
+
+								paramsObject[name] = value;
+
+							}
+
+						}
+
+					}
+
+				}
+
+				return paramsObject;
+
+			}
+
+
+			var Player = {
+
+				smpSettings: {
+					product         : 'iplayer',
+					playerProfile   : 'smp',
+					responsive      : true,
+					superResponsive	: true,
+					ui				: {
+						embed: {
+							enabled: false
+						},
+						colour: '#121260'
+					}
+				},
+
+				userDefinedParams: {
+
+					pid: '',
+					sid: '',
+					href: '',
+					playlist: '',
+					vpid: '',
+					title: '',
+					holdingImageURL: '',
+					duration: 0,
+					kind: '',
+					captionsUrl: '',
+					liveRewind: '',
+					playerOnly: false
+
+				},
+
+
+				buildPlayer: function() {
+					this.processUserDefinedParams();
+
+					if(!this.userDefinedParams.playerOnly) {
+
+					}
+
+					this.addPlaySettings();
+				},
+
+				processUserDefinedParams: function() {
+
+					var rawParams = getQueryParams();
+
+					for(var key in rawParams) {
+
+						switch(key.toLowerCase()) {
+							case 'pid':
+								this.userDefinedParams.pid = rawParams[key];
+							break;
+							case 'sid':
+								this.userDefinedParams.sid = rawParams[key];
+							break;
+							case 'href':
+								this.userDefinedParams.href = rawParams[key];
+							break;
+							case 'playlist':
+								this.userDefinedParams.playlist = rawParams[key];
+							break;
+							case 'vpid':
+								this.userDefinedParams.vpid = rawParams[key];
+							break;
+							case 'title':
+								this.userDefinedParams.title = rawParams[key];
+							break;
+							case 'holdingimageurl':
+								this.userDefinedParams.holdingImageURL = rawParams[key];
+							break;
+							case 'duration':
+								this.userDefinedParams.duration = rawParams[key];
+							break;
+							case 'kind':
+								this.userDefinedParams.kind = rawParams[key];
+							break;
+							case 'captionsurl':
+								this.userDefinedParams.captionsUrl = rawParams[key];
+							break;
+							case 'liverewind':
+								this.userDefinedParams.liveRewind = rawParams[key];
+							break;
+							case 'playeronly':
+								if(rawParams[key] == 'true') {
+									this.userDefinedParams.playerOnly = true;
+								}
+							break;
+							default:
+						}
+
+					}
+
+				},
+
+
+				addPlaySettings: function() {
+
+					if(this.userDefinedParams.playlist.length) {
+						this.addPlaylistSettings();
+					} else if(this.userDefinedParams.href.length) {
+						this.addHrefSettings();
+					} else if(this.userDefinedParams.vpid.length) {
+						this.addVpidSettings();
+					} else if(this.userDefinedParams.sid.length) {
+						this.addSidSettings();
+					} else if(this.userDefinedParams.pid.length) {
+						this.addPidSettings( this.userDefinedParams.pid );
+					} 
+
+				},
+
+				addPlaylistSettings: function() {
+
+					this.smpSettings.playlist = this.userDefinedParams.playlist;
+
+					this.createPlayer();
+
+				},
+
+				addHrefSettings: function() {
+
+					var playlistObject = {
+
+						items: [{}]
+
+					};
+
+					playlistObject.items[0].href = this.userDefinedParams.href;
+
+					if(this.userDefinedParams.title) {
+						playlistObject.title = this.userDefinedParams.title;
+					}
+
+					if(this.userDefinedParams.holdingImageURL) {
+						playlistObject.holdingImageURL = this.userDefinedParams.holdingImageURL;
+					}
+
+					if(this.userDefinedParams.duration) {
+						playlistObject.items[0].duration = this.userDefinedParams.duration;
+					}
+
+					if(this.userDefinedParams.captionsUrl) {
+						playlistObject.items[0].captionsUrl = this.userDefinedParams.captionsUrl;
+					}
+
+					if(this.userDefinedParams.kind) {
+						playlistObject.items[0].kind = this.userDefinedParams.kind;
+					}
+
+
+					this.smpSettings.playlistObject = playlistObject;
+
+					if(this.userDefinedParams.ui) {
+						playlistObject.items.ui = this.userDefinedParams.ui;
+					}
+
+					this.createPlayer();
+
+
+				},
+
+
+				addVpidSettings: function() {
+
+					var playlistObject = {
+
+						items: [{}]
+
+					};
+
+					playlistObject.items[0].vpid = this.userDefinedParams.vpid;
+
+					if(this.userDefinedParams.title) {
+						playlistObject.title = this.userDefinedParams.title;
+					}
+
+					if(this.userDefinedParams.holdingImageURL) {
+						playlistObject.holdingImageURL = this.userDefinedParams.holdingImageURL;
+					}
+
+					if(this.userDefinedParams.duration) {
+						playlistObject.items[0].duration = this.userDefinedParams.duration;
+					}
+
+					if(this.userDefinedParams.kind) {
+						playlistObject.items[0].kind = this.userDefinedParams.kind;
+					}
+
+					this.smpSettings.playlistObject = playlistObject;
+
+					this.createPlayer();
+
+
+				},
+
+
+				addSidSettings: function() {
+
+					var playlistObject = {
+
+						items: [{}]
+
+					};
+
+					playlistObject.items[0].vpid = this.userDefinedParams.sid;
+					playlistObject.items[0].live = true;
+
+					if(this.userDefinedParams.title) {
+						playlistObject.title = this.userDefinedParams.title;
+					}
+
+					if(this.userDefinedParams.holdingImageURL) {
+						playlistObject.holdingImageURL = this.userDefinedParams.holdingImageURL;
+					}
+
+					if(this.userDefinedParams.liveRewind) {
+						playlistObject.liveRewind = this.userDefinedParams.liveRewind;
+					} else {
+						playlistObject.liveRewind = false;
+					}
+
+					this.smpSettings.playlistObject = playlistObject;
+
+					this.createPlayer();
+
+
+				},
+
+
+				addPidSettings: function(pid) {					
+
+					
+					var that = this;
+					var xhr = new XMLHttpRequest();
+
+					xhr.onreadystatechange = function() {
+						if(xhr.readyState == 4) {
+							if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+								that.processPlaylistEndpointData(JSON.parse(xhr.responseText));
+							} else {
+								console.log('Error retrieving playlist data: ' + xhr.status);
+							}
+						}
+					};
+
+					xhr.open('get', '//www.bbc.co.uk/academy/playlist/' + encodeURIComponent(pid) + '?format=json', true);
+					
+					xhr.send(null);	
+
+
+				},
+
+
+				processPlaylistEndpointData: function(endpointData) {
+
+					var playlistObject = {
+
+						items: [{}]
+
+					};
+
+
+					if(endpointData.vpid) {
+						playlistObject.items[0].vpid = endpointData.vpid;
+					}
+
+					if(endpointData.title) {
+						playlistObject.title = endpointData.title;
+					}
+
+					if(endpointData.duration) {
+						playlistObject.items[0].duration = endpointData.duration;
+					}
+
+					if(onSSL) {
+
+						if(endpointData.httpsImage) {
+							playlistObject.holdingImageURL = endpointData.httpsImage;
+						}
+
+					} else {
+
+						if(endpointData.httpImage) {
+							playlistObject.holdingImageURL = endpointData.httpImage;
+						}
+
+					}
+
+					this.smpSettings.playlistObject = playlistObject;
+
+					this.createPlayer();
+
+				},
+
+
+				createPlayer: function() {
+
+					var that = this;
+
+					require(['bump-3'],function (mp) {
+						var mediaPlayer = mp('#mp').player(that.smpSettings);
+						// EVENT EXAMPLE: mediaPlayer.bind('ended', function(e) {  console.log('player ended'); });
+						
+						mediaPlayer.load();
+					});
+
+				}
+
+
+
+
+			};
+
+			Player.buildPlayer();
+
+		</script>
+	
+	</body>
+</html>
