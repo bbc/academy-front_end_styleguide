@@ -271,3 +271,119 @@
         }
     }
 }
+
+/*doc
+---
+title:  Events--speakers
+category: Modules - Events
+---
+
+```html_example
+        <div class="event-col-1-4">
+            <h4> Speakers </h4>
+                <div class="event__speakers">
+                    <div class="event__speaker">
+                        <div class="event__speaker-img">
+                            <figure class="article__figure">
+                                <img src="https://ichef.bbci.co.uk/images/ic/80x80/p05jrgpt.jpg" alt="I-Want-it-Now-Essentials-(Hero)" onerror="this.style.display='none'" class="is-loaded">
+                            </figure>
+                        </div>
+                        <div class="event__speaker-copy">
+                            <span class="name"> Leah Whyment</span>
+                            <span class="role"> Trainer, BBC</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+```
+
+NUNJUKS
+
+```
+            {% if speakers | length > 0 %}
+            <div class="event-col-1-4">
+                <h4> Speakers </h4>
+                <div class="event__speakers">
+                {% for speaker in speakers %}
+                <div class="event__speaker">
+                    <div class="event__speaker-img">
+                        <figure class="article__figure">
+                            <img src="{{ __imagechefs }}/80x80/{{ speaker.event_speaker_image }}.jpg" alt="{{ media.media_title }}" onerror="this.style.display='none'">
+                        </figure>
+                    </div>
+                    <div class="event__speaker-copy">
+                        <span class="name"> {{ speaker.event_speaker_name}}</span>
+                        <span class="role"> {{ speaker.event_speaker_title}}</span>
+                    </div>
+                </div>
+                {% endfor %}
+                   </div>
+            </div>
+            {% else %} {% endif %}
+```
+*/
+
+/*doc
+---
+title:  Events--partners_logos
+category: Modules - Events
+---
+
+```html_example
+<div class="event__partners">
+    <h3> Partners </h3>
+    <ul class="event__partners-list">
+        <li class="partner-logo">
+            <div class="img-wrapper">
+                <img src="https://ichef.bbci.co.uk/images/ic/832xn/p05jv4kb.png" alt="Globodyne" onerror="this.style.display='none'" class="is-loaded">
+            </div>
+        </li>
+        <li class="partner-logo">
+            <div class="img-wrapper">
+                <img src="https://ichef.bbci.co.uk/images/ic/832xn/p05jv794.png" alt="Bruce Wayne Industries" onerror="this.style.display='none'" class="is-loaded">
+            </div>
+        </li>
+        <li class="partner-logo">
+            <div class="img-wrapper">
+                <img src="https://ichef.bbci.co.uk/images/ic/832xn/p05jv4kb.png" alt="Company 3" onerror="this.style.display='none'" class="is-loaded">
+            </div>
+        </li>
+        <li class="partner-logo">
+            <div class="img-wrapper">
+                <img src="https://ichef.bbci.co.uk/images/ic/832xn/p05jv4kb.png" alt="Company 4" onerror="this.style.display='none'" class="is-loaded">
+            </div>
+        </li>
+    </ul>
+</div>
+
+```
+
+NUNJUKS
+
+```
+{% if partners | length > 0 %}
+<div class="event__partners">
+    <h3> Partners </h3>
+    <ul class="event__partners-list">
+        {% for partner in partners %}
+            <li class="partner-logo">
+                <div class="img-wrapper">
+                     <img src="{{ __imagechefs }}/832xn/{{ partner.partner_image }}.png" alt="{{ partner.partner_name }}" onerror="this.style.display='none'"> 
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+```
+*/
+
+
+
+
+
+
+
+
+

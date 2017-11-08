@@ -287,3 +287,248 @@ NUNJUKS
 ```
 
 */
+
+/*doc
+---
+title: Hero--events
+category: Modules - Hero
+---
+
+Module description goes here
+
+```html_example
+<div class="event__media">
+    <div class="event-row">
+        <div class="event-col-3-4 media-holder">
+            <div class="article__media "> 
+                <figure class="article__figure">
+
+                    <img src="https://ichef.bbci.co.uk/images/ic/832x468/p05jnhty.jpg" alt="S" onerror="this.style.display='none'" class="is-loaded"> 
+                </figure>
+            </div>
+            <!--./ end hero feature -->
+        </div>
+        <div class="event-col-1-4">
+            <div class="event__info">
+                <section id="event-carousel" class="scroll-carousel--event js-scroll-carousel js-setdates">
+                    <div class="scroll-carousel__wrapper">
+                        <div class="scroll-carousel__container">
+                            <form class="scroll-carousel__buttons">
+                                <button class="scroll-carousel__button--next" tabindex="-1"><span class="scroll-carousel__button__text">Next (as in next item)</span></button>
+                                <button class="scroll-carousel__button--prev" tabindex="-1" disabled=""><span class="scroll-carousel__button__text">Prev (as in prev item)</span></button>
+                            </form>
+                            <div class="scroll-carousel__visible">
+                                <div class="scroll-carousel__viewport">
+                                    <ul class="scroll-carousel__list--4">
+                                        <li class="scroll-carousel__item">
+                                                    <div class="event__info-date">
+                                                    <h1><time datetime="2017-10-31" class="dates__time">31 Oct</time></h1>
+                                                    <h4> Tuesday  </h4>
+                                                    </div>
+                                                    <div class="event__info-add">
+                                                    <div class="dates__time">
+                                                        <div class="dates__icon">
+                                                            <span class="dates__svg">
+                                                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-duration"></use></svg>
+                                                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                            </span>
+                                                        </div>
+                                                        
+                                                    <p> <time datetime="12:00:00" class="dates__time"> 12:00 </time> </p>
+                                                    </div>
+                                                    <div class="dates__time">
+                                                    <div class="dates__icon">
+                                                        <span class="dates__svg">
+                                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-expires"></use></svg>
+                                                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-expires.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                        </span>
+                                                    </div> 
+                                                    
+                                                    <p class="dates__time"><time datetime="P 2 H">2</time> <abbr title="hour">h</abbr></p>
+                                                </div>
+                                                <div class="dates__location">
+                                                    <div class="dates__icon">
+                                                        <span class="dates__svg">
+                                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-map"></use></svg>
+                                                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/><![endif]-->
+                                                        </span>
+                                                    </div>
+                                                    <p>birmingham, Alright Bab</p>
+                                                </div>
+                                                </div>
+
+                                                <div class="card__button--event">
+                                                <div class="card__button--request" for="">
+                                                    <a href="javascript:;" class="card__button--request__cta card__button--event__cta">
+                                                        Book a Place
+                                                    </a>
+                                                    <div class="card__button__shelf">
+                                                        <legend>But first, who are you?</legend>
+                                                        <span class="close-x">×</span>
+                                                        <a data-type="mydevelopment" data-courseid="" data-revisiondate="" href="https://performancemanager.successfactors.eu/sf/learning?destUrl=https%3a%2f%2fbbcprod%2eplateau%2ecom%2flearning%2fuser%2fdeeplink%5fredirect%2ejsp%3flinkId%3dITEM_DETAILS%26componentID%3d%26componentTypeID%3dCLASS%26revisionDate%3d%26fromSF%3dY&amp;company=S001190811T2">I'm BBC Staff or FTC</a>
+                                                        <a data-type="mydevelopment" data-courseid="" data-revisiondate="" href="https://bbcprod.plateau.com/learning/user/deeplink_redirect.jsp?linkId=ITEM_DETAILS&amp;componentID=&amp;componentTypeID=CLASS&amp;revisionDate=&amp;nativelogin=y">I'm a Freelancer or Other</a>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                                    <li class="scroll-carousel__item">
+                                                            <div class="event__info-date">
+                                                            <h1><time datetime="2017-11-01" class="dates__time">01 Nov</time></h1>
+                                                            <h4> Wednesday  </h4>
+                                                            </div>
+                                                            <div class="event__info-add">
+                                                            <div class="dates__time">
+                                                                <div class="dates__icon">
+                                                                    <span class="dates__svg">
+                                                                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-duration"></use></svg>
+                                                                        <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                                    </span>
+                                                                </div>
+                                                                
+
+                                                            <p> <time datetime="09:00:00" class="dates__time"> 09:00 </time> </p>
+                                                            </div>
+                                                                <div class="dates__time">
+                                                                <div class="dates__icon">
+                                                                    <span class="dates__svg">
+                                                                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-expires"></use></svg>
+                                                                        <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-expires.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                                    </span>
+                                                                </div> 
+                                                                
+                                                                <p class="dates__time"><time datetime="P 2.5 H">2.5</time> <abbr title="hour">h</abbr></p>
+                                                            </div>
+                                                            <div class="dates__location">
+                                                                <div class="dates__icon">
+                                                                    <span class="dates__svg">
+                                                                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-map"></use></svg>
+                                                                        <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/><![endif]-->
+                                                                    </span>
+                                                                </div>
+                                                                <p>london, Big room</p>
+                                                            </div>
+                                                            </div>
+
+                                                            <div class="card__button--event">
+                                                                <a href="mailto:joe.bloggs@bbc.co.uk" class="card__button--event__cta card__button--request__cta" data-type="mailto">
+                                                                Book a place via e-mail
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="scroll-carousel__item">
+                                                            <div class="event__info-date">
+                                                            <h1><time datetime="2017-12-02" class="dates__time">02 Dec</time></h1>
+                                                            <h4> Saturday  </h4>
+                                                            </div>
+                                                        <div class="event__info-add">
+                                                        <div class="dates__time">
+                                                            <div class="dates__icon">
+                                                                <span class="dates__svg">
+                                                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-duration"></use></svg>
+                                                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                                </span>
+                                                            </div>
+                                                        
+                                                        <p> <time datetime="14:00:00" class="dates__time"> 14:00 </time> </p>
+                                                        </div>
+                                                            <div class="dates__time">
+                                                            <div class="dates__icon">
+                                                                <span class="dates__svg">
+                                                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-expires"></use></svg>
+                                                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-expires.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                                </span>
+                                                            </div> 
+                                                            
+                                                            <p class="dates__time"><time datetime="P 2.75 H">2.75</time> <abbr title="hour">h</abbr></p>
+                                                        </div>
+                                                        <div class="dates__location">
+                                                            <div class="dates__icon">
+                                                                <span class="dates__svg">
+                                                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-map"></use></svg>
+                                                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/><![endif]-->
+                                                                </span>
+                                                            </div>
+                                                            <p>glasgow, Small room</p>
+                                                        </div>
+                                                        </div>
+
+                                                        <div class="card__button--event">
+                                                            <a href="mailto:joe.bloggs@bbc.co.uk" class="card__button--event__cta card__button--request__cta" data-type="mailto">
+                                                            Book a place via e-mail
+                                                            </a>
+                                                        </div>
+
+                                                            </li>
+                                                        <li class="scroll-carousel__item">
+                                                    <div class="event__info-date">
+                                                    <h1><time datetime="2018-01-06" class="dates__time">06 Jan</time></h1>
+                                                    <h4> Saturday  </h4>
+                                                    </div>
+                                                    <div class="event__info-add">
+                                                    <div class="dates__time">
+                                                        <div class="dates__icon">
+                                                            <span class="dates__svg">
+                                                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-duration"></use></svg>
+                                                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                            </span>
+                                                        </div>
+                                                        
+
+                                                    <p> <time datetime="09:00:00" class="dates__time"> 09:00 </time> </p>
+                                                    </div>
+                                                    <div class="dates__time">
+                                                    <div class="dates__icon">
+                                                        <span class="dates__svg">
+                                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-expires"></use></svg>
+                                                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-expires.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png" alt=""/><![endif]-->
+                                                        </span>
+                                                    </div> 
+                                                    
+                                                    <p class="dates__time"><time datetime="P 6 H">6</time> <abbr title="hour">h</abbr></p>
+                                                </div>
+                                                <div class="dates__location">
+                                                    <div class="dates__icon">
+                                                        <span class="dates__svg">
+                                                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-map"></use></svg>
+                                                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map-grey.png" alt="map icon"/><![endif]-->
+                                                        </span>
+                                                    </div>
+                                                    <p>birmingham, Lecture theatre</p>
+                                                </div>
+                                                </div>
+
+                                                <div class="card__button--event">
+                                                    <a href="mailto:joe.bloggs@bbc.co.uk" class="card__button--event__cta card__button--request__cta" data-type="mailto">
+                                                    Book a place via e-mail
+                                                    </a>
+                                                </div>
+
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scrollbar">
+                            <div class="scrollbar__wrapper">
+                                <div class="scrollbar__track">
+                                    <div class="scrollbar__indicator" style="width: 114.399px; right: initial; left: 0px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Scroll Carousel Wrapper. -->
+                </section>
+<!-- End Scroll Carousel Section. -->
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+NUNJUKS
+
+```
+
+```
+
+*/

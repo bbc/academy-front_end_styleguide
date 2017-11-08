@@ -1,4 +1,4 @@
-@import url('main-1.css?z=535');
+@import url('main-1.css?z=807');
 
 .search__button,
 .search__button--clear {
@@ -436,10 +436,22 @@
 .nav__item--language {
   list-style: none;
   display: block;
+  position: relative;
 }
 
 .nav__item--language {
   margin: 16px 8px;
+}
+
+.nav__item-bg:after {
+  content: ' ';
+  position: absolute;
+  background-color: rgba(72,73,121,0.5);
+  width: 100%;
+  height: 35px;
+  top: -6px;
+  left: 0;
+  z-index: -1;
 }
 
 .nav__link,
@@ -1198,30 +1210,25 @@
   background-color: #121260;
   width: 100%;
   bottom: 0px;
+  text-transform: capitalize;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 14px;
 }
 
 .card__event-info span {
   color: white;
+  height: 26px;
 }
 
 .card__event-info span svg {
-  fill: white;
-}
-
-.card__event-info-sub {
-  position: absolute;
-  z-index: 2;
-  background-color: #121260;
-  width: 100%;
-  bottom: 0px;
-  text-transform: capitalize;
-}
-
-.card__event-info-sub span {
-  color: white;
-}
-
-.card__event-info-sub span svg {
   fill: white;
 }
 
@@ -1587,19 +1594,9 @@
 
   .card__event-info {
     left: 0;
-    padding: 10px 18px;
   }
 
   .card__event-info span {
-    font-size: 12px;
-  }
-
-  .card__event-info-sub {
-    left: 0;
-    padding: 9px 13px;
-  }
-
-  .card__event-info-sub span {
     font-size: 12px;
   }
 
@@ -1688,12 +1685,7 @@
 
   .card__event-info {
     left: 40px;
-    padding: 7px 9px 10px 18px;
-  }
-
-  .card__event-info-sub {
-    left: 40px;
-    padding: 9px 13px;
+    height: 40px;
   }
 
   .card .s-carousel,
@@ -2015,13 +2007,8 @@
   }
 
   .card__event-info {
+    height: 48px;
     left: 48px;
-    padding: 13px 18px;
-  }
-
-  .card__event-info-sub {
-    left: 48px;
-    padding: 13px 18px;
   }
 
   .card .s-carousel,
@@ -2105,16 +2092,11 @@
   }
 
   .card__event-info {
+    height: 48px;
     left: 48px;
-    padding: 13px 18px;
   }
 
-  .card__event-info-sub {
-    left: 48px;
-    padding: 13px 18px;
-  }
-
-  .card__event-info-sub .hide-on-desktop {
+  .card__event-info .hide-on-desktop {
     display: none;
   }
 
@@ -2160,12 +2142,7 @@
 
   .card__event-info {
     left: 84px;
-    padding: 12px 13px 14px 15px;
-  }
-
-  .card__event-info-sub {
-    left: 48px;
-    padding: 11px 13px 15px 15px;
+    height: 48px;
   }
 
   .card .s-carousel,
@@ -7247,7 +7224,6 @@ a .sidebar-left .page__tag+.page__tag .card__data__wrapper {
 
 .language__change {
   border-top: 1px solid #ccc;
-  line-height: 35px;
 }
 
 .language__change span {
@@ -7264,6 +7240,11 @@ a .sidebar-left .page__tag+.page__tag .card__data__wrapper {
   width: 100%;
   text-align: left;
   padding-left: 8px;
+}
+
+.language__selector .nav__item,
+.language__selector .nav__item--language {
+  position: relative;
 }
 
 .language__selector .nav__item:hover,
@@ -7393,49 +7374,9 @@ a .sidebar-left .page__tag+.page__tag .card__data__wrapper {
     border-bottom: 3px solid transparent;
   }
 
-  .language__selector__link {
-    padding: 0 12px 6px 12px !important;
-  }
-
   .language__selector__link:hover {
     border-bottom: 3px solid #fff;
   }
-}
-
-.switch-button .language-page {
-  padding: 0 4px 6px 4px !important;
-  margin: 0px 4px;
-}
-
-.switch-button .language-page::after {
-  background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat !important;
-  background-size: 74% !important;
-  right: 5px !important;
-  bottom: 5px !important;
-  content: ' ';
-}
-
-.switch-button .language-page-public {
-  padding: 0 30px 6px 4px !important;
-  margin: 0px 8px;
-}
-
-.switch-button .language-page-public::after {
-  background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat !important;
-  background-size: 74% !important;
-  right: 5px !important;
-  bottom: 5px !important;
-  content: ' ';
-}
-
-.switch-button .language-page-public::before {
-  border-left: 1px solid rgba(255,255,255,0.2);
-  position: absolute;
-  right: -4px;
-  top: -2px;
-  content: ' ';
-  height: 17px;
-  width: 116px;
 }
 
 .switch-colour {

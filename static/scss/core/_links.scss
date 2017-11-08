@@ -50,7 +50,7 @@ a,
     .card__button--event{
         a { 
             &[href*="//"]:not([href*="bbc.co"]) {
-                position: relative; 
+                position: relative;   
                 padding-right: 23px;
                 &:after {
                     content: '';

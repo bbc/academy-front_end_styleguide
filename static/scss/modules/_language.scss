@@ -33,7 +33,7 @@
     }
     &__change {
         border-top: 1px solid palette(shades, lightgray);
-        line-height: 35px;
+        // line-height: 33px;
         span {
             @extend #{gel(pica)};
             color: palette(shades, white);
@@ -49,9 +49,11 @@
         text-align: left; 
         padding-left: 8px;
         .nav__item {
+            position:relative;
             &:hover {
                 border-bottom: 4px solid transparent;
             }
+
         }
         &__link {
             @extend .nav__link;
@@ -144,6 +146,7 @@
                 }
             }
         }
+ 
     } //* =======================MODIFIER
     //* =======================BREAKPOINTS - xs, s, m, l
     @include bp(xs, min-width) {}
@@ -174,7 +177,6 @@
                 }
             }
             &__link {
-                padding: 0 12px 6px 12px !important;
                 &:hover {
                     border-bottom: 3px solid palette(shades, white);
                 }
@@ -183,42 +185,8 @@
     }
     @include bp(l, min-width) {}
 }
-
+ 
 .switch {
-    &-button {
-        .language-page {
-            padding: 0 4px 6px 4px!important;
-            margin: 0px 4px;
-            &::after {
-                background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat !important;
-                background-size: 74% !important;
-                right: 5px !important;
-                bottom: 5px !important;
-                content: ' '; 
-            }
-        }
-        .language-page-public {
-            padding: 0 30px 6px 4px!important;
-            margin: 0px 8px;
-            &::after {
-                background: url("/academy/static/img/svg-fallbacks/gel-icon-external-link-white.png") 50% 50% no-repeat !important;
-                background-size: 74% !important;
-                right: 5px !important;
-                bottom: 5px !important;
-                content: ' '; 
-                
-            }
-            &::before {
-                border-left: 1px solid rgba(255, 255, 255, 0.2);
-                position: absolute;
-                right: -4px;
-                top: -2px;
-                content: ' ';
-                height: 17px;
-                width: 116px;
-            }
-        }
-    }
     &-colour {
         background-color: rgba(#484979, 0.5);
         &:hover {
@@ -226,6 +194,7 @@
         }
     }
 }
+
 
 //* ===========================STYLE GUIDE
 

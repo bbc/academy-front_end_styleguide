@@ -156,10 +156,8 @@
                     padding-left: halve($gel-spacing-unit);
                 }
             }
-
         }
-       
-    } 
+    }
     &__data-icon {
         float: left;
         width: double($gel-spacing-unit);
@@ -174,7 +172,7 @@
                 fill: palette(type, grey);
             }
         }
-        &-events{
+        &-events {
             margin-left: double($gel-spacing-unit);
         }
     }
@@ -269,8 +267,8 @@
                 &:focus {
                     outline: 1px red;
                 }
-                &:hover { 
-                    color: palette(shades, white); 
+                &:hover {
+                    color: palette(shades, white);
                 }
             }
         }
@@ -348,23 +346,14 @@
         background-color: palette(brand, a);
         width: 100%;
         bottom: 0px;
-        span {
-            color: white;
-            svg {
-                fill: white;
-            }
-        }
-    }
-    &__event-info-sub {
-        position: absolute;
-        z-index: 2;
-        background-color: #121260;
-        width: 100%;
-        bottom: 0px;
         text-transform: capitalize;
-        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 14px;
         span {
             color: white;
+            height: 26px;
             svg {
                 fill: white;
             }
@@ -660,14 +649,6 @@
         }
         &__event-info {
             left: 0;
-            padding: 10px 18px;
-            span {
-                font-size: 12px;
-            }
-        }
-        &__event-info-sub {
-            left: 0;
-            padding: 9px 13px;
             span {
                 font-size: 12px;
             }
@@ -738,16 +719,11 @@
         }
         &__flag {
             float: left;
-
             margin-right: halve($gel-spacing-unit);
         }
         &__event-info {
             left: 40px;
-            padding: 7px 9px 10px 18px;
-        }
-        &__event-info-sub {
-            left: 40px;
-            padding: 9px 13px;
+            height: 40px;
         }
         .s-carousel {
             left: 0;
@@ -899,12 +875,8 @@
             float: left;
         }
         &__event-info {
+            height: 48px;
             left: 48px;
-            padding: 13px 18px;
-        }
-        &__event-info-sub {
-            left: 48px;
-            padding: 13px 18px;
         }
         .s-carousel {
             left: 48px;
@@ -961,15 +933,10 @@
         }
         &__flag {
             float: left;
-
         }
         &__event-info {
+            height: 48px;
             left: 48px;
-            padding: 13px 18px;
-        }
-        &__event-info-sub {
-            left: 48px;
-            padding: 13px 18px;
             .hide-on-desktop {
                 display: none;
             }
@@ -1008,11 +975,7 @@
         }
         &__event-info {
             left: 84px;
-            padding:12px 13px 14px 15px;
-        }
-        &__event-info-sub {
-            left: 48px;
-            padding: 11px 13px 15px 15px;
+            height: 48px;
         }
         .s-carousel {
             left: 48px;
@@ -1032,7 +995,7 @@ title: Card
 category: Modules - Cards
 ---
 
-Module description goes here
+Sub card for events - mainly used on a hompage and collections
 
 ```html_example
 <div class="card">
@@ -1044,7 +1007,7 @@ Module description goes here
                     <div class="card__media-icon">
                         <span class="card__media-icon__svg">
                             <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-classroom"></use></svg>
-                            <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt="data icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt="data icon"/><![endif]-->
+                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt="data icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt="data icon"/><![endif]-->
                         </span>
                     </div>
                     <figcaption class="icon__caption">Content type classroom course</figcaption>
@@ -1162,7 +1125,7 @@ Module description goes here
                         <div class="card__data-icon">
                             <span class="card__data-icon__svg">
                                 <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-video"></use></svg>
-                                <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-video-white.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon--white.png" alt="media icon"/><![endif]-->
+                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-video-white.png"  alt="media icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon--white.png" alt="media icon"/><![endif]-->
                             </span>
                         </div>
                         <span class="card__type__copy">Video</span>
@@ -1280,7 +1243,7 @@ Module description goes here
                     <div class="card__media-icon">
                         <span class="card__media-icon__svg">
                                 <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-document"></use></svg>
-                                <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/><![endif]-->
+                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/><![endif]-->
                         </span>
                     </div>
 
@@ -1390,19 +1353,16 @@ Module description goes here
             <div class="card__media">
                 <figure>
                         <img src="https://ichef.bbci.co.uk/images/ic/624x351/p0499f72.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
-
                     <div class="card__media-icon">
                         <span class="card__media-icon__svg">
                                 <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-document"></use></svg>
-                                <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/><![endif]-->
+                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-document-purple.png" alt="media icon"/><![endif]-->
                         </span>
                     </div>
-
                         <figcaption class="icon__caption">Content type article</figcaption>
                 </figure>
             </div>
             <!-- End Card Media. -->
-
             <div class="card__body">
                 <h3 class="card__heading">Watch { develop: BBC} 2017 LIVE</h3>
                 <p class="card__description">24th March 2017: Fusion supports { develop: BBC} 2017: Q5, MCUK, Salford: 9.45am-5pm. This event will be live...</p>
@@ -1506,7 +1466,7 @@ Module description goes here
                     <div class="card__media-icon">
                         <span class="card__media-icon__svg">
                                 <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-podcast"></use></svg>
-                                <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-podcast-purple.png"  alt="media icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon--purple.png" alt="media icon"/><![endif]-->
+                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-podcast-purple.png"  alt="media icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon--purple.png" alt="media icon"/><![endif]-->
                         </span>
                     </div>
                     <figcaption class="icon__caption">Content type podcast</figcaption>
@@ -1630,7 +1590,7 @@ Module description goes here
                 <div class="card__media-icon">
                     <span class="card__media-icon__svg">
                         <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-collection"></use></svg>
-                        <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-collection-white.png" alt="data icon"/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-collection-white.png" alt="data icon"/><![endif]-->
+                        <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-collection-white.png" alt="data icon"/></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-collection-white.png" alt="data icon"/><![endif]-->
                     </span>
                 </div>
                 <span class="card__media-icon__tag">Collection</span>
@@ -1754,4 +1714,1015 @@ NUNJUKS
 <!-- End Search result card. -->
 ```
 
+*/
+
+
+/*doc
+---
+title: card--event_feature
+category: Modules - Cards
+---
+
+Module description goes here
+
+```html_example
+<div class="featured__item--main">
+    <div class="card--featured">
+            <div class="card__inner" data-cardtype="card-featured">
+                <a href="/academy/en/events/evt20171009162056105" class="card__link">
+                    <div class="card__media" data-mediatype="eventDigital Cities">
+                        <figure>
+                                <img src="https://ichef.bbci.co.uk/images/ic/624x351/p01ccvn6.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
+                            <div class="card__media-icon">
+                                <span class="card__media-icon__svg">
+                                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                                        <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                                </span>
+                            </div>
+                        </figure>
+                        <div class="card__event-info">
+                            <div class="event__bar">
+                                    <span class="card__content-type card__content-event-result">
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-blog-purple.png"   alt=""/><![endif]-->
+                                    02 Nov
+                                    </span>
+                                    <span class="card__content-type card__content-event-result">    
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-duration"></use></svg>
+                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-duration.png"   alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-blog-purple.png"   alt=""/><![endif]-->
+                                    10:00
+                                    </span>
+                                    <span class="card__content-type card__content-event-result">    
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-map"></use></svg>
+                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-maprs.png"   alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-blog-purple.png"   alt=""/><![endif]-->
+                                    birmingham
+                                    </span>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- End Card Media. -->
+                    <div class="card__body">
+                        <h3 class="card__heading">Coding for Kids</h3>
+                        <p class="card__description">Join our coders for a fun workshop.</p>
+                    </div>
+                </a>
+                <!-- End Card Body. -->
+                <div class="card__data__wrapper" data-type="event">
+                        <span class="card__content-type">event</span>
+                </div>
+        </div>
+    </div>
+</div>
+```
+
+NUNJUKS
+
+```
+{% set item = homepage.sections[0].items[0] %}
+<div class="card--featured">
+    <div class="card__inner" data-cardtype="card-featured">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media" data-mediatype="{{ item.type }}{{ item.media_type }}">
+                <figure>
+                    {% set urlPattern = r/^https?:\/\/.+/i %}
+                    {% if item.image and urlPattern.test(item.image) %}
+                        <img src="{{ item.image }}" data-source="item.image" alt="" onerror="this.style.display='none'">
+                    {% elif item.legacy == 1 %}
+                        <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% elif item.image.length < 10 %}
+                        <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% else %}
+                        <!-- default to placeholder -->
+                        <img src="{{ item.image }}" data-source="placeholder" alt="" onerror="this.style.display='none'">
+                    {% endif %}
+
+                    {% if item.media_type or item.type %}
+                 
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                            {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'subject' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'image' %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'class' %}
+                                <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'guide' or item.type == 'guide' %}
+                                <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'topic' or item.media_type == 'collection' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'video' %}
+                                <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'podcast' %}
+                                <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'external' %}
+                                <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'event' %}
+                                <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% else %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% endif %}
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% include "partials/snippets/card-fig-caption.html" %}
+                </figure>
+
+                {% if item.type == 'event' %}
+                    {% if item.events | length > 1  %}
+                        <div class="card__event-info">
+                                {% include "partials/snippets/card-event-many-dates.html" %}   
+                        </div> 
+                        {% else %} 
+                        <div class="card__event-info">
+                                {% include "partials/snippets/card-event-info.html" %}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <!-- End Card Media. -->
+
+            <div class="card__body">
+                <h3 class="card__heading">{{ item.title }}</h3>
+                <p class="card__description">{{ item.description | truncate(110) }}</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+        {% include "partials/snippets/data.html" %}   
+    </div>
+</div>
+<!-- End Item card. -->
+
+```
+
+*/
+
+
+/*doc
+---
+title: card--event_pocket_item
+category: Modules - Cards
+---
+
+```html_example
+<div class="pocket__item pocket__item--4">
+<div class="card">
+    <div class="card__inner" data-cardtype="card">
+        <a href="/academy/en/events/evt20171012100849282" class="card__link">
+            <div class="card__media" data-mediatype="eventDigital Cities">
+                <figure>
+                        <!-- default to placeholder -->
+                        <img src="" alt="" data-source="placeholder" onerror="this.style.display='none'" style="display: none;" class="is-loaded">
+
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                        </span>
+                    </div>
+                </figure>
+                
+                    <div class="card__event-info s-carousel"> 
+        <div class="event__bar">
+            <span class="card__content-type card__content-event-result">
+                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-blog-purple.png"   alt=""/><![endif]-->
+                25 Oct
+            </span>
+        </div>
+                    </div>
+                
+            </div>
+            <!-- End Card Media. -->
+
+            <div class="card__body">
+                <h3 class="card__heading">Testing Coding for kids</h3>
+                <p class="card__description">This is a page description</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+<div class="card__data__wrapper" data-type="event">
+        <span class="card__content-type">event</span>
+</div>
+    </div>
+</div>
+<!-- End Item card. -->
+                            </div>
+
+```
+
+NUNJUKS
+
+```
+<div class="card">
+    <div class="card__inner" data-cardtype="card">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media" data-mediatype="{{ item.type }}{{ item.media_type }}">
+                <figure>
+                    {% set urlPattern = r/^https?:\/\/.+/i %}
+                    {% if item.image and urlPattern.test(item.image) %}
+                        <img src="{{ item.image }}" alt="" data-source="isURL" onerror="this.style.display='none'">
+                    {% elif item.legacy == 1 %}
+                        <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% elif item.image.length < 10 %}
+                        <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% else %}
+                        <!-- default to placeholder -->
+                        <img src="{{ item.image }}" alt="" data-source="placeholder" onerror="this.style.display='none'">
+                    {% endif %}
+
+                    {% if item.media_type or item.type %}
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                            {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'subject' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'image' %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'class' or item.media_type == 'classroom-course' %}
+                                <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'guide' or item.type == 'guide' %}
+                                <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'topic' or item.media_type == 'collection' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'video' %}
+                                <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'podcast' %}
+                                <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                             {% elif item.type == 'event' %}
+                                <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'external' %}
+                                <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% else %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% endif %}
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% include "partials/snippets/card-fig-caption.html" %}
+                </figure>
+                
+                {% if item.type == 'event' %}
+                    {% if item.events | length > 1  %}
+                    <div class="card__event-info s-carousel"> 
+                            {% include "partials/snippets/card-event-many-dates.html" %}    
+                    </div>
+                    {% else %}
+                    <div class="card__event-info s-carousel"> 
+                             {% include "partials/snippets/card-event-info-sub.html" %}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                
+            </div>
+            <!-- End Card Media. -->
+
+            <div class="card__body">
+                <h3 class="card__heading">{{ item.title }}</h3>
+                <p class="card__description">{{ item.description | truncate(110) }}</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+        {% include "partials/snippets/data.html" %}
+    </div>
+</div>
+<!-- End Item card. -->
+
+```
+*/
+
+
+/*doc
+---
+title: card--event_carousel_item
+category: Modules - Cards
+---
+
+```html_example
+<li style="list-style:none;" class="scroll-carousel__item">
+    <div class="card">
+        <div class="card__inner" data-cardtype="card">
+            <a href="/academy/en/events/evt20171009114226771" class="card__link">
+                <div class="card__media" data-mediatype="eventAcademy on the Road Event">
+                    <figure>
+                            <img src="https://ichef.bbci.co.uk/images/ic/624x351/p01ccvnl.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
+                        <div class="card__media-icon">
+                            <span class="card__media-icon__svg">
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                                    <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            </span>
+                        </div>
+                    </figure>
+                    <div class="card__event-info s-carousel"> 
+                        <div class="event__bar">
+                            <span class="card__content-type card__content-event-result">
+                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-blog-purple.png"   alt=""/><![endif]-->
+                            4 upcoming dates
+                            </span>
+                        </div>
+                    </div>  
+                </div>
+                <!-- End Card Media. -->
+                <div class="card__body">
+                    <h3 class="card__heading">Test Event for Development purposes</h3>
+                    <p class="card__description">Test page description</p>
+                </div>
+            </a>
+            <!-- End Card Body. -->
+            <div class="card__data__wrapper" data-type="event">
+                    <span class="card__content-type">event</span>
+            </div>
+        </div>
+    </div>
+<!-- End Item card. -->
+</li>
+
+
+```
+
+NUNJUKS
+
+```
+<div class="card">
+    <div class="card__inner" data-cardtype="card">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media" data-mediatype="{{ item.type }}{{ item.media_type }}">
+                <figure>
+                    {% set urlPattern = r/^https?:\/\/.+/i %}
+                    {% if item.image and urlPattern.test(item.image) %}
+                        <img src="{{ item.image }}" alt="" data-source="isURL" onerror="this.style.display='none'">
+                    {% elif item.legacy == 1 %}
+                        <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% elif item.image.length < 10 %}
+                        <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% else %}
+                        <!-- default to placeholder -->
+                        <img src="{{ item.image }}" alt="" data-source="placeholder" onerror="this.style.display='none'">
+                    {% endif %}
+
+                    {% if item.media_type or item.type %}
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                            {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'subject' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'image' %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'class' or item.media_type == 'classroom-course' %}
+                                <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'guide' or item.type == 'guide' %}
+                                <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'topic' or item.media_type == 'collection' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'video' %}
+                                <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'podcast' %}
+                                <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                             {% elif item.type == 'event' %}
+                                <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'external' %}
+                                <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% else %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% endif %}
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% include "partials/snippets/card-fig-caption.html" %}
+                </figure>
+                
+                {% if item.type == 'event' %}
+                    {% if item.events | length > 1  %}
+                    <div class="card__event-info s-carousel"> 
+                            {% include "partials/snippets/card-event-many-dates.html" %}    
+                    </div>
+                    {% else %}
+                    <div class="card__event-info s-carousel"> 
+                             {% include "partials/snippets/card-event-info-sub.html" %}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                
+            </div>
+            <!-- End Card Media. -->
+
+            <div class="card__body">
+                <h3 class="card__heading">{{ item.title }}</h3>
+                <p class="card__description">{{ item.description | truncate(110) }}</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+        {% include "partials/snippets/data.html" %}
+    </div>
+</div>
+<!-- End Item card. -->
+
+```
+*/
+
+
+/*doc
+---
+title: card--event_panel
+category: Modules - Cards
+---
+
+```html_example
+<div class="card--panel">
+    <div class="card__inner" data-cardtype="card-panel">
+        <div class="card__media">
+    
+            <a href="/academy/en/events/evt20171102145337817" class="card__media-link ">
+                <figure>
+                        <img src="https://ichef.bbci.co.uk/images/ic/624x351/p01s54c6.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
+                    <figcaption class="icon__caption">Academy on the Road: Glasgow</figcaption>
+                </figure>
+            </a>
+            <div class="card__data">
+            <a href="/academy/en/events/evt20171102145337817" class="card--panel__link">
+                <div class="card__type">
+                    <div class="card__data-icon">
+                        <span class="card__data-icon__svg">
+                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                            <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                        </span>
+                    </div>
+                        <span class="card__type__copy">Event</span>
+                            <div class="card__data-icon card__data-icon-events">
+                                <span class="card__data-icon__svg">
+                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+                                <noscript><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png" alt=""></noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png" alt=""/><![endif]-->
+                                </span>
+                            </div>
+                            <span class="card__type__copy"> <time datetime="2017-11-09"> 09  Nov  </time></span>
+                </div>
+                 <h3 class="card__heading">Academy on the Road: Glasgow</h3>
+            </a>
+            </div>
+        </div>
+        <!-- End Card Media. -->
+    </div>
+</div>
+
+
+```
+
+NUNJUKS
+
+```
+<div class="card">
+    <div class="card__inner" data-cardtype="card">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media" data-mediatype="{{ item.type }}{{ item.media_type }}">
+                <figure>
+                    {% set urlPattern = r/^https?:\/\/.+/i %}
+                    {% if item.image and urlPattern.test(item.image) %}
+                        <img src="{{ item.image }}" alt="" data-source="isURL" onerror="this.style.display='none'">
+                    {% elif item.legacy == 1 %}
+                        <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% elif item.image.length < 10 %}
+                        <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% else %}
+                        <!-- default to placeholder -->
+                        <img src="{{ item.image }}" alt="" data-source="placeholder" onerror="this.style.display='none'">
+                    {% endif %}
+
+                    {% if item.media_type or item.type %}
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                            {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'subject' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'image' %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'class' or item.media_type == 'classroom-course' %}
+                                <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'guide' or item.type == 'guide' %}
+                                <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'topic' or item.media_type == 'collection' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'video' %}
+                                <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'podcast' %}
+                                <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                             {% elif item.type == 'event' %}
+                                <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'external' %}
+                                <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% else %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% endif %}
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% include "partials/snippets/card-fig-caption.html" %}
+                </figure>
+                
+                {% if item.type == 'event' %}
+                    {% if item.events | length > 1  %}
+                    <div class="card__event-info s-carousel"> 
+                            {% include "partials/snippets/card-event-many-dates.html" %}    
+                    </div>
+                    {% else %}
+                    <div class="card__event-info s-carousel"> 
+                             {% include "partials/snippets/card-event-info-sub.html" %}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                
+            </div>
+            <!-- End Card Media. -->
+
+            <div class="card__body">
+                <h3 class="card__heading">{{ item.title }}</h3>
+                <p class="card__description">{{ item.description | truncate(110) }}</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+        {% include "partials/snippets/data.html" %}
+    </div>
+</div>
+<!-- End Item card. -->
+
+```
+*/
+
+
+/*doc
+---
+title: card--event_result-single-date
+category: Modules - Cards
+---
+
+```html_example
+<div class="card--result biscuit" id="0e717a5b-7c68-43f8-ab51-fc42d85523c5">
+    <div class="card__inner" data-cardtype="card-result">
+        <a href="/academy/en/events/evt20171003101405658" class="card__link">
+            <div class="card__media">
+                    <figure>
+                            <img src="https://ichef.bbci.co.uk/images/ic/624x351/p05jgt5n.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
+                        <div class="card__media-icon">
+                            <span class="card__media-icon__svg">
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                                    <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""/><![endif]-->
+                            </span>
+                        </div>
+                    </figure>
+            </div>
+            <!-- End Card Media. -->
+            <div class="card__body">
+                <h3 class="card__heading" data-availability="bbc">
+                    <span class="card__flag">INTERNAL</span>
+                I Want it NOW Essentials
+                </h3>
+            </div>
+            <!-- End Card Body. -->
+        </a>
+<div class="card__data__wrapper" data-type="Digital Season Event">
+        <span class="card__content-type card__content-event-result">Digital Season Event</span>
+        <span class="card__content-type card__content-event-result"> 
+               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+               <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""/><![endif]-->
+                09  Nov
+        </span>
+        <span class="card__content-type card__content-event-result">    
+               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-map"></use></svg>
+               <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-map.png"   alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""/><![endif]-->
+                salford
+         </span>
+</div>
+
+
+    </div>
+</div>
+```
+
+NUNJUKS
+
+```
+<div class="card--result biscuit" id="{{ item.id | slugify }}">
+    <div class="card__inner" data-cardtype="card-result">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media">
+                    <figure>
+                        {% set urlPattern = r/^https?:\/\/.+/i %}
+                        {% if item.image and urlPattern.test(item.image) %}
+                            <img src="{{ item.image }}" data-source="item.image" alt="" onerror="this.style.display='none'">
+                        {% elif item.legacy == 1 %}
+                            <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                        {% elif item.image.length < 10 %}
+                            <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                        {% elif item.media and item.media.image %}
+                            <img src="{{ __imagechefs }}/624x351/{{ item.item.media.image }}.jpg" alt="" onerror="this.style.display='none'">
+                        {% else %}
+                            <!-- default to placeholder -->
+                            <img src="{{ item.image }}" data-providedBy="placeholder" alt="" onerror="this.style.display='none'">
+                        {% endif %}
+                        <div class="card__media-icon">
+                            <span class="card__media-icon__svg">
+                                {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                    <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                                {% elif item.type == 'subject' %}
+                                    <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'image' %}
+                                    <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'class' or item.media_type == 'classroom-course' %}
+                                    <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                    <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'guide' or item.type == 'guide' %}
+                                    <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'topic' %}
+                                    <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'video' %}
+                                    <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'podcast' %}
+                                    <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                                {% elif item.type == 'external' %}
+                                    <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                                 {% elif item.media_type == 'event' %}
+                                    <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/><![endif]-->
+                                {% else %}
+                                    <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                                {% endif %}
+                            </span>
+                        </div>
+                        {% include "partials/snippets/card-fig-caption.html" %}
+                    </figure>
+            </div>
+            <!-- End Card Media. -->
+            <div class="card__body">
+                <h3 class="card__heading" data-availability="{{ item.availability }}">
+                {% if item.availability == 'bbc' %}
+                    <span class="card__flag">{{ 'internalTag' | i18n }}</span>
+                {% endif %}
+                {{ item.title }}
+                </h3>
+                <p class="card__description">{{ item.description | truncate(180) }}</p>
+            </div>
+            <!-- End Card Body. -->
+        </a>
+        {% include "partials/snippets/data-search.html" %}
+    </div>
+</div>
+<!-- End Search result card. -->
+
+```
+*/
+
+
+/*doc
+---
+title: card--event_result-many-dates
+category: Modules - Cards
+---
+
+```html_example
+<div class="card--result biscuit" id="08cfcdb8-77de-4024-895f-28efa1d6a425">
+    <div class="card__inner" data-cardtype="card-result">
+        <a href="/academy/en/events/evt20171003101407345" class="card__link">
+            <div class="card__media">
+                    <figure>
+                            <img src="https://ichef.bbci.co.uk/images/ic/624x351/p05jgtr4.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
+                        <div class="card__media-icon">
+                            <span class="card__media-icon__svg">
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                                    <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""/><![endif]-->
+                            </span>
+                        </div>
+                    </figure>
+            </div>
+            <!-- End Card Media. -->
+            <div class="card__body">
+                <h3 class="card__heading" data-availability="bbc">
+                    <span class="card__flag">INTERNAL</span>
+                Think and Behave Like a Young Person Advanced
+                </h3>
+            </div>
+            <!-- End Card Body. -->
+        </a>
+<div class="card__data__wrapper" data-type="Digital Season Event">
+        <span class="card__content-type card__content-event-result">Digital Season Event</span>
+        <span class="card__content-type card__content-event-result">
+               <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+               <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""/><![endif]-->
+               2 Upcoming dates 
+        </span>
+</div>
+
+
+    </div>
+</div>
+```
+
+NUNJUKS
+
+```
+<div class="card--result biscuit" id="{{ item.id | slugify }}">
+    <div class="card__inner" data-cardtype="card-result">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media">
+                    <figure>
+                        {% set urlPattern = r/^https?:\/\/.+/i %}
+                        {% if item.image and urlPattern.test(item.image) %}
+                            <img src="{{ item.image }}" data-source="item.image" alt="" onerror="this.style.display='none'">
+                        {% elif item.legacy == 1 %}
+                            <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                        {% elif item.image.length < 10 %}
+                            <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                        {% elif item.media and item.media.image %}
+                            <img src="{{ __imagechefs }}/624x351/{{ item.item.media.image }}.jpg" alt="" onerror="this.style.display='none'">
+                        {% else %}
+                            <!-- default to placeholder -->
+                            <img src="{{ item.image }}" data-providedBy="placeholder" alt="" onerror="this.style.display='none'">
+                        {% endif %}
+                        <div class="card__media-icon">
+                            <span class="card__media-icon__svg">
+                                {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                    <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                                {% elif item.type == 'subject' %}
+                                    <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'image' %}
+                                    <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'class' or item.media_type == 'classroom-course' %}
+                                    <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                    <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'guide' or item.type == 'guide' %}
+                                    <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'topic' %}
+                                    <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'video' %}
+                                    <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                                {% elif item.media_type == 'podcast' %}
+                                    <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                                {% elif item.type == 'external' %}
+                                    <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                                 {% elif item.media_type == 'event' %}
+                                    <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/><![endif]-->
+                                {% else %}
+                                    <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                    <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                                {% endif %}
+                            </span>
+                        </div>
+                        {% include "partials/snippets/card-fig-caption.html" %}
+                    </figure>
+            </div>
+            <!-- End Card Media. -->
+            <div class="card__body">
+                <h3 class="card__heading" data-availability="{{ item.availability }}">
+                {% if item.availability == 'bbc' %}
+                    <span class="card__flag">{{ 'internalTag' | i18n }}</span>
+                {% endif %}
+                {{ item.title }}
+                </h3>
+                <p class="card__description">{{ item.description | truncate(180) }}</p>
+            </div>
+            <!-- End Card Body. -->
+        </a>
+        {% include "partials/snippets/data-search.html" %}
+    </div>
+</div>
+<!-- End Search result card. -->
+
+```
+*/
+
+
+/*doc
+---
+title: card--event_feature-sub
+category: Modules - Cards
+---
+
+```html_example
+<div style="width:245px;">
+<div class="card--sub">
+    <div class="card__inner" data-cardtype="card-sub">
+        <a href="/academy/en/events/evt20171009114226771" class="card__link">
+            <div class="card__media" data-mediatype="eventAcademy on the Road Event">
+                <figure>
+                        <img src="https://ichef.bbci.co.uk/images/ic/624x351/p01ccvnl.jpg" alt="" onerror="this.style.display='none'" class="is-loaded">
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-event"></use></svg>
+                                <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-event.png" alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                        </span>  
+                    </div>
+                </figure>
+                <div class="card__event-info s-carousel">
+                    <div class="event__bar">
+                            <span class="card__content-type card__content-event-result">
+                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gel-icon-calendar"></use></svg>
+                            <noscript>&lt;img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-calendar.png"   alt=""/&gt;</noscript><!--[if lt IE 9]><img class="icon__falback" src="/academy/static/img/svg-fallbacks/gel-icon-blog-purple.png"   alt=""/><![endif]-->
+                            4 upcoming dates
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Card Media. -->
+            <div class="card__body">
+                <h3 class="card__heading">Test Event for Development purposes</h3>
+                <p class="card__description">Test page description</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+
+            <div class="card__data__wrapper" data-type="event">
+                    <span class="card__content-type">event</span>
+            </div>
+    </div>
+</div>
+</div>
+```
+
+NUNJUKS
+
+```
+<div class="card--sub">
+    <div class="card__inner" data-cardtype="card-sub">
+        {% set item_link = item.link %}
+        <a href="{{ item_link | href }}" class="card__link">
+            <div class="card__media" data-mediatype="{{ item.type }}{{ item.media_type }}">
+                <figure>
+                    {% set urlPattern = r/^https?:\/\/.+/i %}
+                    {% if item.image and urlPattern.test(item.image) %}
+                        <img src="{{ item.image }}" alt="" data-source="item.image" onerror="this.style.display='none'">
+                    {% elif item.legacy == 1 %}
+                        <img src="{{ __imagechef }}/624x351/legacy/clip/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% elif item.image.length < 10 %}
+                        <img src="{{ __imagechefs }}/624x351/{{ item.image }}.jpg" alt="" onerror="this.style.display='none'">
+                    {% else %}
+                        <!-- default to placeholder -->
+                        <img src="{{ item.image }}" alt="" data-source="placeholder" onerror="this.style.display='none'">
+                    {% endif %}
+
+                    {% if item.media_type %}
+                    <div class="card__media-icon">
+                        <span class="card__media-icon__svg">
+                            {% if item.type == 'blogs-post' or item.type == 'blog' %}
+                                <svg><use xlink:href="#gel-icon-blog"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-blog-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'subject' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'image' %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'class' %}
+                                <svg><use xlink:href="#gel-icon-classroom"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-classroom-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'online' or item.media_type == 'online-course'  %}
+                                <svg><use xlink:href="#gel-icon-pc"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-pc-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'guide' or item.type == 'guide' %}
+                                <svg><use xlink:href="#gel-icon-revision-guide"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-revision-guide-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'topic' or item.media_type == 'collection' %}
+                                <svg><use xlink:href="#gel-icon-collection"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-collection-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'video' %}
+                                <svg><use xlink:href="#gel-icon-video"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-video-purple.png" alt=""/><![endif]-->
+                            {% elif item.media_type == 'podcast' %}
+                                <svg><use xlink:href="#gel-icon-podcast"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-podcast-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'event' %}
+                                <svg><use xlink:href="#gel-icon-event"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-event.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% elif item.type == 'external' %}
+                                <svg><use xlink:href="#gel-icon-external-link"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-external-link-purple.png" alt=""/><![endif]-->
+                            {% else %}
+                                <svg><use xlink:href="#gel-icon-document"></use></svg>
+                                <noscript><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/></noscript><!--[if lt IE 9]><img class="icon__falback" src="{{ __sitebase }}/static/img/svg-fallbacks/gel-icon-document-purple.png" alt=""/><![endif]-->
+                            {% endif %}
+                        </span>
+                        
+                    </div>
+                    {% endif %}
+
+                    {% include "partials/snippets/card-fig-caption.html" %}
+                </figure>
+
+                {% if item.type == 'event' %}
+                        {% if item.events | length > 1  %}
+                        <div class="card__event-info-sub">
+                                {% include "partials/snippets/card-event-many-dates.html" %}
+                        </div>
+                        {% else %}
+                        <div class="card__event-info-sub">
+                                {% include "partials/snippets/card-event-info-sub.html" %}
+                        </div>
+                        {% endif %}
+                 {% endif %}
+
+            </div>
+            <!-- End Card Media. -->
+
+            <div class="card__body">
+                <h3 class="card__heading">{{ item.title }}</h3>
+                <p class="card__description">{{ item.description | truncate(110) }}</p>
+            </div>
+        </a>
+        <!-- End Card Body. -->
+        {% include "partials/snippets/data.html" %}
+    </div>
+</div>
+<!-- End Item card. -->
+
+<!-- End Search result card. -->
+
+```
 */
